@@ -50,7 +50,7 @@ Marc Gouw, Hugo Samano, Kim van Roey, Francesca Diella, Toby Gibson, Holger Dink
 [training material](http://aidanbudd.github.io/ppisnd/trainingMaterial/holgerDinkel/linear_motifs/) from the EMBO courses*
 
 
-## Basic Protocol: Using REST API (Holger, Marc)
+## Basic Protocol: Using REST API (Marc, Holger)
 
 - How does one fetch information from the database using the REST API
 
