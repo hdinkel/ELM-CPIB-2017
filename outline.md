@@ -3,7 +3,7 @@
 **Deadline:** 15 December for us, 15 Jan for submission.
 
 # Authors
-Marc Gouw, Hugo Samano, Kim van Roey, Francesca Diella, Toby Gibson, Holger Dinkel
+Marc Gouw, Hugo Samano, Kim Van Roey, Francesca Diella, Toby Gibson, Holger Dinkel
 
 # Outline
 
@@ -36,7 +36,7 @@ Marc Gouw, Hugo Samano, Kim van Roey, Francesca Diella, Toby Gibson, Holger Dink
 - Biological example: p53
 
 
-## Basic Protocol: Predicting & Detecting ELMs in sequences (Marc, Hugo, Holger)
+## Basic Protocol: Predicting & Detecting ELMs in sequences (Marc, Holger, Hugo)
 
 - How does one submit their own sequences to the database
 
@@ -50,7 +50,7 @@ Marc Gouw, Hugo Samano, Kim van Roey, Francesca Diella, Toby Gibson, Holger Dink
 [training material](http://aidanbudd.github.io/ppisnd/trainingMaterial/holgerDinkel/linear_motifs/) from the EMBO courses*
 
 
-## Basic Protocol: Using REST API (Holger, Marc)
+## Basic Protocol: Using REST API (Marc, Holger)
 
 - How does one fetch information from the database using the REST API
 
