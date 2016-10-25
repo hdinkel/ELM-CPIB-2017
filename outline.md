@@ -2,7 +2,12 @@
 
 **Deadline:** 15 December for us, 15 Jan for submission.
 
-## Introduction
+# Authors
+Marc Gouw, Hugo Samano, Kim van Roey, Francesca Diella, Toby Gibson, Holger Dinkel
+
+# Outline
+
+## Introduction (Marc, Kim, Francesca)
 
 - Introduce the concept of Linear Motifs
 
@@ -12,7 +17,7 @@
 
 - Mention the need for predictive tools for unknown sequences
 
-## Basic Protocol: Searching the ELM database
+## Basic Protocol: Searching the ELM database (Francesca, Kim)
 
 - How does one search the content in the database.
 
@@ -31,7 +36,7 @@
 - Biological example: p53
 
 
-## Basic Protocol: Predicting & Detecting ELMs in sequences
+## Basic Protocol: Predicting & Detecting ELMs in sequences (Marc, Hugo, Holger)
 
 - How does one submit their own sequences to the database
 
@@ -41,8 +46,11 @@
 
 - Biological example: SH2 & EPIYA in Bacteria
 
+*If need for examples / exercises, see our 
+[training material](http://aidanbudd.github.io/ppisnd/trainingMaterial/holgerDinkel/linear_motifs/) from the EMBO courses*
 
-## Basic Protocol: Using REST API
+
+## Basic Protocol: Using REST API (Holger, Marc)
 
 - How does one fetch information from the database using the REST API
 
@@ -51,3 +59,9 @@
 - How to interpret the results in each case
 
 
+# Tips / Guidelines (also see [styleguide](instructions2authors/bioinformatics-style-9.10.pdf) )
+- "The primary audience for Current Protocols in Bioinformatics consists of molecular biologists who have an interest in applying bioinformatics tools to their own work, but who may have little to no computational experience."
+- write in *protocol* style, with individual, sequential steps, ideally numbered
+- the protocol steps should describe the actions performed, employing the active tense versus the passive
+- give a summary / guideline on how to interpret the results, what might have gone wrong, what to look out for
+- screenshots are good. more screenshots are more good
