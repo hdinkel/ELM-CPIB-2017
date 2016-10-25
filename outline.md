@@ -3,7 +3,7 @@
 **Deadline:** 15 December for us, 15 Jan for submission.
 
 # Authors
-Marc Gouw, Hugo Samano, Kim van Roey, Francesca Diella, Toby Gibson, Holger Dinkel
+Marc Gouw, Hugo Samano, Kim Van Roey, Francesca Diella, Toby Gibson, Holger Dinkel
 
 # Outline
 
