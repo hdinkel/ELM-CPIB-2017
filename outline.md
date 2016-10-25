@@ -36,7 +36,7 @@ Marc Gouw, Hugo Samano, Kim Van Roey, Francesca Diella, Toby Gibson, Holger Dink
 - Biological example: p53
 
 
-## Basic Protocol: Predicting & Detecting ELMs in sequences (Marc, Hugo, Holger)
+## Basic Protocol: Predicting & Detecting ELMs in sequences (Marc, Holger, Hugo)
 
 - How does one submit their own sequences to the database
 
