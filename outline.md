@@ -1,10 +1,3 @@
-# Unit title: Eukaryotic Linear Motifs on the ELM database
-
-**Deadline:** 15 December for us, 15 Jan for submission.
-
-# Authors
-Marc Gouw, Hugo Samano, Kim Van Roey, Francesca Diella, Toby Gibson, Holger Dinkel
-
 # Outline
 
 ## Introduction (Marc, Kim, Francesca)
