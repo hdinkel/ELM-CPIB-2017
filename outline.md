@@ -25,6 +25,8 @@ Marc Gouw, Hugo Samano, Kim Van Roey, Francesca Diella, Toby Gibson, Holger Dink
 
 - This section should also help explain the structure of the database itself
 
+- Explain classes (types of classes), instances & regular expressions.
+
 - Mention the importance of ontologies & data standards 
 
 - Include information on links / content contained within ELM 
