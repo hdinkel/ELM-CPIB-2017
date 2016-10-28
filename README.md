@@ -9,6 +9,10 @@ Protocols in Bioinformatics.
 * Final draft: 15th December 2016  
 * **Submission deadline: 15 January 2017** 
 
+## References
+
+Please insert references as: (PMID: 123456).
+
 ## Screenshots
 
 For each screenshot, please add a text file describing in exact details which
