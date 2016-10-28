@@ -6,9 +6,9 @@
 
 ### Software
 
-## (First subheading goes here)
+## Submitting a query to ELM 
 
-### 1. (First step goes here)
+1. (First step goes here)
 
 *instructions: write steps in numerical order (1,2,3... etc), separated by
 logical subheadings to clarify what is being done in each series of steps.*
