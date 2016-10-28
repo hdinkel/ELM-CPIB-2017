@@ -1,10 +1,3 @@
-# Unit title: Eukaryotic Linear Motifs on the ELM database
-
-**Deadline:** 15 December for us, 15 Jan for submission.
-
-# Authors
-Marc Gouw, Hugo Samano, Kim Van Roey, Francesca Diella, Toby Gibson, Holger Dinkel
-
 # Outline
 
 ## Introduction (Marc, Kim, Francesca)
@@ -24,6 +17,8 @@ Marc Gouw, Hugo Samano, Kim Van Roey, Francesca Diella, Toby Gibson, Holger Dink
 - This section should highlight a "pipeline" of how someone might typically use ELM.
 
 - This section should also help explain the structure of the database itself
+
+- Explain classes (types of classes), instances & regular expressions.
 
 - Mention the importance of ontologies & data standards 
 
