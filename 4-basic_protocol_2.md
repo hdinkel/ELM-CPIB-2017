@@ -21,8 +21,8 @@ smartphones will also work.
    a protein accession (uniprot format) or an amino acid sequence (simply the
    sequence, or a FASTA formatted entry). Enter the accession "HUGOs_PROTEIN"
     
->>> When you enter an accession, the query is still performed on the sequence,
->>> but the sequence is automatically retrived from Expasy (expasy, right?).
+ >>> When you enter an accession, the query is still performed on the sequence,
+ >>> but the sequence is automatically retrived from Expasy (expasy, right?).
 
 ### Figure: ELM predictions search page.
 
