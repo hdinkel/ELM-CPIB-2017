@@ -10,6 +10,8 @@
 
 step 1. (First step goes here)
 
+step 2. (goes here)
+
 *note: please start leave the word 'step' in the step. This is needed for
 gitlab to not auto-renumerate the numbers.*
 
