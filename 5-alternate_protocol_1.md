@@ -10,14 +10,13 @@ However, any browser can be used to access the server, most browsers however dow
 
 ## Downloading all ELM classes
 
-step 1. Direct your browser to the url 'http://elm.eu.org/downloads' or choose 'ELM Downloads' from the Menu at 'http://elm.eu.org'.
+step 1. Direct your browser to the url 'http://elm.eu.org/downloads' or choose 'ELM Downloads' from the Menu at 'http://elm.eu.org' (see the [/Figures/elm_downloads_html.png](screenshot) figure showing the ELM downloads website).
 
 >>> This webpage contains links and descriptions on how to download ELM data in text format.
 >>> The information is separated in individual tables, eg. for 'Classes', 'Instances', and so on...
 >>> Note that each table also shows the 'last modified date' indicating when the particular data was last updated.
 >>> This is useful if you regularly want to update your local data with ELM data, as you can quickly check whether you actually _need_ to download the files again...
->>> The [/Figures/elm_downloads_html.png](screenshot) shows the ELM downloads website.
->>> Note the orange colored download links highlighting different formats: 
+>>> Note the orange colored download links highlighting different formats:
 >>> For many pages, which exist in html format (ending in '.html'), there also exists an additional URL/file extension to get the data in other formats.
 
 step 2. Click on the first orange 'html' link in the table "Classes" or use the following URL: 'http://elm.eu.org/elms.html'
@@ -31,10 +30,11 @@ step 3. Use the following URL: 'http://elm.eu.org/elms.html?q=CSK'
 >>> Next, we are going to use the same URL pattern, but with '.tsv' to download the same data as actual data, not HTML.
 
 step 4. Use the following URL: 'http://elm.eu.org/elms.tsv?q=CSK'
+See Figure [/Figures/elm_curl_classes_CSK.png](elm_curl_classes_CSK.png)
 
 >>> By exchanging the '.html' part of the url with '.tsv', we ask the webserver to give us the data in TSV (tab-separated) format.
 >>> This query should download a file such as the following:
->>> 
+>>>
 >>> #ELM_Classes_Download_Version: 1.4
 >>> #ELM_Classes_Download_Date: 2016-11-06 17:39:41.503341
 >>> #Origin: elm.eu.org
