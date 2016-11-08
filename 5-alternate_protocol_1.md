@@ -76,6 +76,18 @@ P04637	ELM	sequence_feature	305	323	.	.	.	ID=TRG_NLS_Bipartite_1
 MEEPQSDPSVEPPLSQETFSDLWKLLPENNVLSPLPSQAMDDLMLSPDDIEQWFTEDPGPDEAPRMPEAAPPVAPAPAAPTPAAPAPAPSWPLSSSVPSQKTYQGSYGFRLGFLHSGTAKSVTCTYSPALNKMFCQLAKTCPVQLWVDSTPPPGTRVRAMAIYKQSQHMTEVVRRCPHHERCSDSDGLAPPQHLIRVEGNLRVEYLDDRNTFRHSVVVPYEPPEVGSDCTTIHYNYMCNSSCMGGMNRRPILTIITLEDSSGNLLGRNSFEVRVCACPGRDRRTEEENLRKKGEPHHELPPGSTKRALPNNTSSSPQPKKKPLDGEYFTLQIRGRERFEMFRELNEALELKDAQAGKEPGGS
 ```
 
+step 5. Use the following URL: ''http://elm.eu.org/instances.tsv?q=CLV_&taxon=aedes+agypti'
 
+> Use the query term 'q=CLV_' to get all instances of cleavage site classes.
+> To limit your search to 'yellow fever mosquito' instances, use the parameter 'taxon=' followed by the taxon's scientific name, replacing spaces with '+':
+```
+> curl 'http://elm.eu.org/instances.tsv?q=CLV_&taxon=aedes+agypti'
+
+
+
+More data (interactions, domains, methods, etc.) can be downloaded from ELM in
+analogous fashion. Different formats are available depending on data type (the most
+common format is TSV), for example ELM instances can be downloaded in TSV, FASTA, GFF, PIR,
+or PSI-MI format (either XML or MiTab) [24067240].
 
 % NOTE: TODO: Mention ELM software license agreement?
