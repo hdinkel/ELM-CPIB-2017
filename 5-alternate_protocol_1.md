@@ -35,6 +35,7 @@ See Figure [/Figures/elm_curl_classes_CSK.png](elm_curl_classes_CSK.png)
 >>> By exchanging the '.html' part of the url with '.tsv', we ask the webserver to give us the data in TSV (tab-separated) format.
 >>> This query should download a file such as the following:
 ```
+> curl 'http://elm.eu.org/elms.tsv?q=CSK'
 #ELM_Classes_Download_Version: 1.4
 #ELM_Classes_Download_Date: 2016-11-06 17:39:41.503341
 #Origin: elm.eu.org
@@ -49,6 +50,32 @@ See Figure [/Figures/elm_curl_classes_CSK.png](elm_curl_classes_CSK.png)
 "ELME000424"	"LIG_CSK_EPIYA_1"	"EPIYA ligand motif for CSK-SH2"	"Csk Src Homology 2 (SH2) domain binding EPIYA motif"	"EP[IL]Y[TAG]"	"2.46761307667e-06"	"13"	"0"
 "ELME000013"	"MOD_TYR_CSK"	"TYR phosphorylation site"	"Members of the non-receptor tyrosine kinase Csk family phosphorylate the C-terminal tyrosine residues of the Src family."	"[TAD][EA].Q(Y)[QE].[GQA][PEDLS]"	"2.92617843803e-07"	"12"	"0"
 ```
+
+
+step 4. Use the following URL: 'http://elm.eu.org/instances.gff?q=p53_human'
+See Figure [/Figures/elm_curl_instances_p53_human.png](elm_curl_instances_p53_human.png)
+
+```
+> curl 'http://elm.eu.org/instances.gff?q=p53_human'
+##gff-version 3
+P04637	ELM	sequence_feature	19	26	.	.	.	ID=DEG_MDM2_SWIB_1
+P04637	ELM	sequence_feature	381	385	.	.	.	ID=DOC_CYCLIN_1
+P04637	ELM	sequence_feature	359	363	.	.	.	ID=DOC_USP7_MATH_1
+P04637	ELM	sequence_feature	364	368	.	.	.	ID=DOC_USP7_MATH_1
+P04637	ELM	sequence_feature	30	35	.	.	.	ID=DOC_WW_Pin1_4
+P04637	ELM	sequence_feature	78	83	.	.	.	ID=DOC_WW_Pin1_4
+P04637	ELM	sequence_feature	312	317	.	.	.	ID=DOC_WW_Pin1_4
+P04637	ELM	sequence_feature	15	21	.	.	.	ID=MOD_CK1_1
+P04637	ELM	sequence_feature	30	37	.	.	.	ID=MOD_GSK3_1
+P04637	ELM	sequence_feature	12	18	.	.	.	ID=MOD_PIKK_1
+P04637	ELM	sequence_feature	385	388	.	.	.	ID=MOD_SUMO_for_1
+P04637	ELM	sequence_feature	339	352	.	.	.	ID=TRG_NES_CRM1_1
+P04637	ELM	sequence_feature	305	323	.	.	.	ID=TRG_NLS_Bipartite_1
+##FASTA
+>P04637
+MEEPQSDPSVEPPLSQETFSDLWKLLPENNVLSPLPSQAMDDLMLSPDDIEQWFTEDPGPDEAPRMPEAAPPVAPAPAAPTPAAPAPAPSWPLSSSVPSQKTYQGSYGFRLGFLHSGTAKSVTCTYSPALNKMFCQLAKTCPVQLWVDSTPPPGTRVRAMAIYKQSQHMTEVVRRCPHHERCSDSDGLAPPQHLIRVEGNLRVEYLDDRNTFRHSVVVPYEPPEVGSDCTTIHYNYMCNSSCMGGMNRRPILTIITLEDSSGNLLGRNSFEVRVCACPGRDRRTEEENLRKKGEPHHELPPGSTKRALPNNTSSSPQPKKKPLDGEYFTLQIRGRERFEMFRELNEALELKDAQAGKEPGGS
+```
+
 
 
 % NOTE: TODO: Mention ELM software license agreement?
