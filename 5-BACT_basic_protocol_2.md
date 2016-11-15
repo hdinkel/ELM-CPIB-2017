@@ -21,8 +21,8 @@ step 1. Click on the "ELM Predictions" button in the menu to access the search q
    a protein accession (uniprot format) or an amino acid sequence (simply the
    sequence, or a FASTA formatted entry). Enter the accession "HUGOs_PROTEIN"
     
- >>> When you enter an accession, the query is still performed on the sequence,
- >>> but the sequence is automatically retrived from Expasy (expasy, right?).
+> When you enter an accession, the query is still performed on the sequence,
+> but the sequence is automatically retrived from Expasy (expasy, right?).
 
 ### Figure: ELM predictions search page.
 
@@ -35,7 +35,7 @@ step 3. Submit the sequence. You will be brought to an intermediate page which y
    results are being processed, and you should be redirected to the final
    results page within 30 seconds.
 
->>> You can bookmark this page: The results are stored for a week.
+> You can bookmark this page: The results are stored for a week.
 
 ## Interpreting the prediction results: Graphical Summary
 
@@ -48,10 +48,10 @@ step 5. The first row contains phosphorylation sites as Retrieved from Phospho.E
    which are all manually annotated fron literature. You can follow the link to
    PhosphoELM by clicking on the phosphorylation site in the image.
 
->>> Phosphorylation sites are only available when the search is performed
->>> with a protein accession, and only its a known uniprot or ensembl accession.
->>> Phosphorilation sites are relevant to interpreting ELM motif detections...
->>> because???
+> Phosphorylation sites are only available when the search is performed
+> with a protein accession, and only its a known uniprot or ensembl accession.
+> Phosphorilation sites are relevant to interpreting ELM motif detections...
+> because???
 
 step 6. The second row shows when domains are detected from the SMART
    (9600884,25300481) or Pfam (9600884) database. Annotations are retrieved
@@ -59,8 +59,8 @@ step 6. The second row shows when domains are detected from the SMART
    Hovering the mouse over the domain reveals the domain name and its start
    position.
 
->>> Motifs are less likely to be found in domain regious, therefore any
->>> motifs detected within these sites are less likely to be functional.
+> Motifs are less likely to be found in domain regious, therefore any
+> motifs detected within these sites are less likely to be functional.
 
 step 7.  The third row shows unstructured, or disordered regions within the sequence
     as predicted by GlobPlot (12824398). [what does hover do?] The 4th & 5th
@@ -68,7 +68,7 @@ step 7.  The third row shows unstructured, or disordered regions within the sequ
     priction tool. Protein segments with an IUpred score above 0.5 are 95% likely
     to be disorered (REF?)
 
->>> As motifs are often found in intrinsically disorered regions, motifs that
+> As motifs are often found in intrinsically disorered regions, motifs that
 fall within regios idenfified by GlobPlot are likely to be functional.
 
 step 8. The 5th row contains information on secondary structure. HELP?!?!?! Where do
@@ -85,9 +85,9 @@ step 9. The remainder of the figure (from row 6 onwards) displays the motif
    detected in homologous sequences are also shown as the fraction of red vs.
    blue in the motif hit rectangle.
 
->>> In the case that no homolous sequences were detected (see below), it is not
->>> possible to assign a confidence score. Therefore all of the "motif hits"
->>> are a uniform blue color.
+> In the case that no homolous sequences were detected (see below), it is not
+> possible to assign a confidence score. Therefore all of the "motif hits"
+> are a uniform blue color.
 
 step 10. Mouse over a motif hit (which has not been filtered out by the structural
    filter) to details of the motif name and its start and stop potition. This
@@ -96,8 +96,8 @@ step 10. Mouse over a motif hit (which has not been filtered out by the structur
    suggestive of how confident this motif hit is: red for low confidence,
    green for high confidence, as a color spectrum 
 
->>> The confidence score is based on ???. And we can use it to interpret the
->>> motif occurences ???
+> The confidence score is based on ???. And we can use it to interpret the
+> motif occurences ???
 
 step 11. Mouse over a gray rectangle (filtered out) to find out why this hist was
    filtered out. It shows scores for all of the individual criteria used to
@@ -106,7 +106,7 @@ step 11. Mouse over a gray rectangle (filtered out) to find out why this hist wa
    *totalscore P-value*. It also shows the sequence which cased matched the
    motif's regular expression.
 
->>> In general, how do we interpret this information, how is it useful?
+> In general, how do we interpret this information, how is it useful?
 
 ## Interpreting the prediction results: Additional Information 
 
@@ -119,13 +119,13 @@ step 12. Scroll down to below the graphic with the results to find additional
    alignments, conservation features and phophosite features by following the
    respective links.
 
->>> The search for homologous sequences performed against the UniRef 90
->>> database, a dataset of Unique Reference proteins designed to reflect the
->>> entire known univer of proteins in the uniprot database (25348405). Note
->>> that it is possible that the BLAST results are not finished when the
->>> results page is shown: We suggest to refresh the page if you see the
->>> message "Results are not ready... (something something).
->>> The in formation in the MSA is useful becuase... ehhhmm..???
+> The search for homologous sequences performed against the UniRef 90
+> database, a dataset of Unique Reference proteins designed to reflect the
+> entire known univer of proteins in the uniprot database (25348405). Note
+> that it is possible that the BLAST results are not finished when the
+> results page is shown: We suggest to refresh the page if you see the
+> message "Results are not ready... (something something).
+> The in formation in the MSA is useful becuase... ehhhmm..???
 
 step 13. Scroll down a little further to the section titled "Filtering Summary" to
    view some statistics about how many motifs and instances hits were filtered
@@ -138,10 +138,10 @@ step 13. Scroll down a little further to the section titled "Filtering Summary" 
    "Smart" or "Structural Score" filter. To the right of the table, the input
    sequence is shown.
 
->>> Note that the graphical summary above does NOT contain sequences filtered
->>> out b y the "cell compartment" and "taxonomic context" filters. However
->>> those filtered out by by the SMART and Structural scores are shown in the
->>> graphic above (as gray rectangles).
+> Note that the graphical summary above does NOT contain sequences filtered
+> out b y the "cell compartment" and "taxonomic context" filters. However
+> those filtered out by by the SMART and Structural scores are shown in the
+> graphic above (as gray rectangles).
 
 step 14. Scroll further down to the section with the header "Globular domains/ TM
    domains and signal peptide detected by the SMART server". This section
@@ -161,14 +161,14 @@ step 15. Scroll further down to the section titled "The ELMs in the following ta
    stop positions of an instance to view the databaes annotation for that
    instance.
 
->>> Note that this section may also be completely absent at times: If this
->>> sequence has not been annotated in the database, only the motif instances
->>> predictions (see below) will be shown. These occurences are, however,
->>> bonafide instances which have been desribed in the literature, and reviewed,
->>> curated and uploaded by someone to the ELM database. Don't forget to pay 
->>> attention to the "logic" of each instances: A "True Positive" instances
->>> means that this instance is functional, whereas a "True Negative" means
->>> this instance is not functional.
+> Note that this section may also be completely absent at times: If this
+> sequence has not been annotated in the database, only the motif instances
+> predictions (see below) will be shown. These occurences are, however,
+> bonafide instances which have been desribed in the literature, and reviewed,
+> curated and uploaded by someone to the ELM database. Don't forget to pay 
+> attention to the "logic" of each instances: A "True Positive" instances
+> means that this instance is functional, whereas a "True Negative" means
+> this instance is not functional.
 
 step 16. Scroll further down to the section with the heading "Results of ELM motif
    search after globular domain filtering, structural filtering and context
