@@ -15,7 +15,7 @@ ELM is best viewed on a laptop or desktop computer, although tablets and
 smartphones will also work.
 
 ## Submitting a query to ELM 
-1. Click on the "ELM Predictions" button in the menu to access the search query
+step 1. Click on the "ELM Predictions" button in the menu to access the search query
    page. (Queries can also be submitted from the ELM homepage). Figure
    (PREDICTIONS-SEARCH) shows the "ELM predictions" page. Users either provide
    a protein accession (uniprot format) or an amino acid sequence (simply the
@@ -26,12 +26,12 @@ smartphones will also work.
 
 ### Figure: ELM predictions search page.
 
-2. Select the search criteria. It is possible to select a "cell compartment"
+step 2. Select the search criteria. It is possible to select a "cell compartment"
    (explain here). It is also possible to select a "taxonomic contect" (explain
    here). It is also possible to change the "Motif probability cutoff" (explain
    here). We are going to leave these at their default values.
 
-3. Submit the sequence. You will be brought to an intermediate page which your
+step 3. Submit the sequence. You will be brought to an intermediate page which your
    results are being processed, and you should be redirected to the final
    results page within 30 seconds.
 
@@ -39,10 +39,10 @@ smartphones will also work.
 
 ## Interpreting the prediction results: Graphical Summary
 
-4. The Results are summarized in The first figure on the results page
+step 4. The Results are summarized in The first figure on the results page
    (PREDICTIONS-RESULTS). Below we summarize the results of this figure first.
 
-5. The first row contains phosphorylation sites as Retrieved from Phospho.ELM
+step 5. The first row contains phosphorylation sites as Retrieved from Phospho.ELM
    (21062810), and whether the phosphorylated amino acid is a Serine, Threonine
    or Tyrosine. These phosphorylation sites are retrieved from PhosphoELM,
    which are all manually annotated fron literature. You can follow the link to
@@ -53,7 +53,7 @@ smartphones will also work.
 >>> Phosphorilation sites are relevant to interpreting ELM motif detections...
 >>> because???
 
-6. The second row shows when domains are detected from the SMART
+step 6. The second row shows when domains are detected from the SMART
    (9600884,25300481) or Pfam (9600884) database. Annotations are retrieved
    from SMART (both SMART and Pfam), and also include low complexity regions.
    Hovering the mouse over the domain reveals the domain name and its start
@@ -62,7 +62,7 @@ smartphones will also work.
 >>> Motifs are less likely to be found in domain regious, therefore any
 >>> motifs detected within these sites are less likely to be functional.
 
-7.  The third row shows unstructured, or disordered regions within the sequence
+step 7.  The third row shows unstructured, or disordered regions within the sequence
     as predicted by GlobPlot (12824398). [what does hover do?] The 4th & 5th
     Rows contain results from IUPred (15955779), another unstructured region
     priction tool. Protein segments with an IUpred score above 0.5 are 95% likely
@@ -71,10 +71,10 @@ smartphones will also work.
 >>> As motifs are often found in intrinsically disorered regions, motifs that
 fall within regios idenfified by GlobPlot are likely to be functional.
 
-8. The 5th row contains information on secondary structure. HELP?!?!?! Where do
+step 8. The 5th row contains information on secondary structure. HELP?!?!?! Where do
    these predictions come from?
 
-9. The remainder of the figure (from row 6 onwards) displays the motif
+step 9. The remainder of the figure (from row 6 onwards) displays the motif
    occurences detected, as well as a host of information about the context of
    the motif hit. A blue square indicates a motif instance was found, and the
    intensity of the color indicates the confidence assoaciated with that motif detection.
@@ -89,7 +89,7 @@ fall within regios idenfified by GlobPlot are likely to be functional.
 >>> possible to assign a confidence score. Therefore all of the "motif hits"
 >>> are a uniform blue color.
 
-10. Mouse over a motif hit (which has not been filtered out by the structural
+step 10. Mouse over a motif hit (which has not been filtered out by the structural
    filter) to details of the motif name and its start and stop potition. This
    box also shows the amino acid sequence which matched the motif, as well as
    the confidence score. The color of the confidence score title box is also
@@ -99,7 +99,7 @@ fall within regios idenfified by GlobPlot are likely to be functional.
 >>> The confidence score is based on ???. And we can use it to interpret the
 >>> motif occurences ???
 
-11. Mouse over a gray rectangle (filtered out) to find out why this hist was
+step 11. Mouse over a gray rectangle (filtered out) to find out why this hist was
    filtered out. It shows scores for all of the individual criteria used to
    filter out a sequence: The name of the domain, the *accessibility score* ,
    *secondary structure score*, *combined total score*, and the associated
@@ -110,7 +110,7 @@ fall within regios idenfified by GlobPlot are likely to be functional.
 
 ## Interpreting the prediction results: Additional Information 
 
-12. Scroll down to below the graphic with the results to find additional
+step 12. Scroll down to below the graphic with the results to find additional
    information on the motifs found. The first section contains links to
    multiple sequence alignments in the case that homologous sequences were
    detected. The multiple sequence alignmets can be viewed by clicking on the
@@ -127,7 +127,7 @@ fall within regios idenfified by GlobPlot are likely to be functional.
 >>> message "Results are not ready... (something something).
 >>> The in formation in the MSA is useful becuase... ehhhmm..???
 
-13. Scroll down a little further to the section titled "Filtering Summary" to
+step 13. Scroll down a little further to the section titled "Filtering Summary" to
    view some statistics about how many motifs and instances hits were filtered
    out. The first 2 lines contain information of if and which filtere were
    applied in step 2 of this protocol. The first two rows of the table show how
@@ -143,13 +143,13 @@ fall within regios idenfified by GlobPlot are likely to be functional.
 >>> those filtered out by by the SMART and Structural scores are shown in the
 >>> graphic above (as gray rectangles).
 
-14. Scroll further down to the section with the header "Globular domains/ TM
+step 14. Scroll further down to the section with the header "Globular domains/ TM
    domains and signal peptide detected by the SMART server". This section
    contains information on which globular domains were detected by the SMART
    server, and their positions. Clicking on their names will bring you to the
    SMART entry for that domain on the SMART homepage.
 
-15. Scroll further down to the section titled "The ELMs in the following table
+step 15. Scroll further down to the section titled "The ELMs in the following table
     are known instances annotated from the literature". In the case that this
    sequence has been annotated, and is in the database, all instances will be
    shown in this table. For each motif instances, information is shown on the
@@ -170,7 +170,7 @@ fall within regios idenfified by GlobPlot are likely to be functional.
 >>> means that this instance is functional, whereas a "True Negative" means
 >>> this instance is not functional.
 
-16. Scroll further down to the section with the heading "Results of ELM motif
+step 16. Scroll further down to the section with the heading "Results of ELM motif
    search after globular domain filtering, structural filtering and context
    filtering" to obtain an overview of all of the motifs and motif instnaces
    detected. Each row also contains information on the Motif name, the matching
@@ -185,7 +185,7 @@ fall within regios idenfified by GlobPlot are likely to be functional.
    information on the Probability filter: the probability reflects the chance
    to observe this motif in any random amino acid sequence.
 
-17. Scroll futher down to the heading "o  List of excluded ELMs falling inside
+step 17. Scroll futher down to the heading "o  List of excluded ELMs falling inside
    SMART/PFAM domains and/or scoring poorly with the structural filter (if
    applicable).". This table is (almost) identical to the one above, but shows
    information for motif instances which were rejected by the structure filter
