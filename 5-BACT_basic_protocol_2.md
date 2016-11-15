@@ -15,16 +15,20 @@ ELM is best viewed on a laptop or desktop computer, although tablets and
 smartphones will also work.
 
 ## Submitting a query to ELM 
+
+![](Figures/BACT_basic_protocol_2/prediction_input.png)
+**Figure BACT-BP-1:** The input query page for finding motifs in ELM. The
+sequence for SRC kindase signaling inhibitor was insered as an example for this
+article.
+ 
 step 1. Click on the "ELM Predictions" button in the menu to access the search query
    page. (Queries can also be submitted from the ELM homepage). Figure
-   (PREDICTIONS-SEARCH) shows the "ELM predictions" page. Users either provide
+   BACT-BP-1 shows the "ELM predictions" page. Users either provide
    a protein accession (uniprot format) or an amino acid sequence (simply the
    sequence, or a FASTA formatted entry). Enter the accession "HUGOs_PROTEIN"
     
 > When you enter an accession, the query is still performed on the sequence,
 > but the sequence is automatically retrived from Expasy (expasy, right?).
-
-### Figure: ELM predictions search page.
 
 step 2. Select the search criteria. It is possible to select a "cell compartment"
    (explain here). It is also possible to select a "taxonomic contect" (explain
@@ -39,8 +43,16 @@ step 3. Submit the sequence. You will be brought to an intermediate page which y
 
 ## Interpreting the prediction results: Graphical Summary
 
+![](Figures/BACT_basic_protocol_2/output_graphic.png)
+**Figure BACT-BP-2:** The graphical results summary for SRC kindase signaling inhibitor
+1 (SRCN1_HUMAN). Note that not all motif hits are shown: the image is chopped
+off at the bottom. The protein has a handfull of structural features (shown in
+the top 5 rows). The motif hits are shown as blue boxes, the intensity of which
+indicates the conficence score. See the legend at the top of the figure for
+more information.
+
 step 4. The Results are summarized in The first figure on the results page
-   (PREDICTIONS-RESULTS). Below we summarize the results of this figure first.
+   (see figure BACT-BP-2). Below we summarize the results of this figure first.
 
 step 5. The first row contains phosphorylation sites as Retrieved from Phospho.ELM
    (21062810), and whether the phosphorylated amino acid is a Serine, Threonine
@@ -110,8 +122,13 @@ step 11. Mouse over a gray rectangle (filtered out) to find out why this hist wa
 
 ## Interpreting the prediction results: Additional Information 
 
+![](Figures/BACT_basic_protocol_2/output_alignment.png)
+**Figure BACT-BP-3:** This section of the results contains links to view the
+alignment of homologous proteins. Click any of the linkts to find SRCN1
+homologs identified in the UniRef90 database.
+
 step 12. Scroll down to below the graphic with the results to find additional
-   information on the motifs found. The first section contains links to
+   information on the motifs found (figure BACT-BP-3). The first section contains links to
    multiple sequence alignments in the case that homologous sequences were
    detected. The multiple sequence alignmets can be viewed by clicking on the
    link. Note that this requries you to have a Java browser pluging.
@@ -127,9 +144,16 @@ step 12. Scroll down to below the graphic with the results to find additional
 > message "Results are not ready... (something something).
 > The in formation in the MSA is useful becuase... ehhhmm..???
 
+![](Figures/BACT_basic_protocol_2/output_filter.png)
+**Figure BACT-BP-4:** A summar of how many motifs and instances were predicted,
+and how many were filtered out by various filters. As no user supplied filters
+were applied, motifs are only filtered out for structural reasons. In this
+case, 2 motifs (elms) and 9 instances were filtered out becuase they occured
+within a SMART domain.
+
 step 13. Scroll down a little further to the section titled "Filtering Summary" to
    view some statistics about how many motifs and instances hits were filtered
-   out. The first 2 lines contain information of if and which filtere were
+   out (figure BACT-BP-4). The first 2 lines contain information of if and which filtere were
    applied in step 2 of this protocol. The first two rows of the table show how
    many ELMs and instances were filtered out due to these filters. The
    next two lines (Smart & Structural score) show exactly how many motifs and
@@ -143,14 +167,22 @@ step 13. Scroll down a little further to the section titled "Filtering Summary" 
 > those filtered out by by the SMART and Structural scores are shown in the
 > graphic above (as gray rectangles).
 
+![](Figures/BACT_basic_protocol_2/output_domains.png)
+**Figure BACT-BP-5:** The list of SMART and Pfam domains detected. In this
+instance, only a single coiled-coil region was identified.
+
 step 14. Scroll further down to the section with the header "Globular domains/ TM
-   domains and signal peptide detected by the SMART server". This section
+   domains and signal peptide detected by the SMART server" (Figure BACT-BP-5). This section
    contains information on which globular domains were detected by the SMART
    server, and their positions. Clicking on their names will bring you to the
    SMART entry for that domain on the SMART homepage.
 
+![](Figures/BACT_basic_protocol_2/output_instances.png)
+**Figure BACT-BP-6:** Thie protein was already annotated in the database, and
+has a single instances  of the motif "LIG_SxIP_EBH_1" annotated.
+
 step 15. Scroll further down to the section titled "The ELMs in the following table
-    are known instances annotated from the literature". In the case that this
+    are known instances annotated from the literature" (Figure BACT-BP-6). In the case that this
    sequence has been annotated, and is in the database, all instances will be
    shown in this table. For each motif instances, information is shown on the
    amino acid sequence that matched the motif regular expression, their positions,
@@ -170,10 +202,14 @@ step 15. Scroll further down to the section titled "The ELMs in the following ta
 > means that this instance is functional, whereas a "True Negative" means
 > this instance is not functional.
 
+![](Figures/BACT_basic_protocol_2/output_predictions.png)
+**Figure BACT-BP-7:** This table contains the list of motifs detected in the
+sequence (only the top part of the table is shown).
+
 step 16. Scroll further down to the section with the heading "Results of ELM motif
    search after globular domain filtering, structural filtering and context
    filtering" to obtain an overview of all of the motifs and motif instnaces
-   detected. Each row also contains information on the Motif name, the matching
+   detected (Figure BACT-BP-7). Each row also contains information on the Motif name, the matching
    pep tide sequence and its position. What does the View in Jmol do? Further
    information is shown abot the ELM, cell comparment and its regular
    expression. If the motif was detected ina homolog, the column called
@@ -185,9 +221,14 @@ step 16. Scroll further down to the section with the heading "Results of ELM mot
    information on the Probability filter: the probability reflects the chance
    to observe this motif in any random amino acid sequence.
 
+![](Figures/BACT_basic_protocol_2/output_filtered.png)
+**Figure BACT-BP-8:** This table contains the list of motifs detected in the
+sequence (only the top part of the table is shown) which were excluded due to
+structural filters. 
+
 step 17. Scroll futher down to the heading "o  List of excluded ELMs falling inside
    SMART/PFAM domains and/or scoring poorly with the structural filter (if
-   applicable).". This table is (almost) identical to the one above, but shows
+   applicable)." (Figure BACT-BP-8). This table is (almost) identical to the one above, but shows
    information for motif instances which were rejected by the structure filter
    (right?). **WAIT?!?** whats the difference between this, and the column
    "structure filter" above?
