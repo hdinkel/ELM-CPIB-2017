@@ -17,3 +17,12 @@ sed -i 's#\[\](Figures#\[\](../Figures#' $ALL_MD
 
 echo ""
 echo "Merged output to: $ALL_MD"
+
+cd merged
+pandoc -o complete.tex complete.md
+sed -i 's/includegraphics/includegraphics[width=\\textwidth]/g' complete.tex 
+pdflatex RB-CurrentProtocol_clean.tex
+rm RB-CurrentProtocol_clean.aux
+rm RB-CurrentProtocol_clean.out
+rm RB-CurrentProtocol_clean.log
+cd -

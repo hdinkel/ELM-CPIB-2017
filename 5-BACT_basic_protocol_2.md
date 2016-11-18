@@ -5,7 +5,8 @@ sequences.
 
 We will use as an example protein "SRC kinase signaling inhibitor 1" (uniprot
 ID: Q9C0H9), which is suspected to ????? (add biological example question
-here?)
+here?)  **Hugo:** What are we expecting? Can you add two or three sentnces
+explaining what we expect, and maybe a "biological question"?
 
 ## Necessary Resources
 
@@ -26,7 +27,8 @@ step 1. Click on the "ELM Predictions" button in the menu to access the search q
    page. (Queries can also be submitted from the ELM homepage). Figure
    BACT-BP-1 shows the "ELM predictions" page. Users either provide
    a protein accession (uniprot format) or an amino acid sequence (simply the
-   sequence, or a FASTA formatted entry). Enter the accession "HUGOs_PROTEIN"
+   sequence, or a FASTA formatted entry). Enter the sequence for the protein:
+   SRCN1_HUMAN (uniprot ID: Q9C0H9)
     
 > When you enter an accession, the query is still performed on the sequence,
 > but the sequence is automatically retrieved from Expasy (expasy, right?).
