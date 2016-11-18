@@ -92,7 +92,7 @@ P04637	ELM	sequence_feature	305	323	.	.	.	ID=TRG_NLS_Bipartite_1
 MEEPQSDPSVEPPLSQETFSDLWKLLPENNVLSPLPSQAMDDLMLSPDDIEQWFTEDPGPDEAPRMPEAAPPVAPAPAAPTPAAPAPAPSWPLSSSVPSQKTYQGSYGFRLGFLHSGTAKSVTCTYSPALNKMFCQLAKTCPVQLWVDSTPPPGTRVRAMAIYKQSQHMTEVVRRCPHHERCSDSDGLAPPQHLIRVEGNLRVEYLDDRNTFRHSVVVPYEPPEVGSDCTTIHYNYMCNSSCMGGMNRRPILTIITLEDSSGNLLGRNSFEVRVCACPGRDRRTEEENLRKKGEPHHELPPGSTKRALPNNTSSSPQPKKKPLDGEYFTLQIRGRERFEMFRELNEALELKDAQAGKEPGGS
 ```
 
-step 5. Use the following URL: ''http://elm.eu.org/instances.tsv?q=CLV_&taxon=aedes+agypti'
+step 5. Use the following URL: 'http://elm.eu.org/instances.tsv?q=CLV_&taxon=aedes+agypti'
 
 > Use the query term 'q=CLV_' to get all instances of cleavage site classes.
 > To limit your search to 'yellow fever mosquito' instances, use the parameter 'taxon=' followed by the taxon's scientific name, replacing spaces with '+':
