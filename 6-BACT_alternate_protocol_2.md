@@ -10,6 +10,15 @@ However, any browser can be used to access the server, most browsers however dow
 
 ## Downloading all ELM classes
 
+![](Figures/BACT_alternate_protocol_2/elm_downloads_html.png)
+
+**Figure ELM-Downloads:** The ELM downloads page, which holds information about
+the different types of data (such as "Classes", "Instances", etc; see menu to
+the right) that can be obtain from the server. The orange boxes are clickable
+links, the url following them are used to highlight the URL scheme used by the
+server (bold font denotes specifics used in the examples such as query terms,
+or formats).
+
 step 1. Direct your browser to the url 'http://elm.eu.org/downloads' or choose 'ELM Downloads' from the Menu at 'http://elm.eu.org' (see the [/Figures/elm_downloads_html.png](screenshot) figure showing the ELM downloads website).
 
 >>> This webpage contains links and descriptions on how to download ELM data in text format.
@@ -29,8 +38,11 @@ step 3. Use the following URL: 'http://elm.eu.org/elms.html?q=CSK'
 >>> This will again show the webpage with all annotated ELM classes, this time however limited to those matching the query term 'PCSK'.
 >>> Next, we are going to use the same URL pattern, but with '.tsv' to download the same data as actual data, not HTML.
 
+![](Figures/BACT_alternate_protocol_2/elm_curl_classes_CSK.png)
+**Figure ELM-Curl-Classes**:
+Screenshot of a terminal window using `curl` to download all ELM classes matching the term 'CSK'.
+
 step 4. Use the following URL: 'http://elm.eu.org/elms.tsv?q=CSK'
-See Figure [/Figures/elm_curl_classes_CSK.png](elm_curl_classes_CSK.png)
 
 >>> By exchanging the '.html' part of the url with '.tsv', we ask the webserver to give us the data in TSV (tab-separated) format.
 >>> This query should download a file such as the following:
@@ -52,8 +64,12 @@ See Figure [/Figures/elm_curl_classes_CSK.png](elm_curl_classes_CSK.png)
 ```
 
 
+![](Figures/BACT_alternate_protocol_2/elm_curl_instances_p53_human.png)
+**Figure ELM-Curl-Instances-P53**:
+Screenshot of a terminal window using `curl` to download all ELM instances annotated for sequence p53_human.
+
+
 step 4. Use the following URL: 'http://elm.eu.org/instances.gff?q=p53_human'
-See Figure [/Figures/elm_curl_instances_p53_human.png](elm_curl_instances_p53_human.png)
 
 ```
 > curl 'http://elm.eu.org/instances.gff?q=p53_human'
