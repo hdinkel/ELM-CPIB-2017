@@ -17,3 +17,8 @@ sed -i 's#\[\](Figures#\[\](../Figures#' $ALL_MD
 
 echo ""
 echo "Merged output to: $ALL_MD"
+
+cd merged
+pandoc -o complete.tex complete.md
+pdflatex RB-CurrentProtocol_clean.tex
+cd -
