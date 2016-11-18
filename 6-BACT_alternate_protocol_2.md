@@ -96,10 +96,10 @@ step 5. Use the following URL: ''http://elm.eu.org/instances.tsv?q=CLV_&taxon=ae
 
 > Use the query term 'q=CLV_' to get all instances of cleavage site classes.
 > To limit your search to 'yellow fever mosquito' instances, use the parameter 'taxon=' followed by the taxon's scientific name, replacing spaces with '+':
+
 ```
 > curl 'http://elm.eu.org/instances.tsv?q=CLV_&taxon=aedes+agypti'
-
-
+```
 
 More data (interactions, domains, methods, etc.) can be downloaded from ELM in
 analogous fashion. Different formats are available depending on data type (the most
