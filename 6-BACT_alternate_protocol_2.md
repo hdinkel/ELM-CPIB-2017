@@ -21,22 +21,22 @@ or formats).
 
 step 1. Direct your browser to the url 'http://elm.eu.org/downloads' or choose 'ELM Downloads' from the Menu at 'http://elm.eu.org' (see the [/Figures/elm_downloads_html.png](screenshot) figure showing the ELM downloads website).
 
->>> This webpage contains links and descriptions on how to download ELM data in text format.
->>> The information is separated in individual tables, eg. for 'Classes', 'Instances', and so on...
->>> Note that each table also shows the 'last modified date' indicating when the particular data was last updated.
->>> This is useful if you regularly want to update your local data with ELM data, as you can quickly check whether you actually _need_ to download the files again...
->>> Note the orange colored download links highlighting different formats:
->>> For many pages, which exist in html format (ending in '.html'), there also exists an additional URL/file extension to get the data in other formats.
+> This webpage contains links and descriptions on how to download ELM data in text format.
+> The information is separated in individual tables, eg. for 'Classes', 'Instances', and so on...
+> Note that each table also shows the 'last modified date' indicating when the particular data was last updated.
+> This is useful if you regularly want to update your local data with ELM data, as you can quickly check whether you actually _need_ to download the files again...
+> Note the orange colored download links highlighting different formats:
+> For many pages, which exist in html format (ending in '.html'), there also exists an additional URL/file extension to get the data in other formats.
 
 step 2. Click on the first orange 'html' link in the table "Classes" or use the following URL: 'http://elm.eu.org/elms.html'
 
->>> This webpage shows all annotated ELM classes.
->>> Next, we are going to use the query parameter 'q' to limit our search
+> This webpage shows all annotated ELM classes.
+> Next, we are going to use the query parameter 'q' to limit our search
 
 step 3. Use the following URL: 'http://elm.eu.org/elms.html?q=CSK'
 
->>> This will again show the webpage with all annotated ELM classes, this time however limited to those matching the query term 'PCSK'.
->>> Next, we are going to use the same URL pattern, but with '.tsv' to download the same data as actual data, not HTML.
+> This will again show the webpage with all annotated ELM classes, this time however limited to those matching the query term 'PCSK'.
+> Next, we are going to use the same URL pattern, but with '.tsv' to download the same data as actual data, not HTML.
 
 ![](Figures/BACT_alternate_protocol_2/elm_curl_classes_CSK.png)
 **Figure ELM-Curl-Classes**:
@@ -44,8 +44,8 @@ Screenshot of a terminal window using `curl` to download all ELM classes matchin
 
 step 4. Use the following URL: 'http://elm.eu.org/elms.tsv?q=CSK'
 
->>> By exchanging the '.html' part of the url with '.tsv', we ask the webserver to give us the data in TSV (tab-separated) format.
->>> This query should download a file such as the following:
+> By exchanging the '.html' part of the url with '.tsv', we ask the webserver to give us the data in TSV (tab-separated) format.
+> This query should download a file such as the following:
 ```
 > curl 'http://elm.eu.org/elms.tsv?q=CSK'
 #ELM_Classes_Download_Version: 1.4
@@ -96,10 +96,10 @@ step 5. Use the following URL: ''http://elm.eu.org/instances.tsv?q=CLV_&taxon=ae
 
 > Use the query term 'q=CLV_' to get all instances of cleavage site classes.
 > To limit your search to 'yellow fever mosquito' instances, use the parameter 'taxon=' followed by the taxon's scientific name, replacing spaces with '+':
+
 ```
 > curl 'http://elm.eu.org/instances.tsv?q=CLV_&taxon=aedes+agypti'
-
-
+```
 
 More data (interactions, domains, methods, etc.) can be downloaded from ELM in
 analogous fashion. Different formats are available depending on data type (the most
