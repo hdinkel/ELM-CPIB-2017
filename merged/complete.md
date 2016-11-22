@@ -14,7 +14,7 @@ SLiMs are generally located in intrinsically disordered regions (IDR) of the pro
 
 Due to their degenerate nature, motif sequences contain only very little information, and many short sequences in a proteome will match motif patterns. However, most of these matches will not represent functional motifs, and hence, when scanning a proteome for putative motifs using only the motif sequence patterns will yield a large number of false positive instances, far exceeding the number of true motifs. Therefore, reliable motif detection cannot go without experimental validation of candidate motifs, using different types of experiments and techniques (PMID:26581338). This however does not mean that bioinformatics analysis cannot guide researchers towards a subset of candidate motifs that have a higher probability to be functional and help rule out those candidate motifs that are likely to be false positives. Taking into account additional information, besides a match to a sequence pattern defining a SLiM, can greatly narrow the selection of putative motifs for experimental validation. Additional data for in silico analysis include conservation of the motif sequence, the location of the motif within the protein’s structure and its accessibility for its binding partner, validated interaction with the binding partner, and in-cell co-localisation with the binding partner. The availability and usefulness of these additional data for SLiM discovery depends on their extensive and correct biocuration. A vast and increasing amount of biological data is available in a wide variety of sources, including the literature and large-scale datasets. In order to facilitate integration of data, they need to be collected, annotated and formatted in central data and knowledge repositories. The ELM database provides such a repository for experimentally validated linear motif classes and instances. The ELM prediction tool in turn relies on annotated data, both from the ELM database and other resources, to accurately analyse unknown sequences for candidate motifs and assist researchers in selecting the most plausible ones for experimental validation and discard likely false positive hits, saving them valuable time and assets (PMID:22110040).
 
-# Basic Protocol 1: Searching & Browsing the ELM database
+# Basic protocol 1: explore the manually curated information for the p53 protein in the ELM DB
 
 *(introduction goes here)*
 
@@ -22,46 +22,168 @@ Due to their degenerate nature, motif sequences contain only very little informa
 
 ### Software
 
-## (First subheading goes here)
+### Hardware 
 
-step 1. (First step goes here)
+Step 1. Open your browser (any one which we should not recommend?) at
+http://elm.eu.org and enter the Uniprot identifier or accession number of the
+protein, e.g. P53_HUMAN, for which you would like to explore the information
+stored in the ELM DB. Select the specie and the cellular compartment
+(optional), then click submit (Fig. 1a and 1b)
 
-step 2. (goes here)
 
-*note: please start leave the word 'step' in the step. This is needed for
-gitlab to not auto-renumerate the numbers.*
+![](../Figures/TP53_basic_protocol_1/input_page.png)
+**Figure 1a**
 
-*instructions: write steps in numerical order (1,2,3... etc), separated by
-logical subheadings to clarify what is being done in each series of steps.*
 
-> Let's use "blockquotes" (>) For annotations.
-> *instructions: Useful auxiliary information can be included after some
-> protocol steps (as needed) in the form of italicized annotations.*
+![](../Figures/TP53_basic_protocol_1/input_page_seq.png)
+**Figure 1b** If the protein of interest has some annotation in the ELM DB the
+information relative the sequence, cell compartment and taxonomy will be
+automatically filled.
 
-# Alternate Protocol 1: Predicting ELMS in sequences using REST API
 
-*(introduction goes here)*
+Step 2. The page results will open in a new tab (Fig.2)
 
-## Necessary Resources
 
-### Software
+![](../Figures/TP53_basic_protocol_1/output_graphic.png)
+**Figure 2**
 
-## (First subheading goes here)
+Step 3. This page show the list of predicted and annotated ELM for p53. For
+details on the predicted ELM see the chapter xxx. Scroll down the page until
+the section with the p53 instances annotated from the literature. (Fig.3)
+ 
 
-step 1. (First step goes here)
+![](../Figures/TP53_basic_protocol_1/output_table.png)
+**Figure 3**
 
-*note: please start leave the word 'step' in the step. This is needed for
-gitlab to not auto-renumerate the numbers.*
 
-*instructions: write steps in numerical order (1,2,3... etc), separated by
-logical subheadings to clarify what is being done in each series of steps.*
+Step 4. In order to view the information relative to the p53 annotates
+instances one can a) click on the Elm Name, e.g. DOC_CYCLIN_1, to go to the
+page with the information relative to this ELM motif and then click on p53
+motif subsequence (GQSTSRHKKLMFKTEGPDSD) in the instance table (Fig.4), or b)
+click on the position of the p53 instance, i.e. 381-385, for the DOC_CYCLIN_1
+motif (Fig.5).
 
-*instructions: write steps in numerical order (1,2,3... etc), separated by
-logical subheadings to clarify what is being done in each series of steps.*
 
->>> Let's use "blockquotes" (>>>) For annotations.
->>> *instructions: Useful auxiliary information can be included after some
->>> protocol steps (as needed) in the form of italicized annotations.*
+![](../Figures/TP53_basic_protocol_1/doc_cyclin_page.png)
+**Figure 4**
+
+
+![](../Figures/TP53_basic_protocol_1/doc_cyclin_experiments.png)
+**Figure 5**
+
+
+Step 5. Data relative to the instance evidences include: Evidence class, PSMI
+id and Method name, type of evidence, reference, Logic, Reliability and Notes
+(internal method classification).  How much description should we add here,
+e.g. is enough to mention that for the methods ELM use the PSMI ontology and
+provide the link? 
+
+Following the links to external DB are available relative to:
+Instance
+- http://www.uniprot.org/uniprot/P04637
+- http://www.rcsb.org/pdb/explore/explore.do?pdbId=1H26
+- https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=9606
+
+Instance evidence
+- http://www.ebi.ac.uk/ols/ontologies/mi/terms?obo_id=MI%3A0405
+- https://www.ncbi.nlm.nih.gov/pubmed/10884347
+
+Pathway
+- http://www.kegg.jp/kegg-bin/show_pathway?map=hsa04210&mapscale=1.0&show_description=hide&multi_query=hsa:7157+red,black%0D%0A
+
+
+Step 6. Go back to the table with the p53 annotated instance (Fig.3) and select
+the subsequence of the DOC_WW_Pin1_4 motif (Fig. 6)
+
+
+![](../Figures/TP53_basic_protocol_1/doc_cyclin_details.png)
+**Figure 6**
+
+
+For this motif, curated data from the ELM switch Db are shown
+
+
+![](../Figures/TP53_basic_protocol_1/doc_cyclin_switches.png)
+**Figure 7**
+
+# Basic protocol 2: Explore the content of the ELM DB
+
+step 1. Go to the http://elm.eu.org and click on the tab ELM DB to explore the
+content of the different types of data about experimentally validated ELM which
+are manually curated from the literature (Figure 1).
+
+
+![](../Figures/TP53_basic_protocol_2/search.png)
+**Figure 1**
+
+
+step 2. Summary of the ELM classes (Figure 2). For each class the
+following information are provided: ELM identifier, short description,
+regular expression, number of instance annotated for each class, and
+number of structure available. For details on each class, click on the ELM
+identifier 
+
+
+![](../Figures/TP53_basic_protocol_2/search_results.png)
+**Figure 2**
+
+
+step 3. ELM instance. Some filters (instance logic, organism and ELM class) can
+be applied to retrieve  the instance of interest (Figure 3)
+
+
+![](../Figures/TP53_basic_protocol_2/instances.png)
+**Figure 3**
+
+
+step 4. Table of the methods used for the ELM annotation. The methods are
+provided by the  PsiMi (Proteomics Standards Initiative - Molecular
+Interaction)  (Figure 4)
+
+
+![](../Figures/TP53_basic_protocol_2/methods.png)
+**Figure 4**
+
+
+step 5. Table of the structures linked to an ELM instance (Figure 5)
+
+
+![](../Figures/TP53_basic_protocol_2/pdbs.png)
+**Figure 5**
+
+
+step 6. Table of the binding domains (Figure 6)
+
+
+![](../Figures/TP53_basic_protocol_2/interactions.png)
+**Figure 6**
+
+
+step 7. Table of the ELM switches (Figure 7)
+
+
+![](../Figures/TP53_basic_protocol_2/switches.png)
+**Figure 7**
+
+
+step 8. List of pathways from the "Kyoto Encyclopedia of Genes and Genomes" (KEGG) database mapped to ELM instance (Fig 8)
+Are the pathways described elsewhere? Otherwise, I could extend this section
+
+
+![](../Figures/TP53_basic_protocol_2/pathways.png)
+**Figure 8**
+
+
+step 9. Table of the ELM instance abused by viruses (Fig 9)
+
+![](../Figures/TP53_basic_protocol_2/viruses.png)
+**Figure 9**
+
+
+step 10. Short description of disease caused by mutation reported in ELM instances. (Fig 10)
+
+![](../Figures/TP53_basic_protocol_2/diseases.png)
+**Figure 10**
 
 # Basic Protocol 2: Predicting ELMs in sequences 
 
@@ -70,7 +192,8 @@ sequences.
 
 We will use as an example protein "SRC kinase signaling inhibitor 1" (uniprot
 ID: Q9C0H9), which is suspected to ????? (add biological example question
-here?)
+here?)  **Hugo:** What are we expecting? Can you add two or three sentnces
+explaining what we expect, and maybe a "biological question"?
 
 ## Necessary Resources
 
@@ -82,7 +205,7 @@ smartphones will also work.
 
 ## Submitting a query to ELM 
 
-![](../Figures/BACT_basic_protocol_2/prediction_input.png){width=100%}
+![](../Figures/BACT_basic_protocol_2/prediction_input.png)
 **Figure BACT-BP-1:** The input query page for finding motifs in ELM. The
 sequence for SRC kinase signaling inhibitor was insered as an example for this
 article.
@@ -91,7 +214,8 @@ step 1. Click on the "ELM Predictions" button in the menu to access the search q
    page. (Queries can also be submitted from the ELM homepage). Figure
    BACT-BP-1 shows the "ELM predictions" page. Users either provide
    a protein accession (uniprot format) or an amino acid sequence (simply the
-   sequence, or a FASTA formatted entry). Enter the accession "HUGOs_PROTEIN"
+   sequence, or a FASTA formatted entry). Enter the sequence for the protein:
+   SRCN1_HUMAN (uniprot ID: Q9C0H9)
     
 > When you enter an accession, the query is still performed on the sequence,
 > but the sequence is automatically retrieved from Expasy (expasy, right?).
@@ -114,7 +238,7 @@ step 3. Retrieve the amino acid sequence from Uniprot, and submit the sequence.
 
 ## Interpreting the prediction results: Graphical Summary
 
-![](../Figures/BACT_basic_protocol_2/output_graphic.png){width=100%}
+![](../Figures/BACT_basic_protocol_2/output_graphic.png)
 **Figure BACT-BP-2:** The graphical results summary for SRC kinase signaling inhibitor
 1 (SRCN1_HUMAN). Note that not all motif hits are shown: the image is chopped
 off at the bottom. The protein has a handful of structural features (shown in
@@ -193,7 +317,7 @@ step 11. Mouse over a gray rectangle (filtered out) to find out why this hit was
 
 ## Interpreting the prediction results: Additional Information 
 
-![](../Figures/BACT_basic_protocol_2/output_alignment.png){width=100%}
+![](../Figures/BACT_basic_protocol_2/output_alignment.png)
 **Figure BACT-BP-3:** This section of the results contains links to view the
 alignment of homologous proteins. Click any of the linkts to find SRCN1
 homologs identified in the UniRef90 database.
@@ -215,7 +339,7 @@ step 12. Scroll down to below the graphic with the results to find additional
 > message "Results are not ready... (something something).
 > The in formation in the MSA is useful because... ehhhmm..???
 
-![](../Figures/BACT_basic_protocol_2/output_filter.png){width=100%}
+![](../Figures/BACT_basic_protocol_2/output_filter.png)
 **Figure BACT-BP-4:** A summary of how many motifs and instances were predicted,
 and how many were filtered out by various filters. As no user supplied filters
 were applied, motifs are only filtered out for structural reasons. In this
@@ -238,7 +362,7 @@ step 13. Scroll down a little further to the section titled "Filtering Summary" 
 > those filtered out by by the SMART and Structural scores are shown in the
 > graphic above (as gray rectangles).
 
-![](../Figures/BACT_basic_protocol_2/output_domains.png){width=100%}
+![](../Figures/BACT_basic_protocol_2/output_domains.png)
 **Figure BACT-BP-5:** The list of SMART and Pfam domains detected. In this
 instance, only a single coiled-coil region was identified.
 
@@ -248,7 +372,7 @@ step 14. Scroll further down to the section with the header "Globular domains/ T
    server, and their positions. Clicking on their names will bring you to the
    SMART entry for that domain on the SMART homepage.
 
-![](../Figures/BACT_basic_protocol_2/output_instances.png){width=100%}
+![](../Figures/BACT_basic_protocol_2/output_instances.png)
 **Figure BACT-BP-6:** Thie protein was already annotated in the database, and
 has a single instances  of the motif "LIG_SxIP_EBH_1" annotated.
 
@@ -273,7 +397,7 @@ step 15. Scroll further down to the section titled "The ELMs in the following ta
 > means that this instance is functional, whereas a "True Negative" means
 > this instance is not functional.
 
-![](../Figures/BACT_basic_protocol_2/output_predictions.png){width=100%}
+![](../Figures/BACT_basic_protocol_2/output_predictions.png)
 **Figure BACT-BP-7:** This table contains the list of motifs detected in the
 sequence (only the top part of the table is shown).
 
@@ -292,7 +416,7 @@ step 16. Scroll further down to the section with the heading "Results of ELM mot
    information on the Probability filter: the probability reflects the chance
    to observe this motif in any random amino acid sequence.
 
-![](../Figures/BACT_basic_protocol_2/output_filtered.png){width=100%}
+![](../Figures/BACT_basic_protocol_2/output_filtered.png)
 **Figure BACT-BP-8:** This table contains the list of motifs detected in the
 sequence (only the top part of the table is shown) which were excluded due to
 structural filters. 
@@ -316,7 +440,7 @@ However, any browser can be used to access the server, most browsers however dow
 
 ## Downloading all ELM classes
 
-![](../Figures/BACT_alternate_protocol_2/elm_downloads_html.png){width=100%}
+![](../Figures/BACT_alternate_protocol_2/elm_downloads_html.png)
 
 **Figure ELM-Downloads:** The ELM downloads page, which holds information about
 the different types of data (such as "Classes", "Instances", etc; see menu to
@@ -344,7 +468,7 @@ step 3. Use the following URL: 'http://elm.eu.org/elms.html?q=CSK'
 > This will again show the webpage with all annotated ELM classes, this time however limited to those matching the query term 'PCSK'.
 > Next, we are going to use the same URL pattern, but with '.tsv' to download the same data as actual data, not HTML.
 
-![](../Figures/BACT_alternate_protocol_2/elm_curl_classes_CSK.png){width=100%}
+![](../Figures/BACT_alternate_protocol_2/elm_curl_classes_CSK.png)
 **Figure ELM-Curl-Classes**:
 Screenshot of a terminal window using `curl` to download all ELM classes matching the term 'CSK'.
 
@@ -370,7 +494,7 @@ step 4. Use the following URL: 'http://elm.eu.org/elms.tsv?q=CSK'
 ```
 
 
-![](../Figures/BACT_alternate_protocol_2/elm_curl_instances_p53_human.png){width=100%}
+![](../Figures/BACT_alternate_protocol_2/elm_curl_instances_p53_human.png)
 **Figure ELM-Curl-Instances-P53**:
 Screenshot of a terminal window using `curl` to download all ELM instances annotated for sequence p53_human.
 
@@ -398,7 +522,7 @@ P04637	ELM	sequence_feature	305	323	.	.	.	ID=TRG_NLS_Bipartite_1
 MEEPQSDPSVEPPLSQETFSDLWKLLPENNVLSPLPSQAMDDLMLSPDDIEQWFTEDPGPDEAPRMPEAAPPVAPAPAAPTPAAPAPAPSWPLSSSVPSQKTYQGSYGFRLGFLHSGTAKSVTCTYSPALNKMFCQLAKTCPVQLWVDSTPPPGTRVRAMAIYKQSQHMTEVVRRCPHHERCSDSDGLAPPQHLIRVEGNLRVEYLDDRNTFRHSVVVPYEPPEVGSDCTTIHYNYMCNSSCMGGMNRRPILTIITLEDSSGNLLGRNSFEVRVCACPGRDRRTEEENLRKKGEPHHELPPGSTKRALPNNTSSSPQPKKKPLDGEYFTLQIRGRERFEMFRELNEALELKDAQAGKEPGGS
 ```
 
-step 5. Use the following URL: ''http://elm.eu.org/instances.tsv?q=CLV_&taxon=aedes+agypti'
+step 5. Use the following URL: 'http://elm.eu.org/instances.tsv?q=CLV_&taxon=aedes+agypti'
 
 > Use the query term 'q=CLV_' to get all instances of cleavage site classes.
 > To limit your search to 'yellow fever mosquito' instances, use the parameter 'taxon=' followed by the taxon's scientific name, replacing spaces with '+':
