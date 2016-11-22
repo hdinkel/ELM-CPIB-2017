@@ -28,48 +28,48 @@ Step 1. Open your browser (any one which we should not recommend?) at
 http://elm.eu.org and enter the Uniprot identifier or accession number of the
 protein, e.g. P53_HUMAN, for which you would like to explore the information
 stored in the ELM DB. Select the specie and the cellular compartment
-(optional), then click submit (Fig. 1a and 1b)
+(optional), then click submit (Fig. TP53-BP1-1a and TP53-1-1b)
 
 
 ![](../Figures/TP53_basic_protocol_1/input_page.png)
-**Figure 1a**
+**Figure TP53-BP1-1a**
 
 
 ![](../Figures/TP53_basic_protocol_1/input_page_seq.png)
-**Figure 1b** If the protein of interest has some annotation in the ELM DB the
-information relative the sequence, cell compartment and taxonomy will be
-automatically filled.
+**Figure TP53-BP1-1b** If the protein of interest has some annotation in
+the ELM DB the information relative the sequence, cell compartment and taxonomy
+will be automatically filled.
 
 
-Step 2. The page results will open in a new tab (Fig.2)
+Step 2. The page results will open in a new tab (Fig. TP53-BP1-2)
 
 
 ![](../Figures/TP53_basic_protocol_1/output_graphic.png)
-**Figure 2**
+**Figure TP53-BP1-2**
 
 Step 3. This page show the list of predicted and annotated ELM for p53. For
 details on the predicted ELM see the chapter xxx. Scroll down the page until
-the section with the p53 instances annotated from the literature. (Fig.3)
+the section with the p53 instances annotated from the literature. (Fig TP53-BP1-3)
  
 
 ![](../Figures/TP53_basic_protocol_1/output_table.png)
-**Figure 3**
+**Figure TP53-BP1- 3**
 
 
 Step 4. In order to view the information relative to the p53 annotates
 instances one can a) click on the Elm Name, e.g. DOC_CYCLIN_1, to go to the
 page with the information relative to this ELM motif and then click on p53
-motif subsequence (GQSTSRHKKLMFKTEGPDSD) in the instance table (Fig.4), or b)
+motif subsequence (GQSTSRHKKLMFKTEGPDSD) in the instance table (Fig TP53-BP1-4), or b)
 click on the position of the p53 instance, i.e. 381-385, for the DOC_CYCLIN_1
-motif (Fig.5).
+motif (Fig TP53-BP1-5).
 
 
 ![](../Figures/TP53_basic_protocol_1/doc_cyclin_page.png)
-**Figure 4**
+**Figure TP53-BP1- 4**
 
 
 ![](../Figures/TP53_basic_protocol_1/doc_cyclin_experiments.png)
-**Figure 5**
+**Figure TP53-BP1- 5**
 
 
 Step 5. Data relative to the instance evidences include: Evidence class, PSMI
@@ -92,32 +92,32 @@ Pathway
 - http://www.kegg.jp/kegg-bin/show_pathway?map=hsa04210&mapscale=1.0&show_description=hide&multi_query=hsa:7157+red,black%0D%0A
 
 
-Step 6. Go back to the table with the p53 annotated instance (Fig.3) and select
-the subsequence of the DOC_WW_Pin1_4 motif (Fig. 6)
+Step 6. Go back to the table with the p53 annotated instance (Fig TP53-BP1-3) and select
+the subsequence of the DOC_WW_Pin1_4 motif (Fig TP53-BP1-6)
 
 
 ![](../Figures/TP53_basic_protocol_1/doc_cyclin_details.png)
-**Figure 6**
+**Figure TP53-BP1- 6**
 
 
 For this motif, curated data from the ELM switch Db are shown
 
 
 ![](../Figures/TP53_basic_protocol_1/doc_cyclin_switches.png)
-**Figure 7**
+**Figure TP53-BP1- 7**
 
 # Basic protocol 2: Explore the content of the ELM DB
 
 step 1. Go to the http://elm.eu.org and click on the tab ELM DB to explore the
 content of the different types of data about experimentally validated ELM which
-are manually curated from the literature (Figure 1).
+are manually curated from the literature (Figure TP53-BP2-1).
 
 
 ![](../Figures/TP53_basic_protocol_2/search.png)
-**Figure 1**
+**Figure TP53-BP2-1**
 
 
-step 2. Summary of the ELM classes (Figure 2). For each class the
+step 2. Summary of the ELM classes (Figure TP53-BP2-2). For each class the
 following information are provided: ELM identifier, short description,
 regular expression, number of instance annotated for each class, and
 number of structure available. For details on each class, click on the ELM
@@ -125,65 +125,65 @@ identifier
 
 
 ![](../Figures/TP53_basic_protocol_2/search_results.png)
-**Figure 2**
+**Figure TP53-BP2-2**
 
 
 step 3. ELM instance. Some filters (instance logic, organism and ELM class) can
-be applied to retrieve  the instance of interest (Figure 3)
+be applied to retrieve  the instance of interest (Figure TP53-BP2-3)
 
 
 ![](../Figures/TP53_basic_protocol_2/instances.png)
-**Figure 3**
+**Figure TP53-BP2-3**
 
 
 step 4. Table of the methods used for the ELM annotation. The methods are
 provided by the  PsiMi (Proteomics Standards Initiative - Molecular
-Interaction)  (Figure 4)
+Interaction)  (Figure TP53-BP2-4)
 
 
 ![](../Figures/TP53_basic_protocol_2/methods.png)
-**Figure 4**
+**Figure TP53-BP2-4**
 
 
-step 5. Table of the structures linked to an ELM instance (Figure 5)
+step 5. Table of the structures linked to an ELM instance (Figure TP53-BP2-5)
 
 
 ![](../Figures/TP53_basic_protocol_2/pdbs.png)
-**Figure 5**
+**Figure TP53-BP2-5**
 
 
-step 6. Table of the binding domains (Figure 6)
+step 6. Table of the binding domains (Figure TP53-BP2-6)
 
 
 ![](../Figures/TP53_basic_protocol_2/interactions.png)
-**Figure 6**
+**Figure TP53-BP2-6**
 
 
-step 7. Table of the ELM switches (Figure 7)
+step 7. Table of the ELM switches (Figure TP53-BP2-7)
 
 
 ![](../Figures/TP53_basic_protocol_2/switches.png)
-**Figure 7**
+**Figure TP53-BP2-7**
 
 
-step 8. List of pathways from the "Kyoto Encyclopedia of Genes and Genomes" (KEGG) database mapped to ELM instance (Fig 8)
+step 8. List of pathways from the "Kyoto Encyclopedia of Genes and Genomes" (KEGG) database mapped to ELM instance (Fig TP53-BP2-8)
 Are the pathways described elsewhere? Otherwise, I could extend this section
 
 
 ![](../Figures/TP53_basic_protocol_2/pathways.png)
-**Figure 8**
+**Figure TP53-BP2-8**
 
 
-step 9. Table of the ELM instance abused by viruses (Fig 9)
+step 9. Table of the ELM instance abused by viruses (Fig TP53-BP2-9)
 
 ![](../Figures/TP53_basic_protocol_2/viruses.png)
-**Figure 9**
+**Figure TP53-BP2-9**
 
 
-step 10. Short description of disease caused by mutation reported in ELM instances. (Fig 10)
+step 10. Short description of disease caused by mutation reported in ELM instances. (Fig TP53-BP2-10)
 
 ![](../Figures/TP53_basic_protocol_2/diseases.png)
-**Figure 10**
+**Figure TP53-BP2-10**
 
 # Basic Protocol 2: Predicting ELMs in sequences 
 
