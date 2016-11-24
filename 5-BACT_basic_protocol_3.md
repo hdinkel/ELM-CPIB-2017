@@ -18,7 +18,7 @@ smartphones will also work.
 
 ## Submitting a query to ELM 
 
-![](Figures/BACT_basic_protocol_2/prediction_input.png)
+![](../Figures/BACT_basic_protocol_2/prediction_input.png)
 **Figure BACT-BP-1:** The input query page for finding motifs in ELM. The
 sequence for SRC kinase signaling inhibitor was insered as an example for this
 article.
@@ -51,7 +51,7 @@ step 3. Retrieve the amino acid sequence from Uniprot, and submit the sequence.
 
 ## Interpreting the prediction results: Graphical Summary
 
-![](Figures/BACT_basic_protocol_2/output_graphic.png)
+![](../Figures/BACT_basic_protocol_2/output_graphic.png)
 **Figure BACT-BP-2:** The graphical results summary for SRC kinase signaling inhibitor
 1 (SRCN1_HUMAN). Note that not all motif hits are shown: the image is chopped
 off at the bottom. The protein has a handful of structural features (shown in
@@ -130,7 +130,7 @@ step 11. Mouse over a gray rectangle (filtered out) to find out why this hit was
 
 ## Interpreting the prediction results: Additional Information 
 
-![](Figures/BACT_basic_protocol_2/output_alignment.png)
+![](../Figures/BACT_basic_protocol_2/output_alignment.png)
 **Figure BACT-BP-3:** This section of the results contains links to view the
 alignment of homologous proteins. Click any of the linkts to find SRCN1
 homologs identified in the UniRef90 database.
@@ -152,7 +152,7 @@ step 12. Scroll down to below the graphic with the results to find additional
 > message "Results are not ready... (something something).
 > The in formation in the MSA is useful because... ehhhmm..???
 
-![](Figures/BACT_basic_protocol_2/output_filter.png)
+![](../Figures/BACT_basic_protocol_2/output_filter.png)
 **Figure BACT-BP-4:** A summary of how many motifs and instances were predicted,
 and how many were filtered out by various filters. As no user supplied filters
 were applied, motifs are only filtered out for structural reasons. In this
@@ -175,7 +175,7 @@ step 13. Scroll down a little further to the section titled "Filtering Summary" 
 > those filtered out by by the SMART and Structural scores are shown in the
 > graphic above (as gray rectangles).
 
-![](Figures/BACT_basic_protocol_2/output_domains.png)
+![](../Figures/BACT_basic_protocol_2/output_domains.png)
 **Figure BACT-BP-5:** The list of SMART and Pfam domains detected. In this
 instance, only a single coiled-coil region was identified.
 
@@ -185,7 +185,7 @@ step 14. Scroll further down to the section with the header "Globular domains/ T
    server, and their positions. Clicking on their names will bring you to the
    SMART entry for that domain on the SMART homepage.
 
-![](Figures/BACT_basic_protocol_2/output_instances.png)
+![](../Figures/BACT_basic_protocol_2/output_instances.png)
 **Figure BACT-BP-6:** Thie protein was already annotated in the database, and
 has a single instances  of the motif "LIG_SxIP_EBH_1" annotated.
 
@@ -210,7 +210,7 @@ step 15. Scroll further down to the section titled "The ELMs in the following ta
 > means that this instance is functional, whereas a "True Negative" means
 > this instance is not functional.
 
-![](Figures/BACT_basic_protocol_2/output_predictions.png)
+![](../Figures/BACT_basic_protocol_2/output_predictions.png)
 **Figure BACT-BP-7:** This table contains the list of motifs detected in the
 sequence (only the top part of the table is shown).
 
@@ -229,7 +229,7 @@ step 16. Scroll further down to the section with the heading "Results of ELM mot
    information on the Probability filter: the probability reflects the chance
    to observe this motif in any random amino acid sequence.
 
-![](Figures/BACT_basic_protocol_2/output_filtered.png)
+![](../Figures/BACT_basic_protocol_2/output_filtered.png)
 **Figure BACT-BP-8:** This table contains the list of motifs detected in the
 sequence (only the top part of the table is shown) which were excluded due to
 structural filters. 

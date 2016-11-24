@@ -10,7 +10,7 @@ However, any browser can be used to access the server, most browsers however dow
 
 ## Downloading all ELM classes
 
-![](Figures/BACT_alternate_protocol_2/elm_downloads_html.png)
+![](../Figures/BACT_alternate_protocol_2/elm_downloads_html.png)
 
 **Figure ELM-Downloads:** The ELM downloads page, which holds information about
 the different types of data (such as "Classes", "Instances", etc; see menu to
@@ -38,7 +38,7 @@ step 3. Use the following URL: 'http://elm.eu.org/elms.html?q=CSK'
 > This will again show the webpage with all annotated ELM classes, this time however limited to those matching the query term 'PCSK'.
 > Next, we are going to use the same URL pattern, but with '.tsv' to download the same data as actual data, not HTML.
 
-![](Figures/BACT_alternate_protocol_2/elm_curl_classes_CSK.png)
+![](../Figures/BACT_alternate_protocol_2/elm_curl_classes_CSK.png)
 **Figure ELM-Curl-Classes**:
 Screenshot of a terminal window using `curl` to download all ELM classes matching the term 'CSK'.
 
@@ -64,7 +64,7 @@ step 4. Use the following URL: 'http://elm.eu.org/elms.tsv?q=CSK'
 ```
 
 
-![](Figures/BACT_alternate_protocol_2/elm_curl_instances_p53_human.png)
+![](../Figures/BACT_alternate_protocol_2/elm_curl_instances_p53_human.png)
 **Figure ELM-Curl-Instances-P53**:
 Screenshot of a terminal window using `curl` to download all ELM instances annotated for sequence p53_human.
 
