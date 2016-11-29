@@ -60,7 +60,7 @@ The graphical results summary for P53_HUMAN. Note that not all motif hits are
 shown: the image is chopped off at the bottom. The protein has a handful of
 structural features (shown in the top 5 rows). See the legend at the top of the
 figure for more information.  Motif instances which are manually annotated in
-the database appear as read or yellow ovals in the graphic. Blue/gray square
+the database appear as red or yellow ovals in the graphic. Blue/gray square
 represent predicted motif occurrences (which are further discussed in Basic
 Protocol 3: Predicting ELMs in sequences)
 
@@ -69,10 +69,10 @@ Protocol 3: Predicting ELMs in sequences)
 **Figure TP53-BP1- 3**
 
 Step 3. On the results page, scroll down to the heading: "The ELMs in the
-following table are known instances annotated from the literature" (Fig TP53-BP1-3)
+following table are known instances annotated from the literature" (Fig TP53-BP1-3).
 This table has details of SLiMs which have been manually annotated in the ELM
 database. The columns show each motif name, the sequence(s) that matched the
-motif as well as their starting and ending positions and the logic of the annotation.
+motif as well as their starting and ending positions and the logic of the annotation
 followed by a short description of each motif, to which cell compartments its
 has been associated, and finally the regular expression of the motif.
 
@@ -97,7 +97,7 @@ for the interaction.
 > The probability score is the probability that the regular expression
 > represents a random selection of amino acids (similar to an information
 > content score). A lower score indicates a high chance that this motif is
-> conserved and functional.
+> conserved and functional. [Hugo: a lower score only indicates that the pattern is more complex and will be more difficult to find it by chance in a random sequence.]
 
 Step 5. Scroll further down the "DOC_CYCLIN_1" page (Fig TP53-BP1-5) to view
 more details about the manually annotated data and instances in the database
