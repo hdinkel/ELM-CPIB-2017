@@ -148,7 +148,8 @@ well as the Literature references in which the experiments were published.
 
 Step 9. Scroll further down to the header "Pathways" to view pathway
 information. This is a list of all of the pathways in which the protein p53 is
-known to be involved (according to KEGG). Click on a pathway to ???
+known to be involved (according to KEGG). Click on a pathway to see the 
+localization of p53 in the corresponding KEGG pathway.
 
 ![](Figures/TP53_basic_protocol_1/doc_www_pin_details.png)
 **Figure TP53-BP1- 6** The instance details page for the "DOC_WW_Pin1_4"
@@ -165,11 +166,12 @@ information about this motifs "switch" and "interaction" characteristics.
 
 Step 11. Scroll down to the "Interactions" header to view information about
 this instance's interactions (Fig TP53-BP1-6). This instance interacts with PIN1_Human via the
-PG00397 domain (found on position 7--37 in PIN1_Human. If available, binding
+PG00397 domain (found on position 7--37 in PIN1_Human). If available, binding
 affinities are also shown here. Mitab and xml download links ??? are also made
 available.
 
 Step 12. Scroll further down the "Switches" section for an brief overview of
-the switches details of this instances obtained form "switches.elm" (REF) (Fig TP53-BP1-6). This
-particular instances in is involved in the switch phosphorulating P53. Clicking
-on the digram will open an external link on the "switches.elm" website.
+the switches details of this instance obtained from "switches.elm" (PMID: 23550212) 
+(Fig TP53-BP1-6). This switch corresponds to the phosphorylation of the Pin1-binding 
+motif of p53 by Pin1. Clicking on the diagram will open an external link on the 
+"switches.elm" website.
