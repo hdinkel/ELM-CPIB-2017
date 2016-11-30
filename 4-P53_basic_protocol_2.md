@@ -1,10 +1,10 @@
 # Basic protocol 2: Explore the content of the ELM DB
 
-The core of the ELM dabase is the set of manual annotations of motifs and
-instances curated from litarture. There are over 3000 annotaed instances from
+The core of the ELM database is the set of manual annotations of motifs and
+instances curated from literature. There are over 3000 annotated instances from
 XXX classes from YYY publications. In this protocol we give an overview on how
-to navidate and browse the entire database contain. This secion should give an
-overview of all of the data, and types of data contained in the databse.
+to navigate and browse the entire database content. This section should give an
+overview of all the data, and types of data contained in the database.
 
 ## Database content overview
 
@@ -12,8 +12,8 @@ overview of all of the data, and types of data contained in the databse.
 **Figure TP53-BP2-1** The ELM database overview page (elm.eu.org/search.db).
 
 Step 1. Go to the http://elm.eu.org and click on the tab "ELM DB" to explore the
-content of the different types of data about experimentally validated ELM which
-are manually curated from the literature (Figure TP53-BP2-1). This page
+content of the different types of data about experimentally validated ELMs that
+were manually curated from the literature (Figure TP53-BP2-1). This page
 contains a brief summary of the database content, as well as the number of
 links to third-party databases.
 
@@ -21,9 +21,9 @@ links to third-party databases.
 **Figure TP53-BP2-2** The list of all motifs in the ELM database.
 
 step 2. Click on the sub-menu "ELM classes" in "ELM DB" to go the page with all
-of the ELM classes (Figure TP53-BP2-2).  For each class.  The following
-information are provided: ELM identifier, short description, regular
-expression, number of instance annotated for each class, and number of
+of the ELM classes (Figure TP53-BP2-2).  For each class, the following
+information is provided: ELM identifier, short description, regular
+expression, number of instances annotated for each class, and number of
 structure available. For details on each class, click on the ELM
 identifier.
 
@@ -97,11 +97,11 @@ well as the name of the interacting domain and a brief description.
 ![](Figures/TP53_basic_protocol_2/switches.png)
 **Figure TP53-BP2-7** A list of all switches annotated in ELM.
 
-step 7. Click on the sub-menu "ELM switches" in "ELM DB" to go to see a
+step 7. Click on the sub-menu "ELM switches" in "ELM DB" to see a
 complete list of all the switches in ELM (Figure TP53-BP2-7). This table shows
-the motif class, contains a link to Uniprot, and start and stop positions of
-the switch. The last two columns have links to switches.ELM, and s brief
-description of the switch also taken from Switches.ELM.
+the motif class, contains a link to Uniprot, and the start and stop positions of
+the motif mediating the switch. The last two columns have links to switches.ELM, and a brief
+description of the switch also taken from switches.ELM (PMID:23550212).
 
 
 > The filter bar on the top page can be used to filter the list of interactions
@@ -122,7 +122,7 @@ pathways which have a protein annotated in ELM, and links to the pathways on KEG
 ![](Figures/TP53_basic_protocol_2/viruses.png)
 **Figure TP53-BP2-9** A Table of the ELM instance abused by viruses 
 
-step 9. Click on the sub-menu "ELM virus instances" in "ELM DB" to go to see a
+step 9. Click on the sub-menu "ELM virus instances" in "ELM DB" to see a
 list of all instances in ELM that have been annotated as being abused by
 viruses (Fig TP53-BP2-9). The columns are identical to those listed in section
 XXX step YYY (Figure ZZZZ).
