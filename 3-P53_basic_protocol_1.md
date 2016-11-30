@@ -1,10 +1,10 @@
 # Basic protocol 1: explore the manually curated information for the p53 protein in the ELM DB
 
 The core of the ELM database is a repository of manually annotated
-motifs and instances. As of Dec 2016 ELM contains over 260? motif classes
+motifs and instances. As of December 2016, ELM contains over 260? motif classes
 categorized into 6 different types: DOC (docking), LIG (Ligand binding), DEG
-(degradation), CLV (cleavage), MOD (post translational modifications and
-targeting/anchoring (TRG) motifs. These motifs are derived from various types
+(degradation), CLV (cleavage), MOD (post translational modifications), and
+TRG (targeting/anchoring) motifs (Figure 1). (Should we explain here what annotation means in ELM?) These motifs are derived from various types
 of experiments reported in literature. Each manually annotated motif also has a
 set of bona fide instances (occurrences) of this motif. The motifs and motif
 instances have been uploaded by a large group of annotators from around the
@@ -13,10 +13,10 @@ and explored on the ELM database.
 
 In this protocol we will be viewing the manually annotated data of a typical
 protein, using p53 (Uniprot ID: P53_HUMAN/P04637) as an example. We will cover how to
-find the manual annotated motifs and instances, and how to find the motif
+find the manually annotated motifs and instances, and how to find the motif
 instances, the references used to annotate each instance, the experimental
 protocols used, and additional information including relationships to biological
-pathways (in KEGG), disease (from ???) and molecular switches.
+pathways (in KEGG), diseases (from ???) and molecular switches (in switches.ELM).
 
 ## Necessary Resources
 
@@ -59,8 +59,8 @@ Step 2. The results from the query will open in a new tab (Fig. TP53-BP1-2).
 The graphical results summary for P53_HUMAN. Note that not all motif hits are
 shown: the image is chopped off at the bottom. The protein has a handful of
 structural features (shown in the top 5 rows). See the legend at the top of the
-figure for more information.  Motif instances which are manually annotated in
-the database appear as red or yellow ovals in the graphic. Blue/gray square
+figure for more information. Motif instances which are manually annotated in
+the database appear as red or yellow ovals in the graphic. Blue/gray squares
 represent predicted motif occurrences (which are further discussed in Basic
 Protocol 3: Predicting ELMs in sequences)
 
@@ -123,13 +123,13 @@ database, as well as links to PDB if this structure exists in PDB.
 **Figure TP53-BP1- 5** The instance details page for the "DOC_CYCLIN_1"
 instance found in P53 with start/end position "381-385".
 This page also contains links to many external databases including Uniprot,
-PDB, the NCBI taxonomy, PSMI, Pubmed, and (KEGG?) Pathways.
+PDB, the NCBI taxonomy, Pubmed, and (KEGG?) Pathways, as well as the PSI-MI controlled vocabulary.
 
 Step 7. Return to the P53 results summary page (Step 3) (by
 hitting "back" in the browser), and scroll down the "instances" table in
 Figure TP53-BP1-3. To get information about the motif subsequence
 "GQSTSRHKKLMFKTEGPDSD", click on the link of its start/finish position
-"381-381" to go to the instance details page of this instance. The top part of
+"381-381" to go to the instance details page of this instance (this subsequence is not in fig. 4, and I guess position is 381-385?). The top part of
 the page contains details about the instance and the protein it was identified in.
 
 > There are many other ways to arrive at the "instance details page". For
@@ -138,7 +138,7 @@ the page contains details about the instance and the protein it was identified i
 
 Step 8. Scroll down to the "Instance Evidence" header to view details on the
 experimental evidence used to annotate this instance. This table also contains
-the "evidence class", and descriptions of the methods used from PSMI (REF!) as
+the "evidence class", and descriptions of the methods used from PSI-MI (PMID:17925023) as
 well as the Literature references in which the experiments were published.
 
 > (Here we should explain what "evidence class", "biosource", "Logic",
@@ -153,8 +153,7 @@ known to be involved (according to KEGG). Click on a pathway to ???
 ![](Figures/TP53_basic_protocol_1/doc_www_pin_details.png)
 **Figure TP53-BP1- 6** The instance details page for the "DOC_WW_Pin1_4"
 instance found in P53 with start/end position "30-35". This page is similar to
-that described for P53 instance "DOC_CYCLIN_1", except for this instance is
-also has interaction and switch information.
+that described for P53 instance "DOC_CYCLIN_1", except for this instance interaction and switch information is also available.
 
 Step 10. Return to the P53 results summary page (Step 3) (by
 hitting "back" in the browser), and scroll down the "instances" table in
@@ -165,11 +164,10 @@ information about this motifs "switch" and "interaction" characteristics.
 
 Step 11. Scroll down to the "Interactions" header to view information about
 this instance's interactions (Fig TP53-BP1-6). This instance interacts with PIN1_Human via the
-PG00397 domain (found on position 7--37 in PIN1_Human. If available, binding
-affinities are also shown here. Mitab and xml download links ??? are also made
-available.
+PG00397 domain (found on position 7--37 in PIN1_Human). If available, binding
+affinities are also shown here. Interaction data is made available in Mitab and xml format (PMID:17925023).
 
-Step 12. Scroll further down the "Switches" section for an brief overview of
-the switches details of this instances obtained form "switches.elm" (REF) (Fig TP53-BP1-6). This
-particular instances in is involved in the switch phosphorulating P53. Clicking
-on the digram will open an external link on the "switches.elm" website.
+Step 12. Scroll further down to the "Switches" section for a brief overview of
+the switches details of this instance obtained form "switches.ELM" (PMID:23550212) (Fig TP53-BP1-6). This
+particular instance is involved in the switch phosphorylating P53. Clicking
+on the diagram will open an external link to the "switches.ELM" website.
