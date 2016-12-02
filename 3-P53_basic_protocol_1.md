@@ -148,7 +148,8 @@ well as the Literature references in which the experiments were published.
 
 Step 9. Scroll further down to the header "Pathways" to view pathway
 information. This is a list of all of the pathways in which the protein p53 is
-known to be involved (according to KEGG). Click on a pathway to ???
+known to be involved (according to KEGG). Click on a pathway to see the 
+localization of p53 in the corresponding KEGG pathway.
 
 ![](Figures/TP53_basic_protocol_1/doc_www_pin_details.png)
 **Figure TP53-BP1- 6** The instance details page for the "DOC_WW_Pin1_4"
