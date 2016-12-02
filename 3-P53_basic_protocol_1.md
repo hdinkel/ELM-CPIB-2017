@@ -96,8 +96,8 @@ for the interaction.
 
 > The probability score is the probability that the regular expression
 > represents a random selection of amino acids (similar to an information
-> content score). A lower score indicates a high chance that this motif is
-> conserved and functional. [Hugo: a lower score only indicates that the pattern is more complex and will be more difficult to find it by chance in a random sequence.]
+> content score). A lower score indicates that the motif pattern is more 
+> difficult to find by chance in a random sequence.
 
 Step 5. Scroll further down the "DOC_CYCLIN_1" page (Fig TP53-BP1-5) to view
 more details about the manually annotated data and instances in the database
@@ -112,9 +112,9 @@ the "Instances" header. This table contains the list of all annotated
 instances in the database of this motif. This includes the protein identifier,
 the start and end positions of the instance, the specific sequence matching the
 regular expression and the logic of the instance. The "# Ev." indicates the
-"Evidence code" associated with the annotation (see section XXX below).
-Organism is the species in which the protein is found. Lastly the "Notes"
-column contains links to any "interactions" or "swithces" present in the
+number of experimental evidences associated with the annotation (see section 
+XXX below). Organism is the species in which the protein is found. Lastly the 
+"Notes" column contains links to any "interactions" or "switches" present in the
 database, as well as links to PDB if this structure exists in PDB.
 
 ## Browsing annotated instances
