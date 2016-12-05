@@ -1,4 +1,4 @@
-# Basic Protocol 2: Predicting ELMs in sequences 
+# Basic Protocol 2: Predicting ELMs in sequences [2 or 3?]
 
 One of the most useful features in ELM is the ability to detect motifs in proteins and
 sequences.
@@ -20,7 +20,7 @@ smartphones will also work.
 
 ![](../Figures/BACT_basic_protocol_2/prediction_input.png)
 **Figure BACT-BP-1:** The input query page for finding motifs in ELM. The
-sequence for SRC kinase signaling inhibitor was insered as an example for this
+sequence for SRC kinase signaling inhibitor was used as an example for this
 article.
  
 step 1. Click on the "ELM Predictions" button in the menu to access the search query
@@ -35,13 +35,14 @@ step 1. Click on the "ELM Predictions" button in the menu to access the search q
 
 step 2. Select the search criteria. It is possible to select a "cell compartment",
    in which only motifs annotated as belonging to that cell compartment will be
-   included in the search results. It is also possible to select a "taxonomic contect" 
-   (explain here). It is also possible to change the "Motif probability cutoff" (explain
-   here). Leave these all of these at their default values: 'not specified',
-   '100' and no Taxonomic Context.
+   included in the search results. It is also possible to select a "taxonomic context" 
+   to filter out ELMs that have not been reported in the selected taxonomic category.
+   Additionaly, a "Motif probability cutoff" can be used to only retain ELM 
+   classes whose pattern probability is below the given value. Leave all of 
+   these at their default values: 'not specified', '100' and no Taxonomic Context.
 
 step 3. Retrieve the amino acid sequence from Uniprot, and submit the sequence.
-   Results may submitted as a single FASTA formatted entry, or alternatively only
+   Results may be submitted as a single FASTA formatted entry, or alternatively only
    the amino acid sequence.
    You will be brought to an intermediate page indicating that your results are being
    processed, and you should be redirected to the final results page within 30
@@ -56,7 +57,7 @@ step 3. Retrieve the amino acid sequence from Uniprot, and submit the sequence.
 1 (SRCN1_HUMAN). Note that not all motif hits are shown: the image is chopped
 off at the bottom. The protein has a handful of structural features (shown in
 the top 5 rows). The motif hits are shown as blue boxes, the intensity of which
-indicates the confidence score. See the legend at the top of the figure for
+indicates the conservation score. See the legend at the top of the figure for
 more information.
 
 step 4. The Results are summarized in The first figure on the results page
@@ -65,27 +66,29 @@ step 4. The Results are summarized in The first figure on the results page
 step 5. The first row contains phosphorylation sites as retrieved from Phospho.ELM
    (21062810), and whether the phosphorylated amino acid is a Serine, Threonine
    or Tyrosine. PhosphoELM is a database of manually annotated phosphorylation
-   sites obtained from scientific publications. (right?). You can follow the link
+   sites obtained from scientific publications. (right?) [I would put: from low and high-throughput experiments]. You can follow the link
    to PhosphoELM by clicking on the phosphorylation site in the image.
 
 > Phosphorylation sites are only available when the search is performed
-> with a protein accession, and only its a known uniprot or ensembl accession.
-> Phosphorilation sites are relevant to interpreting ELM motif detections...
-> because???
+> with a protein accession, and only if it is a known uniprot or ensembl accession.
+> Phosphorylation sites are relevant to interprete ELM motif predictions when 
+> the predicted motif requires to be phosphorylated (as in several docking and
+> ligand binding motifs) and naturally, for the prediction of phosphorylation 
+> motifs.
 
 step 6. The second row shows when domains are detected from the SMART
    (9600884,25300481) or Pfam (9600884) database. Annotations are retrieved
    from SMART (both SMART and Pfam), and also include low complexity regions.
-   Hovering the mouse over the domain reveals the domain name and its start
-   position.
+   Hovering the mouse over the domain reveals the domain name as well as its
+   start and end positions.
 
-> Motifs are less likely to be found in domains and structured regions, therefore any
-> motifs detected within these sites are less likely to be functional, and are usually filtered out.
+> Motifs are less likely to be found in domains and structured regions (21909575), therefore any
+> motif detected within these sites are less likely to be functional, and are usually [usually? When they are not?] filtered out.
 
 step 7.  The third row shows unstructured, or disordered regions within the sequence
     as predicted by GlobPlot (12824398). [what does hover do?] The 4th & 5th
-    Rows contain results from IUPred (15955779), another unstructured region
-    priction tool. Protein segments with an IUpred score above 0.5 are 95% likely
+    rows contain results from IUPred (15955779), another unstructured region
+    prediction tool. Protein segments with an IUpred score above 0.5 are 95% likely
     to be disorered (REF?)
 
 > As motifs are often found in intrinsically disordered regions, motifs that
@@ -99,7 +102,7 @@ step 9. The remainder of the figure (from row 6 onwards) displays the motif
    the motif hit. A blue square indicates a motif instance was found, and the
    intensity of the color indicates the confidence associated with that motif detection.
    Boxes in gray are motif hits which have been filtered out as they occur in a
-   SMART domain. Boxes that are Blue & Gray are neutral (what does that mean).
+   SMART domain [and the pink boxes?]. Boxes that are Blue & Gray are neutral (what does that mean).
    If the sequence is already present in the database, any motifs instances
    that have already been annotated are shown as ovals. Lastly, Any motifs
    detected in homologous sequences are also shown as the fraction of red vs.
@@ -110,7 +113,7 @@ step 9. The remainder of the figure (from row 6 onwards) displays the motif
 > are a uniform blue color.
 
 step 10. Mouse over a motif hit (which has not been filtered out by the structural
-   filter) to details of the motif name and its start and stop petition. This
+   filter) to detail the motif name and its start and stop positions. This
    box also shows the amino acid sequence which matched the motif, as well as
    the confidence score. The color of the confidence score title box is also
    suggestive of how confident this motif hit is: red for low confidence,
@@ -132,25 +135,24 @@ step 11. Mouse over a gray rectangle (filtered out) to find out why this hit was
 
 ![](../Figures/BACT_basic_protocol_2/output_alignment.png)
 **Figure BACT-BP-3:** This section of the results contains links to view the
-alignment of homologous proteins. Click any of the linkts to find SRCN1
+alignment of homologous proteins. Click any of the links to find SRCN1
 homologs identified in the UniRef90 database.
 
 step 12. Scroll down to below the graphic with the results to find additional
    information on the motifs found (figure BACT-BP-3). The first section contains links to
-   multiple sequence alignments in the case that homologous sequences were
+   multiple sequence alignments in the case that highly similar sequences were
    detected. The multiple sequence alignments can be viewed by clicking on the
    link. Note that this requires you to have a Java browser plugin.
    Alternatively you can also download the individual files with the
    alignments, conservation features and phophosite features by following the
    respective links.
 
-> The search for homologous sequences performed against the UniRef 90
-> database, a dataset of Unique Reference proteins designed to reflect the
-> entire known universe of proteins in the uniprot database (25348405). Note
+> The search for possible homologous sequences is performed against the UniRef90
+> database, a dataset of protein sequences with less than 90 percent identity between any two of them (25348405). Note
 > that it is possible that the BLAST results are not finished when the
 > results page is shown: We suggest to refresh the page if you see the
-> message "Results are not ready... (something something).
-> The in formation in the MSA is useful because... ehhhmm..???
+> message "Either not enough data available to calculate a sequence alignment or the calculations haven't finished yet"
+> The information in the MSA is useful because... ehhhmm..???
 
 ![](../Figures/BACT_basic_protocol_2/output_filter.png)
 **Figure BACT-BP-4:** A summary of how many motifs and instances were predicted,
