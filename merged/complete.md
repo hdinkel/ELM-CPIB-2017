@@ -8,7 +8,7 @@
 individual protocols in unit; a brief mention of any critical limitations and
 assumptions;*
 
-The activity and function of a protein is tightly regulated by its cellular environment. To interact with their surroundings, proteins use various types of binding modules that each display distinct binding properties (PMID:10550212). One prominent type of binding module consists of short linear motifs (SLiMs) (PMID:18508681). These compact binding sites mediate a diverse set of interactions that regulate protein functionality (PMID:24926813) (Figure 1). They can function as ligand binding sites or as sites for post-translational modification (PTM). Some ligand SLiMs are recognised by components of the cellular transport machinery and function as localisation signals that target proteins to specific sub-cellular compartments. Other ligand SLiMs are abundantly present in interfaces that mediate the assembly of large macromolecular complexes and in highly modular scaffold proteins that act as multivalent platforms for protein complex assembly. Docking motifs are ligand SLiMs that recruit modification enzymes to their substrates by binding to a site on the enzyme that is distinct from the active site. A subset of these, known as degrons, recruit ubiquitin ligases, which subsequently polyubiquitylate their substrates and hence target them for proteasomal degradation. SLiMs that act as sites for PTM can either be targeted by specific enzymes for the addition or removal of a small chemical group, mediate proteolytic cleavage by acting as target site for proteolytic enzymes, or be recognised for structural modification by isomerases that catalyse cis-trans isomerisation of the peptide backbone.
+The activity and function of a protein is tightly regulated by its cellular environment. To interact with their surroundings, proteins use various types of binding modules that each display distinct binding properties (PMID:10550212). One prominent type of binding module consists of short linear motifs (SLiMs) (PMID:18508681). These compact binding sites mediate a diverse set of interactions that regulate protein functionality (PMID:24926813, PMID:24773235) (Figure 1). They can function as ligand binding sites or as sites for post-translational modification (PTM). Some ligand SLiMs are recognised by components of the cellular transport machinery and function as localisation signals that target proteins to specific sub-cellular compartments. Other ligand SLiMs are abundantly present in interfaces that mediate the assembly of large macromolecular complexes and in highly modular scaffold proteins that act as multivalent platforms for protein complex assembly. Docking motifs are ligand SLiMs that recruit modification enzymes to their substrates by binding to a site on the enzyme that is distinct from the active site. A subset of these, known as degrons, recruit ubiquitin ligases, which subsequently polyubiquitylate their substrates and hence target them for proteasomal degradation. SLiMs that act as sites for PTM can either be targeted by specific enzymes for the addition or removal of a small chemical group, mediate proteolytic cleavage by acting as target site for proteolytic enzymes, or be recognised for structural modification by isomerases that catalyse cis-trans isomerisation of the peptide backbone.
 
 SLiMs are generally located in intrinsically disordered regions (IDR) of the proteome, but often adapt a secondary structure upon binding (PMID:19841628). In general, they bind to the surface of a globular domain in a protein, although some are known to bind to a protein’s IDR or even RNA molecules. As their name suggests, SLiMs are compact, being composed of a limited number of adjacent amino acids. Most of a motif’s binding specificity however is conferred by only a subset of these amino acids. Those few residues that directly interact with the binding partner are evolutionary conserved, although in many cases a subset of amino acids that share certain properties (such as similar charge, size or hydrophobicity) are allowed in these hotspot positions. In the motif positions that contribute little to the interaction, there are even less constraints, i.e. a broader range of amino acids is allowed in these positions (PMID:21909575). A first consequence of this degeneracy is that SLiMs co-operatively engage in interactions of relatively low affinity. Hence these binding events are transient and reversible, and can be readily modulated, for instance by PTM. These characteristics make SLiM-based interactions ideal mediators of the dynamic processes involved in cell signalling (PMID:22480932). Another consequence is that it might take only a few or even a single point mutation to generate or disrupt a functional motif in a protein. The associated ability to evolve convergently might underlie the proliferation of SLiMs and the rewiring of interactomes (PMID:26589632) (PMID:22346764). Conversely, several SLiM-associated diseases have been characterised to date, for instance Liddle syndrome (PMID:15483078).
 
@@ -17,10 +17,10 @@ Due to their degenerate nature, motif sequences contain only very little informa
 # Basic protocol 1: explore the manually curated information for the p53 protein in the ELM DB
 
 The core of the ELM database is a repository of manually annotated
-motifs and instances. As of Dec 2016 ELM contains over 260? motif classes
+motifs and instances. As of December 2016, ELM contains over 260? motif classes
 categorized into 6 different types: DOC (docking), LIG (Ligand binding), DEG
-(degradation), CLV (cleavage), MOD (post translational modifications and
-targeting/anchoring (TRG) motifs. These motifs are derived from various types
+(degradation), CLV (cleavage), MOD (post translational modifications), and
+TRG (targeting/anchoring) motifs (Figure 1). (Should we explain here what annotation means in ELM?) These motifs are derived from various types
 of experiments reported in literature. Each manually annotated motif also has a
 set of bona fide instances (occurrences) of this motif. The motifs and motif
 instances have been uploaded by a large group of annotators from around the
@@ -29,10 +29,10 @@ and explored on the ELM database.
 
 In this protocol we will be viewing the manually annotated data of a typical
 protein, using p53 (Uniprot ID: P53_HUMAN/P04637) as an example. We will cover how to
-find the manual annotated motifs and instances, and how to find the motif
+find the manually annotated motifs and instances, and how to find the motif
 instances, the references used to annotate each instance, the experimental
 protocols used, and additional information including relationships to biological
-pathways (in KEGG), disease (from ???) and molecular switches.
+pathways (in KEGG), diseases (from ???) and molecular switches (in switches.ELM).
 
 ## Necessary Resources
 
@@ -75,8 +75,8 @@ Step 2. The results from the query will open in a new tab (Fig. TP53-BP1-2).
 The graphical results summary for P53_HUMAN. Note that not all motif hits are
 shown: the image is chopped off at the bottom. The protein has a handful of
 structural features (shown in the top 5 rows). See the legend at the top of the
-figure for more information.  Motif instances which are manually annotated in
-the database appear as read or yellow ovals in the graphic. Blue/gray square
+figure for more information. Motif instances which are manually annotated in
+the database appear as red or yellow ovals in the graphic. Blue/gray squares
 represent predicted motif occurrences (which are further discussed in Basic
 Protocol 3: Predicting ELMs in sequences)
 
@@ -85,10 +85,10 @@ Protocol 3: Predicting ELMs in sequences)
 **Figure TP53-BP1- 3**
 
 Step 3. On the results page, scroll down to the heading: "The ELMs in the
-following table are known instances annotated from the literature" (Fig TP53-BP1-3)
+following table are known instances annotated from the literature" (Fig TP53-BP1-3).
 This table has details of SLiMs which have been manually annotated in the ELM
 database. The columns show each motif name, the sequence(s) that matched the
-motif as well as their starting and ending positions and the logic of the annotation.
+motif as well as their starting and ending positions and the logic of the annotation
 followed by a short description of each motif, to which cell compartments its
 has been associated, and finally the regular expression of the motif.
 
@@ -112,8 +112,8 @@ for the interaction.
 
 > The probability score is the probability that the regular expression
 > represents a random selection of amino acids (similar to an information
-> content score). A lower score indicates a high chance that this motif is
-> conserved and functional.
+> content score). A lower score indicates that the motif pattern is more 
+> difficult to find by chance in a random sequence.
 
 Step 5. Scroll further down the "DOC_CYCLIN_1" page (Fig TP53-BP1-5) to view
 more details about the manually annotated data and instances in the database
@@ -128,9 +128,9 @@ the "Instances" header. This table contains the list of all annotated
 instances in the database of this motif. This includes the protein identifier,
 the start and end positions of the instance, the specific sequence matching the
 regular expression and the logic of the instance. The "# Ev." indicates the
-"Evidence code" associated with the annotation (see section XXX below).
-Organism is the species in which the protein is found. Lastly the "Notes"
-column contains links to any "interactions" or "swithces" present in the
+number of experimental evidences associated with the annotation (see section 
+XXX below). Organism is the species in which the protein is found. Lastly the 
+"Notes" column contains links to any "interactions" or "switches" present in the
 database, as well as links to PDB if this structure exists in PDB.
 
 ## Browsing annotated instances
@@ -139,13 +139,13 @@ database, as well as links to PDB if this structure exists in PDB.
 **Figure TP53-BP1- 5** The instance details page for the "DOC_CYCLIN_1"
 instance found in P53 with start/end position "381-385".
 This page also contains links to many external databases including Uniprot,
-PDB, the NCBI taxonomy, PSMI, Pubmed, and (KEGG?) Pathways.
+PDB, the NCBI taxonomy, Pubmed, and (KEGG?) Pathways, as well as the PSI-MI controlled vocabulary.
 
 Step 7. Return to the P53 results summary page (Step 3) (by
 hitting "back" in the browser), and scroll down the "instances" table in
 Figure TP53-BP1-3. To get information about the motif subsequence
 "GQSTSRHKKLMFKTEGPDSD", click on the link of its start/finish position
-"381-381" to go to the instance details page of this instance. The top part of
+"381-381" to go to the instance details page of this instance (this subsequence is not in fig. 4, and I guess position is 381-385?). The top part of
 the page contains details about the instance and the protein it was identified in.
 
 > There are many other ways to arrive at the "instance details page". For
@@ -154,7 +154,7 @@ the page contains details about the instance and the protein it was identified i
 
 Step 8. Scroll down to the "Instance Evidence" header to view details on the
 experimental evidence used to annotate this instance. This table also contains
-the "evidence class", and descriptions of the methods used from PSMI (REF!) as
+the "evidence class", and descriptions of the methods used from PSI-MI (PMID:17925023) as
 well as the Literature references in which the experiments were published.
 
 > (Here we should explain what "evidence class", "biosource", "Logic",
@@ -164,13 +164,13 @@ well as the Literature references in which the experiments were published.
 
 Step 9. Scroll further down to the header "Pathways" to view pathway
 information. This is a list of all of the pathways in which the protein p53 is
-known to be involved (according to KEGG). Click on a pathway to ???
+known to be involved (according to KEGG). Click on a pathway to see the 
+localization of p53 in the corresponding KEGG pathway.
 
 ![](../Figures/TP53_basic_protocol_1/doc_www_pin_details.png)
 **Figure TP53-BP1- 6** The instance details page for the "DOC_WW_Pin1_4"
 instance found in P53 with start/end position "30-35". This page is similar to
-that described for P53 instance "DOC_CYCLIN_1", except for this instance is
-also has interaction and switch information.
+that described for P53 instance "DOC_CYCLIN_1", except for this instance interaction and switch information is also available.
 
 Step 10. Return to the P53 results summary page (Step 3) (by
 hitting "back" in the browser), and scroll down the "instances" table in
@@ -181,22 +181,20 @@ information about this motifs "switch" and "interaction" characteristics.
 
 Step 11. Scroll down to the "Interactions" header to view information about
 this instance's interactions (Fig TP53-BP1-6). This instance interacts with PIN1_Human via the
-PG00397 domain (found on position 7--37 in PIN1_Human. If available, binding
-affinities are also shown here. Mitab and xml download links ??? are also made
-available.
+PG00397 domain (found on position 7--37 in PIN1_Human). If available, binding
+affinities are also shown here. Interaction data is made available in Mitab and xml format (PMID:17925023).
 
-Step 12. Scroll further down the "Switches" section for an brief overview of
-the switches details of this instances obtained form "switches.elm" (REF) (Fig TP53-BP1-6). This
-particular instances in is involved in the switch phosphorulating P53. Clicking
-on the digram will open an external link on the "switches.elm" website.
-
+Step 12. Scroll further down to the "Switches" section for a brief overview of
+the switches details of this instance obtained form "switches.ELM" (PMID:23550212) (Fig TP53-BP1-6). This
+particular instance is involved in the switch phosphorylating P53. Clicking
+on the diagram will open an external link to the "switches.ELM" website.
 # Basic protocol 2: Explore the content of the ELM DB
 
-The core of the ELM dabase is the set of manual annotations of motifs and
-instances curated from litarture. There are over 3000 annotaed instances from
+The core of the ELM database is the set of manual annotations of motifs and
+instances curated from literature. There are over 3000 annotated instances from
 XXX classes from YYY publications. In this protocol we give an overview on how
-to navidate and browse the entire database contain. This secion should give an
-overview of all of the data, and types of data contained in the databse.
+to navigate and browse the entire database content. This section should give an
+overview of all the data, and types of data contained in the database.
 
 ## Database content overview
 
@@ -204,8 +202,8 @@ overview of all of the data, and types of data contained in the databse.
 **Figure TP53-BP2-1** The ELM database overview page (elm.eu.org/search.db).
 
 Step 1. Go to the http://elm.eu.org and click on the tab "ELM DB" to explore the
-content of the different types of data about experimentally validated ELM which
-are manually curated from the literature (Figure TP53-BP2-1). This page
+content of the different types of data about experimentally validated ELMs that
+were manually curated from the literature (Figure TP53-BP2-1). This page
 contains a brief summary of the database content, as well as the number of
 links to third-party databases.
 
@@ -213,9 +211,9 @@ links to third-party databases.
 **Figure TP53-BP2-2** The list of all motifs in the ELM database.
 
 step 2. Click on the sub-menu "ELM classes" in "ELM DB" to go the page with all
-of the ELM classes (Figure TP53-BP2-2).  For each class.  The following
-information are provided: ELM identifier, short description, regular
-expression, number of instance annotated for each class, and number of
+of the ELM classes (Figure TP53-BP2-2).  For each class, the following
+information is provided: ELM identifier, short description, regular
+expression, number of instances annotated for each class, and number of
 structure available. For details on each class, click on the ELM
 identifier.
 
@@ -289,11 +287,11 @@ well as the name of the interacting domain and a brief description.
 ![](../Figures/TP53_basic_protocol_2/switches.png)
 **Figure TP53-BP2-7** A list of all switches annotated in ELM.
 
-step 7. Click on the sub-menu "ELM switches" in "ELM DB" to go to see a
+step 7. Click on the sub-menu "ELM switches" in "ELM DB" to see a
 complete list of all the switches in ELM (Figure TP53-BP2-7). This table shows
-the motif class, contains a link to Uniprot, and start and stop positions of
-the switch. The last two columns have links to switches.ELM, and s brief
-description of the switch also taken from Switches.ELM.
+the motif class, contains a link to Uniprot, and the start and stop positions of
+the motif mediating the switch. The last two columns have links to switches.ELM, and a brief
+description of the switch also taken from switches.ELM (PMID:23550212).
 
 
 > The filter bar on the top page can be used to filter the list of interactions
@@ -314,7 +312,7 @@ pathways which have a protein annotated in ELM, and links to the pathways on KEG
 ![](../Figures/TP53_basic_protocol_2/viruses.png)
 **Figure TP53-BP2-9** A Table of the ELM instance abused by viruses 
 
-step 9. Click on the sub-menu "ELM virus instances" in "ELM DB" to go to see a
+step 9. Click on the sub-menu "ELM virus instances" in "ELM DB" to see a
 list of all instances in ELM that have been annotated as being abused by
 viruses (Fig TP53-BP2-9). The columns are identical to those listed in section
 XXX step YYY (Figure ZZZZ).
@@ -336,7 +334,7 @@ information is taken from the OMIM database.
 > This table also includes the diseases found under the "ELM pathogenic
 > abuse" menu in "ELM DB". (right?)
 
-# Basic Protocol 2: Predicting ELMs in sequences 
+# Basic Protocol 2: Predicting ELMs in sequences [2 or 3?]
 
 One of the most useful features in ELM is the ability to detect motifs in proteins and
 sequences.
@@ -358,7 +356,7 @@ smartphones will also work.
 
 ![](../Figures/BACT_basic_protocol_2/prediction_input.png)
 **Figure BACT-BP-1:** The input query page for finding motifs in ELM. The
-sequence for SRC kinase signaling inhibitor was insered as an example for this
+sequence for SRC kinase signaling inhibitor was used as an example for this
 article.
  
 step 1. Click on the "ELM Predictions" button in the menu to access the search query
@@ -373,13 +371,14 @@ step 1. Click on the "ELM Predictions" button in the menu to access the search q
 
 step 2. Select the search criteria. It is possible to select a "cell compartment",
    in which only motifs annotated as belonging to that cell compartment will be
-   included in the search results. It is also possible to select a "taxonomic contect" 
-   (explain here). It is also possible to change the "Motif probability cutoff" (explain
-   here). Leave these all of these at their default values: 'not specified',
-   '100' and no Taxonomic Context.
+   included in the search results. It is also possible to select a "taxonomic context" 
+   to filter out ELMs that have not been reported in the selected taxonomic category.
+   Additionaly, a "Motif probability cutoff" can be used to only retain ELM 
+   classes whose pattern probability is below the given value. Leave all of 
+   these at their default values: 'not specified', '100' and no Taxonomic Context.
 
 step 3. Retrieve the amino acid sequence from Uniprot, and submit the sequence.
-   Results may submitted as a single FASTA formatted entry, or alternatively only
+   Results may be submitted as a single FASTA formatted entry, or alternatively only
    the amino acid sequence.
    You will be brought to an intermediate page indicating that your results are being
    processed, and you should be redirected to the final results page within 30
@@ -394,7 +393,7 @@ step 3. Retrieve the amino acid sequence from Uniprot, and submit the sequence.
 1 (SRCN1_HUMAN). Note that not all motif hits are shown: the image is chopped
 off at the bottom. The protein has a handful of structural features (shown in
 the top 5 rows). The motif hits are shown as blue boxes, the intensity of which
-indicates the confidence score. See the legend at the top of the figure for
+indicates the conservation score. See the legend at the top of the figure for
 more information.
 
 step 4. The Results are summarized in The first figure on the results page
@@ -403,27 +402,29 @@ step 4. The Results are summarized in The first figure on the results page
 step 5. The first row contains phosphorylation sites as retrieved from Phospho.ELM
    (21062810), and whether the phosphorylated amino acid is a Serine, Threonine
    or Tyrosine. PhosphoELM is a database of manually annotated phosphorylation
-   sites obtained from scientific publications. (right?). You can follow the link
+   sites obtained from scientific publications. (right?) [I would put: from low and high-throughput experiments]. You can follow the link
    to PhosphoELM by clicking on the phosphorylation site in the image.
 
 > Phosphorylation sites are only available when the search is performed
-> with a protein accession, and only its a known uniprot or ensembl accession.
-> Phosphorilation sites are relevant to interpreting ELM motif detections...
-> because???
+> with a protein accession, and only if it is a known uniprot or ensembl accession.
+> Phosphorylation sites are relevant to interprete ELM motif predictions when 
+> the predicted motif requires to be phosphorylated (as in several docking and
+> ligand binding motifs) and naturally, for the prediction of phosphorylation 
+> motifs.
 
 step 6. The second row shows when domains are detected from the SMART
    (9600884,25300481) or Pfam (9600884) database. Annotations are retrieved
    from SMART (both SMART and Pfam), and also include low complexity regions.
-   Hovering the mouse over the domain reveals the domain name and its start
-   position.
+   Hovering the mouse over the domain reveals the domain name as well as its
+   start and end positions.
 
-> Motifs are less likely to be found in domains and structured regions, therefore any
-> motifs detected within these sites are less likely to be functional, and are usually filtered out.
+> Motifs are less likely to be found in domains and structured regions (21909575), therefore any
+> motif detected within these sites are less likely to be functional, and are usually [usually? When they are not?] filtered out.
 
 step 7.  The third row shows unstructured, or disordered regions within the sequence
     as predicted by GlobPlot (12824398). [what does hover do?] The 4th & 5th
-    Rows contain results from IUPred (15955779), another unstructured region
-    priction tool. Protein segments with an IUpred score above 0.5 are 95% likely
+    rows contain results from IUPred (15955779), another unstructured region
+    prediction tool. Protein segments with an IUpred score above 0.5 are 95% likely
     to be disorered (REF?)
 
 > As motifs are often found in intrinsically disordered regions, motifs that
@@ -437,7 +438,7 @@ step 9. The remainder of the figure (from row 6 onwards) displays the motif
    the motif hit. A blue square indicates a motif instance was found, and the
    intensity of the color indicates the confidence associated with that motif detection.
    Boxes in gray are motif hits which have been filtered out as they occur in a
-   SMART domain. Boxes that are Blue & Gray are neutral (what does that mean).
+   SMART domain [and the pink boxes?]. Boxes that are Blue & Gray are neutral (what does that mean).
    If the sequence is already present in the database, any motifs instances
    that have already been annotated are shown as ovals. Lastly, Any motifs
    detected in homologous sequences are also shown as the fraction of red vs.
@@ -448,7 +449,7 @@ step 9. The remainder of the figure (from row 6 onwards) displays the motif
 > are a uniform blue color.
 
 step 10. Mouse over a motif hit (which has not been filtered out by the structural
-   filter) to details of the motif name and its start and stop petition. This
+   filter) to detail the motif name and its start and stop positions. This
    box also shows the amino acid sequence which matched the motif, as well as
    the confidence score. The color of the confidence score title box is also
    suggestive of how confident this motif hit is: red for low confidence,
@@ -470,25 +471,24 @@ step 11. Mouse over a gray rectangle (filtered out) to find out why this hit was
 
 ![](../Figures/BACT_basic_protocol_2/output_alignment.png)
 **Figure BACT-BP-3:** This section of the results contains links to view the
-alignment of homologous proteins. Click any of the linkts to find SRCN1
+alignment of homologous proteins. Click any of the links to find SRCN1
 homologs identified in the UniRef90 database.
 
 step 12. Scroll down to below the graphic with the results to find additional
    information on the motifs found (figure BACT-BP-3). The first section contains links to
-   multiple sequence alignments in the case that homologous sequences were
+   multiple sequence alignments in the case that highly similar sequences were
    detected. The multiple sequence alignments can be viewed by clicking on the
    link. Note that this requires you to have a Java browser plugin.
    Alternatively you can also download the individual files with the
    alignments, conservation features and phophosite features by following the
    respective links.
 
-> The search for homologous sequences performed against the UniRef 90
-> database, a dataset of Unique Reference proteins designed to reflect the
-> entire known universe of proteins in the uniprot database (25348405). Note
+> The search for possible homologous sequences is performed against the UniRef90
+> database, a dataset of protein sequences with less than 90 percent identity between any two of them (25348405). Note
 > that it is possible that the BLAST results are not finished when the
 > results page is shown: We suggest to refresh the page if you see the
-> message "Results are not ready... (something something).
-> The in formation in the MSA is useful because... ehhhmm..???
+> message "Either not enough data available to calculate a sequence alignment or the calculations haven't finished yet"
+> The information in the MSA is useful because... ehhhmm..???
 
 ![](../Figures/BACT_basic_protocol_2/output_filter.png)
 **Figure BACT-BP-4:** A summary of how many motifs and instances were predicted,
