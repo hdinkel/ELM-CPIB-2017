@@ -13,7 +13,7 @@ done
 
 echo ""
 echo "Fixing figure paths"
-sed -i 's#\[\](Figures#\[\](../Figures#' $ALL_MD
+sed -i.bak 's#(Figures#(../Figures#' $ALL_MD
 
 echo ""
 echo "Merged output to: $ALL_MD"
