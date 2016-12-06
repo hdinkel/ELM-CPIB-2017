@@ -5,7 +5,7 @@
 
 ### Software
 
-Ideally use `curl` https://curl.haxx.se/ on the commandline
+Ideally use `curl` https://curl.haxx.se/ on the commandline.
 However, any browser can be used to access the server, most browsers however download text- and csv-files instead of displaying them. Therefore, for trying out different URLs / Parameters, it might be better to use a commandline client such as `curl`.
 
 ## Downloading all ELM classes
@@ -14,12 +14,12 @@ However, any browser can be used to access the server, most browsers however dow
 
 **Figure ELM-Downloads:** The ELM downloads page, which holds information about
 the different types of data (such as "Classes", "Instances", etc; see menu to
-the right) that can be obtain from the server. The orange boxes are clickable
-links, the url following them are used to highlight the URL scheme used by the
+the right) that can be obtained from the server. The orange boxes are clickable
+links, the URL following them are used to highlight the URL scheme used by the
 server (bold font denotes specifics used in the examples such as query terms,
 or formats).
 
-step 1. Direct your browser to the url 'http://elm.eu.org/downloads' or choose 'ELM Downloads' from the Menu at 'http://elm.eu.org' (see the [/Figures/elm_downloads_html.png](screenshot) figure showing the ELM downloads website).
+step 1. Direct your browser to the URL 'http://elm.eu.org/downloads' or choose 'ELM Downloads' from the Menu at 'http://elm.eu.org' (see the [/Figures/elm_downloads_html.png](screenshot) figure showing the ELM downloads website).
 
 > This webpage contains links and descriptions on how to download ELM data in text format.
 > The information is separated in individual tables, eg. for 'Classes', 'Instances', and so on...
