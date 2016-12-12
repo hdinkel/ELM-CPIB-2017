@@ -60,3 +60,12 @@
 - the protocol steps should describe the actions performed, employing the active tense versus the passive
 - give a summary / guideline on how to interpret the results, what might have gone wrong, what to look out for
 - screenshots are good. more screenshots are more good
+
+
+# Consistency Notes
+
+- we should use british english for spelling correction
+- we should write resource names consistently, e.g. Uniprot instead of uniprot
+- serine, threonine or tyrosine instead of Serine, Threonine or Tyrosine
+- consistent use of 'URL' instead of 'url'
+
