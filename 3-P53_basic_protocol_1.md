@@ -1,48 +1,46 @@
 # Basic protocol 1: explore the manually curated information for the p53 protein in the ELM DB
 
 The core of the ELM database is a repository of manually annotated
-motifs and instances. As of December 2016, ELM contains over 260? motif classes
+motifs and instances. As of December 2016, ELM contains over 260 motif classes
 categorized into 6 different types: DOC (docking), LIG (Ligand binding), DEG
 (degradation), CLV (cleavage), MOD (post translational modifications), and
-TRG (targeting/anchoring) motifs (Figure 1). (Should we explain here what annotation means in ELM?) These motifs are derived from various types
+TRG (targeting/anchoring) motifs (Figure functional_classification_of_SLiMs). These motifs are derived from various types
 of experiments reported in literature. Each manually annotated motif also has a
 set of bona fide instances (occurrences) of this motif. The motifs and motif
 instances have been uploaded by a large group of annotators from around the
 globe. The complete catalogue of manually curated data can be searched, browsed
-and explored on the ELM database.
+and explored on the ELM website
 
 In this protocol we will be viewing the manually annotated data of a typical
 protein, using p53 (Uniprot ID: P53_HUMAN/P04637) as an example. We will cover how to
 find the manually annotated motifs and instances, and how to find the motif
 instances, the references used to annotate each instance, the experimental
 protocols used, and additional information including relationships to biological
-pathways (in KEGG), diseases (from ???) and molecular switches (in switches.ELM).
+pathways (such as KEGG PMID:26476454), diseases (from OMIM PMID:17357067) and molecular switches (in switches.ELM PMID:23550212).
 
 ## Necessary Resources
 
 ### Software & Hardware
 
-A modern browser such as Firefox, Chrome, Safari, Internet Explorer or Edge.
+A modern browser such as Firefox, Chrome, or Safari.
 ELM is best viewed on a laptop or desktop computer, although tablets and
 smartphones will also work.
 
 ## Searching ELM database content
 
 ![](Figures/TP53_basic_protocol_1/input_page_seq.png)
-**Figure TP53-BP1-1** The query input page for ELM for searching for manually
-annotated content from the ELM database. If the identifier for a protein with
-manually annotated data is typed into the search field it appears as an
-"autocomplete suggestion".
+**Figure TP53-BP1-1** The query input page for ELM for predicting motifs in a given protein sequence.
 
 Step 1. Open a browser, and navigate to the ELM homepage: http://elm.eu.org.
 Enter the Uniprot ID "P53_HUMAN" in the search field labelled "Enter a uniprot
-identifier or accession number". The page will automatically suggest the
+identifier or accession number". The page should autocomplete/suggest the
 protein "P53_HUMAN / P04637 (Homo sapiens)". Click on this entry to confirm
 that we want to search for SLiM data for this protein. Click on "Submit" to
 view the motif instance data for p53. (Fig. TP53-BP1-1)
 
-> If protein is used for this query which is present in ELM, certain data is
-> automatically populated to filter the search criteria. In this example,
+> The autocompletion mechanism queries uniprot.org for protein identifier;
+> if it succeeds, then additional information from uniprot
+> will be used to pre-populate the filter boxes. In this example,
 > P53_HUMAN is recognized as a Human protein, and so "Homo sapiens" is
 > automatically filled in the "Taxonomic Contenct" field. Also, P53 has manually
 > annotated motifs identified in the nucleus, cytosol, endoplasmic reticulum
@@ -56,7 +54,7 @@ view the motif instance data for p53. (Fig. TP53-BP1-1)
 **Figure TP53-BP1-2**
 
 Step 2. The results from the query will open in a new tab (Fig. TP53-BP1-2).
-The graphical results summary for P53_HUMAN. Note that not all motif hits are
+Note that not all motif hits are
 shown: the image is chopped off at the bottom. The protein has a handful of
 structural features (shown in the top 5 rows). See the legend at the top of the
 figure for more information. Motif instances which are manually annotated in
@@ -77,15 +75,22 @@ followed by a short description of each motif, to which cell compartments its
 has been associated, and finally the regular expression of the motif.
 
 > The "Logic" column indicates whether this motif is an example of a functional
-> (True Postive) or non-functional (False Postive) motif. This is ???
+> (True Positive, TP) or non-functional (False Positive, FP) motif. A TP
+> instance is an instance annotated with experimental evidence showing this
+> instance to be functional, whereas a FP is an instance with experimental
+> evidence hinting at a function, but after careful inspection our annotators
+> believe this instance to be non-functional. There are only rare cases of a
+> true negative (TN) instance, which is an annotated instance where experiments
+> have shown it to be non-functional.
 
 ## Browsing Motif information.
 
 ![](Figures/TP53_basic_protocol_1/doc_cyclin_page.png)
 **Figure TP53-BP1- 4** The motif details page for "DOC_CYCLIN_1". This page
-contains all of the manual annotation details for the DOC_CYCLIN_1 motif, as
-well as links to more details about motifs, links to external resources
-(pubmed, GO and PDB).
+contains all of the manual annotation details for the DOC_CYCLIN_1 motif,
+the biological background summarized from the scientific literature including
+links to the primary literature and to external resources (Pubmed (PMID:27899561),
+GeneOntology (PMID:27899567), PDB (PMID:12037327) and more).
 
 Step 4.  Click on "DOC_CYCLIN_1" to navigate to the page with details about the
 "DOC_CYCLIN_1" motif (Fig TP53-BP1-4). This page contains a description of the
@@ -122,19 +127,16 @@ database, as well as links to PDB if this structure exists in PDB.
 ![](Figures/TP53_basic_protocol_1/doc_cyclin_experiments.png)
 **Figure TP53-BP1- 5** The instance details page for the "DOC_CYCLIN_1"
 instance found in P53 with start/end position "381-385".
-This page also contains links to many external databases including Uniprot,
-PDB, the NCBI taxonomy, Pubmed, and (KEGG?) Pathways, as well as the PSI-MI controlled vocabulary.
+This page also contains links to many external databases including Uniprot (PMID:25348405),
+PDB (PMID:12037327), NCBI taxonomy, Pubmed (PMID:27899561), and KEGG Pathways (PMID:26476454), 
+as well as the PSI-MI controlled vocabulary (PMID:17925023).
 
 Step 7. Return to the P53 results summary page (Step 3) (by
-hitting "back" in the browser), and scroll down the "instances" table in
-Figure TP53-BP1-3. To get information about the motif subsequence
-"GQSTSRHKKLMFKTEGPDSD", click on the link of its start/finish position
-"381-381" to go to the instance details page of this instance (this subsequence is not in fig. 4, and I guess position is 381-385?). The top part of
+hitting "back" in the browser), and scroll down the "instances" table.
+To get information about the annotated motif instance of "DOC_CYCLIN_1"
+(the third instance in Figure TP53-BP1-3) click on the link of its start/finish position
+"381-385" to go to the instance details page of this instance. The top part of
 the page contains details about the instance and the protein it was identified in.
-
-> There are many other ways to arrive at the "instance details page". For
-> instance, clicking on the sequence "GQSTSRHKKLMFKTEGPDSD" on the
-> "DOC_CYCLIN_1" page (Fig TP53-BP1-4) will also bring you to this page. 
 
 Step 8. Scroll down to the "Instance Evidence" header to view details on the
 experimental evidence used to annotate this instance. This table also contains
@@ -144,7 +146,7 @@ well as the Literature references in which the experiments were published.
 > (Here we should explain what "evidence class", "biosource", "Logic",
 > "Reliability" and "Notes" actually mean).
 
-## Details on switches.
+## Details on molecular switches, motif-mediated pathways and other external resources.
 
 Step 9. Scroll further down to the header "Pathways" to view pathway
 information. This is a list of all of the pathways in which the protein p53 is
@@ -152,20 +154,20 @@ known to be involved (according to KEGG). Click on a pathway to see the
 localization of p53 in the corresponding KEGG pathway.
 
 ![](Figures/TP53_basic_protocol_1/doc_www_pin_details.png)
-**Figure TP53-BP1- 6** The instance details page for the "DOC_WW_Pin1_4"
-instance found in P53 with start/end position "30-35". This page is similar to
-that described for P53 instance "DOC_CYCLIN_1", except for this instance interaction and switch information is also available.
+**Figure TP53-BP1-6** The instance details page for the "DOC_WW_Pin1_4"
+instance found in P53 with start/end position "30-35". 
 
 Step 10. Return to the P53 results summary page (Step 3) (by
 hitting "back" in the browser), and scroll down the "instances" table in
 Figure TP53-BP1-3. To get information about the first "DOC_WW_Pin1_4" motif,
-click on the start/end position "30-35" (Fig TP53-BP1-6). This page is similar to that
-previously described for DOC_CYCLIN_1 (Fig TP53-BP1-5), but also contains
-information about this motifs "switch" and "interaction" characteristics.
+click on the start/end position "30-35" (Fig TP53-BP1-6). This page is similar to
+that described for P53 instance "DOC_CYCLIN_1" (Fig TP53-BP1-5); additionally, for this instance
+there is information available about its interaction partner and a molecular switch
+which is mediated by this motif instance.
 
 Step 11. Scroll down to the "Interactions" header to view information about
 this instance's interactions (Fig TP53-BP1-6). This instance interacts with PIN1_Human via the
-PG00397 domain (found on position 7--37 in PIN1_Human). If available, binding
+"WW" domain (PFAM identifier PF00397; found on position 7--37 in PIN1_Human). If available, binding
 affinities are also shown here. Interaction data is made available in Mitab and xml format (PMID:17925023).
 
 Step 12. Scroll further down to the "Switches" section for a brief overview of
