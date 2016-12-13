@@ -77,8 +77,8 @@ step 5. The first row contains phosphorylation sites as retrieved from Phospho.E
 > motifs.
 
 step 6. The second row shows when domains are detected from the SMART
-   (9600884,25300481) or Pfam (9600884) database. Annotations are retrieved
-   from SMART (both SMART and Pfam), and also include low complexity regions.
+   (25300481) or Pfam (9600884) database. Annotations are retrieved
+   from SMART (showing domains from both SMART and Pfam), and also include low complexity regions.
    Hovering the mouse over the domain reveals the domain name as well as its
    start and end positions.
 
