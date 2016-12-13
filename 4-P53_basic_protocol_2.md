@@ -8,7 +8,7 @@ overview of all the data, and types of data contained in the database.
 
 ## Database content overview
 
-![](Figures/TP53_basic_protocol_2/search.png)
+![](Figures/TP53_2/stats.png)
 **Figure TP53-BP2-1** The ELM database overview page (elm.eu.org/search.db).
 
 Step 1. Go to http://elm.eu.org and click on the tab "ELM DB" to explore the
@@ -17,7 +17,7 @@ were manually curated from the literature (Figure TP53-BP2-1). This page
 contains a brief summary of the database content, as well as the number of
 links to third-party databases.
 
-![](Figures/TP53_basic_protocol_2/search_results.png)
+![](Figures/TP53_2/elms.png)
 **Figure TP53-BP2-2** The list of all motifs in the ELM database.
 
 Step 2. Click on the sub-menu "ELM classes" in "ELM DB" to see the page with all
@@ -38,7 +38,7 @@ click on the number of instances.
 > values" file.
 
 
-![](Figures/TP53_basic_protocol_2/instances.png)
+![](Figures/TP53_2/instances.png)
 **Figure TP53-BP2-3** The list of all instances in the ELM database.
 
 Step 3. Click on the sub-menu "ELM instances" in "ELM DB" to go to
@@ -53,7 +53,7 @@ as step XXXX, figure YYY in the previous section).
 > top of the page can be used to download the instances in the following formats: gff,
 > pir, fasta or tsv.
 
-![](Figures/TP53_basic_protocol_2/methods.png)
+![](Figures/TP53_2/methods.png)
 **Figure TP53-BP2-4** The list of all experimental methods used in the ELM database.
 
 Step 4. Click on the sub-menu "ELM methods " in "ELM DB" to see a list
@@ -68,7 +68,7 @@ annotated using that method.
 > The filter bar on the top page can be used to filter the list of methods. The
 > *tsv* link creates a downloadable file in "tab separated values" format.
 
-![](Figures/TP53_basic_protocol_2/pdbs.png)
+![](Figures/TP53_2/pdbs.png)
 **Figure TP53-BP2-5** The list of all known structures in PDB also in ELM.
 
 Step 5. Click on the sub-menu "ELM pdb structures" in "ELM DB" to see a
@@ -81,7 +81,7 @@ This page also contains links to RCSB (PMID:12037327), the individual instance a
 > values" format. The *tsv* file contains the PDB id, uniprot name, and ELM class.
 
 
-![](Figures/TP53_basic_protocol_2/interactions.png)
+![](Figures/TP53_2/interactiondomains.png)
 **Figure TP53-BP2-6** A list of all interactions annotated in the database.
 
 Step 6. Click on the sub-menu "ELM binding domains " in "ELM DB" to see a
@@ -97,7 +97,7 @@ well as the name of the interacting domain followed by a brief description.
 
 ## Links to external resources
 
-![](Figures/TP53_basic_protocol_2/switches.png)
+![](Figures/TP53_2/switches.png)
 **Figure TP53-BP2-7** A list of all switches annotated in ELM.
 
 Step 7. Click on the sub-menu "ELM switches" in "ELM DB" to see a
@@ -111,7 +111,7 @@ description of the switch also taken from switches.ELM (PMID:23550212).
 > shown. 
 
 
-![](Figures/TP53_basic_protocol_2/pathways.png)
+![](Figures/TP53_2/pathways.png)
 **Figure TP53-BP2-8** A list of all Pathways from KEGG with proteins in ELM.
 
 Step 8. Click on the sub-menu "ELM pathways" in "ELM DB" to see a list of
@@ -122,7 +122,7 @@ pathways which have a protein annotated in ELM, and links to the pathways on KEG
 
 ## Infections and Diseases
 
-![](Figures/TP53_basic_protocol_2/viruses.png)
+![](Figures/TP53_2/viruses.png)
 **Figure TP53-BP2-9** A Table of the ELM instance abused by viruses 
 
 Step 9. Click on the sub-menu "ELM virus instances" in "ELM DB" to see a
@@ -136,7 +136,7 @@ XXX step YYY (Figure ZZZZ).
 > section XXX for a description of these formats.)
 
 
-![](Figures/TP53_basic_protocol_2/diseases.png)
+![](Figures/TP53_2/diseases.png)
 **Figure TP53-BP2-10** A list of all diseases in ELM. 
 
 Step 10. Click on the sub-menu "ELM diseases" in "ELM DB" to see a list
