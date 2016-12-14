@@ -14,6 +14,7 @@ done
 echo ""
 echo "Fixing figure paths"
 sed -i.bak 's#(Figures#(../Figures#' $ALL_MD
+sed -i.bak 's/PMID:\([0-9]\{7,8\}\)/\\cite{\1}/g' $ALL_MD
 
 echo ""
 echo "Merged output to: $ALL_MD"
@@ -24,6 +25,8 @@ pandoc -o complete.tex complete.md
 
 sed -i.bak 's/includegraphics/includegraphics[width=\\textwidth]/g' complete.tex 
 
+pdflatex RB-CurrentProtocol_clean.tex
+bibtex RB-CurrentProtocol_clean
 pdflatex RB-CurrentProtocol_clean.tex
 rm RB-CurrentProtocol_clean.aux
 rm RB-CurrentProtocol_clean.out
