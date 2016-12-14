@@ -64,7 +64,7 @@ Step 4. The Results are summarized in the first figure on the results page
    (see figure BACT-BP-2).
 
 Step 5. The first row contains phosphorylation sites as retrieved from Phospho.ELM
-   (21062810), and whether the phosphorylated amino acid is a serine, threonine
+   (PMID:21062810), and whether the phosphorylated amino acid is a serine, threonine
    or tyrosine. Phospho.ELM is a database of manually annotated phosphorylation
    sites obtained from scientific publications. (right?) [I would put: from low and high-throughput experiments]. You can follow the link
    to Phospho.ELM by clicking on the phosphorylation site in the image.
@@ -77,17 +77,17 @@ Step 5. The first row contains phosphorylation sites as retrieved from Phospho.E
 > motifs.
 
 Step 6. The second row shows when domains are detected from the SMART
-   (25300481) or Pfam (9600884) database. Annotations are retrieved
+   (PMID:25300481) or Pfam (PMID:9600884) database. Annotations are retrieved
    from SMART (showing domains from both SMART and Pfam), and also include low complexity regions.
    Hovering the mouse over the domain reveals the domain name as well as its
    start and end positions.
 
-> Motifs are less likely to be found in domains and structured regions (21909575), therefore any
+> Motifs are less likely to be found in domains and structured regions (PMID:21909575), therefore any
 > motif detected within these sites are less likely to be functional, and are usually [usually? When they are not?] filtered out.
 
 Step 7.  The third row shows unstructured, or disordered regions within the sequence
-    as predicted by GlobPlot (12824398). [what does hover do?] The 4th & 5th
-    rows contain results from IUPred (15955779), another unstructured region
+    as predicted by GlobPlot (PMID:12824398). [what does hover do?] The 4th & 5th
+    rows contain results from IUPred (PMID:15955779), another unstructured region
     prediction tool. Protein segments with an IUpred score above 0.5 are 95% likely
     to be disorered (REF?)
 
@@ -148,7 +148,7 @@ Step 12. Scroll down to below the results graphic to find additional
    respective links.
 
 > The search for possible homologous sequences is performed against the UniRef90
-> database, a dataset of protein sequences with less than 90 percent identity between any two of them (25348405). Note
+> database, a dataset of protein sequences with less than 90 percent identity between any two of them (PMID:25348405). Note
 > that it is possible that the BLAST results are not finished when the
 > results page is shown: We suggest to refresh the page if you see the
 > message "Either not enough data available to calculate a sequence alignment or the calculations haven't finished yet"
