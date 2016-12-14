@@ -187,7 +187,7 @@ step 14. Scroll further down to the section with the header "Globular domains/ T
    server, and their positions. Clicking on their names will bring you to the
    SMART entry for that domain on the SMART homepage.
 
-![](Figures/BACT_basic_protocol_2/output_instances.png)
+![](Figures/BACT_1/elm_results_motifs.png)
 **Figure BACT-BP-6:** This protein was already annotated in the database, and
 has a single instance of the motif "LIG_SxIP_EBH_1" annotated.
 
