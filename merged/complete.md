@@ -8,11 +8,11 @@
 individual protocols in unit; a brief mention of any critical limitations and
 assumptions;*
 
-The activity and function of a protein is tightly regulated by its cellular environment. To interact with their surroundings, proteins use various types of binding modules that each display distinct binding properties (PMID:10550212). One prominent type of binding module consists of short linear motifs (SLiMs) (PMID:18508681). These compact binding sites mediate a diverse set of interactions that regulate protein functionality (PMID:24926813, PMID:24773235) (Figure functional_classification_of_SLiMs). They can function as ligand binding sites or as sites for post-translational modification (PTM). Some ligand SLiMs are recognised by components of the cellular transport machinery and function as localisation signals that target proteins to specific sub-cellular compartments. Other ligand SLiMs are abundantly present in interfaces that mediate the assembly of large macromolecular complexes and in highly modular scaffold proteins that act as multivalent platforms for protein complex assembly. Docking motifs are ligand SLiMs that recruit modification enzymes to their substrates by binding to a site on the enzyme that is distinct from the active site. A subset of these, known as degrons, recruit ubiquitin ligases, which subsequently polyubiquitylate their substrates and hence target them for proteasomal degradation. SLiMs that act as sites for PTM can either be targeted by specific enzymes for the addition or removal of a small chemical group, mediate proteolytic cleavage by acting as target site for proteolytic enzymes, or be recognised for structural modification by isomerases that catalyse cis-trans isomerisation of the peptide backbone.
+The activity and function of a protein is tightly regulated by its cellular environment. To interact with their surroundings, proteins use various types of binding modules that each display distinct binding properties (\cite{10550212}). One prominent type of binding module consists of short linear motifs (SLiMs) (\cite{18508681}). These compact binding sites mediate a diverse set of interactions that regulate protein functionality (\cite{24926813}, \cite{24773235}) (Figure functional_classification_of_SLiMs). They can function as ligand binding sites or as sites for post-translational modification (PTM). Some ligand SLiMs are recognised by components of the cellular transport machinery and function as localisation signals that target proteins to specific sub-cellular compartments. Other ligand SLiMs are abundantly present in interfaces that mediate the assembly of large macromolecular complexes and in highly modular scaffold proteins that act as multivalent platforms for protein complex assembly. Docking motifs are ligand SLiMs that recruit modification enzymes to their substrates by binding to a site on the enzyme that is distinct from the active site. A subset of these, known as degrons, recruit ubiquitin ligases, which subsequently polyubiquitylate their substrates and hence target them for proteasomal degradation. SLiMs that act as sites for PTM can either be targeted by specific enzymes for the addition or removal of a small chemical group, mediate proteolytic cleavage by acting as target site for proteolytic enzymes, or be recognised for structural modification by isomerases that catalyse cis-trans isomerisation of the peptide backbone.
 
-SLiMs are generally located in intrinsically disordered regions (IDR) of the proteome, but often adapt a secondary structure upon binding (PMID:19841628). In general, they bind to the surface of a globular domain in a protein, although some are known to bind to a protein’s IDR or even RNA molecules. As their name suggests, SLiMs are compact, being composed of a limited number of adjacent amino acids. Most of a motif’s binding specificity however is conferred by only a subset of these amino acids. Those few residues that directly interact with the binding partner are evolutionary conserved, although in many cases a subset of amino acids that share certain properties (such as similar charge, size or hydrophobicity) are allowed in these hotspot positions. In the motif positions that contribute little to the interaction, there are even less constraints, i.e. a broader range of amino acids is allowed in these positions (PMID:21909575). A first consequence of this degeneracy is that SLiMs co-operatively engage in interactions of relatively low affinity. Hence these binding events are transient and reversible, and can be readily modulated, for instance by PTM. These characteristics make SLiM-based interactions ideal mediators of the dynamic processes involved in cell signalling (PMID:22480932). Another consequence is that it might take only a few or even a single point mutation to generate or disrupt a functional motif in a protein. The associated ability to evolve convergently might underlie the proliferation of SLiMs and the rewiring of interactomes (PMID:26589632) (PMID:22346764). Conversely, several SLiM-associated diseases have been characterised to date, for instance Liddle syndrome (PMID:15483078).
+SLiMs are generally located in intrinsically disordered regions (IDR) of the proteome, but often adapt a secondary structure upon binding (\cite{19841628}). In general, they bind to the surface of a globular domain in a protein, although some are known to bind to a protein’s IDR or even RNA molecules. As their name suggests, SLiMs are compact, being composed of a limited number of adjacent amino acids. Most of a motif’s binding specificity however is conferred by only a subset of these amino acids. Those few residues that directly interact with the binding partner are evolutionary conserved, although in many cases a subset of amino acids that share certain properties (such as similar charge, size or hydrophobicity) are allowed in these hotspot positions. In the motif positions that contribute little to the interaction, there are even less constraints, i.e. a broader range of amino acids is allowed in these positions (\cite{21909575}). A first consequence of this degeneracy is that SLiMs co-operatively engage in interactions of relatively low affinity. Hence these binding events are transient and reversible, and can be readily modulated, for instance by PTM. These characteristics make SLiM-based interactions ideal mediators of the dynamic processes involved in cell signalling (\cite{22480932}). Another consequence is that it might take only a few or even a single point mutation to generate or disrupt a functional motif in a protein. The associated ability to evolve convergently might underlie the proliferation of SLiMs and the rewiring of interactomes (\cite{26589632}) (\cite{22346764}). Conversely, several SLiM-associated diseases have been characterised to date, for instance Liddle syndrome (\cite{15483078}).
 
-Due to their degenerate nature, motif sequences contain only very little information, and many short sequences in a proteome will match motif patterns. However, most of these matches will not represent functional motifs, and hence, when scanning a proteome for putative motifs using only the motif sequence patterns will yield a large number of false positive instances, far exceeding the number of true motifs. Therefore, reliable motif detection cannot go without experimental validation of candidate motifs, using different types of experiments and techniques (PMID:26581338). This however does not mean that bioinformatics analysis cannot guide researchers towards a subset of candidate motifs that have a higher probability to be functional and help rule out those candidate motifs that are likely to be false positives. Taking into account additional information, besides a match to a sequence pattern defining a SLiM, can greatly narrow the selection of putative motifs for experimental validation. Additional data for in silico analysis include conservation of the motif sequence, the location of the motif within the protein’s structure and its accessibility for its binding partner, validated interaction with the binding partner, and in-cell co-localisation with the binding partner. The availability and usefulness of these additional data for SLiM discovery depends on their extensive and correct biocuration. A vast and increasing amount of biological data is available in a wide variety of sources, including the literature and large-scale datasets. In order to facilitate integration of data, they need to be collected, annotated and formatted in central data and knowledge repositories. The ELM database provides such a repository for experimentally validated linear motif classes and instances. The ELM prediction tool in turn relies on annotated data, both from the ELM database and other resources, to accurately analyse unknown sequences for candidate motifs and assist researchers in selecting the most plausible ones for experimental validation and discard likely false positive hits, saving them valuable time and assets (PMID:22110040).
+Due to their degenerate nature, motif sequences contain only very little information, and many short sequences in a proteome will match motif patterns. However, most of these matches will not represent functional motifs, and hence, when scanning a proteome for putative motifs using only the motif sequence patterns will yield a large number of false positive instances, far exceeding the number of true motifs. Therefore, reliable motif detection cannot go without experimental validation of candidate motifs, using different types of experiments and techniques (\cite{26581338}). This however does not mean that bioinformatics analysis cannot guide researchers towards a subset of candidate motifs that have a higher probability to be functional and help rule out those candidate motifs that are likely to be false positives. Taking into account additional information, besides a match to a sequence pattern defining a SLiM, can greatly narrow the selection of putative motifs for experimental validation. Additional data for in silico analysis include conservation of the motif sequence, the location of the motif within the protein’s structure and its accessibility for its binding partner, validated interaction with the binding partner, and in-cell co-localisation with the binding partner. The availability and usefulness of these additional data for SLiM discovery depends on their extensive and correct biocuration. A vast and increasing amount of biological data is available in a wide variety of sources, including the literature and large-scale datasets. In order to facilitate integration of data, they need to be collected, annotated and formatted in central data and knowledge repositories. The ELM database provides such a repository for experimentally validated linear motif classes and instances. The ELM prediction tool in turn relies on annotated data, both from the ELM database and other resources, to accurately analyse unknown sequences for candidate motifs and assist researchers in selecting the most plausible ones for experimental validation and discard likely false positive hits, saving them valuable time and assets (\cite{22110040}).
 
 
 ![](../Figures/functional_classification_of_SLiMs.png)
@@ -36,7 +36,7 @@ protein, using p53 (Uniprot ID: P53_HUMAN/P04637) as an example. We will cover h
 find the manually annotated motifs and instances, and how to find the motif
 instances, the references used to annotate each instance, the experimental
 protocols used, and additional information including relationships to biological
-pathways (such as KEGG PMID:26476454), diseases (from OMIM PMID:17357067) and molecular switches (in switches.ELM PMID:23550212).
+pathways (such as KEGG \cite{26476454}), diseases (from OMIM \cite{17357067}) and molecular switches (in switches.ELM \cite{23550212}).
 
 ## Necessary Resources
 
@@ -110,8 +110,8 @@ has been associated, and finally the regular expression of the motif.
 **Figure TP53-BP1- 4** The motif details page for "DOC_CYCLIN_1". This page
 contains all of the manual annotation details for the DOC_CYCLIN_1 motif,
 the biological background summarized from the scientific literature including
-links to the primary literature and to external resources (Pubmed (PMID:27899561),
-GeneOntology (PMID:27899567), PDB (PMID:12037327) and more).
+links to the primary literature and to external resources (Pubmed (\cite{27899561}),
+GeneOntology (\cite{27899567}), PDB (\cite{12037327}) and more).
 
 Step 4.  Click on "DOC_CYCLIN_1" to navigate to the page with details about the
 "DOC_CYCLIN_1" motif (Fig TP53-BP1-4). This page contains a description of the
@@ -148,9 +148,9 @@ database, as well as links to PDB if this structure exists in PDB.
 ![](../Figures/TP53_1/doc_cyclin_1_instance.png)
 **Figure TP53-BP1- 5** The instance details page for the "DOC_CYCLIN_1"
 instance found in P53 with start/end position "381-385".
-This page also contains links to many external databases including Uniprot (PMID:25348405),
-PDB (PMID:12037327), NCBI taxonomy, Pubmed (PMID:27899561), and KEGG Pathways (PMID:26476454), 
-as well as the PSI-MI controlled vocabulary (PMID:17925023).
+This page also contains links to many external databases including Uniprot (\cite{25348405}),
+PDB (\cite{12037327}), NCBI taxonomy, Pubmed (\cite{27899561}), and KEGG Pathways (\cite{26476454}), 
+as well as the PSI-MI controlled vocabulary (\cite{17925023}).
 
 Step 7. Return to the P53 results summary page (Step 3) (by
 hitting "back" in the browser), and scroll down the "instances" table.
@@ -161,7 +161,7 @@ the page contains details about the instance and the protein it was identified i
 
 Step 8. Scroll down to the "Instance Evidence" header to view details on the
 experimental evidence used to annotate this instance. This table also contains
-the "evidence class", and descriptions of the methods used from PSI-MI (PMID:17925023) as
+the "evidence class", and descriptions of the methods used from PSI-MI (\cite{17925023}) as
 well as the Literature references in which the experiments were published.
 
 > (Here we should explain what "evidence class", "biosource", "Logic",
@@ -189,10 +189,10 @@ which is mediated by this motif instance.
 Step 11. Scroll down to the "Interactions" header to view information about
 this instance's interactions (Fig TP53-BP1-6). This instance interacts with PIN1_Human via the
 "WW" domain (PFAM identifier PF00397; found on position 7--37 in PIN1_Human). If available, binding
-affinities are also shown here. Interaction data is made available in Mitab and xml format (PMID:17925023).
+affinities are also shown here. Interaction data is made available in Mitab and xml format (\cite{17925023}).
 
 Step 12. Scroll further down to the "Switches" section for a brief overview of
-the switches details of this instance obtained form "switches.ELM" (PMID:23550212) (Fig TP53-BP1-6). This
+the switches details of this instance obtained form "switches.ELM" (\cite{23550212}) (Fig TP53-BP1-6). This
 particular instance is involved in the switch phosphorylating P53. Clicking
 on the diagram will open an external link to the "switches.ELM" website.
 
@@ -257,7 +257,7 @@ as step XXXX, figure YYY in the previous section).
 Step 4. Click on the sub-menu "ELM methods " in "ELM DB" to see a list
 of all experimental methods which have been used to identify motifs and instances (figure
 TP32-BP2-4). This table shows the internal method identifier in the first
-column, a link to the corresponding entry in the PSI-MI database (PMID:17925023),
+column, a link to the corresponding entry in the PSI-MI database (\cite{17925023}),
 and the method name as annotated by the PSI-MI controlled vocabulary, as well as
 the type of experiment (in vitro/in vivo).
 Clicking on the link in the "instances" column will list all instances
@@ -272,7 +272,7 @@ annotated using that method.
 Step 5. Click on the sub-menu "ELM pdb structures" in "ELM DB" to see a
 list of all macromolecular structures in the ELM database (Figure TP53-BP2-5).
 Structures annotated in ELM ideally (but not always) show both interaction partners, motif and domain.
-This page also contains links to RCSB (PMID:12037327), the individual instance and the motif class of that instance.
+This page also contains links to RCSB (\cite{12037327}), the individual instance and the motif class of that instance.
 
 > The filter bar on the top page can be used to filter the list of structures
 > shown . The *tsv* link creates a downloadable file in "tab separated
@@ -286,7 +286,7 @@ Step 6. Click on the sub-menu "ELM binding domains " in "ELM DB" to see a
 complete list of all the interaction domains in ELM (Figure TP53-BP2-6).
 This table shows the ELM classes which have been annotated with a corresponding
 interaction domain. This table shows the ELM class, a link to the Pfam 
-(PMID:26673716) / SMART (PMID:25300481) / InterPro (PMID:27899635) domain, as
+(\cite{26673716}) / SMART (\cite{25300481}) / InterPro (\cite{27899635}) domain, as
 well as the name of the interacting domain followed by a brief description.
 
 > The filter bar on the top page can be used to filter the list of interactions
@@ -302,7 +302,7 @@ Step 7. Click on the sub-menu "ELM switches" in "ELM DB" to see a
 complete list of all the switches in ELM (Figure TP53-BP2-7). This table shows
 the motif class, contains a link to Uniprot, and the start and stop positions of
 the motif mediating the switch. The last two columns have links to switches.ELM, and a brief
-description of the switch also taken from switches.ELM (PMID:23550212).
+description of the switch also taken from switches.ELM (\cite{23550212}).
 
 
 > The filter bar on the top page can be used to quickly filter the list of interactions
@@ -314,7 +314,7 @@ description of the switch also taken from switches.ELM (PMID:23550212).
 
 Step 8. Click on the sub-menu "ELM pathways" in "ELM DB" to see a list of
 all pathways contained in ELM (Fig. TP53-BP2-8). Pathways are from the "Kyoto
-Encyclopedia of Genes and Genomes" (KEGG (PMID:26476454)) database mapped to ELM instances.
+Encyclopedia of Genes and Genomes" (KEGG (\cite{26476454})) database mapped to ELM instances.
 Click on a species (for example "Homo sapiens") for a complete list of all Human
 pathways which have a protein annotated in ELM, and links to the pathways on KEGG.
 
@@ -377,17 +377,19 @@ Candidate classes tough some content is related to the p53 protein.
 
 # Basic Protocol 2: Predicting ELMs in sequences [2 or 3?]
 
-One of the most useful features in ELM is the ability to detect motifs in proteins and
-sequences.
+One of the most useful (and used) features in ELM is the ability to detect
+motifs in proteins and sequences. Given a protein's amino acid sequence, the
+"EML Predictions" pipeline searches for occurrences of each Motif class using
+their regular expressions. The presence of each motif is also ......
 
-We will use as an example protein "SRC kinase signaling inhibitor 1" (uniprot
-ID: Q9C0H9), which is suspected to ????? (add biological example question
-here?)  **Hugo:** What are we expecting? Can you add two or three sentnces
-explaining what we expect, and maybe a "biological question"?
+We will use as an example protein "CV_0974" (uniprot ID: Q7NZE8), a "probable
+tyrosine phosphatase" from _Chromobacterium violaceum_. This protein is predicted
+to be a tyrosine phosphates because it has a "tyrosine phosphatase" (PTPc) domain.
+However its specificity is unknown ???
 
 ## Necessary Resources
 
-### Software
+### Software & Hardware
 
 A modern browser such as Firefox, Chrome, Safari, Internet Explorer or Edge.
 ELM is best viewed on a laptop or desktop computer, although tablets and
@@ -397,212 +399,193 @@ smartphones will also work.
 
 ![](../Figures/BACT_1/elm_search.png)
 **Figure BACT-BP-1:** The input query page for finding motifs in ELM. The
-sequence for SRC kinase signaling inhibitor was used as an example for this
-article.
+sequence for _C. vilaceum protein_ CV_0974 was used as an example for this
+protocol.
 
 step 1. Click on the "ELM Predictions" button in the menu to access the search query
-   page. (Queries can also be submitted from the ELM homepage). Figure
-   BACT-BP-1 shows the "ELM predictions" page. Users either provide
-   a protein accession (uniprot format) or an amino acid sequence (simply the
-   sequence, or a FASTA formatted entry). Enter the sequence for the protein:
-   SRCN1_HUMAN (uniprot ID: Q9C0H9)
+   page (Fig. BACT-BP-1). Here you can provide either a protein accession (from
+   uniprot) or an amino acid sequence (simply the
+   sequence, or a FASTA formatted entry) in which you want to detect SLiMs.
+   Retrieve the FASTA formatted sequence from Uniprot
+   (http://www.uniprot.org/uniprot/Q7NZE8), and enter it into the "sequence
+   input text box".
 
-> When you enter an accession, the query is still performed on the sequence,
-> but the sequence is automatically retrieved from Expasy (expasy, right?).
+> As this protein is already present in the ELM database, it is also possible
+> to type its identifier (CV_0974) into the "identifier input field" as steps
+> XXX and in YYY Basic Protocols 1`& 3. However it is not neccesary to submit
+> protein sequences already in the database: any amino acid sequence can
+> submitted to the ELM prediction pipeline.
 
-step 2. Select the search criteria. It is possible to select a specific "cell compartment",
-   such that only motif classes annotated as belonging to that cellular compartment will be
-   included in the search results. It is also possible to select a "taxonomic context"
-   to filter out ELMs that have not been reported in the selected taxonomic category.
+step 2. Select the search criteria (optional). It is possible to limit the
+   results by "cell compartment", "taxonomic context" or by changing the "motif
+   probability cutoff". To restrict the search to include SLiM's that are
+   active in certain cellular compartments, select one or more from the list
+   (use the "control" key to select more than one option). It is also possible
+   to select a "taxonomic context" to restrict the search to SLiMs from certain
+   species. Start typing a species name in the "taxonomic context" input field to
+   get an auto-completed list of species to select from.
    Additionaly, a "Motif probability cutoff" can be used to only retain ELM
-   classes whose pattern probability is below the given value. Leave all of
-   these at their default values: 'not specified', '100' and no Taxonomic Context.
+   classes whose pattern probability is below the given value.
+   For the current protocol, leave all of these at their default values: "not
+   specified", "100" and no "taxonomic context"
 
-step 3. Retrieve the amino acid sequence from Uniprot, and submit the sequence.
-   Results may be submitted as a single FASTA formatted entry, or alternatively only
-   the amino acid sequence.
-   You will be brought to an intermediate page indicating that your results are being
-   processed, and you should be redirected to the final results page within 30
-   seconds.
+step 3. Click "submit" to start the searching for motifs. 
+   You will be brought to an intermediate page indicating that your results are
+   being processed, and you should be redirected to the final results page within
+   30 seconds.
 
 > You can bookmark this page: The results are stored for a week.
 
 ## Interpreting the prediction results: Graphical Summary
 
 ![](../Figures/BACT_1/elm_results_summary.png)
-**Figure BACT-BP-2:** The graphical results summary for SRC kinase signaling inhibitor
-1 (SRCN1_HUMAN). Note that not all motif hits are shown: the image is chopped
-off at the bottom. The protein has a handful of structural features (shown in
-the top 5 rows). The motif hits are shown as blue boxes, the intensity of which
-indicates the conservation score. See the legend at the top of the figure for
-more information.
+**Figure BACT-BP-2:** The graphical results summary of the ELM Prediction pipeline
+for Probable Tyrosine phoshate (CV_0974). Note that not all motif
+detections are shown (the image is truncated at the bottom). The top five rows show a handfull of 
+structural features. The motif occurence are shown as blue boxes, the intensity of which
+indicates the conservation score. See steps XXX to YYY for more information.
 
-step 4. The Results are summarized in the first figure on the results page
-   (see figure BACT-BP-2).
+step 4. The Results are summarized in the first figure on the results page (see
+   figure BACT-BP-2). The Graphical summary shows all of the final and
+   intermediate results generated by the ELM Prediction pipeline, and can be
+   used infer whether or not a motif is present in a sequence, as well as now
+   likely it is to be functional based on its structural context and
+   evolutionary conservation. 
 
 step 5. The first row contains phosphorylation sites as retrieved from Phospho.ELM
-   (21062810), and whether the phosphorylated amino acid is a serine, threonine
+   (\cite{21062810}), and whether the phosphorylated amino acid is a serine, threonine
    or tyrosine. Phospho.ELM is a database of manually annotated phosphorylation
-   sites obtained from scientific publications. (right?) [I would put: from low and high-throughput experiments]. You can follow the link
+   sites obtained from scientific publications from low and high-throughput experiments. You can follow the link
    to Phospho.ELM by clicking on the phosphorylation site in the image.
 
 > Phosphorylation sites are only available when the search is performed
-> with a protein accession, and only if its a known uniprot accession.
-> Phosphorylation sites are relevant to interprete ELM motif predictions when
+> with a protein accession in step XXX.  Phosphorylation sites are relevant to
+> interprete ELM motif predictions when
 > the predicted motif requires to be phosphorylated (as in several docking and
 > ligand binding motifs) and naturally, for the prediction of phosphorylation
 > motifs.
 
-step 6. The second row shows when domains are detected from the SMART
-   (9600884,25300481) or Pfam (9600884) database. Annotations are retrieved
-   from SMART (both SMART and Pfam), and also include low complexity regions.
-   Hovering the mouse over the domain reveals the domain name as well as its
-   start and end positions.
+step 6. The second row shows SMART and Pfam domains detected by the SMART
+   database (9600884,25300481, 9600884). Hover the mouse over these domains to
+   see their names and exact start and end positions.
 
-> Motifs are less likely to be found in domains and structured regions (21909575), therefore any
-> motif detected within these sites are less likely to be functional, and are usually [usually? When they are not?] filtered out.
+> In order to be functional SLiMs need to be accessble, and are therefore they
+> are usually not > found within domains and structured regions (21909575). Any
+> SLiMs detected by the ELM prediction pipleline are less likely to be
+> functional, and are filtered out by the "structural filter" (see also step XXX).
 
-step 7.  The third row shows unstructured, or disordered regions within the sequence
-    as predicted by GlobPlot (12824398). [what does hover do?] The 4th & 5th
+step 7.  The third row shows globular and disordered regions in the sequence as
+    predicted by GlobPlot (12824398). The 4th & 5th
     rows contain results from IUPred (15955779), another unstructured region
     prediction tool. Protein segments with an IUpred score above 0.5 are 95% likely
-    to be disorered (REF?)
+    to be disorered (REF???).
 
-> As motifs are often found in intrinsically disordered regions, motifs that
-fall within regions identified by GlobPlot are likely to be functional.
+>  SLiMs are typically only functional when found in intrinsically disordered
+>  regions. Any motif occurence detected by the ELM prediction pipeline that
+>  fall within disoredered regious are more likely to be functional.
 
-step 8. The 5th row contains information on secondary structure. HELP?!?!?! Where do
-   these predictions come from?
+step 8. The 5th row contains information on secondary structure. The secondary
+   structure is predicted using a ?????
 
 step 9. The remainder of the figure (from row 6 onwards) displays the motif
-   occurrences detected, as well as a host of information about the context of
-   the motif hit. A blue square indicates a motif instance was found, and the
-   intensity of the color indicates the confidence associated with that motif detection.
-   Boxes in gray are motif hits which have been filtered out as they occur in a
-   SMART domain [and the pink boxes?]. Boxes that are Blue & Gray are neutral (what does that mean).
+   detections, overlayed by the structural context from rows 2 and 3 (SMART
+   domains and GlobPlot). A blue square indicates a single motif occurence,
+   intensity of the color indicates the conservation of this sequence in
+   homologous proteins.
+   Boxes in gray are motif occurences which have been filtered out by the "structure
+   filter". Boxes that are blue & gray are neutral (what does that mean ?????).
    If the sequence is already present in the database, any motif instances
    that have already been annotated are shown as ovals. Lastly, Any motifs
-   detected in homologous sequences are also shown as the fraction of red vs.
-   blue in the motif hit rectangle.
+   detected in homologous sequences are also shown as blue & red rectangles.
 
-> In the case that no homologous sequences were detected (see below), it is not
-> possible to assign a confidence score. Therefore all of the "motif hits"
-> are a uniform blue color.
+> In the case that no homologous sequences were detected (see step XXX below),
+> it is not possible to assign a conservation score. Therefore all of the
+> motif occurences will be shown in a uniform shade of blue.
 
-step 10. Mouse over a motif hit (which has not been filtered out by the structural
-   filter) to detail the motif name and its start and stop positions. This
-   box also shows the amino acid sequence which matched the motif, as well as
-   the confidence score. The color of the confidence score title box is also
-   suggestive of how confident this motif hit is: red for low confidence,
-   green for high confidence, as a color spectrum.
+step 10. Place the cursor over the blue box for motif occurence
+   "DOC_USP7_MATH_1" at position 129-133. This motif is in a disorered region, and
+   has not been filtered out by the structural filter. However, its
+   conservation score is extremely low: 0.000, indicating it is not conserved
+   in homologous proteins. Place the cursor over motif "DOC_MAPK_DCC_7" at
+   positions "334-343". Despite the high conservation score (1.000), this motif
+   is inside the PTPc domain (and a Globular regions), and therefore has been
+   filtered out.
 
-> The confidence score is based on ???. And we can use it to interpret the
-> motif occurrences ???
+> The confidence score is based on how conserved the sequence is across a set
+> of homolous proteins from other sequences. An exact description of the method
+> is given in ????
 
 step 11. Mouse over a gray rectangle (filtered out) to find out why this hit was
    filtered out. It shows scores for all of the individual criteria used to
    filter out a sequence: The name of the domain, the *accessibility score* ,
    *secondary structure score*, *combined total score*, and the associated
    *totalscore P-value*. It also shows the sequence which cased matched the
-   motif's regular expression.
-
-> In general, how do we interpret this information, how is it useful?
+   motif's regular expression. **Skip this one, its not working!**
 
 ## Interpreting the prediction results: Additional Information
 
-![](../Figures/BACT_1/elm_results_alignments.png)
-**Figure BACT-BP-3:** This section of the results contains links to view the
-alignment of homologous proteins. Click any of the links to find SRCN1
-homologs identified in the UniRef90 database.
+![](../Figures/BACT_1/elm_results_alignments_filtering_domains.png)
+**Figure BACT-BP-3:** This section of the results contains additional details
+of alignment of homologous proteins, filtering results and globular domains.
 
 step 12. Scroll down to below the results graphic to find additional
-   information on putative motifs (figure BACT-BP-3). The first section contains links to
-   multiple sequence alignments in the case that highly similar sequences were
-   detected. The multiple sequence alignments can be viewed by clicking on the
-   link. Note that this requires you to have a Java browser plugin.
-   Alternatively you can also download the individual files with the
-   alignments, conservation features and phophosite features by following the
-   respective links.
+   information on the ELM Predction pipeline's results (figure BACT-BP-3).
+   The first section contains links to download or view the multiple sequence
+   alignments of homologous proteins used to calculate the conservation score.
+   Click on the link "Click here to enable the multiple sequence alignment
+   viewer" to open the alignment in Jalview (note: this requires the Java browser
+   plugin, which is not available on some newer operating systems).
+   Alternatively you can also download the "alignment", "conservation features"
+   and "phosphosite features" files separately to view on a standard
+   (non-browser) installation of Jalview.
 
-> The search for possible homologous sequences is performed against the UniRef90
-> database, a dataset of protein sequences with less than 90 percent identity between any two of them (25348405). Note
-> that it is possible that the BLAST results are not finished when the
-> results page is shown: We suggest to refresh the page if you see the
-> message "Either not enough data available to calculate a sequence alignment or the calculations haven't finished yet"
-> The information in the MSA is useful because... ehhhmm..???
+> The search for possible homologs is performed against the UniRef90
+> database, a dataset of protein sequences with less than 90 percent identity
+> between any two of them (25348405). It is also possible that 
+> that the BLAST results are not finished when the results page is shown: We
+> suggest to refresh the page if you see the message "Either not enough data
+> available to calculate a sequence alignment or the calculations haven't
+> finished yet". In some cases it is also possible that no homologs will be
+> detected. If you have refreshed the page after waiting for more than 3
+> minutes, this is most likely the case.
 
-![](../Figures/BACT_1/elm_results_filtering.png)
-**Figure BACT-BP-4:** A summary of how many motif and instance hits were predicted,
-and how many were filtered out by various filters. As no user supplied filters
-were applied, motifs are only filtered out for structural reasons. In this
-case, 2 motifs (elms) and 9 instances were filtered out because they occurred
-within a SMART domain.
+step 13. Scroll down to the section titled "Filtering Summary" to
+   view some statistics about how many motifs and instances were filtered
+   out (figure BACT-BP-3). The first two lines contain information on whether and which filters were
+   applied in step XXX of this protocol. The next two lines (SMART & Structural
+   score) show how many motifs and instances were removed by the SMART and
+   Secondary structure filters. The "Retained by" section shows how many motif
+   hits were not filtered out by the "Smart" or "Structural Score" filter. In
+   this example a total of 156 instances (of 54 different motifs were
+   identified), of which 63 instances (and 16 motifs) were filtered out as they
+   occured in a SMART domain.
 
-step 13. Scroll down a little further to the section titled "Filtering Summary" to
-   view some statistics about how many motifs and instances hits were filtered
-   out (figure BACT-BP-4). The first two lines contain information on whether and which filters were
-   applied in step 2 of this protocol. The first two rows of the table show how
-   many ELMs and instances were filtered out due to these filters. The
-   next two lines (Smart & Structural score) show exactly how many motifs and
-   instances were removed by the Smart and Secondary structure filters. The
-   "Retained by" section shows how many motif hits were not filtered out by the
-   "Smart" or "Structural Score" filter. To the right of the table, the input
-   sequence is shown.
+> Note that the graphical summary above does not contain sequences filtered
+> out by the "cell compartment" and "taxonomic context" filters (in step XXX).
+> However those filtered out by by the SMART and Structural scores are shown in the
+> graphic above (as gray rectangles). If any "cell compartment" or "taxonomic
+> context" filters are selected in step XXX, the number of motifs and instances
+> are also shown in this table.
 
-> Note that the graphical summary above does NOT contain sequences filtered
-> out b y the "cell compartment" and "taxonomic context" filters. However
-> those filtered out by by the SMART and Structural scores are shown in the
-> graphic above (as gray rectangles).
-
-![](../Figures/BACT_1/elm_results_domains.png)
-**Figure BACT-BP-5:** The list of SMART and Pfam domains detected. In this
-instance, only a single coiled-coil region was identified.
-
-step 14. Scroll further down to the section with the header "Globular domains/ TM
-   domains and signal peptide detected by the SMART server" (Figure BACT-BP-5). This section
-   contains information on which globular domains were detected by the SMART
+step 14. Scroll down to the section with the header "Globular domains/ TM
+   domains and signal peptide detected by the SMART server" (Figure BACT-BP-3). This section
+   contains information on which domains were detected by the SMART
    server, and their positions. Clicking on their names will bring you to the
    SMART entry for that domain on the SMART homepage.
-
-![](../Figures/BACT_basic_protocol_2/output_instances.png)
-**Figure BACT-BP-6:** This protein was already annotated in the database, and
-has a single instance of the motif "LIG_SxIP_EBH_1" annotated.
-
-step 15. Scroll further down to the section titled "The ELMs in the following table
-    are known instances annotated from the literature" (Figure BACT-BP-6). In the case that this
-   sequence has been annotated, and is in the database, all instances will be
-   shown in this table. For each motif instance, information is shown on the
-   amino acid sequence that matched the motif regular expression, their positions,
-   and the "logic". Additionally, for each motif, information is shown about
-   information annotated in the database about this motif: A description, cell
-   compartment, and the regular expression describing that motif. Click on the
-   elm name to view the database entry for that motif, or click on the start and
-   stop positions of an instance to view the database annotation for that
-   instance.
-
-> Note that this section may also be completely absent at times: If this
-> sequence has not been annotated in the database, only the motif instances
-> predictions (see below) will be shown. These occurrences are, however,
-> bona fide instances which have been described in the literature, and reviewed,
-> curated and uploaded by someone to the ELM database. Don't forget to pay
-> attention to the "logic" of each instances: A "True Positive" instances
-> means that this instance is functional, whereas a "True Negative" means
-> this instance is not functional.
 
 ![](../Figures/BACT_1/elm_results_motifs.png)
 **Figure BACT-BP-7:** This table contains the list of motifs detected in the
 sequence (only the top part of the table is shown).
 
-step 16. Scroll further down to the section with the heading "Results of ELM motif
+step 16. Scroll further down to the section title "Results of ELM motif
    search after globular domain filtering, structural filtering and context
    filtering" to obtain an overview of all of the motifs and motif instances
    detected (Figure BACT-BP-7). Each row also contains information on the Motif name, the matching
-   peptide sequence and its position. What does the View in Jmol do? Further
-   information is shown about the ELM, cell compartment and its regular
+   peptide sequence and its position. Additional information is shown about the ELM, cell compartment and its regular
    expression. If the motif was detected in a homologue, the column called
-   "PHI-Blast    Instance mapping" contains links to the Sequence alignment of
+   "PHI-Blast Instance mapping" contains links to the Sequence alignment of
    the homologous protein, and a summary of the ELM instance mapper output. If a
-   motif instance has been filtered out due to Structural criteria (Smart or
+   motif instance has been filtered out due to Structural criteria (SMART or
    Structure), this column contains a link to a page with details on how
    individual criteria that make up this filter. The last column contains
    information on the Probability filter: the probability reflects the chance
@@ -613,12 +596,11 @@ step 16. Scroll further down to the section with the heading "Results of ELM mot
 sequence (only the top part of the table is shown) which were excluded due to
 structural filters.
 
-step 17. Scroll further down to the heading "o  List of excluded ELMs falling inside
+step 17. Scroll further down to the heading "List of excluded ELMs falling inside
    SMART/PFAM domains and/or scoring poorly with the structural filter (if
-   applicable)." (Figure BACT-BP-8). This table is (almost) identical to the one above, but shows
-   information for motif instances which were rejected by the structure filter
-   (right?). **WAIT?!?** whats the difference between this, and the column
-   "structure filter" above?
+   applicable)." (Figure BACT-BP-8). This table is (almost) identical to the
+   one above, but shows motif instances which were rejecte by the Structural
+   filter or SMART filter.
 
 # Alternate Protocol 1: Predicting ELMS in sequences using REST API
 
