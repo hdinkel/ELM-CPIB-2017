@@ -28,7 +28,8 @@ smartphones will also work.
 
 ## Searching ELM database content
 
-![](Figures/TP53_basic_protocol_1/input_page_seq.png)
+![](Figures/TP53_1/elm_search.png)
+
 **Figure TP53-BP1-1** The query input page for ELM for predicting motifs in a given protein sequence.
 
 Step 1. Open a browser, and navigate to the ELM homepage: http://elm.eu.org.
@@ -50,7 +51,7 @@ view the motif instance data for p53. (Fig. TP53-BP1-1)
 
 ## Browsing annotation details. 
 
-![](Figures/TP53_basic_protocol_1/output_graphic.png)
+![](Figures/TP53_1/elm_results_summary.png)
 **Figure TP53-BP1-2**
 
 Step 2. The results from the query will open in a new tab (Fig. TP53-BP1-2).
@@ -63,7 +64,7 @@ represent predicted motif occurrences (which are further discussed in Basic
 Protocol 3: Predicting ELMs in sequences)
 
 
-![](Figures/TP53_basic_protocol_1/output_table.png)
+![](Figures/TP53_1/elm_results_known.png)
 **Figure TP53-BP1- 3**
 
 Step 3. On the results page, scroll down to the heading: "The ELMs in the
@@ -85,7 +86,7 @@ has been associated, and finally the regular expression of the motif.
 
 ## Browsing Motif information.
 
-![](Figures/TP53_basic_protocol_1/doc_cyclin_page.png)
+![](Figures/TP53_1/doc_cyclin_1_class.png)
 **Figure TP53-BP1- 4** The motif details page for "DOC_CYCLIN_1". This page
 contains all of the manual annotation details for the DOC_CYCLIN_1 motif,
 the biological background summarized from the scientific literature including
@@ -124,7 +125,7 @@ database, as well as links to PDB if this structure exists in PDB.
 
 ## Browsing annotated instances
 
-![](Figures/TP53_basic_protocol_1/doc_cyclin_experiments.png)
+![](Figures/TP53_1/doc_cyclin_1_instance.png)
 **Figure TP53-BP1- 5** The instance details page for the "DOC_CYCLIN_1"
 instance found in P53 with start/end position "381-385".
 This page also contains links to many external databases including Uniprot (PMID:25348405),
@@ -153,7 +154,7 @@ information. This is a list of all of the pathways in which the protein p53 is
 known to be involved (according to KEGG). Click on a pathway to see the 
 localization of p53 in the corresponding KEGG pathway.
 
-![](Figures/TP53_basic_protocol_1/doc_www_pin_details.png)
+![](Figures/TP53_1/doc_ww_pin_1_4_instance.png)
 **Figure TP53-BP1-6** The instance details page for the "DOC_WW_Pin1_4"
 instance found in P53 with start/end position "30-35". 
 
