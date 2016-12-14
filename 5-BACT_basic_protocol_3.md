@@ -1,16 +1,18 @@
 # Basic Protocol 2: Predicting ELMs in sequences [2 or 3?]
 
-One of the most useful features in ELM is the ability to detect motifs in proteins and
-sequences.
+One of the most useful (and used) features in ELM is the ability to detect
+motifs in proteins and sequences. Given a protein's amino acid sequence, the
+"EML Predictions" pipeline searches for occurrences of each Motif class using
+their regular expressions. The presence of each motif is also ......
 
-We will use as an example protein "CV_0974" (uniprot ID: Q7NZE8), a "Probably
-tyrosine phosphatase" from Chromobacterium violaceum. This protein is predicted
+We will use as an example protein "CV_0974" (uniprot ID: Q7NZE8), a "probable
+tyrosine phosphatase" from _Chromobacterium violaceum_. This protein is predicted
 to be a tyrosine phosphates because it has a "tyrosine phosphatase" (PTPc) domain.
-However its speceficity is unknown ???
+However its specificity is unknown ???
 
 ## Necessary Resources
 
-### Software
+### Software & Hardware
 
 A modern browser such as Firefox, Chrome, Safari, Internet Explorer or Edge.
 ELM is best viewed on a laptop or desktop computer, although tablets and
@@ -20,211 +22,193 @@ smartphones will also work.
 
 ![](Figures/BACT_1/elm_search.png)
 **Figure BACT-BP-1:** The input query page for finding motifs in ELM. The
-sequence for C. vilaceum protein CV_0974 was used as an example for this
-protocol
+sequence for _C. vilaceum protein_ CV_0974 was used as an example for this
+protocol.
 
 step 1. Click on the "ELM Predictions" button in the menu to access the search query
-   page (Fig. BACT-BP-1). Users either provide
-   a protein accession (uniprot format) or an amino acid sequence (simply the
-   sequence, or a FASTA formatted entry). Enter the sequence for the protein:
-   CV_0974 (uniprot ID: Q7NZE8)
+   page (Fig. BACT-BP-1). Here you can provide either a protein accession (from
+   uniprot) or an amino acid sequence (simply the
+   sequence, or a FASTA formatted entry) in which you want to detect SLiMs.
+   Retrieve the FASTA formatted sequence from Uniprot
+   (http://www.uniprot.org/uniprot/Q7NZE8), and enter it into the "sequence
+   input text box".
 
-> When you enter an accession, the query is still performed on the sequence,
-> but the sequence is automatically retrieved from Expasy (expasy, right?).
+> As this protein is already present in the ELM database, it is also possible
+> to type its identifier (CV_0974) into the "identifier input field" as steps
+> XXX and in YYY Basic Protocols 1`& 3. However it is not neccesary to submit
+> protein sequences already in the database: any amino acid sequence can
+> submitted to the ELM prediction pipeline.
 
-step 2. Select the search criteria. It is possible to select a specific "cell compartment",
-   such that only motif classes annotated as belonging to that cellular compartment will be
-   included in the search results. It is also possible to select a "taxonomic context"
-   to filter out ELMs that have not been reported in the selected taxonomic category.
+step 2. Select the search criteria (optional). It is possible to limit the
+   results by "cell compartment", "taxonomic context" or by changing the "motif
+   probability cutoff". To restrict the search to include SLiM's that are
+   active in certain cellular compartments, select one or more from the list
+   (use the "control" key to select more than one option). It is also possible
+   to select a "taxonomic context" to restrict the search to SLiMs from certain
+   species. Start typing a species name in the "taxonomic context" input field to
+   get an auto-completed list of species to select from.
    Additionaly, a "Motif probability cutoff" can be used to only retain ELM
-   classes whose pattern probability is below the given value. Leave all of
-   these at their default values: 'not specified', '100' and no Taxonomic Context.
+   classes whose pattern probability is below the given value.
+   For the current protocol, leave all of these at their default values: "not
+   specified", "100" and no "taxonomic context"
 
-step 3. Retrieve the amino acid sequence from Uniprot, and submit the sequence.
-   Results may be submitted as a single FASTA formatted entry, or alternatively only
-   the amino acid sequence.
-   You will be brought to an intermediate page indicating that your results are being
-   processed, and you should be redirected to the final results page within 30
-   seconds.
+step 3. Click "submit" to start the searching for motifs. 
+   You will be brought to an intermediate page indicating that your results are
+   being processed, and you should be redirected to the final results page within
+   30 seconds.
 
 > You can bookmark this page: The results are stored for a week.
 
 ## Interpreting the prediction results: Graphical Summary
 
 ![](Figures/BACT_1/elm_results_summary.png)
-**Figure BACT-BP-2:** The graphical results summary for the Probable Tyrosine phoshate (CV_0974)
-. Note that not all motif hits are shown: the image is chopped
-off at the bottom. The protein has a handful of structural features (shown in
-the top 5 rows). The motif hits are shown as blue boxes, the intensity of which
-indicates the conservation score. See the legend at the top of the figure for
-more information.
+**Figure BACT-BP-2:** The graphical results summary of the ELM Prediction pipeline
+for Probable Tyrosine phoshate (CV_0974). Note that not all motif
+detections are shown (the image is truncated at the bottom). The top five rows show a handfull of 
+structural features. The motif occurence are shown as blue boxes, the intensity of which
+indicates the conservation score. See steps XXX to YYY for more information.
 
-step 4. The Results are summarized in the first figure on the results page
-   (see figure BACT-BP-2).
+step 4. The Results are summarized in the first figure on the results page (see
+   figure BACT-BP-2). The Graphical summary shows all of the final and
+   intermediate results generated by the ELM Prediction pipeline, and can be
+   used infer whether or not a motif is present in a sequence, as well as now
+   likely it is to be functional based on its structural context and
+   evolutionary conservation. 
 
 step 5. The first row contains phosphorylation sites as retrieved from Phospho.ELM
    (PMID:21062810), and whether the phosphorylated amino acid is a serine, threonine
    or tyrosine. Phospho.ELM is a database of manually annotated phosphorylation
-   sites obtained from scientific publications. (right?) [I would put: from low and high-throughput experiments]. You can follow the link
+   sites obtained from scientific publications from low and high-throughput experiments. You can follow the link
    to Phospho.ELM by clicking on the phosphorylation site in the image.
 
 > Phosphorylation sites are only available when the search is performed
-> with a protein accession, and only if its a known uniprot accession.
-> Phosphorylation sites are relevant to interprete ELM motif predictions when
+> with a protein accession in step XXX.  Phosphorylation sites are relevant to
+> interprete ELM motif predictions when
 > the predicted motif requires to be phosphorylated (as in several docking and
 > ligand binding motifs) and naturally, for the prediction of phosphorylation
 > motifs.
 
-step 6. The second row shows when domains are detected from the SMART
-   (9600884,25300481) or Pfam (9600884) database. Annotations are retrieved
-   from SMART (both SMART and Pfam), and also include low complexity regions.
-   Hovering the mouse over the domain reveals the domain name as well as its
-   start and end positions.
+step 6. The second row shows SMART and Pfam domains detected by the SMART
+   database (9600884,25300481, 9600884). Hover the mouse over these domains to
+   see their names and exact start and end positions.
 
-> Motifs are less likely to be found in domains and structured regions (21909575), therefore any
-> motif detected within these sites are less likely to be functional, and are usually [usually? When they are not?] filtered out.
+> In order to be functional SLiMs need to be accessble, and are therefore they
+> are usually not > found within domains and structured regions (21909575). Any
+> SLiMs detected by the ELM prediction pipleline are less likely to be
+> functional, and are filtered out by the "structural filter" (see also step XXX).
 
-step 7.  The third row shows unstructured, or disordered regions within the sequence
-    as predicted by GlobPlot (12824398). [what does hover do?] The 4th & 5th
+step 7.  The third row shows globular and disordered regions in the sequence as
+    predicted by GlobPlot (12824398). The 4th & 5th
     rows contain results from IUPred (15955779), another unstructured region
     prediction tool. Protein segments with an IUpred score above 0.5 are 95% likely
-    to be disorered (REF?)
+    to be disorered (REF???).
 
-> As motifs are often found in intrinsically disordered regions, motifs that
-fall within regions identified by GlobPlot are likely to be functional.
+>  SLiMs are typically only functional when found in intrinsically disordered
+>  regions. Any motif occurence detected by the ELM prediction pipeline that
+>  fall within disoredered regious are more likely to be functional.
 
-step 8. The 5th row contains information on secondary structure. HELP?!?!?! Where do
-   these predictions come from?
+step 8. The 5th row contains information on secondary structure. The secondary
+   structure is predicted using a ?????
 
 step 9. The remainder of the figure (from row 6 onwards) displays the motif
-   occurrences detected, as well as a host of information about the context of
-   the motif hit. A blue square indicates a motif instance was found, and the
-   intensity of the color indicates the confidence associated with that motif detection.
-   Boxes in gray are motif hits which have been filtered out as they occur in a
-   SMART domain [and the pink boxes?]. Boxes that are Blue & Gray are neutral (what does that mean).
+   detections, overlayed by the structural context from rows 2 and 3 (SMART
+   domains and GlobPlot). A blue square indicates a single motif occurence,
+   intensity of the color indicates the conservation of this sequence in
+   homologous proteins.
+   Boxes in gray are motif occurences which have been filtered out by the "structure
+   filter". Boxes that are blue & gray are neutral (what does that mean ?????).
    If the sequence is already present in the database, any motif instances
    that have already been annotated are shown as ovals. Lastly, Any motifs
-   detected in homologous sequences are also shown as the fraction of red vs.
-   blue in the motif hit rectangle.
+   detected in homologous sequences are also shown as blue & red rectangles.
 
-> In the case that no homologous sequences were detected (see below), it is not
-> possible to assign a confidence score. Therefore all of the "motif hits"
-> are a uniform blue color.
+> In the case that no homologous sequences were detected (see step XXX below),
+> it is not possible to assign a conservation score. Therefore all of the
+> motif occurences will be shown in a uniform shade of blue.
 
-step 10. Mouse over a motif hit (which has not been filtered out by the structural
-   filter) to detail the motif name and its start and stop positions. This
-   box also shows the amino acid sequence which matched the motif, as well as
-   the confidence score. The color of the confidence score title box is also
-   suggestive of how confident this motif hit is: red for low confidence,
-   green for high confidence, as a color spectrum.
+step 10. Place the cursor over the blue box for motif occurence
+   "DOC_USP7_MATH_1" at position 129-133. This motif is in a disorered region, and
+   has not been filtered out by the structural filter. However, its
+   conservation score is extremely low: 0.000, indicating it is not conserved
+   in homologous proteins. Place the cursor over motif "DOC_MAPK_DCC_7" at
+   positions "334-343". Despite the high conservation score (1.000), this motif
+   is inside the PTPc domain (and a Globular regions), and therefore has been
+   filtered out.
 
-> The confidence score is based on ???. And we can use it to interpret the
-> motif occurrences ???
+> The confidence score is based on how conserved the sequence is across a set
+> of homolous proteins from other sequences. An exact description of the method
+> is given in ????
 
 step 11. Mouse over a gray rectangle (filtered out) to find out why this hit was
    filtered out. It shows scores for all of the individual criteria used to
    filter out a sequence: The name of the domain, the *accessibility score* ,
    *secondary structure score*, *combined total score*, and the associated
    *totalscore P-value*. It also shows the sequence which cased matched the
-   motif's regular expression.
-
-> In general, how do we interpret this information, how is it useful?
+   motif's regular expression. **Skip this one, its not working!**
 
 ## Interpreting the prediction results: Additional Information
 
-![](Figures/BACT_1/elm_results_alignments.png)
-**Figure BACT-BP-3:** This section of the results contains links to view the
-alignment of homologous proteins. Click any of the links to find SRCN1
-homologs identified in the UniRef90 database.
+![](Figures/BACT_1/elm_results_alignments_filtering_domains.png)
+**Figure BACT-BP-3:** This section of the results contains additional details
+of alignment of homologous proteins, filtering results and globular domains.
 
 step 12. Scroll down to below the results graphic to find additional
-   information on putative motifs (figure BACT-BP-3). The first section contains links to
-   multiple sequence alignments in the case that highly similar sequences were
-   detected. The multiple sequence alignments can be viewed by clicking on the
-   link. Note that this requires you to have a Java browser plugin.
-   Alternatively you can also download the individual files with the
-   alignments, conservation features and phophosite features by following the
-   respective links.
+   information on the ELM Predction pipeline's results (figure BACT-BP-3).
+   The first section contains links to download or view the multiple sequence
+   alignments of homologous proteins used to calculate the conservation score.
+   Click on the link "Click here to enable the multiple sequence alignment
+   viewer" to open the alignment in Jalview (note: this requires the Java browser
+   plugin, which is not available on some newer operating systems).
+   Alternatively you can also download the "alignment", "conservation features"
+   and "phosphosite features" files separately to view on a standard
+   (non-browser) installation of Jalview.
 
-> The search for possible homologous sequences is performed against the UniRef90
-> database, a dataset of protein sequences with less than 90 percent identity between any two of them (25348405). Note
-> that it is possible that the BLAST results are not finished when the
-> results page is shown: We suggest to refresh the page if you see the
-> message "Either not enough data available to calculate a sequence alignment or the calculations haven't finished yet"
-> The information in the MSA is useful because... ehhhmm..???
+> The search for possible homologs is performed against the UniRef90
+> database, a dataset of protein sequences with less than 90 percent identity
+> between any two of them (25348405). It is also possible that 
+> that the BLAST results are not finished when the results page is shown: We
+> suggest to refresh the page if you see the message "Either not enough data
+> available to calculate a sequence alignment or the calculations haven't
+> finished yet". In some cases it is also possible that no homologs will be
+> detected. If you have refreshed the page after waiting for more than 3
+> minutes, this is most likely the case.
 
-![](Figures/BACT_1/elm_results_filtering.png)
-**Figure BACT-BP-4:** A summary of how many motif and instance hits were predicted,
-and how many were filtered out by various filters. As no user supplied filters
-were applied, motifs are only filtered out for structural reasons. In this
-case, 2 motifs (elms) and 9 instances were filtered out because they occurred
-within a SMART domain.
+step 13. Scroll down to the section titled "Filtering Summary" to
+   view some statistics about how many motifs and instances were filtered
+   out (figure BACT-BP-3). The first two lines contain information on whether and which filters were
+   applied in step XXX of this protocol. The next two lines (SMART & Structural
+   score) show how many motifs and instances were removed by the SMART and
+   Secondary structure filters. The "Retained by" section shows how many motif
+   hits were not filtered out by the "Smart" or "Structural Score" filter. In
+   this example a total of 156 instances (of 54 different motifs were
+   identified), of which 63 instances (and 16 motifs) were filtered out as they
+   occured in a SMART domain.
 
-step 13. Scroll down a little further to the section titled "Filtering Summary" to
-   view some statistics about how many motifs and instances hits were filtered
-   out (figure BACT-BP-4). The first two lines contain information on whether and which filters were
-   applied in step 2 of this protocol. The first two rows of the table show how
-   many ELMs and instances were filtered out due to these filters. The
-   next two lines (Smart & Structural score) show exactly how many motifs and
-   instances were removed by the Smart and Secondary structure filters. The
-   "Retained by" section shows how many motif hits were not filtered out by the
-   "Smart" or "Structural Score" filter. To the right of the table, the input
-   sequence is shown.
+> Note that the graphical summary above does not contain sequences filtered
+> out by the "cell compartment" and "taxonomic context" filters (in step XXX).
+> However those filtered out by by the SMART and Structural scores are shown in the
+> graphic above (as gray rectangles). If any "cell compartment" or "taxonomic
+> context" filters are selected in step XXX, the number of motifs and instances
+> are also shown in this table.
 
-> Note that the graphical summary above does NOT contain sequences filtered
-> out b y the "cell compartment" and "taxonomic context" filters. However
-> those filtered out by by the SMART and Structural scores are shown in the
-> graphic above (as gray rectangles).
-
-![](Figures/BACT_1/elm_results_domains.png)
-**Figure BACT-BP-5:** The list of SMART and Pfam domains detected. In this
-instance, only a single coiled-coil region was identified.
-
-step 14. Scroll further down to the section with the header "Globular domains/ TM
-   domains and signal peptide detected by the SMART server" (Figure BACT-BP-5). This section
-   contains information on which globular domains were detected by the SMART
+step 14. Scroll down to the section with the header "Globular domains/ TM
+   domains and signal peptide detected by the SMART server" (Figure BACT-BP-3). This section
+   contains information on which domains were detected by the SMART
    server, and their positions. Clicking on their names will bring you to the
    SMART entry for that domain on the SMART homepage.
-
-![](Figures/BACT_basic_protocol_2/output_instances.png)
-**Figure BACT-BP-6:** This protein was already annotated in the database, and
-has a single instance of the motif "LIG_SxIP_EBH_1" annotated.
-
-step 15. Scroll further down to the section titled "The ELMs in the following table
-    are known instances annotated from the literature" (Figure BACT-BP-6). In the case that this
-   sequence has been annotated, and is in the database, all instances will be
-   shown in this table. For each motif instance, information is shown on the
-   amino acid sequence that matched the motif regular expression, their positions,
-   and the "logic". Additionally, for each motif, information is shown about
-   information annotated in the database about this motif: A description, cell
-   compartment, and the regular expression describing that motif. Click on the
-   elm name to view the database entry for that motif, or click on the start and
-   stop positions of an instance to view the database annotation for that
-   instance.
-
-> Note that this section may also be completely absent at times: If this
-> sequence has not been annotated in the database, only the motif instances
-> predictions (see below) will be shown. These occurrences are, however,
-> bona fide instances which have been described in the literature, and reviewed,
-> curated and uploaded by someone to the ELM database. Don't forget to pay
-> attention to the "logic" of each instances: A "True Positive" instances
-> means that this instance is functional, whereas a "True Negative" means
-> this instance is not functional.
 
 ![](Figures/BACT_1/elm_results_motifs.png)
 **Figure BACT-BP-7:** This table contains the list of motifs detected in the
 sequence (only the top part of the table is shown).
 
-step 16. Scroll further down to the section with the heading "Results of ELM motif
+step 16. Scroll further down to the section title "Results of ELM motif
    search after globular domain filtering, structural filtering and context
    filtering" to obtain an overview of all of the motifs and motif instances
    detected (Figure BACT-BP-7). Each row also contains information on the Motif name, the matching
-   peptide sequence and its position. What does the View in Jmol do? Further
-   information is shown about the ELM, cell compartment and its regular
+   peptide sequence and its position. Additional information is shown about the ELM, cell compartment and its regular
    expression. If the motif was detected in a homologue, the column called
-   "PHI-Blast    Instance mapping" contains links to the Sequence alignment of
+   "PHI-Blast Instance mapping" contains links to the Sequence alignment of
    the homologous protein, and a summary of the ELM instance mapper output. If a
-   motif instance has been filtered out due to Structural criteria (Smart or
+   motif instance has been filtered out due to Structural criteria (SMART or
    Structure), this column contains a link to a page with details on how
    individual criteria that make up this filter. The last column contains
    information on the Probability filter: the probability reflects the chance
@@ -235,9 +219,8 @@ step 16. Scroll further down to the section with the heading "Results of ELM mot
 sequence (only the top part of the table is shown) which were excluded due to
 structural filters.
 
-step 17. Scroll further down to the heading "o  List of excluded ELMs falling inside
+step 17. Scroll further down to the heading "List of excluded ELMs falling inside
    SMART/PFAM domains and/or scoring poorly with the structural filter (if
-   applicable)." (Figure BACT-BP-8). This table is (almost) identical to the one above, but shows
-   information for motif instances which were rejected by the structure filter
-   (right?). **WAIT?!?** whats the difference between this, and the column
-   "structure filter" above?
+   applicable)." (Figure BACT-BP-8). This table is (almost) identical to the
+   one above, but shows motif instances which were rejecte by the Structural
+   filter or SMART filter.
