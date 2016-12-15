@@ -1,6 +1,35 @@
+# Eukaryotic Linear Motifs on the ELM database
+
+## Authors
+
+Marc Gouw, Hugo Samano, Kim Van Roey, Francesca Diella, Toby Gibson, Holger Dinkel
+
+
+Structural and Computational Biology, European Molecular Biology Laboratory, Meyerhofstrasse 1, 69117 Heidelberg, Germany
+
+Health Services Research Unit, Operational Direction Public Health and Surveillance, Scientific Institute of Public Health (WIV-ISP), 1050 Brussels, Belgium 
+
+Leibniz-Institute on Aging – Fritz Lipmann Institute (FLI), Beutenbergstrasse 11, 07745 Jena, Germany
+
+## Significance statement
+
+*instructions: 120 word-maximum statement about the significance of the
+protocols/topic described in your manuscript*
+
 # Abstract
 
 *instructions: brief overview, no references, max 150 words*
+
+The Eukaryotic Linear Motif (ELM) resource (http://elm.eu.org) is a manually curated database of short linear motifs (SLiMs).
+This protocol explains how to best use this resource and explains 
+how to access the database content (both manual and scripted access),
+how to interpret the output,
+and how to predict novel putative motifs in any given protein sequence.
+
+# Keywords
+
+Linear motifs, Bioinformatics, Protein-Protein Interaction, Molecular switches, Cell regulation
+
 
 # Introduction
 
@@ -308,22 +337,40 @@ description of the switch also taken from switches.ELM (\cite{23550212}).
 > The filter bar on the top page can be used to quickly filter the list of interactions
 > shown. 
 
+## Exploring KEGG pathways from ELM
 
 ![](../Figures/TP53_2/pathways.png)
-**Figure TP53-BP2-8** A list of all Pathways from KEGG with proteins in ELM.
+**Figure TP53-BP2-9** A list of all Pathways from KEGG with proteins in ELM.
 
-Step 8. Click on the sub-menu "ELM pathways" in "ELM DB" to see a list of
-all pathways contained in ELM (Fig. TP53-BP2-8). Pathways are from the "Kyoto
+Step 9. Click on the sub-menu "ELM pathways" in "ELM DB" to see a list of
+all pathways contained in ELM (Fig. TP53-BP2-9). Pathways are from the "Kyoto
 Encyclopedia of Genes and Genomes" (KEGG (\cite{26476454})) database mapped to ELM instances.
 Click on a species (for example "Homo sapiens") for a complete list of all Human
 pathways which have a protein annotated in ELM, and links to the pathways on KEGG.
 
+![](../Figures/TP53_2/pathways_example.png)
+**Figure TP53-BP2-10** A list of all pathways in Gallus Gallus 
+
+Step 10. On the "ELM pathways" page (Fig. TP53-BP2-9) click on the link "Gallus
+gallus" to navigate to the page containing all pathways annotated for Gallus
+gallus. This page contains links to all ????? KEGG path ways for Gallus gallus. 
+
+
+![](../Figures/TP53_2/pathways_kegg.png)
+**Figure TP53-BP2-11** A list of all pathways in Gallus Gallus 
+
+Step 10. One the page with Gallus Gallus pathways (Fig. TP53-BP2-10) click on
+"Adherens junction" to the KEGG entry for this pathway, with proteins
+colorcoded acoording to ????? (see the color legend on the previous page, Fig.
+TP53-BP2-10).
+
 ## Infections and Diseases
 
 ![](../Figures/TP53_2/viruses.png)
-**Figure TP53-BP2-9** A Table of the ELM instance abused by viruses 
+**Figure TP53-BP2-11** A Table of the ELM instance abused by viruses 
 
-Step 9. Click on the sub-menu "ELM virus instances" in "ELM DB" to see a
+Step 11. Click on the sub-menu "ELM virus instances" in "ELM DB" to see a
+Step 11. Click on the sub-menu "ELM virus instances" in "ELM DB" to see a
 list of all instances in ELM that have been annotated as being abused by
 viruses (Fig TP53-BP2-9). The columns are identical to those listed in section
 XXX step YYY (Figure ZZZZ).
@@ -333,16 +380,16 @@ XXX step YYY (Figure ZZZZ).
 > to download the (complete) table in giff, pir, fasta or tsv format. (See
 > section XXX for a description of these formats.)
 
-
 ![](../Figures/TP53_2/diseases.png)
-**Figure TP53-BP2-10** A list of all diseases in ELM. 
+**Figure TP53-BP2-8** A list of all diseases in ELM. 
 
-Step 10. Click on the sub-menu "ELM diseases" in "ELM DB" to see a list
+Step 8. Click on the sub-menu "ELM diseases" in "ELM DB" to see a list
 of all motif classes that have been annotated with a disease. Disease
 information is taken from the OMIM database.
 
 > This table also includes the diseases found under the "ELM pathogenic
 > abuse" menu in "ELM DB". (right?)
+
 
 # Alternate protocol 2: General Search Box
 
@@ -602,103 +649,6 @@ step 17. Scroll further down to the heading "List of excluded ELMs falling insid
    one above, but shows motif instances which were rejecte by the Structural
    filter or SMART filter.
 
-# Alternate Protocol 1: Predicting ELMS in sequences using REST API
-
-Querying ELM for motifs in a given sequence (as discussed in basic protocol 1),
-gives you a nice overview of putative and possibly annotated motifs in your
-query protein with a graphical representation using colors to highlight
-different regions of the protein sequence (eg. disordered vs. globular).
-It is however difficult to analyse a large set of protein sequences in this
-manner. Therefore, elm.eu.org provides an interface which you can use to submit your sequence
-in a programmatic way. Of course, this way, you won't receive the graphical
-output representation, but are limited to textual data representation.
-
-Currently, there exists a single URL 'http://elm.eu.org/start_search/' to
-accept such queries. You can choose to either submit a uniprot name or accession
-(ex. 'http://elm.eu.org/start_search/P53_HUMAN.tsv') or submit your raw
-sequence (ex. 'http://elm.eu.org/start_search/MAPRGFSCLLLLTSEIDLPVKRRA').
-
-The logic here is, if the URL ends in '.tsv' then the server assumes you
-are using a Uniprot id or accession; if it doesn't, then it assumes you are
-using raw sequence. See below for details.
-
-## Necessary Resources
-
-### Software
-
-Ideally use `curl` https://curl.haxx.se/ on the commandline
-However, any browser can be used to access the server, most browsers however download text- and csv-files instead of displaying them. Therefore, for trying out different URLs / Parameters, it might be better to use a commandline client such as `curl`.
-
-## Submitting a query to ELM via REST
-
-step 1. Use `curl` to query ELM via uniprot name 'http://elm.eu.org/start_search/P53_HUMAN.tsv'
-
-```
-> curl 'http://elm.eu.org/start_search/P53_HUMAN.tsv'
-
-CLV_C14_Caspase3-7	183	187	False	False	False	False	False	False	False
-CLV_C14_Caspase3-7	349	353	False	False	False	False	False	False	False
-CLV_C14_Caspase3-7	388	392	False	False	False	False	False	False	False
-CLV_NRD_NRD_1	174	176	False	False	False	False	False	False	False
-CLV_NRD_NRD_1	248	250	False	False	False	False	False	False	False
-CLV_NRD_NRD_1	282	284	False	False	False	False	False	False	False
-CLV_NRD_NRD_1	289	291	False	False	False	False	False	False	False
-CLV_PCSK_FUR_1	280	284	False	False	False	False	False	False	False
-CLV_PCSK_KEX2_1	174	176	False	False	False	False	False	False	False
-CLV_PCSK_KEX2_1	248	250	False	False	False	False	False	False	False
-CLV_PCSK_KEX2_1	282	284	False	False	False	False	False	False	False
-CLV_PCSK_KEX2_1	305	307	False	False	False	False	False	False	False
-CLV_PCSK_PC1ET2_1	305	307	False	False	False	False	False	False	False
-CLV_PCSK_SKI1_1	120	124	False	False	False	False	False	False	False
-CLV_PCSK_SKI1_1	249	253	False	False	False	False	False	False	False
-CLV_PCSK_SKI1_1	305	309	False	False	False	False	False	False	False
-CLV_PCSK_SKI1_1	382	386	False	False	False	False	False	False	False
-CLV_Separin_Metazoa	171	175	False	False	False	False	False	False	False
-DEG_APCC_DBOX_1	248	256	False	False	False	False	False	False	False
-DEG_MDM2_SWIB_1	19	26	True	False	False	False	False	False	False
-DEG_Nend_UBRbox_2	1	3	False	False	False	False	False	False	False
-DEG_SPOP_SBC_1	92	96	False	False	False	False	False	False	False
-DOC_CYCLIN_1	24	27	False	False	False	False	False	False	False
-DOC_CYCLIN_1	306	309	False	False	False	False	False	False	False
-DOC_CYCLIN_1	381	385	True	False	False	False	False	False	False
-DOC_MAPK_gen_1	248	254	False	False	False	False	False	False	False
-DOC_PP1_RVXF_1	108	114	False	False	False	False	False	False	False
-DOC_PP1_RVXF_1	379	386	False	False	False	False	False	False	False
-DOC_PP1_RVXF_1	380	386	False	False	False	False	False	False	False
-DOC_PP2B_LxvP_1	188	191	False	False	False	False	False	False	False
-DOC_USP7_MATH_1	34	38	False	False	False	False	False	False	False
-DOC_USP7_MATH_1	359	363	True	False	False	False	False	False	False
-DOC_USP7_MATH_1	364	368	True	False	False	False	False	False	False
-
-...
-```
-
-step 2. Use `curl` to query ELM via protein sequence using the URL 'http://elm.eu.org/start_search/MAPRGFSCLLLLTSEIDLPVKRRA'
-
-```
-> curl 'http://elm.eu.org/start_search/MAPRGFSCLLLLTSEIDLPVKRRA'
-
-elm_identifier	start	stop	is_annotated	is_phiblastmatch	is_filtered	phiblast	topodomfilter	taxonfilter	structure
-CLV_NRD_NRD_1	22	24	False	False	False	False	False	False	False
-CLV_PCSK_KEX2_1	21	23	False	False	False	False	False	False	False
-CLV_PCSK_KEX2_1	22	24	False	False	False	False	False	False	False
-CLV_PCSK_PC1ET2_1	21	23	False	False	False	False	False	False	False
-LIG_14-3-3_CanoR_1	4	12	False	False	False	False	False	False	False
-LIG_BIR_II_1	1	5	False	False	False	False	False	False	False
-LIG_FHA_1	11	17	False	False	False	False	False	False	False
-LIG_SUMO_SIM_anti_2	7	15	False	False	False	False	False	False	False
-LIG_SUMO_SIM_par_1	7	15	False	False	False	False	False	False	False
-LIG_SUMO_SIM_par_1	8	15	False	False	False	False	False	False	False
-LIG_WD40_WDR5_VDV_2	13	18	False	False	False	False	False	False	False
-LIG_WD40_WDR5_VDV_2	14	18	False	False	False	False	False	False	False
-LIG_WD40_WDR5_VDV_2	15	18	False	False	False	False	False	False	False
-```
-
-
-TODO: add this information to the download page
-
-TODO: maybe rename `start_search` to `query`?
-
 # Alternate Protocol 2: Searching the ELM database using REST API
 
 
@@ -809,6 +759,103 @@ or PSI-MI format (either XML or MiTab) [24067240].
 
 % NOTE: TODO: Mention ELM software license agreement?
 
+# Alternate Protocol 1: Predicting ELMS in sequences using REST API
+
+Querying ELM for motifs in a given sequence (as discussed in basic protocol 1),
+gives you a nice overview of putative and possibly annotated motifs in your
+query protein with a graphical representation using colors to highlight
+different regions of the protein sequence (eg. disordered vs. globular).
+It is however difficult to analyse a large set of protein sequences in this
+manner. Therefore, elm.eu.org provides an interface which you can use to submit your sequence
+in a programmatic way. Of course, this way, you won't receive the graphical
+output representation, but are limited to textual data representation.
+
+Currently, there exists a single URL 'http://elm.eu.org/start_search/' to
+accept such queries. You can choose to either submit a uniprot name or accession
+(ex. 'http://elm.eu.org/start_search/P53_HUMAN.tsv') or submit your raw
+sequence (ex. 'http://elm.eu.org/start_search/MAPRGFSCLLLLTSEIDLPVKRRA').
+
+The logic here is, if the URL ends in '.tsv' then the server assumes you
+are using a Uniprot id or accession; if it doesn't, then it assumes you are
+using raw sequence. See below for details.
+
+## Necessary Resources
+
+### Software
+
+Ideally use `curl` https://curl.haxx.se/ on the commandline
+However, any browser can be used to access the server, most browsers however download text- and csv-files instead of displaying them. Therefore, for trying out different URLs / Parameters, it might be better to use a commandline client such as `curl`.
+
+## Submitting a query to ELM via REST
+
+step 1. Use `curl` to query ELM via uniprot name 'http://elm.eu.org/start_search/P53_HUMAN.tsv'
+
+```
+> curl 'http://elm.eu.org/start_search/P53_HUMAN.tsv'
+
+CLV_C14_Caspase3-7	183	187	False	False	False	False	False	False	False
+CLV_C14_Caspase3-7	349	353	False	False	False	False	False	False	False
+CLV_C14_Caspase3-7	388	392	False	False	False	False	False	False	False
+CLV_NRD_NRD_1	174	176	False	False	False	False	False	False	False
+CLV_NRD_NRD_1	248	250	False	False	False	False	False	False	False
+CLV_NRD_NRD_1	282	284	False	False	False	False	False	False	False
+CLV_NRD_NRD_1	289	291	False	False	False	False	False	False	False
+CLV_PCSK_FUR_1	280	284	False	False	False	False	False	False	False
+CLV_PCSK_KEX2_1	174	176	False	False	False	False	False	False	False
+CLV_PCSK_KEX2_1	248	250	False	False	False	False	False	False	False
+CLV_PCSK_KEX2_1	282	284	False	False	False	False	False	False	False
+CLV_PCSK_KEX2_1	305	307	False	False	False	False	False	False	False
+CLV_PCSK_PC1ET2_1	305	307	False	False	False	False	False	False	False
+CLV_PCSK_SKI1_1	120	124	False	False	False	False	False	False	False
+CLV_PCSK_SKI1_1	249	253	False	False	False	False	False	False	False
+CLV_PCSK_SKI1_1	305	309	False	False	False	False	False	False	False
+CLV_PCSK_SKI1_1	382	386	False	False	False	False	False	False	False
+CLV_Separin_Metazoa	171	175	False	False	False	False	False	False	False
+DEG_APCC_DBOX_1	248	256	False	False	False	False	False	False	False
+DEG_MDM2_SWIB_1	19	26	True	False	False	False	False	False	False
+DEG_Nend_UBRbox_2	1	3	False	False	False	False	False	False	False
+DEG_SPOP_SBC_1	92	96	False	False	False	False	False	False	False
+DOC_CYCLIN_1	24	27	False	False	False	False	False	False	False
+DOC_CYCLIN_1	306	309	False	False	False	False	False	False	False
+DOC_CYCLIN_1	381	385	True	False	False	False	False	False	False
+DOC_MAPK_gen_1	248	254	False	False	False	False	False	False	False
+DOC_PP1_RVXF_1	108	114	False	False	False	False	False	False	False
+DOC_PP1_RVXF_1	379	386	False	False	False	False	False	False	False
+DOC_PP1_RVXF_1	380	386	False	False	False	False	False	False	False
+DOC_PP2B_LxvP_1	188	191	False	False	False	False	False	False	False
+DOC_USP7_MATH_1	34	38	False	False	False	False	False	False	False
+DOC_USP7_MATH_1	359	363	True	False	False	False	False	False	False
+DOC_USP7_MATH_1	364	368	True	False	False	False	False	False	False
+
+...
+```
+
+step 2. Use `curl` to query ELM via protein sequence using the URL 'http://elm.eu.org/start_search/MAPRGFSCLLLLTSEIDLPVKRRA'
+
+```
+> curl 'http://elm.eu.org/start_search/MAPRGFSCLLLLTSEIDLPVKRRA'
+
+elm_identifier	start	stop	is_annotated	is_phiblastmatch	is_filtered	phiblast	topodomfilter	taxonfilter	structure
+CLV_NRD_NRD_1	22	24	False	False	False	False	False	False	False
+CLV_PCSK_KEX2_1	21	23	False	False	False	False	False	False	False
+CLV_PCSK_KEX2_1	22	24	False	False	False	False	False	False	False
+CLV_PCSK_PC1ET2_1	21	23	False	False	False	False	False	False	False
+LIG_14-3-3_CanoR_1	4	12	False	False	False	False	False	False	False
+LIG_BIR_II_1	1	5	False	False	False	False	False	False	False
+LIG_FHA_1	11	17	False	False	False	False	False	False	False
+LIG_SUMO_SIM_anti_2	7	15	False	False	False	False	False	False	False
+LIG_SUMO_SIM_par_1	7	15	False	False	False	False	False	False	False
+LIG_SUMO_SIM_par_1	8	15	False	False	False	False	False	False	False
+LIG_WD40_WDR5_VDV_2	13	18	False	False	False	False	False	False	False
+LIG_WD40_WDR5_VDV_2	14	18	False	False	False	False	False	False	False
+LIG_WD40_WDR5_VDV_2	15	18	False	False	False	False	False	False	False
+```
+
+
+TODO: add this information to the download page
+
+TODO: maybe rename `start_search` to `query`?
+
 # Guidelines for Interpreting Results 
 
 *instructions: A brief discussion of the theory and applications of your*
@@ -833,4 +880,21 @@ procedure.*
 
 *instructions: optionally 2 separate sections.*
 
+
+# Internet Resources with Annotations
+
+http://www.clustal.org/omega
+Clustal Omega (\cite{21988835}) is a tool for the alignment of multiple nucleic acid and protein sequences.
+
+http://www.jalview.org
+Jalview (\cite{19151095}) is a Java desktop application (and browser applet) that
+employs web services for sequence alignment and visualization.
+
+http://proviz.ucd.ie
+ProViz (\cite{27085803})
+is an interactive protein exploration tool, which searches several databases for
+information about a given query protein. Data relevant to the protein like an
+alignment of homologues, linear motifs, post translational modifications,
+domains, secondary structure, sequence variations and others are graphically
+represented relative to their position in the protein.
 
