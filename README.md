@@ -25,3 +25,7 @@ We'll be using the master branch to make all changes in the repository. Anyone
 who wants to make branches in their local repository may feel free to do so,
 but please merge to master before updating the Gitlab repo.
 
+
+## References
+
+- get bibtex output from a PMID via http://www.bioinformatics.org/texmed/
