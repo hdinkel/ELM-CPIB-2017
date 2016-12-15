@@ -89,17 +89,17 @@ step 5. The first row contains phosphorylation sites as retrieved from Phospho.E
 > motifs.
 
 step 6. The second row shows SMART and Pfam domains detected by the SMART
-   database (9600884,25300481, 9600884). Hover the mouse over these domains to
+   database (PMID:9600884,PMID:25300481, PMID:9600884). Hover the mouse over these domains to
    see their names and exact start and end positions.
 
 > In order to be functional SLiMs need to be accessble, and are therefore they
-> are usually not > found within domains and structured regions (21909575). Any
+> are usually not > found within domains and structured regions (PMID:21909575). Any
 > SLiMs detected by the ELM prediction pipleline are less likely to be
 > functional, and are filtered out by the "structural filter" (see also step XXX).
 
 step 7.  The third row shows globular and disordered regions in the sequence as
-    predicted by GlobPlot (12824398). The 4th & 5th
-    rows contain results from IUPred (15955779), another unstructured region
+    predicted by GlobPlot (PMID:12824398). The 4th & 5th
+    rows contain results from IUPred (PMID:15955779), another unstructured region
     prediction tool. Protein segments with an IUpred score above 0.5 are 95% likely
     to be disorered (REF???).
 
@@ -164,7 +164,7 @@ step 12. Scroll down to below the results graphic to find additional
 
 > The search for possible homologs is performed against the UniRef90
 > database, a dataset of protein sequences with less than 90 percent identity
-> between any two of them (25348405). It is also possible that 
+> between any two of them (PMID:25348405). It is also possible that 
 > that the BLAST results are not finished when the results page is shown: We
 > suggest to refresh the page if you see the message "Either not enough data
 > available to calculate a sequence alignment or the calculations haven't
