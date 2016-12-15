@@ -4,7 +4,7 @@ ALL_MD='merged/complete.md'
 
 rm -f $ALL_MD
 
-for i in [1-9]*.md; do
+for i in [0-9]*.md; do
 
     echo "Adding $i to file."
     cat $i >> $ALL_MD
