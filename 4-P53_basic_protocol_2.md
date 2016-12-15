@@ -121,13 +121,12 @@ Encyclopedia of Genes and Genomes" (KEGG (PMID:26476454)) database mapped to ELM
 Click on a species (for example "Homo sapiens") for a complete list of all Human
 pathways which have a protein annotated in ELM, and links to the pathways on KEGG.
 
-
 ![](Figures/TP53_2/pathways_example.png)
 **Figure TP53-BP2-10** A list of all pathways in Gallus Gallus 
 
 Step 10. On the "ELM pathways" page (Fig. TP53-BP2-9) click on the link "Gallus
 gallus" to navigate to the page containing all pathways annotated for Gallus
-gallus. This page contains links to all ???? KEGG path ways for Gallus gallus. 
+gallus. This page contains links to all ????? KEGG path ways for Gallus gallus. 
 
 
 ![](Figures/TP53_2/pathways_kegg.png)
