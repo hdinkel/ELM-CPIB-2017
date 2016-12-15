@@ -110,22 +110,41 @@ description of the switch also taken from switches.ELM (PMID:23550212).
 > The filter bar on the top page can be used to quickly filter the list of interactions
 > shown. 
 
+## Exploring KEGG pathways from ELM
 
 ![](Figures/TP53_2/pathways.png)
-**Figure TP53-BP2-8** A list of all Pathways from KEGG with proteins in ELM.
+**Figure TP53-BP2-9** A list of all Pathways from KEGG with proteins in ELM.
 
-Step 8. Click on the sub-menu "ELM pathways" in "ELM DB" to see a list of
-all pathways contained in ELM (Fig. TP53-BP2-8). Pathways are from the "Kyoto
+Step 9. Click on the sub-menu "ELM pathways" in "ELM DB" to see a list of
+all pathways contained in ELM (Fig. TP53-BP2-9). Pathways are from the "Kyoto
 Encyclopedia of Genes and Genomes" (KEGG (PMID:26476454)) database mapped to ELM instances.
 Click on a species (for example "Homo sapiens") for a complete list of all Human
 pathways which have a protein annotated in ELM, and links to the pathways on KEGG.
 
+
+![](Figures/TP53_2/pathways_example.png)
+**Figure TP53-BP2-10** A list of all pathways in Gallus Gallus 
+
+Step 10. On the "ELM pathways" page (Fig. TP53-BP2-9) click on the link "Gallus
+gallus" to navigate to the page containing all pathways annotated for Gallus
+gallus. This page contains links to all ???? KEGG path ways for Gallus gallus. 
+
+
+![](Figures/TP53_2/pathways_kegg.png)
+**Figure TP53-BP2-11** A list of all pathways in Gallus Gallus 
+
+Step 10. One the page with Gallus Gallus pathways (Fig. TP53-BP2-10) click on
+"Adherens junction" to the KEGG entry for this pathway, with proteins
+colorcoded acoording to ????? (see the color legend on the previous page, Fig.
+TP53-BP2-10).
+
 ## Infections and Diseases
 
 ![](Figures/TP53_2/viruses.png)
-**Figure TP53-BP2-9** A Table of the ELM instance abused by viruses 
+**Figure TP53-BP2-11** A Table of the ELM instance abused by viruses 
 
-Step 9. Click on the sub-menu "ELM virus instances" in "ELM DB" to see a
+Step 11. Click on the sub-menu "ELM virus instances" in "ELM DB" to see a
+Step 11. Click on the sub-menu "ELM virus instances" in "ELM DB" to see a
 list of all instances in ELM that have been annotated as being abused by
 viruses (Fig TP53-BP2-9). The columns are identical to those listed in section
 XXX step YYY (Figure ZZZZ).
@@ -135,13 +154,13 @@ XXX step YYY (Figure ZZZZ).
 > to download the (complete) table in giff, pir, fasta or tsv format. (See
 > section XXX for a description of these formats.)
 
-
 ![](Figures/TP53_2/diseases.png)
-**Figure TP53-BP2-10** A list of all diseases in ELM. 
+**Figure TP53-BP2-8** A list of all diseases in ELM. 
 
-Step 10. Click on the sub-menu "ELM diseases" in "ELM DB" to see a list
+Step 8. Click on the sub-menu "ELM diseases" in "ELM DB" to see a list
 of all motif classes that have been annotated with a disease. Disease
 information is taken from the OMIM database.
 
 > This table also includes the diseases found under the "ELM pathogenic
 > abuse" menu in "ELM DB". (right?)
+
