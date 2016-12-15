@@ -25,7 +25,7 @@ of the ELM classes (Figure TP53-BP2-2). For each class, the following
 information is provided: ELM identifier, short description, regular
 expression, number of instances annotated for each class, and number of
 structures available. For details on each class, click on the ELM
-identifier; to get a list of annotated instances for an individual class, 
+identifier; to get a list of annotated instances for an individual class,
 click on the number of instances.
 
 > Use the search bar at the top of the page to filter for certain motif
@@ -87,7 +87,7 @@ This page also contains links to RCSB (PMID:12037327), the individual instance a
 Step 6. Click on the sub-menu "ELM binding domains " in "ELM DB" to see a
 complete list of all the interaction domains in ELM (Figure TP53-BP2-6).
 This table shows the ELM classes which have been annotated with a corresponding
-interaction domain. This table shows the ELM class, a link to the Pfam 
+interaction domain. This table shows the ELM class, a link to the Pfam
 (PMID:26673716) / SMART (PMID:25300481) / InterPro (PMID:27899635) domain, as
 well as the name of the interacting domain followed by a brief description.
 
@@ -108,7 +108,7 @@ description of the switch also taken from switches.ELM (PMID:23550212).
 
 
 > The filter bar on the top page can be used to quickly filter the list of interactions
-> shown. 
+> shown.
 
 ## Exploring KEGG pathways from ELM
 
@@ -117,30 +117,31 @@ description of the switch also taken from switches.ELM (PMID:23550212).
 
 Step 9. Click on the sub-menu "ELM pathways" in "ELM DB" to see a list of
 all pathways contained in ELM (Fig. TP53-BP2-9). Pathways are from the "Kyoto
-Encyclopedia of Genes and Genomes" (KEGG (PMID:26476454)) database mapped to ELM instances.
+Encyclopedia of Genes and Genomes" (KEGG PMID:26476454) database mapped to ELM instances.
 Click on a species (for example "Homo sapiens") for a complete list of all Human
 pathways which have a protein annotated in ELM, and links to the pathways on KEGG.
 
 ![](Figures/TP53_2/pathways_example.png)
-**Figure TP53-BP2-10** A list of all pathways in Gallus Gallus 
+**Figure TP53-BP2-10** A list of all pathways in Gallus Gallus
 
-Step 10. On the "ELM pathways" page (Fig. TP53-BP2-9) click on the link "Gallus
-gallus" to navigate to the page containing all pathways annotated for Gallus
-gallus. This page contains links to all ????? KEGG path ways for Gallus gallus. 
+Step 10. On the "ELM pathways" page (Fig. TP53-BP2-9) click on the link "gallus
+gallus" to navigate to the page containing all pathways annotated for chicken.
+This page contains links to all KEGG pathways for the taxon *gallus gallus*
+with annotated instances in the ELM database.
 
 
 ![](Figures/TP53_2/pathways_kegg.png)
-**Figure TP53-BP2-11** A list of all pathways in Gallus Gallus 
+**Figure TP53-BP2-11** A list of all annotated pathways for taxon *gallus gallus*
 
-Step 10. One the page with Gallus Gallus pathways (Fig. TP53-BP2-10) click on
-"Adherens junction" to the KEGG entry for this pathway, with proteins
-colorcoded acoording to ????? (see the color legend on the previous page, Fig.
+Step 10. One the page with chicken pathways (Fig. TP53-BP2-10) click on
+"Adherens junction" to the KEGG entry for this pathway, with proteins color
+overlay corresponding to ELM classes (see the color legend right side of figure
 TP53-BP2-10).
 
 ## Infections and Diseases
 
 ![](Figures/TP53_2/viruses.png)
-**Figure TP53-BP2-11** A Table of the ELM instance abused by viruses 
+**Figure TP53-BP2-11** A Table of the ELM instance abused by viruses
 
 Step 11. Click on the sub-menu "ELM virus instances" in "ELM DB" to see a
 Step 11. Click on the sub-menu "ELM virus instances" in "ELM DB" to see a
@@ -154,7 +155,7 @@ XXX step YYY (Figure ZZZZ).
 > section XXX for a description of these formats.)
 
 ![](Figures/TP53_2/diseases.png)
-**Figure TP53-BP2-8** A list of all diseases in ELM. 
+**Figure TP53-BP2-8** A list of all diseases in ELM.
 
 Step 8. Click on the sub-menu "ELM diseases" in "ELM DB" to see a list
 of all motif classes that have been annotated with a disease. Disease
