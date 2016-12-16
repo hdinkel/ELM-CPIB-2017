@@ -89,7 +89,7 @@ step 5. The first row contains phosphorylation sites as retrieved from Phospho.E
 > motifs.
 
 step 6. The second row shows SMART and Pfam domains detected by the SMART
-   database (PMID:9600884,PMID:25300481, PMID:9600884). Hover the mouse over these domains to
+   database (PMID:9600884, PMID:25300481, PMID:9600884). Hover the mouse over these domains to
    see their names and exact start and end positions.
 
 > In order to be functional SLiMs need to be accessble, and are therefore they
