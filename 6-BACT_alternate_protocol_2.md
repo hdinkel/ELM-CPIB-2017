@@ -1,5 +1,14 @@
 # Alternate Protocol 2: Searching the ELM database using REST API
 
+Many researchers are interested in large-scale analyses rather than information
+about individual protein sequences. To this end, individual queries to the ELM
+webserver with a single protein id at a time, are not practical.
+
+For this reason, as much information as possible is made available via a REST
+interface (\cite{Fielding_2002}). This allows the user to interact with the
+database and webserver via scriptable URL requests. Each request can easily be
+tested in the browser before it is being automated in a script.
+
 
 ## Necessary Resources
 
