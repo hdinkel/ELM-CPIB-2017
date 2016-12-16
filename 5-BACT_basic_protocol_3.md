@@ -1,20 +1,19 @@
-# Basic Protocol 2: Predicting ELMs in sequences [2 or 3?]
+# Alternate Protocol 1: Predicting ELMs in sequences
 
-One of the most useful (and used) features in ELM is the ability to detect
-motifs in proteins and sequences. Given a protein's amino acid sequence, the
-"EML Predictions" pipeline searches for occurrences of each Motif class using
-their regular expressions. The presence of each motif is also ......
 
-We will use as an example protein "CV_0974" (uniprot ID: Q7NZE8), a "probable
+TODO: DEDUPLICATE TEXT (COMPARE TO 4-P53_BASIC_PROTOCOL_2.MD)
+
+TODO: DESCRIBE MOST PROBABLE MOTIF INSTANCES (COMPARED TO FILTERED)
+
+We will use protein "CV_0974" (uniprot ID: Q7NZE8) as an example, a "probable
 tyrosine phosphatase" from _Chromobacterium violaceum_. This protein is predicted
 to be a tyrosine phosphates because it has a "tyrosine phosphatase" (PTPc) domain.
-However its specificity is unknown ???
 
 ## Necessary Resources
 
 ### Software & Hardware
 
-A modern browser such as Firefox, Chrome, Safari, Internet Explorer or Edge.
+A modern browser such as Firefox, Chrome, Safari.
 ELM is best viewed on a laptop or desktop computer, although tablets and
 smartphones will also work.
 
@@ -30,40 +29,12 @@ step 1. Click on the "ELM Predictions" button in the menu to access the search q
    uniprot) or an amino acid sequence (simply the
    sequence, or a FASTA formatted entry) in which you want to detect SLiMs.
    Retrieve the FASTA formatted sequence from Uniprot
-   (http://www.uniprot.org/uniprot/Q7NZE8), and enter it into the "sequence
+   (http://www.uniprot.org/uniprot/Q7NZE8.fasta), and enter it into the "sequence
    input text box".
-
-> As this protein is already present in the ELM database, it is also possible
-> to type its identifier (CV_0974) into the "identifier input field" as steps
-> XXX and in YYY Basic Protocols 1`& 3. However it is not neccesary to submit
-> protein sequences already in the database: any amino acid sequence can
-> submitted to the ELM prediction pipeline.
-
-step 2. Select the search criteria (optional). It is possible to limit the
-   results by "cell compartment", "taxonomic context" or by changing the "motif
-   probability cutoff". To restrict the search to include SLiM's that are
-   active in certain cellular compartments, select one or more from the list
-   (use the "control" key to select more than one option). It is also possible
-   to select a "taxonomic context" to restrict the search to SLiMs from certain
-   species. Start typing a species name in the "taxonomic context" input field to
-   get an auto-completed list of species to select from.
-   Additionaly, a "Motif probability cutoff" can be used to only retain ELM
-   classes whose pattern probability is below the given value.
-   For the current protocol, leave all of these at their default values: "not
-   specified", "100" and no "taxonomic context"
-
-step 3. Click "submit" to start the searching for motifs. 
-   You will be brought to an intermediate page indicating that your results are
-   being processed, and you should be redirected to the final results page within
-   30 seconds.
-
-> You can bookmark this page: The results are stored for a week.
-
-## Interpreting the prediction results: Graphical Summary
 
 ![](Figures/BACT_1/elm_results_summary.png)
 **Figure BACT-BP-2:** The graphical results summary of the ELM Prediction pipeline
-for Probable Tyrosine phoshate (CV_0974). Note that not all motif
+for Probable Tyrosine phosphate (CV_0974). Note that not all motif
 detections are shown (the image is truncated at the bottom). The top five rows show a handfull of 
 structural features. The motif occurence are shown as blue boxes, the intensity of which
 indicates the conservation score. See steps XXX to YYY for more information.
@@ -93,7 +64,7 @@ step 6. The second row shows SMART and Pfam domains detected by the SMART
    see their names and exact start and end positions.
 
 > In order to be functional SLiMs need to be accessble, and are therefore they
-> are usually not > found within domains and structured regions (PMID:21909575). Any
+> are usually not found within domains and structured regions (PMID:21909575). Any
 > SLiMs detected by the ELM prediction pipleline are less likely to be
 > functional, and are filtered out by the "structural filter" (see also step XXX).
 
@@ -107,24 +78,6 @@ step 7.  The third row shows globular and disordered regions in the sequence as
 >  regions. Any motif occurence detected by the ELM prediction pipeline that
 >  fall within disoredered regious are more likely to be functional.
 
-step 8. The 5th row contains information on secondary structure. The secondary
-   structure is predicted using a ?????
-
-step 9. The remainder of the figure (from row 6 onwards) displays the motif
-   detections, overlayed by the structural context from rows 2 and 3 (SMART
-   domains and GlobPlot). A blue square indicates a single motif occurence,
-   intensity of the color indicates the conservation of this sequence in
-   homologous proteins.
-   Boxes in gray are motif occurences which have been filtered out by the "structure
-   filter". Boxes that are blue & gray are neutral (what does that mean ?????).
-   If the sequence is already present in the database, any motif instances
-   that have already been annotated are shown as ovals. Lastly, Any motifs
-   detected in homologous sequences are also shown as blue & red rectangles.
-
-> In the case that no homologous sequences were detected (see step XXX below),
-> it is not possible to assign a conservation score. Therefore all of the
-> motif occurences will be shown in a uniform shade of blue.
-
 step 10. Place the cursor over the blue box for motif occurence
    "DOC_USP7_MATH_1" at position 129-133. This motif is in a disorered region, and
    has not been filtered out by the structural filter. However, its
@@ -133,17 +86,6 @@ step 10. Place the cursor over the blue box for motif occurence
    positions "334-343". Despite the high conservation score (1.000), this motif
    is inside the PTPc domain (and a Globular regions), and therefore has been
    filtered out.
-
-> The confidence score is based on how conserved the sequence is across a set
-> of homolous proteins from other sequences. An exact description of the method
-> is given in ????
-
-step 11. Mouse over a gray rectangle (filtered out) to find out why this hit was
-   filtered out. It shows scores for all of the individual criteria used to
-   filter out a sequence: The name of the domain, the *accessibility score* ,
-   *secondary structure score*, *combined total score*, and the associated
-   *totalscore P-value*. It also shows the sequence which cased matched the
-   motif's regular expression. **Skip this one, its not working!**
 
 ## Interpreting the prediction results: Additional Information
 

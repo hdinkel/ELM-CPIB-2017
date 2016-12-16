@@ -1,4 +1,4 @@
-# Alternate Protocol 2: Searching the ELM database using REST API
+# Alternate Protocol 3: Searching the ELM database using REST API
 
 
 ## Necessary Resources
