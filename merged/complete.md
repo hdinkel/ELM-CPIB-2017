@@ -252,7 +252,7 @@ of the ELM classes (Figure TP53-BP2-2). For each class, the following
 information is provided: ELM identifier, short description, regular
 expression, number of instances annotated for each class, and number of
 structures available. For details on each class, click on the ELM
-identifier; to get a list of annotated instances for an individual class, 
+identifier; to get a list of annotated instances for an individual class,
 click on the number of instances.
 
 > Use the search bar at the top of the page to filter for certain motif
@@ -314,7 +314,7 @@ This page also contains links to RCSB (\cite{12037327}), the individual instance
 Step 6. Click on the sub-menu "ELM binding domains " in "ELM DB" to see a
 complete list of all the interaction domains in ELM (Figure TP53-BP2-6).
 This table shows the ELM classes which have been annotated with a corresponding
-interaction domain. This table shows the ELM class, a link to the Pfam 
+interaction domain. This table shows the ELM class, a link to the Pfam
 (\cite{26673716}) / SMART (\cite{25300481}) / InterPro (\cite{27899635}) domain, as
 well as the name of the interacting domain followed by a brief description.
 
@@ -335,7 +335,7 @@ description of the switch also taken from switches.ELM (\cite{23550212}).
 
 
 > The filter bar on the top page can be used to quickly filter the list of interactions
-> shown. 
+> shown.
 
 ## Exploring KEGG pathways from ELM
 
@@ -344,30 +344,31 @@ description of the switch also taken from switches.ELM (\cite{23550212}).
 
 Step 9. Click on the sub-menu "ELM pathways" in "ELM DB" to see a list of
 all pathways contained in ELM (Fig. TP53-BP2-9). Pathways are from the "Kyoto
-Encyclopedia of Genes and Genomes" (KEGG (\cite{26476454})) database mapped to ELM instances.
+Encyclopedia of Genes and Genomes" (KEGG \cite{26476454}) database mapped to ELM instances.
 Click on a species (for example "Homo sapiens") for a complete list of all Human
 pathways which have a protein annotated in ELM, and links to the pathways on KEGG.
 
 ![](../Figures/TP53_2/pathways_example.png)
-**Figure TP53-BP2-10** A list of all pathways in Gallus Gallus 
+**Figure TP53-BP2-10** A list of all pathways in Gallus Gallus
 
-Step 10. On the "ELM pathways" page (Fig. TP53-BP2-9) click on the link "Gallus
-gallus" to navigate to the page containing all pathways annotated for Gallus
-gallus. This page contains links to all ????? KEGG path ways for Gallus gallus. 
+Step 10. On the "ELM pathways" page (Fig. TP53-BP2-9) click on the link "gallus
+gallus" to navigate to the page containing all pathways annotated for chicken.
+This page contains links to all KEGG pathways for the taxon *gallus gallus*
+with annotated instances in the ELM database.
 
 
 ![](../Figures/TP53_2/pathways_kegg.png)
-**Figure TP53-BP2-11** A list of all pathways in Gallus Gallus 
+**Figure TP53-BP2-11** A list of all annotated pathways for taxon *gallus gallus*
 
-Step 10. One the page with Gallus Gallus pathways (Fig. TP53-BP2-10) click on
-"Adherens junction" to the KEGG entry for this pathway, with proteins
-colorcoded acoording to ????? (see the color legend on the previous page, Fig.
+Step 10. One the page with chicken pathways (Fig. TP53-BP2-10) click on
+"Adherens junction" to the KEGG entry for this pathway, with proteins color
+overlay corresponding to ELM classes (see the color legend right side of figure
 TP53-BP2-10).
 
 ## Infections and Diseases
 
 ![](../Figures/TP53_2/viruses.png)
-**Figure TP53-BP2-11** A Table of the ELM instance abused by viruses 
+**Figure TP53-BP2-11** A Table of the ELM instance abused by viruses
 
 Step 11. Click on the sub-menu "ELM virus instances" in "ELM DB" to see a
 Step 11. Click on the sub-menu "ELM virus instances" in "ELM DB" to see a
@@ -381,7 +382,7 @@ XXX step YYY (Figure ZZZZ).
 > section XXX for a description of these formats.)
 
 ![](../Figures/TP53_2/diseases.png)
-**Figure TP53-BP2-8** A list of all diseases in ELM. 
+**Figure TP53-BP2-8** A list of all diseases in ELM.
 
 Step 8. Click on the sub-menu "ELM diseases" in "ELM DB" to see a list
 of all motif classes that have been annotated with a disease. Disease
@@ -513,17 +514,17 @@ step 5. The first row contains phosphorylation sites as retrieved from Phospho.E
 > motifs.
 
 step 6. The second row shows SMART and Pfam domains detected by the SMART
-   database (9600884,25300481, 9600884). Hover the mouse over these domains to
+   database (\cite{9600884},\cite{25300481}, \cite{9600884}). Hover the mouse over these domains to
    see their names and exact start and end positions.
 
 > In order to be functional SLiMs need to be accessble, and are therefore they
-> are usually not > found within domains and structured regions (21909575). Any
+> are usually not > found within domains and structured regions (\cite{21909575}). Any
 > SLiMs detected by the ELM prediction pipleline are less likely to be
 > functional, and are filtered out by the "structural filter" (see also step XXX).
 
 step 7.  The third row shows globular and disordered regions in the sequence as
-    predicted by GlobPlot (12824398). The 4th & 5th
-    rows contain results from IUPred (15955779), another unstructured region
+    predicted by GlobPlot (\cite{12824398}). The 4th & 5th
+    rows contain results from IUPred (\cite{15955779}), another unstructured region
     prediction tool. Protein segments with an IUpred score above 0.5 are 95% likely
     to be disorered (REF???).
 
@@ -588,7 +589,7 @@ step 12. Scroll down to below the results graphic to find additional
 
 > The search for possible homologs is performed against the UniRef90
 > database, a dataset of protein sequences with less than 90 percent identity
-> between any two of them (25348405). It is also possible that 
+> between any two of them (\cite{25348405}). It is also possible that 
 > that the BLAST results are not finished when the results page is shown: We
 > suggest to refresh the page if you see the message "Either not enough data
 > available to calculate a sequence alignment or the calculations haven't
@@ -648,6 +649,103 @@ step 17. Scroll further down to the heading "List of excluded ELMs falling insid
    applicable)." (Figure BACT-BP-8). This table is (almost) identical to the
    one above, but shows motif instances which were rejecte by the Structural
    filter or SMART filter.
+
+# Alternate Protocol 1: Predicting ELMS in sequences using REST API
+
+Querying ELM for motifs in a given sequence (as discussed in basic protocol 1),
+gives you a nice overview of putative and possibly annotated motifs in your
+query protein with a graphical representation using colors to highlight
+different regions of the protein sequence (eg. disordered vs. globular).
+It is however difficult to analyse a large set of protein sequences in this
+manner. Therefore, elm.eu.org provides an interface which you can use to submit your sequence
+in a programmatic way. Of course, this way, you won't receive the graphical
+output representation, but are limited to textual data representation.
+
+Currently, there exists a single URL 'http://elm.eu.org/start_search/' to
+accept such queries. You can choose to either submit a uniprot name or accession
+(ex. 'http://elm.eu.org/start_search/P53_HUMAN.tsv') or submit your raw
+sequence (ex. 'http://elm.eu.org/start_search/MAPRGFSCLLLLTSEIDLPVKRRA').
+
+The logic here is, if the URL ends in '.tsv' then the server assumes you
+are using a Uniprot id or accession; if it doesn't, then it assumes you are
+using raw sequence. See below for details.
+
+## Necessary Resources
+
+### Software
+
+Ideally use `curl` https://curl.haxx.se/ on the commandline
+However, any browser can be used to access the server, most browsers however download text- and csv-files instead of displaying them. Therefore, for trying out different URLs / Parameters, it might be better to use a commandline client such as `curl`.
+
+## Submitting a query to ELM via REST
+
+step 1. Use `curl` to query ELM via uniprot name 'http://elm.eu.org/start_search/P53_HUMAN.tsv'
+
+```
+> curl 'http://elm.eu.org/start_search/P53_HUMAN.tsv'
+
+CLV_C14_Caspase3-7	183	187	False	False	False	False	False	False	False
+CLV_C14_Caspase3-7	349	353	False	False	False	False	False	False	False
+CLV_C14_Caspase3-7	388	392	False	False	False	False	False	False	False
+CLV_NRD_NRD_1	174	176	False	False	False	False	False	False	False
+CLV_NRD_NRD_1	248	250	False	False	False	False	False	False	False
+CLV_NRD_NRD_1	282	284	False	False	False	False	False	False	False
+CLV_NRD_NRD_1	289	291	False	False	False	False	False	False	False
+CLV_PCSK_FUR_1	280	284	False	False	False	False	False	False	False
+CLV_PCSK_KEX2_1	174	176	False	False	False	False	False	False	False
+CLV_PCSK_KEX2_1	248	250	False	False	False	False	False	False	False
+CLV_PCSK_KEX2_1	282	284	False	False	False	False	False	False	False
+CLV_PCSK_KEX2_1	305	307	False	False	False	False	False	False	False
+CLV_PCSK_PC1ET2_1	305	307	False	False	False	False	False	False	False
+CLV_PCSK_SKI1_1	120	124	False	False	False	False	False	False	False
+CLV_PCSK_SKI1_1	249	253	False	False	False	False	False	False	False
+CLV_PCSK_SKI1_1	305	309	False	False	False	False	False	False	False
+CLV_PCSK_SKI1_1	382	386	False	False	False	False	False	False	False
+CLV_Separin_Metazoa	171	175	False	False	False	False	False	False	False
+DEG_APCC_DBOX_1	248	256	False	False	False	False	False	False	False
+DEG_MDM2_SWIB_1	19	26	True	False	False	False	False	False	False
+DEG_Nend_UBRbox_2	1	3	False	False	False	False	False	False	False
+DEG_SPOP_SBC_1	92	96	False	False	False	False	False	False	False
+DOC_CYCLIN_1	24	27	False	False	False	False	False	False	False
+DOC_CYCLIN_1	306	309	False	False	False	False	False	False	False
+DOC_CYCLIN_1	381	385	True	False	False	False	False	False	False
+DOC_MAPK_gen_1	248	254	False	False	False	False	False	False	False
+DOC_PP1_RVXF_1	108	114	False	False	False	False	False	False	False
+DOC_PP1_RVXF_1	379	386	False	False	False	False	False	False	False
+DOC_PP1_RVXF_1	380	386	False	False	False	False	False	False	False
+DOC_PP2B_LxvP_1	188	191	False	False	False	False	False	False	False
+DOC_USP7_MATH_1	34	38	False	False	False	False	False	False	False
+DOC_USP7_MATH_1	359	363	True	False	False	False	False	False	False
+DOC_USP7_MATH_1	364	368	True	False	False	False	False	False	False
+
+...
+```
+
+step 2. Use `curl` to query ELM via protein sequence using the URL 'http://elm.eu.org/start_search/MAPRGFSCLLLLTSEIDLPVKRRA'
+
+```
+> curl 'http://elm.eu.org/start_search/MAPRGFSCLLLLTSEIDLPVKRRA'
+
+elm_identifier	start	stop	is_annotated	is_phiblastmatch	is_filtered	phiblast	topodomfilter	taxonfilter	structure
+CLV_NRD_NRD_1	22	24	False	False	False	False	False	False	False
+CLV_PCSK_KEX2_1	21	23	False	False	False	False	False	False	False
+CLV_PCSK_KEX2_1	22	24	False	False	False	False	False	False	False
+CLV_PCSK_PC1ET2_1	21	23	False	False	False	False	False	False	False
+LIG_14-3-3_CanoR_1	4	12	False	False	False	False	False	False	False
+LIG_BIR_II_1	1	5	False	False	False	False	False	False	False
+LIG_FHA_1	11	17	False	False	False	False	False	False	False
+LIG_SUMO_SIM_anti_2	7	15	False	False	False	False	False	False	False
+LIG_SUMO_SIM_par_1	7	15	False	False	False	False	False	False	False
+LIG_SUMO_SIM_par_1	8	15	False	False	False	False	False	False	False
+LIG_WD40_WDR5_VDV_2	13	18	False	False	False	False	False	False	False
+LIG_WD40_WDR5_VDV_2	14	18	False	False	False	False	False	False	False
+LIG_WD40_WDR5_VDV_2	15	18	False	False	False	False	False	False	False
+```
+
+
+TODO: add this information to the download page
+
+TODO: maybe rename `start_search` to `query`?
 
 # Alternate Protocol 2: Searching the ELM database using REST API
 
@@ -758,103 +856,6 @@ common format is TSV), for example ELM instances can be downloaded in TSV, FASTA
 or PSI-MI format (either XML or MiTab) [24067240].
 
 % NOTE: TODO: Mention ELM software license agreement?
-
-# Alternate Protocol 1: Predicting ELMS in sequences using REST API
-
-Querying ELM for motifs in a given sequence (as discussed in basic protocol 1),
-gives you a nice overview of putative and possibly annotated motifs in your
-query protein with a graphical representation using colors to highlight
-different regions of the protein sequence (eg. disordered vs. globular).
-It is however difficult to analyse a large set of protein sequences in this
-manner. Therefore, elm.eu.org provides an interface which you can use to submit your sequence
-in a programmatic way. Of course, this way, you won't receive the graphical
-output representation, but are limited to textual data representation.
-
-Currently, there exists a single URL 'http://elm.eu.org/start_search/' to
-accept such queries. You can choose to either submit a uniprot name or accession
-(ex. 'http://elm.eu.org/start_search/P53_HUMAN.tsv') or submit your raw
-sequence (ex. 'http://elm.eu.org/start_search/MAPRGFSCLLLLTSEIDLPVKRRA').
-
-The logic here is, if the URL ends in '.tsv' then the server assumes you
-are using a Uniprot id or accession; if it doesn't, then it assumes you are
-using raw sequence. See below for details.
-
-## Necessary Resources
-
-### Software
-
-Ideally use `curl` https://curl.haxx.se/ on the commandline
-However, any browser can be used to access the server, most browsers however download text- and csv-files instead of displaying them. Therefore, for trying out different URLs / Parameters, it might be better to use a commandline client such as `curl`.
-
-## Submitting a query to ELM via REST
-
-step 1. Use `curl` to query ELM via uniprot name 'http://elm.eu.org/start_search/P53_HUMAN.tsv'
-
-```
-> curl 'http://elm.eu.org/start_search/P53_HUMAN.tsv'
-
-CLV_C14_Caspase3-7	183	187	False	False	False	False	False	False	False
-CLV_C14_Caspase3-7	349	353	False	False	False	False	False	False	False
-CLV_C14_Caspase3-7	388	392	False	False	False	False	False	False	False
-CLV_NRD_NRD_1	174	176	False	False	False	False	False	False	False
-CLV_NRD_NRD_1	248	250	False	False	False	False	False	False	False
-CLV_NRD_NRD_1	282	284	False	False	False	False	False	False	False
-CLV_NRD_NRD_1	289	291	False	False	False	False	False	False	False
-CLV_PCSK_FUR_1	280	284	False	False	False	False	False	False	False
-CLV_PCSK_KEX2_1	174	176	False	False	False	False	False	False	False
-CLV_PCSK_KEX2_1	248	250	False	False	False	False	False	False	False
-CLV_PCSK_KEX2_1	282	284	False	False	False	False	False	False	False
-CLV_PCSK_KEX2_1	305	307	False	False	False	False	False	False	False
-CLV_PCSK_PC1ET2_1	305	307	False	False	False	False	False	False	False
-CLV_PCSK_SKI1_1	120	124	False	False	False	False	False	False	False
-CLV_PCSK_SKI1_1	249	253	False	False	False	False	False	False	False
-CLV_PCSK_SKI1_1	305	309	False	False	False	False	False	False	False
-CLV_PCSK_SKI1_1	382	386	False	False	False	False	False	False	False
-CLV_Separin_Metazoa	171	175	False	False	False	False	False	False	False
-DEG_APCC_DBOX_1	248	256	False	False	False	False	False	False	False
-DEG_MDM2_SWIB_1	19	26	True	False	False	False	False	False	False
-DEG_Nend_UBRbox_2	1	3	False	False	False	False	False	False	False
-DEG_SPOP_SBC_1	92	96	False	False	False	False	False	False	False
-DOC_CYCLIN_1	24	27	False	False	False	False	False	False	False
-DOC_CYCLIN_1	306	309	False	False	False	False	False	False	False
-DOC_CYCLIN_1	381	385	True	False	False	False	False	False	False
-DOC_MAPK_gen_1	248	254	False	False	False	False	False	False	False
-DOC_PP1_RVXF_1	108	114	False	False	False	False	False	False	False
-DOC_PP1_RVXF_1	379	386	False	False	False	False	False	False	False
-DOC_PP1_RVXF_1	380	386	False	False	False	False	False	False	False
-DOC_PP2B_LxvP_1	188	191	False	False	False	False	False	False	False
-DOC_USP7_MATH_1	34	38	False	False	False	False	False	False	False
-DOC_USP7_MATH_1	359	363	True	False	False	False	False	False	False
-DOC_USP7_MATH_1	364	368	True	False	False	False	False	False	False
-
-...
-```
-
-step 2. Use `curl` to query ELM via protein sequence using the URL 'http://elm.eu.org/start_search/MAPRGFSCLLLLTSEIDLPVKRRA'
-
-```
-> curl 'http://elm.eu.org/start_search/MAPRGFSCLLLLTSEIDLPVKRRA'
-
-elm_identifier	start	stop	is_annotated	is_phiblastmatch	is_filtered	phiblast	topodomfilter	taxonfilter	structure
-CLV_NRD_NRD_1	22	24	False	False	False	False	False	False	False
-CLV_PCSK_KEX2_1	21	23	False	False	False	False	False	False	False
-CLV_PCSK_KEX2_1	22	24	False	False	False	False	False	False	False
-CLV_PCSK_PC1ET2_1	21	23	False	False	False	False	False	False	False
-LIG_14-3-3_CanoR_1	4	12	False	False	False	False	False	False	False
-LIG_BIR_II_1	1	5	False	False	False	False	False	False	False
-LIG_FHA_1	11	17	False	False	False	False	False	False	False
-LIG_SUMO_SIM_anti_2	7	15	False	False	False	False	False	False	False
-LIG_SUMO_SIM_par_1	7	15	False	False	False	False	False	False	False
-LIG_SUMO_SIM_par_1	8	15	False	False	False	False	False	False	False
-LIG_WD40_WDR5_VDV_2	13	18	False	False	False	False	False	False	False
-LIG_WD40_WDR5_VDV_2	14	18	False	False	False	False	False	False	False
-LIG_WD40_WDR5_VDV_2	15	18	False	False	False	False	False	False	False
-```
-
-
-TODO: add this information to the download page
-
-TODO: maybe rename `start_search` to `query`?
 
 # Guidelines for Interpreting Results 
 
