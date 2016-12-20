@@ -35,15 +35,6 @@ the data in various formats.
 
 > Each table also shows the 'last modified date' indicating when the data was last updated. This is useful if you want to know when to update your local data with the most up to date ELM data.
 
-![](Figures/BACT_2/elm_downloads_html.png)
-
-**Figure ELM-Downloads:** The ELM downloads page, which holds information about
-the different types of data (such as "Classes", "Instances", etc; see menu to
-the right) that can be obtained from the server. The orange boxes are clickable
-links, the URL following them are used to highlight the URL scheme used by the
-server (bold font denotes specifics used in the examples such as query terms,
-or formats).
-
 step 2. Click on the first orange 'html' link in the table "Classes" to
 navigate to the following URL: 'http://elm.eu.org/elms/elm_index.html'. This
 page shows all of the annotated ELM classes in the database. This page is
