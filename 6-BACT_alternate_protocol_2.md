@@ -1,12 +1,19 @@
 # Alternate Protocol 3: Searching the ELM database using REST API
 
+All of the data in ELM is available to download so that anyone can also run
+their analyses locally, on their own computer. In many cases it also is useful access data programatically, via an Application Programming Interface (API). ELM provies many features to query, search, filter and download data withouth having to use a browser.
+
+In this section we will explore the various ways in which data can downloaded
+both in using the browser as well as via the commandline. 
 
 ## Necessary Resources
 
 ### Software
 
-Ideally use `curl` https://curl.haxx.se/ on the commandline.
-However, any browser can be used to access the server, most browsers however download text- and csv-files instead of displaying them. Therefore, for trying out different URLs / Parameters, it might be better to use a commandline client such as `curl`.
+Ideally use `curl` https://curl.haxx.se/ on the commandline. This program can
+be launched from the terminal in any of the major operating systems: OSX,
+Windows and Linux. Of course `curl` is only one of many different ways to
+access web content programatically, and we suggest anyone to use which ever program they feel is better suited for their tasks.
 
 ## Downloading all ELM classes
 
@@ -19,91 +26,91 @@ links, the URL following them are used to highlight the URL scheme used by the
 server (bold font denotes specifics used in the examples such as query terms,
 or formats).
 
-step 1. Direct your browser to the URL 'http://elm.eu.org/downloads' or choose 'ELM Downloads' from the Menu at 'http://elm.eu.org' (see the [/Figures/elm_downloads_html.png](screenshot) figure showing the ELM downloads website).
+step 1. Direct your browser to the URL 'http://elm.eu.org/downloads' or select 
+'ELM Downloads' from the main Menu (Figure ELM-Downloads) This webpage contains
+links and descriptions on how to download ELM data in text format. The
+datasets are split into several smaller collections (for example
+"Classes", "Instances", etc). Each table contains links (in orange) to download
+the data in various formats.
 
-> This webpage contains links and descriptions on how to download ELM data in text format.
-> The information is separated in individual tables, eg. for 'Classes', 'Instances', and so on...
-> Note that each table also shows the 'last modified date' indicating when the particular data was last updated.
-> This is useful if you regularly want to update your local data with ELM data, as you can quickly check whether you actually _need_ to download the files again...
-> Note the orange colored download links highlighting different formats:
-> For many pages, which exist in html format (ending in '.html'), there also exists an additional URL/file extension to get the data in other formats.
+> Each table also shows the 'last modified date' indicating when the data was last updated. This is useful if you want to know when to update your local data with the most up to date ELM data.
 
-step 2. Click on the first orange 'html' link in the table "Classes" or use the following URL: 'http://elm.eu.org/elms.html'
+![](Figures/BACT_2/elm_downloads_html.png)
 
-> This webpage shows all annotated ELM classes.
-> Next, we are going to use the query parameter 'q' to limit our search
+**Figure ELM-Downloads:** The ELM downloads page, which holds information about
+the different types of data (such as "Classes", "Instances", etc; see menu to
+the right) that can be obtained from the server. The orange boxes are clickable
+links, the URL following them are used to highlight the URL scheme used by the
+server (bold font denotes specifics used in the examples such as query terms,
+or formats).
 
-step 3. Use the following URL: 'http://elm.eu.org/elms.html?q=CSK'
+step 2. Click on the first orange 'html' link in the table "Classes" to
+navigate to the following URL: 'http://elm.eu.org/elms/elm_index.html'. This
+page shows all of the annotated ELM classes in the database. This page is
+the same one as shown in Figure *TP53-BP1-classses*
 
-> This will again show the webpage with all annotated ELM classes, this time however limited to those matching the query term 'PCSK'.
-> Next, we are going to use the same URL pattern, but with '.tsv' to download the same data as actual data, not HTML.
+step 3. Navidate to the folling URL: 'http://elm.eu.org/elms.html?q=CSK',
+specifying "q=CSK" to limit the list of ELMs to those matching the search query
+"CSK". This page is again similar to the one shown in Figure
+*TP53-BP1-classses*, but with less classes.
+
+> This search result is identical to the result you would obtain by doing a
+> "manual" search on the ELM Classes page (http://elm.eu.org/elms.html). The
+> column descriptions are also the same as described in Step XXX in Protocol
+> YYY.
 
 ![](Figures/BACT_2/elm_curl_classes_CSK.png)
 **Figure ELM-Curl-Classes**:
 Screenshot of a terminal window using `curl` to download all ELM classes matching the term 'CSK'.
 
-step 4. Use the following URL: 'http://elm.eu.org/elms.tsv?q=CSK'
+step 4. Open the following URL: 'http://elm.eu.org/elms.tsv?q=CSK' to download
+a list of classes that match the search query "CSK" (as in the previous step)
+in the "tab separated values" format.  By exchanging the '.html' part of the
+url with '.tsv', we ask the webserver to give us the data in TSV
+(tab-separated values) format.
 
-> By exchanging the '.html' part of the url with '.tsv', we ask the webserver to give us the data in TSV (tab-separated) format.
-> This query should download a file such as the following:
-```
-> curl 'http://elm.eu.org/elms.tsv?q=CSK'
-#ELM_Classes_Download_Version: 1.4
-#ELM_Classes_Download_Date: 2016-11-06 17:39:41.503341
-#Origin: elm.eu.org
-#Type: tsv
-#Num_Classes: 7
-"Accession"	"ELMIdentifier"	"FunctionalSiteName"	"Description"	"Regex"	"Probability"	"#Instances"	"#Instances_in_PDB"
-"ELME000101"	"CLV_PCSK_FUR_1"	"PCSK cleavage site"	"Furin (PACE) cleavage site (R-X-[RK]-R-|-X)."	"R.[RK]R."	"0.000508722921034"	"13"	"0"
-"ELME000108"	"CLV_PCSK_KEX2_1"	"PCSK cleavage site"	"Yeast kexin 2 cleavage site (K-R-|-X or R-R-|-X)."	"[KR]R."	"0.007973463544"	"1"	"0"
-"ELME000100"	"CLV_PCSK_PC1ET2_1"	"PCSK cleavage site"	"NEC1/NEC2 cleavage site (K-R-|-X)."	"KR."	"0.00390276834"	"6"	"0"
-"ELME000103"	"CLV_PCSK_PC7_1"	"PCSK cleavage site"	"Proprotein convertase 7 (PC7, PCSK7) cleavage site (R-X-X-X-[RK]-R-|-X)."	"R...[KR]R."	"0.000508722921034"	"1"	"0"
-"ELME000146"	"CLV_PCSK_SKI1_1"	"PCSK cleavage site"	"Subtilisin/kexin isozyme-1 (SKI1) cleavage site ([RK]-X-[hydrophobic]-[LTKF]-|-X)."	"[RK].[AILMFV][LTKF]."	"0.00682052736444"	"2""0"
-"ELME000424"	"LIG_CSK_EPIYA_1"	"EPIYA ligand motif for CSK-SH2"	"Csk Src Homology 2 (SH2) domain binding EPIYA motif"	"EP[IL]Y[TAG]"	"2.46761307667e-06"	"13"	"0"
-"ELME000013"	"MOD_TYR_CSK"	"TYR phosphorylation site"	"Members of the non-receptor tyrosine kinase Csk family phosphorylate the C-terminal tyrosine residues of the Src family."	"[TAD][EA].Q(Y)[QE].[GQA][PEDLS]"	"2.92617843803e-07"	"12"	"0"
-```
+> Depending on which browser you are using, the file may open directly in your
+> browser, or you may be prompted to download the file or save it to a separate
+> location. In the latter two cases you can open the downloaded file using a
+> (plain) text file viewer, or possible a spreadsheet viewer (such as Microsoft
+> Excel). 
 
+step 5. Type the follwing command into a command line terminal to download the
+same data from the previous step directly into the terminal: `curl
+'http://elm.eu.org/elms/elms_index.tsv?q=CSK'`. The output should look similar
+to *Figure ELM-Curl-Classes*. The column names are still the same ones as shown
+in the _classes_ table in Figure *BACT-AP2-Elm-classes-downloads*.
+
+> Use the curl option `-o` to save the results directly to a file. For example: 
+> `curl -o classes.tsv 'http://elm.eu.org/elms/elms_index.tsv?q=CSK'` will save
+> the data to a file called _classes.tsv_.
+
+step 6: To download a list of all motif instances detected in Human P53, type
+the followin command into a terminal: `curl
+'http://elm.eu.org/instances.gff?q=p53_human'`. The output should look similar
+to that shown in figure *Figure ELM-Curl-P53*. The output is in the "General
+Feature Format" (http://www.ensembl.org/info/website/upload/gff.html#moreinfo),
+with the FASTA formatted sequence appended to the end of the output.
+
+> Many other file formats are available for downloading instances annotations,
+> including the FASTA, GFF, PIR, or PSI-MI format (either XML or MiTab)
+> [24067240]. 
 
 ![](Figures/BACT_2/elm_curl_instances_p53_human.png)
 **Figure ELM-Curl-Instances-P53**:
-Screenshot of a terminal window using `curl` to download all ELM instances annotated for sequence p53_human.
+Screenshot of a terminal window using `curl` to download all ELM instances
+annotated for sequence p53_human.
 
+step 7. To download a list of all instances matchin th search query "CLV" in
+the yellow fever mosquito (Aedes agypti), enter the following command into a
+terminal: `curl 'http://elm.eu.org/instances.tsv?q=CLV&taxon=aedes+aegypti'. In
+general any species name can be used, always replacing the "space" with a "+".
+This should return a single instance, the only one matching CLV in A. aegypti.
 
-step 4. Use the following URL: 'http://elm.eu.org/instances.gff?q=p53_human'
-
-```
-> curl 'http://elm.eu.org/instances.gff?q=p53_human'
-##gff-version 3
-P04637	ELM	sequence_feature	19	26	.	.	.	ID=DEG_MDM2_SWIB_1
-P04637	ELM	sequence_feature	381	385	.	.	.	ID=DOC_CYCLIN_1
-P04637	ELM	sequence_feature	359	363	.	.	.	ID=DOC_USP7_MATH_1
-P04637	ELM	sequence_feature	364	368	.	.	.	ID=DOC_USP7_MATH_1
-P04637	ELM	sequence_feature	30	35	.	.	.	ID=DOC_WW_Pin1_4
-P04637	ELM	sequence_feature	78	83	.	.	.	ID=DOC_WW_Pin1_4
-P04637	ELM	sequence_feature	312	317	.	.	.	ID=DOC_WW_Pin1_4
-P04637	ELM	sequence_feature	15	21	.	.	.	ID=MOD_CK1_1
-P04637	ELM	sequence_feature	30	37	.	.	.	ID=MOD_GSK3_1
-P04637	ELM	sequence_feature	12	18	.	.	.	ID=MOD_PIKK_1
-P04637	ELM	sequence_feature	385	388	.	.	.	ID=MOD_SUMO_for_1
-P04637	ELM	sequence_feature	339	352	.	.	.	ID=TRG_NES_CRM1_1
-P04637	ELM	sequence_feature	305	323	.	.	.	ID=TRG_NLS_Bipartite_1
-##FASTA
->P04637
-MEEPQSDPSVEPPLSQETFSDLWKLLPENNVLSPLPSQAMDDLMLSPDDIEQWFTEDPGPDEAPRMPEAAPPVAPAPAAPTPAAPAPAPSWPLSSSVPSQKTYQGSYGFRLGFLHSGTAKSVTCTYSPALNKMFCQLAKTCPVQLWVDSTPPPGTRVRAMAIYKQSQHMTEVVRRCPHHERCSDSDGLAPPQHLIRVEGNLRVEYLDDRNTFRHSVVVPYEPPEVGSDCTTIHYNYMCNSSCMGGMNRRPILTIITLEDSSGNLLGRNSFEVRVCACPGRDRRTEEENLRKKGEPHHELPPGSTKRALPNNTSSSPQPKKKPLDGEYFTLQIRGRERFEMFRELNEALELKDAQAGKEPGGS
-```
-
-step 5. Use the following URL: 'http://elm.eu.org/instances.tsv?q=CLV_&taxon=aedes+agypti'
-
-> Use the query term 'q=CLV_' to get all instances of cleavage site classes.
-> To limit your search to 'yellow fever mosquito' instances, use the parameter 'taxon=' followed by the taxon's scientific name, replacing spaces with '+':
-
-```
-> curl 'http://elm.eu.org/instances.tsv?q=CLV_&taxon=aedes+agypti'
-```
-
-More data (interactions, domains, methods, etc.) can be downloaded from ELM in
-analogous fashion. Different formats are available depending on data type (the most
-common format is TSV), for example ELM instances can be downloaded in TSV, FASTA, GFF, PIR,
-or PSI-MI format (either XML or MiTab) [24067240].
+step 8. More data (interactions, domains, methods, etc.) can be downloaded from
+ELM in analogous fashion as shown in the preceeding steps. Take a look at the
+ELM Downloads page (http://elm.eu.org/downloads, Figure
+*BACT-AP2-Elm-downloads*) for an overview of which datasets can be downloaded,
+and what the different possible filters and formats are for each dataset.
 
 % NOTE: TODO: Mention ELM software license agreement?
