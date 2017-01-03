@@ -97,7 +97,8 @@ step 6. The first row contains phosphorylation sites as retrieved from
    phosphorylation sites.
 
 > Phosphorylation sites are only available when the search is performed with a
-> protein accession (eg. *not* with FASTA sequence alone) in step XXX.
+> protein accession (eg. *not* with FASTA sequence alone) in step XXX and there is 
+> relevant information annotated in the Phospho.ELM database.
 > Phosphorylation sites are relevant to interpret ELM motif predictions when
 > the predicted motif requires to be phosphorylated (as in several docking and
 > ligand binding motifs) and naturally, for the prediction of phosphorylation
@@ -234,6 +235,7 @@ has been associated, and finally the regular expression of the motif.
 
 
 TODO: INSERT/CHANGE FIGURE/NAME
+
 step 16. Scroll down to the section with the header "Globular domains/ TM
    domains and signal peptide detected by the SMART server" (Figure BACT-BP-3).
    This section contains information on which domains were detected by the
@@ -241,11 +243,13 @@ step 16. Scroll down to the section with the header "Globular domains/ TM
    the SMART entry for that domain on the SMART homepage.
 
 TODO: INSERT/CHANGE FIGURE/NAME
+
 ![](Figures/BACT_1/elm_results_motifs.png)
 **Figure BACT-BP-7:** This table contains the list of motifs detected in the
 sequence (only the top part of the table is shown).
 
 TODO: INSERT/CHANGE FIGURE/NAME
+
 step 17. Scroll further down to the section title "Results of ELM motif
    search after globular domain filtering, structural filtering and context
    filtering" to obtain an overview of all of the motifs and motif instances
@@ -262,12 +266,14 @@ step 17. Scroll further down to the section title "Results of ELM motif
    motif in any random amino acid sequence.
 
 TODO: INSERT/CHANGE FIGURE/NAME
+
 ![](Figures/BACT_1/elm_results_motifs_filtered.png)
 **Figure BACT-BP-8:** This table contains the list of motifs detected in the
 sequence (only the top part of the table is shown) which were excluded due to
 structural filters.
 
 TODO: INSERT/CHANGE FIGURE/NAME
+
 step 18. Scroll further down to the heading "List of excluded ELMs falling inside
    SMART/PFAM domains and/or scoring poorly with the structural filter (if
    applicable)." (Figure BACT-BP-8). This table is (almost) identical to the
