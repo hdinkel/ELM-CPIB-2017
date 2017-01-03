@@ -82,7 +82,7 @@ step 4. Click "submit" to start the searching for motifs.
 TODO: INSERT/CHANGE FIGURE/NAME
 
 **Figure TP53-BP1-2** The graphical results summary of the ELM Prediction
-pipeline for “P53_HUMAN”. Note that not all motif detections are shown (the
+pipeline for "P53_HUMAN". Note that not all motif detections are shown (the
 image is truncated at the bottom). The top five rows show a set of structural
 features. Annotated and predicted motifs are shown as differently colored
 ovals/boxes.
@@ -130,7 +130,7 @@ step 9. The 5th row contains information on secondary structure. The secondary
    disorder predictors agree with respect to wihch parts of the sequence are
    considered structured and which disordered.
 
-step 10. The remainder of the figure (below “secondary structure” output)
+step 10. The remainder of the figure (below “secondary structure" output)
    displays predicted and annotated motif instances, overlayed by the
    structural context from rows 2 and 3 (SMART domains and GlobPlot). A blue
    square indicates a single motif occurence, intensity of the color indicates
@@ -193,7 +193,7 @@ step 13. Scroll down to below the results graphic to find additional
 > detected. If you have refreshed the page after waiting for more than 3
 > minutes, this is most likely the case.
 
-TODO: CREATE FIGURE “FILTERING SUMMARY” FOR TP53
+TODO: CREATE FIGURE “FILTERING SUMMARY" FOR TP53
 
 step 14. Scroll down to the section titled "Filtering Summary" to
    view some statistics about how many motifs and instances were filtered out

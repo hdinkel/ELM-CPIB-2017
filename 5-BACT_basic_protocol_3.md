@@ -1,8 +1,6 @@
 # Alternate Protocol 1: Predicting ELMs in sequences
 
 
-TODO: DEDUPLICATE TEXT (COMPARE TO 4-P53_BASIC_PROTOCOL_2.MD)
-
 TODO: DESCRIBE MOST PROBABLE MOTIF INSTANCES (COMPARED TO FILTERED)
 
 We will use protein "CV_0974" (uniprot ID: Q7NZE8) as an example, a "probable
