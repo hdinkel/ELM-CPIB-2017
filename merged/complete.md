@@ -33,59 +33,96 @@ Linear motifs, Bioinformatics, Protein-Protein Interaction, Molecular switches, 
 
 # Introduction
 
-*Needs a lot of re-writing!*
+*instructions: gives context in relation to chapter; short description of
+individual protocols in unit; a brief mention of any critical limitations and
+assumptions;*
 
-Short Linear Motifs (SLiMs) a short protein-interaction modules that determine
-how a protein functions any play major roles all processes that occur in a cell.
-(REFS 3-6 from 2016 NAR paper?)
-Recent estimates suggest that they may be anywhere in the order of millions of
-different motifs (\cite{25038412}), each with different functions and specificities.
-Understanding and identifying which motifs exist, and what their biological
-functions are will be essential to understanding how every single protein
-performs its biological functions in the cell. Being able to detect motifs in
-novel proteins will also greatly help the in silico prediction of protein
-function.
-The ELM database represents the first attempt an creating a single repository
-of SLiM's, their functional roles, and their occurrences. 
+The activity and function of a protein is tightly regulated by its cellular
+environment. To interact with their surroundings, proteins use various types of
+binding modules that each display distinct binding properties (\cite{10550212}).
+One prominent type of binding module consists of short linear motifs (SLiMs)
+(\cite{18508681}). These compact binding sites mediate a diverse set of
+interactions that regulate protein functionality (\cite{24926813}, \cite{24773235})
+(Figure functional_classification_of_SLiMs). They can function as ligand
+binding sites or as sites for post-translational modification (PTM). Some
+ligand SLiMs are recognised by components of the cellular transport machinery
+and function as localisation signals that target proteins to specific
+sub-cellular compartments. Other ligand SLiMs are abundantly present in
+interfaces that mediate the assembly of large macromolecular complexes and in
+highly modular scaffold proteins that act as multivalent platforms for protein
+complex assembly. Docking motifs are ligand SLiMs that recruit modification
+enzymes to their substrates by binding to a site on the enzyme that is distinct
+from the active site. A subset of these, known as degrons, recruit ubiquitin
+ligases, which subsequently polyubiquitylate their substrates and hence target
+them for proteasomal degradation. SLiMs that act as sites for PTM can either be
+targeted by specific enzymes for the addition or removal of a small chemical
+group, mediate proteolytic cleavage by acting as target site for proteolytic
+enzymes, or be recognised for structural modification by isomerases that
+catalyse cis-trans isomerisation of the peptide backbone.
 
 SLiMs are generally located in intrinsically disordered regions (IDR) of the
 proteome, but often adapt a secondary structure upon binding (\cite{19841628}).
 In general, they bind to the surface of a globular domain in a protein,
 although some are known to bind to a protein’s IDR or even RNA molecules. As
-their name suggests, SLiMs are short, typically between 3 and 11 amino acids,
-and specificity is usually conferred by only a subset of these. 
-Due to their degenerate nature, motif sequences contain only very little
-information, and many short sequences in a any given protein will match motif patterns.
-However, most of these matches will not represent functional motifs,
-Additional data for in silico analysis include conservation of the motif
-sequence, the location of the motif within the protein’s structure and its
-accessibility for its binding partner, validated interaction with the binding
-partner, and in-cell co-localisation with the binding partner. The availability
-and usefulness of these additional data for SLiM discovery depends on their
-extensive and correct biocuration. A vast and increasing amount of biological
-data is available in a wide variety of sources, including the literature and
-large-scale datasets. 
-In order to facilitate integration of data, they need to be collected,
-annotated and formatted in central data and knowledge repositories.
+their name suggests, SLiMs are compact, being composed of a limited number of
+adjacent amino acids. Most of a motif’s binding specificity however is
+conferred by only a subset of these amino acids. Those few residues that
+directly interact with the binding partner are evolutionary conserved, although
+in many cases a subset of amino acids that share certain properties (such as
+similar charge, size or hydrophobicity) are allowed in these hotspot positions.
+In the motif positions that contribute little to the interaction, there are
+even less constraints, i.e. a broader range of amino acids is allowed in these
+positions (\cite{21909575}). A first consequence of this degeneracy is that SLiMs
+co-operatively engage in interactions of relatively low affinity. Hence these
+binding events are transient and reversible, and can be readily modulated, for
+instance by PTM. These characteristics make SLiM-based interactions ideal
+mediators of the dynamic processes involved in cell signalling (\cite{22480932}).
+Another consequence is that it might take only a few or even a single point
+mutation to generate or disrupt a functional motif in a protein. The associated
+ability to evolve convergently might underlie the proliferation of SLiMs and
+the rewiring of interactomes (\cite{26589632}) (\cite{22346764}). Conversely,
+several SLiM-associated diseases have been characterised to date, for instance
+Liddle syndrome (\cite{15483078}).
 
-The ELM database is a repository for experimentally validated linear motif classes and instances. 
-The web resource (elm.eu.org) provides a
-web interface to search and browse these data, as well as a prediction tool to
-detect these motifs in novel sequences. In the first Protocol we explain how to
-browse the database of manually curated SLiMs and the collection of annotated
-motif instances, including information on the experimental protocols contained
-in ELM and links to known tertiary structures, diseases, biological pathways,
-and molecular switches. In the second protocol we take P53 as an example to
-shown how to interpret the motif annotations for a single protein, including
-information on how to determine which experimental protocols and literature
-citations were used for each instance annotation.  The 3 protocol (an
-alternative protocol) briefly describes how to use the "global search" feature
-of ELM. The third and fourth protocols show examples of how to use the manually
-curated dataset in ELM to detect the occurrences of motifs in novel sequences.
-Basic protocol 3 shows how to submit a novel sequence to the database, and how
-to read and interpret the results yielded by the ELM Prediction pipeline. The
-last Protocol (Alternate protocol 2) shows how to access ELM programmatically via
-the API.
+Due to their degenerate nature, motif sequences contain only very little
+information, and many short sequences in a proteome will match motif patterns.
+However, most of these matches will not represent functional motifs, and hence,
+when scanning a proteome for putative motifs using only the motif sequence
+patterns will yield a large number of false positive instances, far exceeding
+the number of true motifs. Therefore, reliable motif detection cannot go
+without experimental validation of candidate motifs, using different types of
+experiments and techniques (\cite{26581338}). This however does not mean that
+bioinformatics analysis cannot guide researchers towards a subset of candidate
+motifs that have a higher probability to be functional and help rule out those
+candidate motifs that are likely to be false positives. Taking into account
+additional information, besides a match to a sequence pattern defining a SLiM,
+can greatly narrow the selection of putative motifs for experimental
+validation. Additional data for in silico analysis include conservation of the
+motif sequence, the location of the motif within the protein’s structure and
+its accessibility for its binding partner, validated interaction with the
+binding partner, and in-cell co-localisation with the binding partner. The
+availability and usefulness of these additional data for SLiM discovery depends
+on their extensive and correct biocuration. A vast and increasing amount of
+biological data is available in a wide variety of sources, including the
+literature and large-scale datasets. In order to facilitate integration of
+data, they need to be collected, annotated and formatted in central data and
+knowledge repositories. The ELM database provides such a repository for
+experimentally validated linear motif classes and instances. The ELM prediction
+tool in turn relies on annotated data, both from the ELM database and other
+resources, to accurately analyse unknown sequences for candidate motifs and
+assist researchers in selecting the most plausible ones for experimental
+validation and discard likely false positive hits, saving them valuable time
+and assets (\cite{22110040}).
+
+
+![](../Figures/functional_classification_of_SLiMs.png)
+**Figure functional_classification_of_SLiMs** 
+For each ELM class, the functional category to which it belongs is indicated by
+a three-letter prefix. Each ELM class is defined by a regular expression.
+Peptide sequences in proteins that match the regular expression of a specific
+ELM class and that were experimentally validated to be functional motifs are
+captured as ELM instances of that class. Degrons are a specific subtype of
+enzyme-recruiting docking motifs (see text for a detailed description).
 
 # Basic protocol 1: Explore the content of the ELM DB
 
@@ -466,7 +503,7 @@ step 4. Click "submit" to start the searching for motifs.
 TODO: INSERT/CHANGE FIGURE/NAME
 
 **Figure TP53-BP1-2** The graphical results summary of the ELM Prediction
-pipeline for “P53_HUMAN”. Note that not all motif detections are shown (the
+pipeline for "P53_HUMAN". Note that not all motif detections are shown (the
 image is truncated at the bottom). The top five rows show a set of structural
 features. Annotated and predicted motifs are shown as differently colored
 ovals/boxes.
@@ -481,7 +518,8 @@ step 6. The first row contains phosphorylation sites as retrieved from
    phosphorylation sites.
 
 > Phosphorylation sites are only available when the search is performed with a
-> protein accession (eg. *not* with FASTA sequence alone) in step XXX.
+> protein accession (eg. *not* with FASTA sequence alone) in step XXX and there is 
+> relevant information annotated in the Phospho.ELM database.
 > Phosphorylation sites are relevant to interpret ELM motif predictions when
 > the predicted motif requires to be phosphorylated (as in several docking and
 > ligand binding motifs) and naturally, for the prediction of phosphorylation
@@ -513,7 +551,7 @@ step 9. The 5th row contains information on secondary structure. The secondary
    disorder predictors agree with respect to wihch parts of the sequence are
    considered structured and which disordered.
 
-step 10. The remainder of the figure (below “secondary structure” output)
+step 10. The remainder of the figure (below “secondary structure" output)
    displays predicted and annotated motif instances, overlayed by the
    structural context from rows 2 and 3 (SMART domains and GlobPlot). A blue
    square indicates a single motif occurence, intensity of the color indicates
@@ -576,7 +614,7 @@ step 13. Scroll down to below the results graphic to find additional
 > detected. If you have refreshed the page after waiting for more than 3
 > minutes, this is most likely the case.
 
-TODO: CREATE FIGURE “FILTERING SUMMARY” FOR TP53
+TODO: CREATE FIGURE “FILTERING SUMMARY" FOR TP53
 
 step 14. Scroll down to the section titled "Filtering Summary" to
    view some statistics about how many motifs and instances were filtered out
@@ -618,6 +656,7 @@ has been associated, and finally the regular expression of the motif.
 
 
 TODO: INSERT/CHANGE FIGURE/NAME
+
 step 16. Scroll down to the section with the header "Globular domains/ TM
    domains and signal peptide detected by the SMART server" (Figure BACT-BP-3).
    This section contains information on which domains were detected by the
@@ -625,11 +664,13 @@ step 16. Scroll down to the section with the header "Globular domains/ TM
    the SMART entry for that domain on the SMART homepage.
 
 TODO: INSERT/CHANGE FIGURE/NAME
+
 ![](../Figures/BACT_1/elm_results_motifs.png)
 **Figure BACT-BP-7:** This table contains the list of motifs detected in the
 sequence (only the top part of the table is shown).
 
 TODO: INSERT/CHANGE FIGURE/NAME
+
 step 17. Scroll further down to the section title "Results of ELM motif
    search after globular domain filtering, structural filtering and context
    filtering" to obtain an overview of all of the motifs and motif instances
@@ -646,12 +687,14 @@ step 17. Scroll further down to the section title "Results of ELM motif
    motif in any random amino acid sequence.
 
 TODO: INSERT/CHANGE FIGURE/NAME
+
 ![](../Figures/BACT_1/elm_results_motifs_filtered.png)
 **Figure BACT-BP-8:** This table contains the list of motifs detected in the
 sequence (only the top part of the table is shown) which were excluded due to
 structural filters.
 
 TODO: INSERT/CHANGE FIGURE/NAME
+
 step 18. Scroll further down to the heading "List of excluded ELMs falling inside
    SMART/PFAM domains and/or scoring poorly with the structural filter (if
    applicable)." (Figure BACT-BP-8). This table is (almost) identical to the
@@ -661,8 +704,6 @@ step 18. Scroll further down to the heading "List of excluded ELMs falling insid
 
 # Alternate Protocol 1: Predicting ELMs in sequences
 
-
-TODO: DEDUPLICATE TEXT (COMPARE TO 4-P53_BASIC_PROTOCOL_2.MD)
 
 TODO: DESCRIBE MOST PROBABLE MOTIF INSTANCES (COMPARED TO FILTERED)
 
@@ -693,53 +734,35 @@ step 1. Click on the "ELM Predictions" button in the menu to access the search q
    (http://www.uniprot.org/uniprot/Q7NZE8.fasta), and enter it into the "sequence
    input text box".
 
+TODO: MENTION NOT TO USE "CHROMOBACTERIUM VIOLACEUM" IN THE ORGANISM BOX AND WHY
+
 ![](../Figures/BACT_1/elm_results_summary.png)
 **Figure BACT-BP-2:** The graphical results summary of the ELM Prediction pipeline
 for Probable Tyrosine phosphate (CV_0974). Note that not all motif
-detections are shown (the image is truncated at the bottom). The top five rows show a handfull of 
+detections are shown (the image is truncated at the bottom). The top five rows show a handfull of
 structural features. The motif occurence are shown as blue boxes, the intensity of which
 indicates the conservation score. See steps XXX to YYY for more information.
 
-step 4. The Results are summarized in the first figure on the results page (see
+step 2. The Results are summarized in the first figure on the results page (see
    figure BACT-BP-2). The Graphical summary shows all of the final and
    intermediate results generated by the ELM Prediction pipeline, and can be
    used infer whether or not a motif is present in a sequence, as well as now
    likely it is to be functional based on its structural context and
-   evolutionary conservation. 
+   evolutionary conservation.
 
-step 5. The first row contains phosphorylation sites as retrieved from Phospho.ELM
-   (\cite{21062810}), and whether the phosphorylated amino acid is a serine, threonine
-   or tyrosine. Phospho.ELM is a database of manually annotated phosphorylation
-   sites obtained from scientific publications from low and high-throughput experiments. You can follow the link
-   to Phospho.ELM by clicking on the phosphorylation site in the image.
+step 3. Check the first row to see whether there are for phosphorylation sites acid is a serine, threonine
+   or tyrosine. In this case, no phosphorylation data could be found in the Phospho.ELM database (\cite{21062810}).
 
-> Phosphorylation sites are only available when the search is performed
-> with a protein accession in step XXX.  Phosphorylation sites are relevant to
-> interprete ELM motif predictions when
-> the predicted motif requires to be phosphorylated (as in several docking and
-> ligand binding motifs) and naturally, for the prediction of phosphorylation
-> motifs.
-
-step 6. The second row shows SMART and Pfam domains detected by the SMART
-   database (\cite{9600884},\cite{25300481}, \cite{9600884}). Hover the mouse over these domains to
+step 4. Check the second row showing SMART and Pfam domains. Hover the mouse over these domains to
    see their names and exact start and end positions.
 
-> In order to be functional SLiMs need to be accessble, and are therefore they
-> are usually not found within domains and structured regions (\cite{21909575}). Any
-> SLiMs detected by the ELM prediction pipleline are less likely to be
-> functional, and are filtered out by the "structural filter" (see also step XXX).
-
-step 7.  The third row shows globular and disordered regions in the sequence as
+step 5.  The third row shows globular and disordered regions in the sequence as
     predicted by GlobPlot (\cite{12824398}). The 4th & 5th
     rows contain results from IUPred (\cite{15955779}), another unstructured region
     prediction tool. Protein segments with an IUpred score above 0.5 are 95% likely
     to be disorered (REF???).
 
->  SLiMs are typically only functional when found in intrinsically disordered
->  regions. Any motif occurence detected by the ELM prediction pipeline that
->  fall within disoredered regious are more likely to be functional.
-
-step 10. Place the cursor over the blue box for motif occurence
+step 6. Place the cursor over the blue box for motif occurence
    "DOC_USP7_MATH_1" at position 129-133. This motif is in a disorered region, and
    has not been filtered out by the structural filter. However, its
    conservation score is extremely low: 0.000, indicating it is not conserved
@@ -748,85 +771,13 @@ step 10. Place the cursor over the blue box for motif occurence
    is inside the PTPc domain (and a Globular regions), and therefore has been
    filtered out.
 
+TODO: CHECK CONSERVATION FILTER
+
 ## Interpreting the prediction results: Additional Information
 
-![](../Figures/BACT_1/elm_results_alignments_filtering_domains.png)
-**Figure BACT-BP-3:** This section of the results contains additional details
-of alignment of homologous proteins, filtering results and globular domains.
-
-step 12. Scroll down to below the results graphic to find additional
-   information on the ELM Predction pipeline's results (figure BACT-BP-3).
-   The first section contains links to download or view the multiple sequence
-   alignments of homologous proteins used to calculate the conservation score.
-   Click on the link "Click here to enable the multiple sequence alignment
-   viewer" to open the alignment in Jalview (note: this requires the Java browser
-   plugin, which is not available on some newer operating systems).
-   Alternatively you can also download the "alignment", "conservation features"
-   and "phosphosite features" files separately to view on a standard
-   (non-browser) installation of Jalview.
-
-> The search for possible homologs is performed against the UniRef90
-> database, a dataset of protein sequences with less than 90 percent identity
-> between any two of them (\cite{25348405}). It is also possible that 
-> that the BLAST results are not finished when the results page is shown: We
-> suggest to refresh the page if you see the message "Either not enough data
-> available to calculate a sequence alignment or the calculations haven't
-> finished yet". In some cases it is also possible that no homologs will be
-> detected. If you have refreshed the page after waiting for more than 3
-> minutes, this is most likely the case.
-
-step 13. Scroll down to the section titled "Filtering Summary" to
-   view some statistics about how many motifs and instances were filtered
-   out (figure BACT-BP-3). The first two lines contain information on whether and which filters were
-   applied in step XXX of this protocol. The next two lines (SMART & Structural
-   score) show how many motifs and instances were removed by the SMART and
-   Secondary structure filters. The "Retained by" section shows how many motif
-   hits were not filtered out by the "Smart" or "Structural Score" filter. In
-   this example a total of 156 instances (of 54 different motifs were
-   identified), of which 63 instances (and 16 motifs) were filtered out as they
-   occured in a SMART domain.
-
-> Note that the graphical summary above does not contain sequences filtered
-> out by the "cell compartment" and "taxonomic context" filters (in step XXX).
-> However those filtered out by by the SMART and Structural scores are shown in the
-> graphic above (as gray rectangles). If any "cell compartment" or "taxonomic
-> context" filters are selected in step XXX, the number of motifs and instances
-> are also shown in this table.
-
-step 14. Scroll down to the section with the header "Globular domains/ TM
-   domains and signal peptide detected by the SMART server" (Figure BACT-BP-3). This section
-   contains information on which domains were detected by the SMART
-   server, and their positions. Clicking on their names will bring you to the
-   SMART entry for that domain on the SMART homepage.
-
-![](../Figures/BACT_1/elm_results_motifs.png)
-**Figure BACT-BP-7:** This table contains the list of motifs detected in the
-sequence (only the top part of the table is shown).
-
-step 16. Scroll further down to the section title "Results of ELM motif
-   search after globular domain filtering, structural filtering and context
-   filtering" to obtain an overview of all of the motifs and motif instances
-   detected (Figure BACT-BP-7). Each row also contains information on the Motif name, the matching
-   peptide sequence and its position. Additional information is shown about the ELM, cell compartment and its regular
-   expression. If the motif was detected in a homologue, the column called
-   "PHI-Blast Instance mapping" contains links to the Sequence alignment of
-   the homologous protein, and a summary of the ELM instance mapper output. If a
-   motif instance has been filtered out due to Structural criteria (SMART or
-   Structure), this column contains a link to a page with details on how
-   individual criteria that make up this filter. The last column contains
-   information on the Probability filter: the probability reflects the chance
-   to observe this motif in any random amino acid sequence.
-
-![](../Figures/BACT_1/elm_results_motifs_filtered.png)
-**Figure BACT-BP-8:** This table contains the list of motifs detected in the
-sequence (only the top part of the table is shown) which were excluded due to
-structural filters.
-
-step 17. Scroll further down to the heading "List of excluded ELMs falling inside
-   SMART/PFAM domains and/or scoring poorly with the structural filter (if
-   applicable)." (Figure BACT-BP-8). This table is (almost) identical to the
-   one above, but shows motif instances which were rejecte by the Structural
-   filter or SMART filter.
+TODO: DESCRIBE HOW TO INTERPRETE THE PREDICTIONS USING THIS BACTERIAL EXAMPLE
+(OF WHICH NOT MUCH IS KNOWN). FOCUS ON HOW ONE SHOULD INTERPRETE THESE
+PREDICTIONS (LOOK AT DISORDER/GLOBULARITY, CONSERVATION)
 
 # Alternate Protocol 4: Predicting ELMS in sequences using REST API
 
@@ -835,9 +786,10 @@ gives you a nice overview of putative and possibly annotated motifs in your
 query protein with a graphical representation using colors to highlight
 different regions of the protein sequence (eg. disordered vs. globular).
 It is however difficult to analyse a large set of protein sequences in this
-manner. Therefore, http://elm.eu.org provides an interface which you can use to submit your sequence
-in a programmatic way. Of course, this way, you won't receive the graphical
-output representation, but are limited to textual data representation.
+manner. Therefore, http://elm.eu.org provides an interface which you can use to
+submit your sequence in a programmatic way. Of course, this way, you won't
+receive the graphical output representation, but are limited to textual data
+representation.
 
 Currently, there exists a single URL 'http://elm.eu.org/start_search/' to
 accept such queries. You can choose to either submit a uniprot name or accession
@@ -852,73 +804,60 @@ using raw sequence. See below for details.
 
 ### Software
 
-Ideally use `curl` https://curl.haxx.se/ on the commandline
-However, any browser can be used to access the server, most browsers however download text- and csv-files instead of displaying them. Therefore, for trying out different URLs / Parameters, it might be better to use a commandline client such as `curl`.
+Ideally use `curl` https://curl.haxx.se/ on the command line. This program can
+be launched from the terminal in any of the major operating systems: OSX,
+Windows and Linux. Of course `curl` is only one of many different ways to
+access web content programatically, and we suggest anyone to use which ever
+program they feel is better suited for their tasks.
 
 ## Submitting a query to ELM via REST
 
-step 1. Use `curl` to query ELM via uniprot name 'http://elm.eu.org/start_search/P53_HUMAN.tsv'
+step 1. Use `curl` to query ELM for all motifs predicted to occur in Human P53
+by typing the following into a terminal: `curl
+'http://elm.eu.org/start_search/P53_HUMAN.tsv'. Each row represents a motif
+detection, and the first column "elm_identifier" indicates which class was
+identified. The columns "start" and "stop" show that first and last amino acid
+positions that matched form part of the motif. "is annotated" is True if this
+motif has been annotated in the database as an (experimentally validate) motif
+instance. "is phiblastmatch" is True if ?????. The column "is filtered" shows
+whether or not this motif was rejected by the ELM Prediction structure filter.
+"phibast" indicates whether ?????. The "topodomfilter" and "taxonfilter" shown
+whether ?????. The last column "structure" ?????
 
-```
-> curl 'http://elm.eu.org/start_search/P53_HUMAN.tsv'
+> In Figure *ELM predictions pP53* we used a sligtly more advanced command to
+> get the output to look nice in the terminal. We specified the `-s`
+> option to silence all `curl` output other than the downloaded file, and piped
+> (`|`) the output directly to the `column` command (this command exists on
+> most Linux and OSX machines).
 
-CLV_C14_Caspase3-7	183	187	False	False	False	False	False	False	False
-CLV_C14_Caspase3-7	349	353	False	False	False	False	False	False	False
-CLV_C14_Caspase3-7	388	392	False	False	False	False	False	False	False
-CLV_NRD_NRD_1	174	176	False	False	False	False	False	False	False
-CLV_NRD_NRD_1	248	250	False	False	False	False	False	False	False
-CLV_NRD_NRD_1	282	284	False	False	False	False	False	False	False
-CLV_NRD_NRD_1	289	291	False	False	False	False	False	False	False
-CLV_PCSK_FUR_1	280	284	False	False	False	False	False	False	False
-CLV_PCSK_KEX2_1	174	176	False	False	False	False	False	False	False
-CLV_PCSK_KEX2_1	248	250	False	False	False	False	False	False	False
-CLV_PCSK_KEX2_1	282	284	False	False	False	False	False	False	False
-CLV_PCSK_KEX2_1	305	307	False	False	False	False	False	False	False
-CLV_PCSK_PC1ET2_1	305	307	False	False	False	False	False	False	False
-CLV_PCSK_SKI1_1	120	124	False	False	False	False	False	False	False
-CLV_PCSK_SKI1_1	249	253	False	False	False	False	False	False	False
-CLV_PCSK_SKI1_1	305	309	False	False	False	False	False	False	False
-CLV_PCSK_SKI1_1	382	386	False	False	False	False	False	False	False
-CLV_Separin_Metazoa	171	175	False	False	False	False	False	False	False
-DEG_APCC_DBOX_1	248	256	False	False	False	False	False	False	False
-DEG_MDM2_SWIB_1	19	26	True	False	False	False	False	False	False
-DEG_Nend_UBRbox_2	1	3	False	False	False	False	False	False	False
-DEG_SPOP_SBC_1	92	96	False	False	False	False	False	False	False
-DOC_CYCLIN_1	24	27	False	False	False	False	False	False	False
-DOC_CYCLIN_1	306	309	False	False	False	False	False	False	False
-DOC_CYCLIN_1	381	385	True	False	False	False	False	False	False
-DOC_MAPK_gen_1	248	254	False	False	False	False	False	False	False
-DOC_PP1_RVXF_1	108	114	False	False	False	False	False	False	False
-DOC_PP1_RVXF_1	379	386	False	False	False	False	False	False	False
-DOC_PP1_RVXF_1	380	386	False	False	False	False	False	False	False
-DOC_PP2B_LxvP_1	188	191	False	False	False	False	False	False	False
-DOC_USP7_MATH_1	34	38	False	False	False	False	False	False	False
-DOC_USP7_MATH_1	359	363	True	False	False	False	False	False	False
-DOC_USP7_MATH_1	364	368	True	False	False	False	False	False	False
 
-...
-```
+TODO: REDO FIGURE as it shows browser in transparent background 
 
-step 2. Use `curl` to query ELM via protein sequence using the URL 'http://elm.eu.org/start_search/MAPRGFSCLLLLTSEIDLPVKRRA'
+![](../Figures/BACT_3/curl_P53.png)
+**Figure ELM Predictions P53:** The commandline output when `curl` is used to
+donload all motifs predicted in Human P53. Note that we used a more advanced
+command that `curl` alone to make the columns align nicely (see text for an
+explanation).
 
-```
-> curl 'http://elm.eu.org/start_search/MAPRGFSCLLLLTSEIDLPVKRRA'
+step 2. Use `curl` to query ELM via protein sequence by using the URL
+'http://elm.eu.org/start_search/MAPRGFSCLLLLTSEIDLPVKRRA' (Figure
+BACT-AP3-query). In this case the the query is an arbitrary short peptide
+sequence, but this can (of course) contain any sequence you are intersted in
+analysing. The output format is exactly the same as in the previous step. 
 
-elm_identifier	start	stop	is_annotated	is_phiblastmatch	is_filtered	phiblast	topodomfilter	taxonfilter	structure
-CLV_NRD_NRD_1	22	24	False	False	False	False	False	False	False
-CLV_PCSK_KEX2_1	21	23	False	False	False	False	False	False	False
-CLV_PCSK_KEX2_1	22	24	False	False	False	False	False	False	False
-CLV_PCSK_PC1ET2_1	21	23	False	False	False	False	False	False	False
-LIG_14-3-3_CanoR_1	4	12	False	False	False	False	False	False	False
-LIG_BIR_II_1	1	5	False	False	False	False	False	False	False
-LIG_FHA_1	11	17	False	False	False	False	False	False	False
-LIG_SUMO_SIM_anti_2	7	15	False	False	False	False	False	False	False
-LIG_SUMO_SIM_par_1	7	15	False	False	False	False	False	False	False
-LIG_SUMO_SIM_par_1	8	15	False	False	False	False	False	False	False
-LIG_WD40_WDR5_VDV_2	13	18	False	False	False	False	False	False	False
-LIG_WD40_WDR5_VDV_2	14	18	False	False	False	False	False	False	False
-LIG_WD40_WDR5_VDV_2	15	18	False	False	False	False	False	False	False
-```
+> This way of querying ELM is unfornataly not stable for long protein
+> sequences. Different browsers and computers have different maximum lengths
+> for URLs, and the excess text is often simply ignored. We reccomend not using
+> this method for sequences longer than 2000 amino acids.
+
+TODO: REDO FIGURE as it shows browser in transparent background 
+
+![](../Figures/BACT_3/predictions_query.png)
+**Figure ELM Predictions on query sequence:** It is also possible to send amino
+acid sequences to the ELM Prediction pipeline. In this case we have used the
+curl option `-o` to download directly to the file `query.tsv`, and use a
+combination of the `head` and `column` commands to display the first 10 rows to
+the terminal.
 
 
 TODO: add this information to the download page
@@ -927,13 +866,20 @@ TODO: maybe rename `start_search` to `query`?
 
 # Alternate Protocol 3: Searching the ELM database using REST API
 
+All of the data in ELM is available to download so that anyone can also run
+their analyses locally, on their own computer. In many cases it also is useful access data programatically, via an Application Programming Interface (API). ELM provies many features to query, search, filter and download data withouth having to use a browser.
+
+In this section we will explore the various ways in which data can downloaded
+both in using the browser as well as via the commandline. 
 
 ## Necessary Resources
 
 ### Software
 
-Ideally use `curl` https://curl.haxx.se/ on the commandline.
-However, any browser can be used to access the server, most browsers however download text- and csv-files instead of displaying them. Therefore, for trying out different URLs / Parameters, it might be better to use a commandline client such as `curl`.
+Ideally use `curl` https://curl.haxx.se/ on the commandline. This program can
+be launched from the terminal in any of the major operating systems: OSX,
+Windows and Linux. Of course `curl` is only one of many different ways to
+access web content programatically, and we suggest anyone to use which ever program they feel is better suited for their tasks.
 
 ## Downloading all ELM classes
 
@@ -946,92 +892,83 @@ links, the URL following them are used to highlight the URL scheme used by the
 server (bold font denotes specifics used in the examples such as query terms,
 or formats).
 
-step 1. Direct your browser to the URL 'http://elm.eu.org/downloads' or choose 'ELM Downloads' from the Menu at 'http://elm.eu.org' (see the [/Figures/elm_downloads_html.png](screenshot) figure showing the ELM downloads website).
+step 1. Direct your browser to the URL 'http://elm.eu.org/downloads' or select 
+'ELM Downloads' from the main Menu (Figure ELM-Downloads) This webpage contains
+links and descriptions on how to download ELM data in text format. The
+datasets are split into several smaller collections (for example
+"Classes", "Instances", etc). Each table contains links (in orange) to download
+the data in various formats.
 
-> This webpage contains links and descriptions on how to download ELM data in text format.
-> The information is separated in individual tables, eg. for 'Classes', 'Instances', and so on...
-> Note that each table also shows the 'last modified date' indicating when the particular data was last updated.
-> This is useful if you regularly want to update your local data with ELM data, as you can quickly check whether you actually _need_ to download the files again...
-> Note the orange colored download links highlighting different formats:
-> For many pages, which exist in html format (ending in '.html'), there also exists an additional URL/file extension to get the data in other formats.
+> Each table also shows the 'last modified date' indicating when the data was last updated. This is useful if you want to know when to update your local data with the most up to date ELM data.
 
-step 2. Click on the first orange 'html' link in the table "Classes" or use the following URL: 'http://elm.eu.org/elms.html'
+step 2. Click on the first orange 'html' link in the table "Classes" to
+navigate to the following URL: 'http://elm.eu.org/elms/elm_index.html'. This
+page shows all of the annotated ELM classes in the database. This page is
+the same one as shown in Figure *TP53-BP1-classses*
 
-> This webpage shows all annotated ELM classes.
-> Next, we are going to use the query parameter 'q' to limit our search
+step 3. Navidate to the folling URL: 'http://elm.eu.org/elms.html?q=CSK',
+specifying "q=CSK" to limit the list of ELMs to those matching the search query
+"CSK". This page is again similar to the one shown in Figure
+*TP53-BP1-classses*, but with less classes.
 
-step 3. Use the following URL: 'http://elm.eu.org/elms.html?q=CSK'
-
-> This will again show the webpage with all annotated ELM classes, this time however limited to those matching the query term 'PCSK'.
-> Next, we are going to use the same URL pattern, but with '.tsv' to download the same data as actual data, not HTML.
+> This search result is identical to the result you would obtain by doing a
+> "manual" search on the ELM Classes page (http://elm.eu.org/elms.html). The
+> column descriptions are also the same as described in Step XXX in Protocol
+> YYY.
 
 ![](../Figures/BACT_2/elm_curl_classes_CSK.png)
 **Figure ELM-Curl-Classes**:
 Screenshot of a terminal window using `curl` to download all ELM classes matching the term 'CSK'.
 
-step 4. Use the following URL: 'http://elm.eu.org/elms.tsv?q=CSK'
+step 4. Open the following URL: 'http://elm.eu.org/elms.tsv?q=CSK' to download
+a list of classes that match the search query "CSK" (as in the previous step)
+in the "tab separated values" format.  By exchanging the '.html' part of the
+url with '.tsv', we ask the webserver to give us the data in TSV
+(tab-separated values) format.
 
-> By exchanging the '.html' part of the url with '.tsv', we ask the webserver to give us the data in TSV (tab-separated) format.
-> This query should download a file such as the following:
-```
-> curl 'http://elm.eu.org/elms.tsv?q=CSK'
-#ELM_Classes_Download_Version: 1.4
-#ELM_Classes_Download_Date: 2016-11-06 17:39:41.503341
-#Origin: elm.eu.org
-#Type: tsv
-#Num_Classes: 7
-"Accession"	"ELMIdentifier"	"FunctionalSiteName"	"Description"	"Regex"	"Probability"	"#Instances"	"#Instances_in_PDB"
-"ELME000101"	"CLV_PCSK_FUR_1"	"PCSK cleavage site"	"Furin (PACE) cleavage site (R-X-[RK]-R-|-X)."	"R.[RK]R."	"0.000508722921034"	"13"	"0"
-"ELME000108"	"CLV_PCSK_KEX2_1"	"PCSK cleavage site"	"Yeast kexin 2 cleavage site (K-R-|-X or R-R-|-X)."	"[KR]R."	"0.007973463544"	"1"	"0"
-"ELME000100"	"CLV_PCSK_PC1ET2_1"	"PCSK cleavage site"	"NEC1/NEC2 cleavage site (K-R-|-X)."	"KR."	"0.00390276834"	"6"	"0"
-"ELME000103"	"CLV_PCSK_PC7_1"	"PCSK cleavage site"	"Proprotein convertase 7 (PC7, PCSK7) cleavage site (R-X-X-X-[RK]-R-|-X)."	"R...[KR]R."	"0.000508722921034"	"1"	"0"
-"ELME000146"	"CLV_PCSK_SKI1_1"	"PCSK cleavage site"	"Subtilisin/kexin isozyme-1 (SKI1) cleavage site ([RK]-X-[hydrophobic]-[LTKF]-|-X)."	"[RK].[AILMFV][LTKF]."	"0.00682052736444"	"2""0"
-"ELME000424"	"LIG_CSK_EPIYA_1"	"EPIYA ligand motif for CSK-SH2"	"Csk Src Homology 2 (SH2) domain binding EPIYA motif"	"EP[IL]Y[TAG]"	"2.46761307667e-06"	"13"	"0"
-"ELME000013"	"MOD_TYR_CSK"	"TYR phosphorylation site"	"Members of the non-receptor tyrosine kinase Csk family phosphorylate the C-terminal tyrosine residues of the Src family."	"[TAD][EA].Q(Y)[QE].[GQA][PEDLS]"	"2.92617843803e-07"	"12"	"0"
-```
+> Depending on which browser you are using, the file may open directly in your
+> browser, or you may be prompted to download the file or save it to a separate
+> location. In the latter two cases you can open the downloaded file using a
+> (plain) text file viewer, or possible a spreadsheet viewer (such as Microsoft
+> Excel). 
 
+step 5. Type the follwing command into a command line terminal to download the
+same data from the previous step directly into the terminal: `curl
+'http://elm.eu.org/elms/elms_index.tsv?q=CSK'`. The output should look similar
+to *Figure ELM-Curl-Classes*. The column names are still the same ones as shown
+in the _classes_ table in Figure *BACT-AP2-Elm-classes-downloads*.
+
+> Use the curl option `-o` to save the results directly to a file. For example: 
+> `curl -o classes.tsv 'http://elm.eu.org/elms/elms_index.tsv?q=CSK'` will save
+> the data to a file called _classes.tsv_.
+
+step 6: To download a list of all motif instances detected in Human P53, type
+the followin command into a terminal: `curl
+'http://elm.eu.org/instances.gff?q=p53_human'`. The output should look similar
+to that shown in figure *Figure ELM-Curl-P53*. The output is in the "General
+Feature Format" (http://www.ensembl.org/info/website/upload/gff.html#moreinfo),
+with the FASTA formatted sequence appended to the end of the output.
+
+> Many other file formats are available for downloading instances annotations,
+> including the FASTA, GFF, PIR, or PSI-MI format (either XML or MiTab)
+> [24067240]. 
 
 ![](../Figures/BACT_2/elm_curl_instances_p53_human.png)
 **Figure ELM-Curl-Instances-P53**:
-Screenshot of a terminal window using `curl` to download all ELM instances annotated for sequence p53_human.
+Screenshot of a terminal window using `curl` to download all ELM instances
+annotated for sequence p53_human.
 
+step 7. To download a list of all instances matchin th search query "CLV" in
+the yellow fever mosquito (Aedes agypti), enter the following command into a
+terminal: `curl 'http://elm.eu.org/instances.tsv?q=CLV&taxon=aedes+aegypti'. In
+general any species name can be used, always replacing the "space" with a "+".
+This should return a single instance, the only one matching CLV in A. aegypti.
 
-step 4. Use the following URL: 'http://elm.eu.org/instances.gff?q=p53_human'
-
-```
-> curl 'http://elm.eu.org/instances.gff?q=p53_human'
-##gff-version 3
-P04637	ELM	sequence_feature	19	26	.	.	.	ID=DEG_MDM2_SWIB_1
-P04637	ELM	sequence_feature	381	385	.	.	.	ID=DOC_CYCLIN_1
-P04637	ELM	sequence_feature	359	363	.	.	.	ID=DOC_USP7_MATH_1
-P04637	ELM	sequence_feature	364	368	.	.	.	ID=DOC_USP7_MATH_1
-P04637	ELM	sequence_feature	30	35	.	.	.	ID=DOC_WW_Pin1_4
-P04637	ELM	sequence_feature	78	83	.	.	.	ID=DOC_WW_Pin1_4
-P04637	ELM	sequence_feature	312	317	.	.	.	ID=DOC_WW_Pin1_4
-P04637	ELM	sequence_feature	15	21	.	.	.	ID=MOD_CK1_1
-P04637	ELM	sequence_feature	30	37	.	.	.	ID=MOD_GSK3_1
-P04637	ELM	sequence_feature	12	18	.	.	.	ID=MOD_PIKK_1
-P04637	ELM	sequence_feature	385	388	.	.	.	ID=MOD_SUMO_for_1
-P04637	ELM	sequence_feature	339	352	.	.	.	ID=TRG_NES_CRM1_1
-P04637	ELM	sequence_feature	305	323	.	.	.	ID=TRG_NLS_Bipartite_1
-##FASTA
->P04637
-MEEPQSDPSVEPPLSQETFSDLWKLLPENNVLSPLPSQAMDDLMLSPDDIEQWFTEDPGPDEAPRMPEAAPPVAPAPAAPTPAAPAPAPSWPLSSSVPSQKTYQGSYGFRLGFLHSGTAKSVTCTYSPALNKMFCQLAKTCPVQLWVDSTPPPGTRVRAMAIYKQSQHMTEVVRRCPHHERCSDSDGLAPPQHLIRVEGNLRVEYLDDRNTFRHSVVVPYEPPEVGSDCTTIHYNYMCNSSCMGGMNRRPILTIITLEDSSGNLLGRNSFEVRVCACPGRDRRTEEENLRKKGEPHHELPPGSTKRALPNNTSSSPQPKKKPLDGEYFTLQIRGRERFEMFRELNEALELKDAQAGKEPGGS
-```
-
-step 5. Use the following URL: 'http://elm.eu.org/instances.tsv?q=CLV_&taxon=aedes+agypti'
-
-> Use the query term 'q=CLV_' to get all instances of cleavage site classes.
-> To limit your search to 'yellow fever mosquito' instances, use the parameter 'taxon=' followed by the taxon's scientific name, replacing spaces with '+':
-
-```
-> curl 'http://elm.eu.org/instances.tsv?q=CLV_&taxon=aedes+agypti'
-```
-
-More data (interactions, domains, methods, etc.) can be downloaded from ELM in
-analogous fashion. Different formats are available depending on data type (the most
-common format is TSV), for example ELM instances can be downloaded in TSV, FASTA, GFF, PIR,
-or PSI-MI format (either XML or MiTab) [24067240].
+step 8. More data (interactions, domains, methods, etc.) can be downloaded from
+ELM in analogous fashion as shown in the preceeding steps. Take a look at the
+ELM Downloads page (http://elm.eu.org/downloads, Figure
+*BACT-AP2-Elm-downloads*) for an overview of which datasets can be downloaded,
+and what the different possible filters and formats are for each dataset.
 
 % NOTE: TODO: Mention ELM software license agreement?
 
