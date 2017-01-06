@@ -139,7 +139,7 @@ class, and number of structures available. For details on each class,
 click on the ELM identifier; to get a list of annotated instances for an
 individual class, click on the number of instances.
 
-\begin{quote}
+\sdesc{
 Use the search bar at the top of the page to filter for certain motif
 classes. For example, typing ``MAPK'' and hitting submit will perform a
 full-text search on all motif classes in the ELM database containing the
@@ -148,7 +148,7 @@ this table. For example, toggling the ``DOC'' button will remove all
 ``DOC'' classes from the table (and clicking it again will bring them
 back). Lastly, the yellow tsv link can be used to export all motif
 classes as a ``tab separated values'' file.
-\end{quote}
+}
 
 \begin{figure}[h!]
 \centering
@@ -172,12 +172,12 @@ and a short description of the ELM and its regular expression, as well
 as a probability score, the taxonomic distribution of the motif and
 which domain (if any) is responsible for the interaction.
 
-\begin{quote}
+\sdesc{
 The probability score is the probability that the regular expression
 represents a random selection of amino acids (similar to an information
 content score). A lower score indicates that the motif pattern is more
 difficult to find by chance in a random sequence.
-\end{quote}
+}
 
 Step 4. Scroll further down the ``DOC\_CYCLIN\_1'' page (Fig TP53-BP1-5)
 to view more details about the manually annotated data and instances in
@@ -216,14 +216,14 @@ the page which lists all of the instances in the database (Figure
 TP53-BP2-3). This table contains a list of all instances in the
 database.
 
-\begin{quote}
+\sdesc{
 Use the search filters at the top of the page to limit the results by a
 full text search, by instance logic, or organisms. Similar to the ELM
 classes page (previous step) these results can be filtered by motif
 class using the green toggle filters on the left hand side. Lastly, the
 yellow buttons at the top of the page can be used to download the
 instances in the following formats: gff, pir, fasta or tsv.
-\end{quote}
+}
 
 \begin{figure}[h!]
 \centering
@@ -253,10 +253,10 @@ also contains the ``evidence class'', and descriptions of the methods
 used from PSI-MI (\cite{17925023}) as well as the Literature references
 in which the experiments were published.
 
-\begin{quote}
+\sdesc{
 (Here we should explain what ``evidence class'', ``biosource'',
 ``Logic'', ``Reliability'' and ``Notes'' actually mean).
-\end{quote}
+}
 
 \subsection{Details on molecular switches, motif-mediated pathways and
 other external
@@ -321,11 +321,11 @@ the PSI-MI controlled vocabulary, as well as the type of experiment (in
 vitro/in vivo). Clicking on the link in the ``instances'' column will
 list all instances annotated using that method.
 
-\begin{quote}
+\sdesc{
 The filter bar on the top page can be used to filter the list of
 methods. The \emph{tsv} link creates a downloadable file in ``tab
 separated values'' format.
-\end{quote}
+}
 
 \begin{figure}[h!]
 \centering
@@ -343,12 +343,12 @@ both interaction partners, motif and domain. This page also contains
 links to RCSB (\cite{12037327}), the individual instance and the motif
 class of that instance.
 
-\begin{quote}
+\sdesc{
 The filter bar on the top page can be used to filter the list of
 structures shown . The \emph{tsv} link creates a downloadable file in
 ``tab separated values'' format. The \emph{tsv} file contains the PDB
 id, uniprot name, and ELM class.
-\end{quote}
+}
 
 \begin{figure}[h!]
 \centering
@@ -367,11 +367,11 @@ a link to the Pfam (\cite{26673716}) / SMART (\cite{25300481}) /
 InterPro (\cite{27899635}) domain, as well as the name of the
 interacting domain followed by a brief description.
 
-\begin{quote}
+\sdesc{
 The filter bar on the top page can be used to filter the list of
 interactions shown. The \emph{tsv} link creates a downloadable file in
 ``tab separated values'' format.
-\end{quote}
+}
 
 \subsection{Links to external
 resources}\label{links-to-external-resources}
@@ -392,10 +392,10 @@ stop positions of the motif mediating the switch. The last two columns
 have links to switches.ELM, and a brief description of the switch also
 taken from switches.ELM (\cite{23550212}).
 
-\begin{quote}
+\sdesc{
 The filter bar on the top page can be used to quickly filter the list of
 interactions shown.
-\end{quote}
+}
 
 \subsection{Exploring KEGG pathways from
 ELM}\label{exploring-kegg-pathways-from-elm}
@@ -462,12 +462,12 @@ see a list of all instances in ELM that have been annotated as being
 abused by viruses (Fig TP53-BP2-9). The columns are identical to those
 listed in section XXX step YYY (Figure ZZZZ).
 
-\begin{quote}
+\sdesc{
 The green buttons on the left can be used to filter this table by motif
 class. Click on the yellow links on the top right of the page to
 download the (complete) table in gff, pir, fasta or tsv format. (See
 section XXX for a description of these formats.)
-\end{quote}
+}
 
 \begin{figure}[h!]
 \centering
@@ -482,10 +482,10 @@ Step 21. Click on the sub-menu ``ELM diseases'' in ``ELM DB'' to see a
 list of all motif classes that have been annotated with a disease.
 Disease information is taken from the OMIM database.
 
-\begin{quote}
+\sdesc{
 This table also includes the diseases found under the ``ELM pathogenic
 abuse'' menu in ``ELM DB''. (right?)
-\end{quote}
+}
 
 \section{Alternate protocol 2: General Search
 Box}\label{alternate-protocol-2-general-search-box}
@@ -585,7 +585,7 @@ sapiens)''. Click on this entry to confirm that we want to search for
 SLiM data for this protein. Click on ``Submit'' to view the motif
 instance data for p53. (Fig. TP53-BP1-1)
 
-\begin{quote}
+\sdesc{
 The autocompletion mechanism queries uniprot.org for protein identifier;
 if it succeeds, then additional information from uniprot will be used to
 pre-populate the filter boxes. In this example, P53\_HUMAN is recognized
@@ -595,7 +595,7 @@ Uniprot) to be localized to nucleus, cytosol, endoplasmic reticulum and
 mitochondrion, so these are also automatically applied as search
 criteria. The motif cutoff of ``100'' is a sufficiently high (lenient)
 threshold to allow all other detected motifs to be shown.
-\end{quote}
+}
 
 step 3. Select the search criteria (optional). It is possible to limit
 the results by ``cell compartment'', ``taxonomic context'' or by
@@ -622,7 +622,7 @@ brought to an intermediate page indicating that your results are being
 processed, and you should be redirected to the final results page within
 a minute.
 
-\begin{quote}
+\sdesc{
 The Results are summarized in the first figure on the results page (see
 figure TP53-BP1-2). The graphical summary shows the results generated by
 the ELM prediction pipeline, combined with additional filters and
@@ -635,7 +635,7 @@ ovals in the graphic. Blue/gray squares represent predicted motif
 occurrences.
 
 You can bookmark this page: The results are stored for a week.
-\end{quote}
+}
 
 \begin{figure}[h!]
 \centering
@@ -659,7 +659,7 @@ publications from low and high-throughput experiments. You can follow
 the link to Phospho.ELM by clicking on the phosphorylation site in the
 image to get more information on individual phosphorylation sites.
 
-\begin{quote}
+\sdesc{
 Phosphorylation sites are only available when the search is performed
 with a protein accession (eg. \emph{not} with FASTA sequence alone) in
 step XXX and there is relevant information annotated in the Phospho.ELM
@@ -667,20 +667,20 @@ database. Phosphorylation sites are relevant to interpret ELM motif
 predictions when the predicted motif requires to be phosphorylated (as
 in several docking and ligand binding motifs) and naturally, for the
 prediction of phosphorylation motifs.
-\end{quote}
+}
 
 step 7. The second row shows SMART and Pfam domains detected by the
 SMART database (\cite{9600884},\cite{25300481}, \cite{9600884}). Hover
 the mouse over these domains to see their names and exact start and end
 positions.
 
-\begin{quote}
+\sdesc{
 In order to be functional SLiMs need to be accessble, and therefore they
 are usually not found within globular domains and structured regions
 (\cite{21909575}). Any SLiMs detected by the ELM prediction pipeline are
 less likely to be functional, and are indicated with a red background
 (see also the ``structural filter'' described in step XXX).
-\end{quote}
+}
 
 step 8. The third row shows globular and disordered regions in the
 sequence as predicted by GlobPlot (\cite{12824398}). The fourth and
@@ -688,12 +688,12 @@ fifth row contains results from IUPred (\cite{15955779}), another
 predictor of disordered protein regions. Protein segments with an IUPred
 score above 0.5 considered to be disordered.
 
-\begin{quote}
+\sdesc{
 SLiMs are typically only functional when found in intrinsically
 disordered regions. Any motif occurrence detected by the ELM prediction
 pipeline that falls within disordered regions are more likely to be
 functional.
-\end{quote}
+}
 
 step 9. The 5th row contains information on secondary structure. The
 secondary structure is predicted using a pipeline mapping motif
@@ -718,11 +718,11 @@ homologous sequences, are shown as red/blue rectangles.
 
 TODO: EXPLAIN / SHOW ANNOTATED INSTANCES
 
-\begin{quote}
+\sdesc{
 In the case that not enough homologous sequences were detected to build
 an alignment, no conservation score can be calculated. Therefore all of
 the motif occurences will be shown in a uniform shade of blue.
-\end{quote}
+}
 
 step 11. Place the cursor over the blue box for motif occurence
 ``MOD\_PLK'' at position 6-12. This motif is in a disordered region, and
@@ -730,11 +730,11 @@ has not been filtered out by the structural filter. However, its
 conservation score is very low: 0.16, indicating it is not conserved in
 homologous proteins.
 
-\begin{quote}
+\sdesc{
 The confidence score is based on how conserved the sequence is across a
 set of homolous proteins from other sequences. An full description of
 the method can be found in \cite{18460207}.
-\end{quote}
+}
 
 step 12. Mouse over a gray rectangle (indicating motifs which have been
 filtered out) to find out why this hit was filtered out. It shows scores
@@ -767,7 +767,7 @@ available on some browsers). Alternatively you can also download the
 files separately to view on a desktop (non-browser) installation of
 Jalview (\cite{19151095}).
 
-\begin{quote}
+\sdesc{
 The search for possible homologs is performed against the UniRef90
 database, a dataset of protein sequences with less than 90 percent
 identity between any two of them (\cite{17379688}). It is also possible
@@ -777,7 +777,7 @@ enough data available to calculate a sequence alignment or the
 calculations haven't finished yet''. In some cases it is also possible
 that no homologs will be detected. If you have refreshed the page after
 waiting for more than 3 minutes, this is most likely the case.
-\end{quote}
+}
 
 step 14. Scroll down to the section titled ``Filtering Summary'' to view
 some statistics about how many motifs and instances were filtered out
@@ -791,7 +791,7 @@ of XXX instances (of XXX different motifs were identified), of which XXX
 instances (and XXX motifs) were filtered out as they occured in a SMART
 domain.
 
-\begin{quote}
+\sdesc{
 Note that the graphical summary above does not contain sequences
 filtered out by the ``cell compartment'' and ``taxonomic context''
 filters (in step XXX). However those filtered out by the SMART and
@@ -799,7 +799,7 @@ Structural scores are shown in the graphic above (as gray rectangles).
 If any ``cell compartment'' or ``taxonomic context'' filters are
 selected in step XXX, the number of motifs and instances are also shown
 in this table.
-\end{quote}
+}
 
 \begin{figure}[h!]
 \centering
@@ -818,7 +818,7 @@ and ending positions and the logic of the annotation followed by a short
 description of each motif, to which cell compartments its has been
 associated, and finally the regular expression of the motif.
 
-\begin{quote}
+\sdesc{
 The ``Logic'' column indicates whether this motif is an example of a
 functional (True Positive, TP) or non-functional (False Positive, FP)
 motif. A TP instance is an instance annotated with experimental evidence
@@ -827,7 +827,7 @@ experimental evidence hinting at a function, but after careful
 inspection our annotators believe this instance to be non-functional.
 There are only rare cases of a true negative (TN) instance, which is an
 annotated instance where experiments have shown it to be non-functional.
-\end{quote}
+}
 
 TODO: INSERT/CHANGE FIGURE/NAME
 
@@ -1034,14 +1034,14 @@ whether or not this motif was rejected by the ELM Prediction structure
 filter. ``phibast'' indicates whether ?????. The ``topodomfilter'' and
 ``taxonfilter'' shown whether ?????. The last column ``structure'' ?????
 
-\begin{quote}
+\sdesc{
 In Figure \emph{ELM predictions pP53} we used a sligtly more advanced
 command to get the output to look nice in the terminal. We specified the
 \texttt{-s} option to silence all \texttt{curl} output other than the
 downloaded file, and piped (\texttt{\textbar{}}) the output directly to
 the \texttt{column} command (this command exists on most Linux and OSX
 machines).
-\end{quote}
+}
 
 TODO: REDO FIGURE as it shows browser in transparent background
 
@@ -1064,13 +1064,13 @@ peptide sequence, but this can (of course) contain any sequence you are
 intersted in analysing. The output format is exactly the same as in the
 previous step.
 
-\begin{quote}
+\sdesc{
 This way of querying ELM is unfornataly not stable for long protein
 sequences. Different browsers and computers have different maximum
 lengths for URLs, and the excess text is often simply ignored. We
 reccomend not using this method for sequences longer than 2000 amino
 acids.
-\end{quote}
+}
 
 TODO: REDO FIGURE as it shows browser in transparent background
 
@@ -1144,11 +1144,11 @@ text format. The datasets are split into several smaller collections
 (for example ``Classes'', ``Instances'', etc). Each table contains links
 (in orange) to download the data in various formats.
 
-\begin{quote}
+\sdesc{
 Each table also shows the `last modified date' indicating when the data
 was last updated. This is useful if you want to know when to update your
 local data with the most up to date ELM data.
-\end{quote}
+}
 
 step 2. Click on the first orange `html' link in the table ``Classes''
 to navigate to the following URL:
@@ -1162,12 +1162,12 @@ list of ELMs to those matching the search query ``CSK''. This page is
 again similar to the one shown in Figure \emph{TP53-BP1-classses}, but
 with less classes.
 
-\begin{quote}
+\sdesc{
 This search result is identical to the result you would obtain by doing
 a ``manual'' search on the ELM Classes page
 (http://elm.eu.org/elms.html). The column descriptions are also the same
 as described in Step XXX in Protocol YYY.
-\end{quote}
+}
 
 \begin{figure}[h!]
 \centering
@@ -1184,13 +1184,13 @@ the previous step) in the ``tab separated values'' format. By exchanging
 the `.html' part of the url with `.tsv', we ask the webserver to give us
 the data in TSV (tab-separated values) format.
 
-\begin{quote}
+\sdesc{
 Depending on which browser you are using, the file may open directly in
 your browser, or you may be prompted to download the file or save it to
 a separate location. In the latter two cases you can open the downloaded
 file using a (plain) text file viewer, or possible a spreadsheet viewer
 (such as Microsoft Excel).
-\end{quote}
+}
 
 step 5. Type the follwing command into a command line terminal to
 download the same data from the previous step directly into the
@@ -1199,12 +1199,12 @@ The output should look similar to \emph{Figure ELM-Curl-Classes}. The
 column names are still the same ones as shown in the \emph{classes}
 table in Figure \emph{BACT-AP2-Elm-classes-downloads}.
 
-\begin{quote}
+\sdesc{
 Use the curl option \texttt{-o} to save the results directly to a file.
 For example:
 \texttt{curl -o classes.tsv 'http://elm.eu.org/elms/elms\_index.tsv?q=CSK'}
 will save the data to a file called \emph{classes.tsv}.
-\end{quote}
+}
 
 step 6: To download a list of all motif instances detected in Human P53,
 type the followin command into a terminal:
@@ -1214,11 +1214,11 @@ The output is in the ``General Feature Format''
 (http://www.ensembl.org/info/website/upload/gff.html\#moreinfo), with
 the FASTA formatted sequence appended to the end of the output.
 
-\begin{quote}
+\sdesc{
 Many other file formats are available for downloading instances
 annotations, including the FASTA, GFF, PIR, or PSI-MI format (either XML
 or MiTab) {[}24067240{]}.
-\end{quote}
+}
 
 \begin{figure}[h!]
 \centering
