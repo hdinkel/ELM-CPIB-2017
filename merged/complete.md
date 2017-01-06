@@ -2,19 +2,15 @@
 
 ## Authors
 
-Marc Gouw, Hugo Samano, Kim Van Roey, Francesca Diella, Toby Gibson, Holger Dinkel
+Marc Gouw^1, Hugo Samano^1, Kim Van Roey^1, Francesca Diella^1, Toby Gibson^1, Holger Dinkel^2
 
+1 Structural and Computational Biology, European Molecular Biology Laboratory, Meyerhofstrasse 1, 69117 Heidelberg, Germany
 
-Structural and Computational Biology, European Molecular Biology Laboratory, Meyerhofstrasse 1, 69117 Heidelberg, Germany
-
-Health Services Research Unit, Operational Direction Public Health and Surveillance, Scientific Institute of Public Health (WIV-ISP), 1050 Brussels, Belgium 
-
-Leibniz-Institute on Aging – Fritz Lipmann Institute (FLI), Beutenbergstrasse 11, 07745 Jena, Germany
+2 Leibniz-Institute on Aging – Fritz Lipmann Institute (FLI), Beutenbergstrasse 11, 07745 Jena, Germany
 
 ## Significance statement
 
-*instructions: 120 word-maximum statement about the significance of the
-protocols/topic described in your manuscript*
+*instructions: Provide a 120-word-maximum statement about the significance of the protocols/topic described in your manuscript. This should be understandable to undergraduate- educated scientists outside their field of specialty. The goal is to explain the relevance of the work in broad context to a broad readership. It will be used in promotion of the article following publication.*
 
 # Abstract
 
@@ -533,7 +529,7 @@ step 12. Mouse over a gray rectangle (indicating motifs which have been
    *combined total score*, and the associated *total score P-value*
    (\cite{19852836}).
 
-![](../Figures/BACT_1/elm_results_alignments_filtering_domains.png)
+![](../Figures/TP53_1/elm_results_alignments_filtering_domains.png)
 **Figure BACT-BP-3:** This section of the results contains additional details
 of alignment of homologous proteins, filtering results and globular domains.
 
@@ -611,7 +607,7 @@ step 16. Scroll down to the section with the header "Globular domains/ TM
 
 TODO: INSERT/CHANGE FIGURE/NAME
 
-![](../Figures/BACT_1/elm_results_motifs.png)
+![](../Figures/TP53_1/elm_results_motifs.png)
 **Figure BACT-BP-7:** This table contains the list of motifs detected in the
 sequence (only the top part of the table is shown).
 
@@ -634,7 +630,7 @@ step 17. Scroll further down to the section title "Results of ELM motif
 
 TODO: INSERT/CHANGE FIGURE/NAME
 
-![](../Figures/BACT_1/elm_results_motifs_filtered.png)
+![](../Figures/TP53_1/elm_results_motifs_filtered.png)
 **Figure BACT-BP-8:** This table contains the list of motifs detected in the
 sequence (only the top part of the table is shown) which were excluded due to
 structural filters.
@@ -812,11 +808,17 @@ TODO: maybe rename `start_search` to `query`?
 
 # Alternate Protocol 3: Searching the ELM database using REST API
 
-All of the data in ELM is available to download so that anyone can also run
-their analyses locally, on their own computer. In many cases it also is useful access data programatically, via an Application Programming Interface (API). ELM provies many features to query, search, filter and download data withouth having to use a browser.
+Many researchers are interested in large-scale analyses rather than information
+about individual protein sequences. To this end, individual queries to the ELM
+webserver with a single protein id at a time, are not practical.
+
+For this reason, as much information as possible is made available via a REST
+interface (\cite{Fielding_2002}). This allows the user to interact with the ELM
+database and ELM webserver via scriptable URL requests. Each request can easily
+be tested in the browser before it is being automated in a script.
 
 In this section we will explore the various ways in which data can downloaded
-both in using the browser as well as via the commandline. 
+both in using the browser as well as via the commandline.
 
 ## Necessary Resources
 
