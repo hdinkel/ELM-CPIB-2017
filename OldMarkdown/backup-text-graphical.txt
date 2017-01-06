@@ -1,0 +1,33 @@
+step 9. The remainder of the figure (from row 6 onwards) displays the motif
+   detections, overlayed by the structural context from rows 2 and 3 (SMART
+   domains and GlobPlot).  A blue square indicates a single motif occurence,
+   intensity of the color indicates the conservation of this sequence in
+   homologous proteins.
+   Boxes in gray are motif occurences which have been filtered out by the "structure
+   filter". Boxes that are blue & gray are neutral (what does that mean ?????).
+   If the sequence is already present in the database, any motif instances
+   that have already been annotated are shown as ovals. Lastly, Any motifs
+   detected in homologous sequences are also shown as blue & red rectangles.
+
+> In the case that no homologous sequences were detected (see step XXX below),
+> it is not possible to assign a conservation score. Therefore all of the
+> motif occurences will be shown in a uniform shade of blue.
+
+step 10. Mouse over a motif hit:vsp 
+ (which has not been filtered out by the structural
+   filter) to detail the motif name and its start and stop positions. This
+   box also shows the amino acid sequence which matched the motif, as well as
+   the confidence score. The color of the confidence score title box is also
+   suggestive of how confident this motif hit is: red for low confidence,
+   green for high confidence, as a color spectrum.
+
+> The confidence score is based on ???. And we can use it to interpret the
+> motif occurrences ???
+
+step 11. Mouse over a gray rectangle (filtered out) to find out why this hit was
+   filtered out. It shows scores for all of the individual criteria used to
+   filter out a sequence: The name of the domain, the *accessibility score* ,
+   *secondary structure score*, *combined total score*, and the associated
+   *totalscore P-value*. It also shows the sequence which cased matched the
+   motif's regular expression.
+
