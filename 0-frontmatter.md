@@ -10,5 +10,4 @@ Marc Gouw^1, Hugo Samano^1, Kim Van Roey^1, Francesca Diella^1, Toby Gibson^1, H
 
 ## Significance statement
 
-*instructions: 120 word-maximum statement about the significance of the
-protocols/topic described in your manuscript*
+*instructions: Provide a 120-word-maximum statement about the significance of the protocols/topic described in your manuscript. This should be understandable to undergraduate- educated scientists outside their field of specialty. The goal is to explain the relevance of the work in broad context to a broad readership. It will be used in promotion of the article following publication.*
