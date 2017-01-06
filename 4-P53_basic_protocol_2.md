@@ -79,7 +79,7 @@ step 4. Click "submit" to start the searching for motifs.
 > You can bookmark this page: The results are stored for a week.
 
 ![](Figures/TP53_1/elm_results_summary.png)
-TODO: INSERT/CHANGE FIGURE/NAME
+TODO: caption 
 
 **Figure TP53-BP1-2** The graphical results summary of the ELM Prediction
 pipeline for "P53_HUMAN". Note that not all motif detections are shown (the
