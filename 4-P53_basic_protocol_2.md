@@ -193,8 +193,6 @@ step 13. Scroll down to below the results graphic to find additional
 > detected. If you have refreshed the page after waiting for more than 3
 > minutes, this is most likely the case.
 
-TODO: CREATE FIGURE “FILTERING SUMMARY" FOR TP53
-
 step 14. Scroll down to the section titled "Filtering Summary" to
    view some statistics about how many motifs and instances were filtered out
    (figure TP53-BP1-2). The first two lines contain information on whether and
