@@ -166,7 +166,7 @@ step 12. Mouse over a gray rectangle (indicating motifs which have been
    *combined total score*, and the associated *total score P-value*
    (PMID:19852836).
 
-![](Figures/BACT_1/elm_results_alignments_filtering_domains.png)
+![](Figures/TP53_1/elm_results_alignments_filtering_domains.png)
 **Figure BACT-BP-3:** This section of the results contains additional details
 of alignment of homologous proteins, filtering results and globular domains.
 
@@ -244,7 +244,7 @@ step 16. Scroll down to the section with the header "Globular domains/ TM
 
 TODO: INSERT/CHANGE FIGURE/NAME
 
-![](Figures/BACT_1/elm_results_motifs.png)
+![](Figures/TP53_1/elm_results_motifs.png)
 **Figure BACT-BP-7:** This table contains the list of motifs detected in the
 sequence (only the top part of the table is shown).
 
@@ -267,7 +267,7 @@ step 17. Scroll further down to the section title "Results of ELM motif
 
 TODO: INSERT/CHANGE FIGURE/NAME
 
-![](Figures/BACT_1/elm_results_motifs_filtered.png)
+![](Figures/TP53_1/elm_results_motifs_filtered.png)
 **Figure BACT-BP-8:** This table contains the list of motifs detected in the
 sequence (only the top part of the table is shown) which were excluded due to
 structural filters.
