@@ -273,6 +273,7 @@ TODO: INSERT/CHANGE FIGURE/NAME
 	\caption{
 	\textbf{Figure TP53-BP1-3}
 	}
+	\label{predicting_p53_elm_results_known}
 \end{figure}
 
 \item On the results page, scroll down to the heading: ``The ELMs in the
@@ -312,43 +313,46 @@ TODO: INSERT/CHANGE FIGURE/NAME
 	\textbf{Figure BACT-BP-7:} This table contains the list of motifs
 	detected in the sequence (only the top part of the table is shown).
 	}
+	\label{predicting_p53_elm_results_motifs}
 \end{figure}
 
 TODO: INSERT/CHANGE FIGURE/NAME
 
-step 17. Scroll further down to the section title ``Results of ELM motif
-search after globular domain filtering, structural filtering and context
-filtering'' to obtain an overview of all of the motifs and motif
-instances detected (Figure BACT-BP-7). Each row also contains
-information on the Motif name, the matching peptide sequence and its
-position. Additional information is shown about the ELM, cell
-compartment and its regular expression. If the motif was detected in a
-homologue, the column called ``PHI-Blast Instance mapping'' contains
-links to the Sequence alignment of the homologous protein, and a summary
-of the ELM instance mapper output. If a motif instance has been filtered
-out due to Structural criteria (SMART or Structure), this column
-contains a link to a page with details on how individual criteria that
-make up this filter. The last column contains information on the
-Probability filter: the probability reflects the chance to observe this
-motif in any random amino acid sequence.
+\item Scroll further down to the section title ``Results of ELM motif search
+	after globular domain filtering, structural filtering and context
+	filtering'' to obtain an overview of all of the motifs and motif
+	instances detected (Figure BACT-BP-7). Each row also contains
+	information on the Motif name, the matching peptide sequence and its
+	position. Additional information is shown about the ELM, cell
+	compartment and its regular expression. If the motif was detected in a
+	homologue, the column called ``PHI-Blast Instance mapping'' contains
+	links to the Sequence alignment of the homologous protein, and a
+	summary of the ELM instance mapper output. If a motif instance has been
+	filtered out due to Structural criteria (SMART or Structure), this
+	column contains a link to a page with details on how individual
+	criteria that make up this filter. The last column contains information
+	on the Probability filter: the probability reflects the chance to
+	observe this motif in any random amino acid sequence.  
 
 TODO: INSERT/CHANGE FIGURE/NAME
 
 \begin{figure}[h!]
 \centering
-\includegraphics[width=\textwidth]{Figures/predicting_p53/elm_results_motifs_filtered.png}
-\caption{
-\textbf{Figure BACT-BP-8:} This table contains the list of motifs
-detected in the sequence (only the top part of the table is shown) which
-were excluded due to structural filters.
-}
+	\includegraphics[width=\textwidth]{Figures/predicting_p53/elm_results_motifs_filtered.png}
+	\caption{
+	\textbf{Figure BACT-BP-8:}
+	This table contains the list of motifs detected in the sequence (only
+	the top part of the table is shown) which were excluded due to
+	structural filters.
+	}
+	\label{predicting_p53_elm_results_motifs_filtered}
 \end{figure}
 
 TODO: INSERT/CHANGE FIGURE/NAME
 
-step 18. Scroll further down to the heading ``List of excluded ELMs
-falling inside SMART/PFAM domains and/or scoring poorly with the
-structural filter (if applicable).'' (Figure BACT-BP-8). This table is
-(almost) identical to the one above, but shows motif instances which
-were rejected by the Structural filter or SMART filter.
+\item Scroll further down to the heading ``List of excluded ELMs falling inside
+	SMART/PFAM domains and/or scoring poorly with the structural filter (if
+	applicable).'' (Figure BACT-BP-8). This table is (almost) identical to
+	the one above, but shows motif instances which were rejected by the
+	Structural filter or SMART filter.
 
