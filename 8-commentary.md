@@ -11,7 +11,9 @@ background information summarises the different functionalities of SLiMs,
 describes the degenerate nature of motif sequences, and emphasises the need for 
 contextual data for confident SLiM prediction.
 
+
 *ELM categorises SLiMs depending on their functionality*
+
 SLiMs mediate different types of interactions, and based on this functionality, 
 the ELM classes annotated in the ELM database are grouped into six main ELM 
 types (Figure 1) (PMID:24214962). They can function as ligand binding sites or 
@@ -34,7 +36,9 @@ enzymes (CLV type), or are recognised for structural modification by isomerases
 that catalyse cis-trans isomerisation of the peptide backbone (DOC type) 
 (PMID:24926813).
 
+
 *ELM regular expressions reflect the degenerate nature of SLiMs*
+
 As their name suggests, SLiMs are compact, being composed of a limited number of 
 adjacent amino acids. Most of a motif’s binding specificity however is conferred 
 by only a subset of these amino acids. Those few residues that directly interact 
@@ -56,7 +60,9 @@ proliferation of SLiMs and the rewiring of interactomes (PMID:26589632)
 (PMID:22346764). Conversely, several SLiM-associated diseases have been 
 characterised to date, for instance Liddle syndrome (PMID:15483078).
 
+
 *ELM integrates data to increase the confidence of SLiM prediction*
+
 Due to their degenerate nature, motif sequences contain only very little 
 information, and many short sequences in a proteome will match motif patterns. 
 However, most of these matches will not represent functional motifs, and hence, 
