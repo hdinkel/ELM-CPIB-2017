@@ -34,7 +34,7 @@ group (e.g. phosphorylation), a sugar molecule (e.g. glycosylation), a protein
 SLiMs mediate proteolytic cleavage by acting as target site for proteolytic 
 enzymes (CLV type), or are recognised for structural modification by isomerases 
 that catalyse cis-trans isomerisation of the peptide backbone (DOC type) 
-(PMID:24926813).
+(PMID:24926813) (PMID:24773235).
 
 
 *ELM regular expressions reflect the degenerate nature of SLiMs*
