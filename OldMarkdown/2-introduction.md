@@ -5,8 +5,8 @@ environment. To interact with their surroundings, proteins use various types of
 binding modules that each display distinct binding properties (PMID:10550212).
 One prominent type of binding module consists of short linear motifs (SLiMs)
 (PMID:18508681). These compact binding sites are generally located in
-intrinsically disordered regions (IDR) of the proteome and commonly bind to
-structured domains in their interaction partners (PMID:21909575). SLiMs mediate
+intrinsically disordered regions (IDR) of the proteome and commonly bind to the 
+surface of a globular domain in a protein (PMID:21909575). SLiMs mediate
 different types of interactions that regulate protein functionality, and hence
 are important regulators of the dynamic processes involved in cell signalling
 (PMID:22480932) (PMID:24926813) (Figure 1). The number of SLiM instances in the
