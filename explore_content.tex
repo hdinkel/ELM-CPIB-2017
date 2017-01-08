@@ -14,6 +14,8 @@ have been uploaded by a large group of annotators from around the globe. The
 complete catalogue of manually curated data can be searched, browsed and
 explored on the ELM website
 
+TODO MARC: explain: elms, annotations, classes, instances, regular expressions. And links to GO, methods PSI. we use DOC CYCLIN etc as example.
+
 %
 % Subsection: Database content overview 
 %
@@ -25,48 +27,65 @@ explored on the ELM website
 
 \begin{figure}[h!]
 	\centering
+	\includegraphics[width=\textwidth]{Figures/explore_content/home.png} 
+	\caption{
+		The homepage of the ELM database (\rurl{elm.eu.org}).
+	}
+	\label{fig:explore_content_home}
+\end{figure}
+
+\item The ELM database is an online web resource. Open a browser and navigate
+	to \rurl{elm.eu.org} to visit the homepage
+	(Fig. \ref{fig:explore_content_home}).
+	This page shows a brief explanation of the ELM resource, and a form to 
+	search for SLiMs (which we cover in further detail in 
+	\ref{sec:predicting_p53} and \ref{sec:predicting_cv_0974}).
+	The column to the right is the news column, and is continually
+	updated with the latest news about changes and additions to the database. 
+
+\begin{figure}[h!]
+	\centering
 	\includegraphics[width=\textwidth]{Figures/explore_content/stats.png} 
 	\caption{
-	\textbf{Figure TP53-BP2-1}
-	The ELM database overview page (http://elm.eu.org/search.db).
+		The ELM database statistics overview page shows the most up to
+		date database statistics. As of January 2017 ELM has just over
+		3000 annotated instances in 262 different motif classes.
 	}
 	\label{fig:explore_content_stats}
 \end{figure}
 
-\item Go to http://elm.eu.org and click on the tab ``ELM DB'' to explore the
-	content of the different types of data about experimentally validated
-	ELMs that were manually curated from the literature
-	(Fig. \ref{fig:explore_content_stats}).
-	This page contains a brief summary of the database
-	content, as well as the number of links to third-party databases. The
-	table gives an overview of the type and amount of information stored in
-	the database. Each line contains at least one link which will take you
-	to the corresponding contents page (eg. ``ELM instances'').  
+\item On the ELM homepage click on the menu link \button{ELM DB} for an overview of
+	the database statistics (Fig. \ref{fig:explore_content_stats}).
+	This page displays the types and amounts of annotations contained in
+	the database and a few links to third-part databases.
+	Each line contains at least one link which will take you
+	to the corresponding contents page (for example, clicking on
+	\button{ELM instances} will take you to the page displaying all of the
+	annotated instances in the database).
 
 %
 % Subsection: Browsing motif classes and instances
 %
 \subsection{Browsing motif classes and annotated instances}
-\label{subsec:explore_content_browsing_classes_and_instances}
+\label{subsec:explore_content_classes_and_instances}
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=\textwidth]{Figures/explore_content/elms.png} 
 	\caption{
-	\textbf{Figure TP53-BP2-2}
-	The list of all motifs in the ELM database.
+		The list of all motif classes annotated in the ELM database.
 	}
 	\label{fig:explore_content_elms}
 \end{figure}
 
-\item Click on the sub-menu ``ELM classes'' in ``ELM DB'' to see the page with
-	all of the ELM classes (Fig. \ref{fig:explore_content_elms}). For each
-	class, the
-	following information is provided: ELM identifier, short description,
-	regular expression, number of instances annotated for each class, and
-	number of structures available. For details on each class, click on the
-	ELM identifier; to get a list of annotated instances for an individual
-	class, click on the number of instances.
+\item Click on the sub-menu \button{ELM classes} under \button{ELM DB} to visit
+	the page listing all of the ELM classes
+	(Fig. \ref{fig:explore_content_elms}).
+	For each class, the following information is provided: ELM identifier,
+	short description, regular expression, number of instances annotated
+	for each class, and number of structures available. For details on each
+	class, click on the ELM identifier; to get a list of annotated
+	instances for an individual class, click on the number of instances.
 
 	\sdesc{Use the search bar at the top of the page to filter for certain
 		motif classes. For example, typing ``MAPK'' and hitting submit
@@ -75,191 +94,218 @@ explored on the ELM website
 		left can also be used to filter this table. For example,
 		toggling the ``DOC'' button will remove all ``DOC'' classes
 		from the table (and clicking it again will bring them back).
-		Lastly, the yellow tsv link can be used to export all motif
-		classes as a ``tab separated values'' file.} 
+		Lastly, the yellow \button{tsv} link can be used to export all
+		motif classes as a ``tab separated values'' file.} 
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=\textwidth]{Figures/explore_content/doc_cyclin_1_class.png}
 	\caption{
-	\textbf{Figure TP53-BP1- 4} 
 	The motif details page for ``DOC\_CYCLIN\_1''. This page
 	contains all of the manual annotation details for the
 	DOC\_CYCLIN\_1 motif, the biological background summarized from
 	the scientific literature including links to the primary
-	literature and to external resources (Pubmed (\cite{27899561}),
-	GeneOntology (\cite{27899567}), PDB (\cite{12037327}) and
+	literature and to external resources (Pubmed \cite{27899561},
+	the Gene Ontology \cite{27899567}, PDB (\cite{12037327}) and
 	more).
 	}
 	\label{fig:explore_content_doc_cyclin}
 \end{figure}
 
-\item Search the table for the term ``DOC\_CYCLIN\_1'' and click on its link to
-	navigate to the page with details about the ``DOC\_CYCLIN\_1'' motif
-	class (Fig. \ref{fig:explore_content_doc_cyclin}).
+\item Search the table for the term \motif{DOC\_CYCLIN\_1} and click on 
+	\button{DOC\_CYCLIN\_1} in the left column to
+	navigate to the page with details about the
+	\motif{DOC\_CYCLIN\_1} motif class
+	(Fig. \ref{fig:explore_content_doc_cyclin}).
 	This page contains a description of the
 	functional site class (a Cyclin recognition site), and a short
 	description of the ELM and its regular expression, as well as a
 	probability score, the taxonomic distribution of the motif and which
 	domain (if any) is responsible for the interaction.
 
-\sdesc{
-	The probability score is the probability that the regular expression
-	represents a random selection of amino acids (similar to an information
-	content score). A lower score indicates that the motif pattern is more
-	difficult to find by chance in a random sequence.
-}
+	\sdesc{The probability score is the probability that the regular
+		expression represents a random selection of amino acids
+		(similar to an information content score). A lower score
+		indicates that the motif pattern is more difficult to find by
+		chance in a random sequence.}
 
-\item Further down the ``DOC\_CYCLIN\_1'' page 
+\item Scroll further down the \motif{DOC\_CYCLIN\_1} page 
 	(Fig. \ref{fig:explore_content_doc_cyclin}) to view
 	more details about the manually annotated data and instances in the
-	database (to the text box starting with the ``Abstract''). The
-	``abstract'' contains a more detailed description of the motif
-	annotation. Click on the ``Show'' button next to the ``selected
+	database (\ref{fig:explore_content_doc_cyclin_abstrac_instances}.)
+	The ``abstract'' contains a more detailed description of the motif
+	annotation. Click on the \button{show} button next to the ``selected
 	references'' header for a list of publications relevant to this motif.
-	Click on ``Show'' next to ``GO terms'' for a complete list of all GO
-	terms annotated for this motif.
+	Click on \button{show} next to ``GO terms'' for a complete list of all
+	Gene Ontology (GO) terms annotated for this motif.
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=\textwidth]{Figures/explore_content/doc_cyclin_1_instances.png}
+	\includegraphics[width=\textwidth]{Figures/explore_content/doc_cyclin_1_abstract_instances.png}
 	\caption{
-	\textbf{Figure ???}
-	The instances annotated for DOC\_CYCLIN\_1.
+		The second part of the \motif{DOC\_CYCLIN\_1} motif details page
+		shows the motif abstract GO terms, and the list of annotated
+		instances.
 	}
-	\label{fig:explore_content_doc_cyclin_instances}
+	\label{fig:explore_content_doc_cyclin_abstract_instances}
 \end{figure}
 
-\item Scroll further down the ``DOC\_CYCLIN\_1'' page to view
+\item Scroll further down the \motif{DOC\_CYCLIN\_1} page to view
 	the ``Instances'' header
-	(Fig. \ref{fig:explore_content_doc_cyclin_instances})
-	This table contains the list of all annotated
+	(Fig. \ref{fig:explore_content_doc_cyclin_abstract_instances})
+	This table contains the list of all annotated \motif{DOC\_CYCLIN\_1}
 	instances in the database of this motif. This includes the protein
 	identifier, the start and end positions of the instance, the specific
-	sequence matching the regular expression and the logic of the instance.
+	sequence matching the regular expression representing the motif and
+	the ``logic'' of the instance.
 	The ``\# Ev.'' indicates the number of experimental evidences
-	associated with the annotation (see section XXX below). Organism is the
+	associated with the annotation. ``Organism'' indicates in which  
 	species in which the protein is found. Lastly the ``Notes'' column
 	contains links to any ``interactions'' or ``switches'' present in the
 	database, as well as links to PDB if this structure exists in PDB.
+
+	\sdesc{The instance ``logic'' is an annotation of whether this is a
+		\textit{bona-fide} instance, or whether it is a non-functional
+		instance. \textit{TP} (True positive) indicates the instance is
+		annotated with experimental evidence showing it is functional.
+		\textit{FP} (False Positive) instances have experimental
+		evidence suggesting function, but are believed to be
+		non-functional after careful examination by our annotators.
+		\textit{TN} (True Negative) instances have been experimentally
+		determined to be non-functional, and \textit{U} (Unknown)
+		instances do not have enough evidence to determine whether it
+		is functional or not. The overwhelming majority of instances in
+		ELM are \textit{TP}s.}
+
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=\textwidth]{Figures/explore_content/instances.png} 
 	\caption{
-	\textbf{Figure TP53-BP2-3}
-	The list of all instances in the ELM database.
+		The ``instances'' page can be used to search for instances in
+		the ELM database. 
 	}
 	\label{fig:explore_content_instances}
 \end{figure}
 
-\item Click on the sub-menu ``ELM instances'' in ``ELM DB'' to go to the page
-	which lists all of the instances in the database
+\item Click on the sub-menu \button{ELM instances} in \button{ELM DB} to visit
+	the page where you can search and browse the instances annotated in ELM.
 	(Fig. \ref{fig:explore_content_instances}).
-	This table contains a list of all instances in the database.
+	Note that only the first 100 instances matching the search criteria are shown.
+	The search form can be used to filter results by a full text search, by
+	instance logic, or organisms.
 
-	\sdesc{Use the search filters at the top of the page to limit the
-		results by a full text search, by instance logic, or organisms.
-		Similar to the ELM classes page (previous step) these results
-		can be filtered by motif class using the green toggle filters
-		on the left hand side. Lastly, the yellow buttons at the top of
-		the page can be used to download the instances in the following
-		formats: gff, pir, fasta or tsv.}
+	\sdesc{This table can be filtered by motif class using the green toggle
+		filters on the left hand side. Lastly, the yellow buttons at
+		the top of the page can be used to download the instances in
+		the following formats: \fileformat{gff}, \fileformat{pir},
+		\fileformat{fasta} or \fileformat{tsv.}}
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=\textwidth]{Figures/explore_content/doc_cyclin_1_instance.png}
 	\caption{
-	\textbf{Figure TP53-BP1- 5}
-	The instance details page for the ``DOC\_CYCLIN\_1'' instance annotated
-	for protein P53\_HUMAN with start/end position ``381-385''. This page
+	The instance details page for the \motif{DOC\_CYCLIN\_1} instance annotated
+	for protein \uniprot{P53\_HUMAN} with start/end position ``381-385''. This page
 	also contains links to many external databases including Uniprot
-	(\cite{25348405}), PDB (\cite{12037327}), NCBI taxonomy, Pubmed
-	(\cite{27899561}), and KEGG Pathways (\cite{26476454}), as well as the
-	PSI-MI controlled vocabulary (\cite{17925023}).
+	\cite{25348405}, PDB \cite{12037327}, NCBI taxonomy, Pubmed
+	\cite{27899561}, and KEGG Pathways \cite{26476454}, as well as the
+	PSI-MI controlled vocabulary \cite{17925023}.
 	}
 	\label{fig:explore_content_doc_cyclin_instance}
 \end{figure}
 
 \item Type ``p53\_human'' in the search box to search for ELM Instances in this
-	protein. Find the row for the ELM class ``DOC\_CYCLIN\_1'' and click on
-	the startposition ``381'' to go to the instance details page of this
-	instance. The top part of the page contains details about the instance
-	and the protein it was identified in.
+	protein. Find the row for the ELM class \motif{DOC\_CYCLIN\_1} and click on
+	the instance subsequence (highlighted in red) to go to the instance
+	details page of this
+	instance (Fig. \ref{fig:explore_content_doc_cyclin_instance})
+	The top part of the page contains details about the instance
+	and the protein it was identified in, and link to the Uniprot entry for
+	the protein \cite{25348405}.
 
 \item Scroll down to the ``Instance Evidence'' header to view details on the
-	experimental evidence used to annotate this instance. This table also
-	contains the ``evidence class'', and descriptions of the methods used
-	from PSI-MI (\cite{17925023}) as well as the Literature references in
-	which the experiments were published.
+	experimental evidence used to annotate this instance. The each
+	experimental method is annotated using the Proteomics Standards
+	Initiative Method Identifier (PSI-MI) \cite{17925023} as well as the
+	references in which the experiments were published.
 
-	\sdesc{(Here we should explain what ``evidence class'', ``biosource'',
-		``Logic'', ``Reliability'' and ``Notes'' actually mean).}
+	\sdesc{
+		The ``biosource'' indicates whether method is \textit{in vivo},
+		\textit{in vitro}, \textit{in sicilo} or a combination of these.
+		The ``logic'' column indicates whether this experiment
+		``supports'' or ``contradicts'' this instance being functional.
+		Each method is also annotated with a ``reliability'', which can
+		be any of ``certain'', ``likely'', ``unlikely'' or
+		``unspecified''.}
 
 %
 % Subsection: Switches, pathways and other external resources. 
 %
-\subsection{Switches, motif-mediated pathways and other external resources.}
+\subsection{Finding Switches and molecular interactions}
 \label{subsec:explore_content_external_resoureces}
-
-\item Scroll further down to the header ``Pathways'' to view pathway
-	information. This is a list of all of the pathways in which the protein
-	p53 is known to be involved (according to KEGG). Click on a pathway to
-	see the localization of p53 in the corresponding KEGG pathway.
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=\textwidth]{Figures/explore_content/doc_ww_pin_1_4_instance.png}
 	\caption{
-	\textbf{Figure TP53-BP1-6}
-	The instance details page for the
-	``DOC\_WW\_Pin1\_4'' instance found in P53 with start/end position
+	The instance details page for the \motif{DOC\_WW\_Pin1\_4}
+	instance found in Human P53 (\uniprot{P53\_HUMAN}) with start/end position
 	``30-35''.
 	}
 	\label{fig:explore_content_doc_ww_instance}
 \end{figure}
 
-\item Repeat the previous search by clicking on the sub-menu ``ELM instances''
-	in ``ELM DB'' and type ``p53\_human'' in the search box.  This time,
-	try to find the ELM instance ``DOC\_WW\_Pin1\_4'' motif with the
-	start/end position ``30-35'' (You can sort the table by clicking on the
-	header lines eg. on ``Start'' to sort by startposition ). Click on the
-	start/endposition or the subsequence which will take you to the details
-	page as shown in figure \ref{fig:explore_content_doc_ww_instance}. This
-	page is similar to that described for the P53 instance ``DOC\_CYCLIN\_1''
-	(Fig. \ref{fig:explore_content_doc_cyclin_instance});
-	additionally, for this instance there is information available about
+\item Repeat the previous search by clicking on the sub-menu \button{ELM instances}
+	under \button{ELM DB} and type ``p53\_human'' in the search box. This time,
+	find the ELM instance \motif{DOC\_WW\_Pin1\_4} motif with the
+	start/end position ``30-35''. (You can sort the table by clicking on the
+	header lines: click on ``Start'' to sort by start position ). Click on the
+	start/end position or the subsequence which will take you to the details
+	page (Fig. \ref{fig:explore_content_doc_ww_instance}). This
+	page is similar to that described for the P53 instance \motif{DOC\_CYCLIN\_1}
+	(Fig. \ref{fig:explore_content_doc_cyclin_instance}).
+	Additionally, for this instance there is information available about
 	its interaction partner and a molecular switch which is mediated by
 	this motif instance.
 
 \item Scroll down to the ``Interactions'' header to view information about this
 	instance's interactions
 	(Fig.  \ref{fig:explore_content_doc_ww_instance}). This instance
-	interacts with PIN1\_Human via the ``WW'' domain (PFAM identifier
-	PF00397; found on position 7--37 in PIN1\_Human). If available,
+	interacts with \uniprot{PIN1\_Human} via the ``WW'' domain (Pfam identifier
+	PF00397; found on position 7-37 in \uniprot{PIN1\_Human}. If available,
 	binding affinities are also shown here. Interaction data is made
-	available in Mitab and xml format (\cite{17925023}).  
+	available in \fileformat{mitab} and \fileformat{xml} format
+	(\cite{17925023}), and can be downloaded by clicking on the yellow
+	buttons in the right column.
 
 \item Scroll further down to the ``Switches'' section for a brief overview of
-	the switches details of this instance obtained form ``switches.ELM''
+	the switches details of this instance obtained form switches.ELM
 	(\cite{23550212}) (Fig. \ref{fig:explore_content_doc_ww_instance}). This
 	particular instance is involved in the switch phosphorylating P53.
 	Clicking on the diagram will open an external link to the
-	``switches.ELM'' website.
+	switches.ELM website.
+
+%
+% Subsection: Links to external resources
+%
+\subsection{Exploring Links External Protein Resources}
+\label{subsec:explore_content_links_to_external_resources}
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=\textwidth]{Figures/explore_content/methods.png} 
 	\caption{
-	\textbf{Figure TP53-BP2-4}
-	The list of all experimental methods used in the ELM database.
+		The list of all experimental methods used in the ELM database,
+		along with their PSI-MI identifiers.
 	}
 	\label{fig:explore_content_methods}
 \end{figure}
 
-\item Click on the sub-menu ``ELM methods'' in ``ELM DB'' to see a list of all
-	experimental methods which have been used to identify motifs and
-	instances (Fig \ref{fig:explore_content_methods}).
+\item Click on the sub-menu \button{ELM methods} in \button{ELM DB} to see a
+	list of all experimental methods which have been used to identify
+	motifs and instances
+	(Fig \ref{fig:explore_content_methods}).
 	This table shows the internal method
 	identifier in the first column, a link to the corresponding entry in
 	the PSI-MI database (\cite{17925023}), and the method name as annotated
@@ -268,79 +314,69 @@ explored on the ELM website
 	will list all instances annotated using that method.  
 
 	\sdesc{The filter bar on the top page can be used to filter the list of
-		methods. The \emph{tsv} link creates a downloadable file in
-		``tab separated values'' format.  }
+		methods. The \fileformat{tsv} link creates a downloadable file
+		in ``tab separated values'' format.}
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=\textwidth]{Figures/explore_content/pdbs.png} 
 	\caption{
-	\textbf{Figure TP53-BP2-5}
-	The list of all known structures in PDB also in ELM.
+	The list of all known structures in PDB which are also in ELM.
 	}
 	\label{fig:explore_content_pdbs}
 \end{figure}
 
-\item Click on the sub-menu ``ELM pdb structures'' in ``ELM DB'' to see a list
-	of all macromolecular structures in the ELM database
+\item Click on the sub-menu \button{ELM pdb structures} in \button{ELM DB} to
+	see a list of all macromolecular structures in the ELM database
 	(Fig. \ref{fig:explore_content_pdbs}).
 	Structures annotated in ELM ideally (but not always) show
 	both interaction partners, motif and domain. This page also contains
-	links to RCSB (\cite{12037327}), the individual instance and the motif
+	links to RCSB/PDB (\cite{12037327}), the individual instance and the motif
 	class of that instance.
 
 	\sdesc{The filter bar on the top page can be used to filter the list of
-		structures shown . The \emph{tsv} link creates a downloadable
-		file in ``tab separated values'' format. The \emph{tsv} file
-		contains the PDB id, uniprot name, and ELM class.}
+		structures shown. The yellow \fileformat{tsv} link creates a
+		downloadable file in ``tab separated values'' format.}
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=\textwidth]{Figures/explore_content/interactiondomains.png}
 	\caption{
-	\textbf{Figure TP53-BP2-6}
 	A list of all interactions annotated in the database.
 	}
 	\label{fig:explore_content_interaction_domains}
 \end{figure}
 
-\item Click on the sub-menu ``ELM binding domains'' in ``ELM DB'' to see a
-	complete list of all the interaction domains in ELM
+\item Click on the sub-menu \button{ELM binding domains} under \button{ELM DB}
+	to see a complete list of all the interaction domains in ELM
 	(Fig. \ref{fig:explore_content_interaction_domains}).
 	This table shows the ELM classes which have been annotated
 	with a corresponding interaction domain. This table shows the ELM
-	class, a link to the Pfam (\cite{26673716}) / SMART (\cite{25300481}) /
+	class, a link to the Pfam \cite{26673716}, SMART \cite{25300481} or 
 	InterPro (\cite{27899635}) domain, as well as the name of the
 	interacting domain followed by a brief description.
 
 	\sdesc{The filter bar on the top page can be used to filter the list of
 		interactions shown. The \emph{tsv} link creates a downloadable
-		file in ``tab separated values'' format.
-	}
+		file in ``tab separated values'' format.}
 
 %
-% Subsection: Links to external resources
-%
-\subsection{Links to external resources}
-\label{subsec:explore_content_links_to_external_resources}
-
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=\textwidth]{Figures/explore_content/switches.png} 
 	\caption{
-	\textbf{Figure TP53-BP2-7}
-	A list of all switches annotated in ELM.
+		A list of all switches annotated switches.ELM also contained in ELM.
 	}
 	\label{fig:explore_content_switches}
 \end{figure}
 
-\item Click on the sub-menu ``ELM switches'' in ``ELM DB'' to see a complete
+\item Click on the sub-menu \button{ELM switches} in \button{ELM DB} to see a complete
 	list of all the switches in ELM
 	(Fig. \ref{fig:explore_content_switches}). This table shows
 	the motif class, contains a link to Uniprot, and the start and stop
 	positions of the motif mediating the switch. The last two columns have
 	links to switches.ELM, and a brief description of the switch also taken
-	from switches.ELM (\cite{23550212}).
+	from switches.ELM \cite{23550212}.
 
 	\sdesc{The filter bar on the top page can be used to quickly filter
 		the list of interactions shown.} 
@@ -349,102 +385,116 @@ explored on the ELM website
 % Subsection: Exploreing KEGG pathways
 %
 
-\subsection{Exploring KEGG pathways from ELM}
+\subsection{Visualizing KEGG pathways from ELM}
 \label{subsec:explore_content_kegg}
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=\textwidth]{Figures/explore_content/pathways.png} 
 	\caption{
-	\textbf{Figure TP53-BP2-9}
 	A list of all Pathways from KEGG with proteins in ELM.
 	}
 	\label{fig:explore_content_pathways}
 \end{figure}
 
-\item Click on the sub-menu ``ELM pathways'' in ``ELM DB'' to see a list of all
-	pathways contained in ELM
+\item Click on the sub-menu \button{ELM pathways} in \button{ELM DB} to see a list of all
+	KEGG pathways contained in ELM
 	(Fig. \ref{fig:explore_content_pathways}).
 	Pathways are from the ``Kyoto Encyclopedia of Genes and Genomes'' (KEGG
-	\cite{26476454}) database mapped to ELM instances. Click on a species
-	(for example ``Homo sapiens'') for a complete list of all Human
-	pathways which have a protein annotated in ELM, and links to the
-	pathways on KEGG.
-
+	\cite{26476454}) database mapped to ELM instances. 
+	
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=\textwidth]{Figures/explore_content/pathways_example.png} 
 	\caption{
-	\textbf{Figure TP53-BP2-10}
-	A list of all pathways in Gallus Gallus
+		A list of all KEGG pathways in \textit{Gallus gallus} involving proteins annotated in ELM.
 	}
 	\label{fig:explore_content_pathways_example}
 \end{figure}
 
 \item On the ``ELM pathways'' page
 	(Fig.  \ref{fig:explore_content_pathways_example})
-	click on the link ``gallus
-	gallus'' to navigate to the page containing all pathways annotated for
-	chicken. This page contains links to all KEGG pathways for the taxon
-	\emph{gallus gallus} with annotated instances in the ELM database.
+	click on the link \button{gallus gallus} to navigate to the page
+	containing all pathways annotated for
+	chicken.
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=\textwidth]{Figures/explore_content/pathways_kegg.png} 
 	\caption{
-	\textbf{Figure TP53-BP2-11}
-	A list of all annotated pathways for taxon \emph{gallus gallus}
+	A list of all annotated pathways for taxon \textit{Gallus gallus}
 	}
 	\label{fig:explore_content_pathways_kegg}
 \end{figure}
 
 \item One the page with chicken pathways
-	(Fig. \ref{fig:explore_content_pathways_kegg})
-	click on ``Adherens
-	junction'' to the KEGG entry for this pathway, with proteins color
-	overlay corresponding to ELM classes (see the color legend right side
-	of figure \ref{fig:explore_content_pathways_kegg}).
+	(Fig. \ref{fig:explore_content_pathways_example})
+	click on \button{Adherens junction} to the KEGG entry for this pathway,
+	with each protein's color corresponding to ELM classes (see the color
+	legend right side of figure \ref{fig:explore_content_pathways_kegg}).
 
-\subsection{Infections and Diseases}\label{infections-and-diseases}
+%
+% Subsection: Infections and Diseases
+%
+\subsection{Browsing Infections and Diseases}
+\label{subsec:explore_content_infections_and_diseases}
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=\textwidth]{Figures/explore_content/viruses.png} 
 	\caption{
-	\textbf{Figure TP53-BP2-11}
-	A Table of the ELM instance abused by viruses
+		A table of the ELM instances abused by viruses.
 	}
 	\label{fig:explore_content_viruses}
 \end{figure}
 
-\item Click on the sub-menu ``ELM virus instances'' in ``ELM DB'' to see a list
-	of all instances in ELM that have been annotated as being abused by
-	viruses (Fig. \ref{fig:explore_content_viruses}).
-	The columns are identical to those listed in section XXX step YYY
-	(Figure ZZZZ).
+\item Click on the sub-menu \button{ELM virus instances} under \button{ELM DB}
+	to see a list of all instances in ELM that have been annotated as being
+	abused by viruses (Fig. \ref{fig:explore_content_viruses}).
+	The columns are identical to those listed in Step 7 (Fig.  
+	\ref{fig:explore_content_instances}).
 
 	\sdesc{The green buttons on the left can be used to filter this table
 		by motif class. Click on the yellow links on the top right of
-		the page to download the (complete) table in gff, pir, fasta or
-		tsv format. (See section XXX for a description of these
-		formats.)}
+		the page to download the (complete) table in \fileformat{gff},
+		\fileformat{pir}, \fileformat{fasta} or \fileformat{tsv}
+		format.}
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=\textwidth]{Figures/explore_content/diseases.png}
 	\caption{
-	\textbf{Figure TP53-BP2-8}
 	A list of all diseases in ELM.
 	}
 	\label{fig:explore_content_diseases}
 \end{figure}
 
-\item Click on the sub-menu ``ELM diseases'' in ``ELM DB'' to see a list of all
-	motif classes that have been annotated with a disease
-	(Fig. \ref{fig:explore_content_diseases}) Disease information is taken
-	from the OMIM database.  
+\item Click on the sub-menu \button{ELM diseases} under \button{ELM DB} to see
+	a list of all motif classes that have been annotated with a disease
+	(Fig. \ref{fig:explore_content_diseases}). Disease information is taken
+	from the Online Mendelian Inheritance in Man (OMIM) database
+	\cite{17357067}.
 
-	\sdesc{This table also includes the diseases found under the ``ELM
-		pathogenic abuse'' menu in ``ELM DB''. (right?)}
+%
+% Subsection: Help page 
+%
+\subsection{Finding Help and Frequently Asked Questions}
+\label{subsec:explore_content_help}
 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{Figures/explore_content/help.png} 
+	\caption{
+		The ELM help and Questions \& Answers page.
+	}
+	\label{fig:explore_content_viruses}
+\end{figure}
+
+\item Click on the \button{Help} button on the right of the top navigation menu
+	to visit the ELM Help page. This page has answers to the most
+	Frequently asked questions, which you can see by clicking on a
+	particular question. For example: Click on ``Regular expressions'' for
+	a detailed description of the symbols used to build regular expressions
+	to define motif classes.
 \end{enumerate}
+

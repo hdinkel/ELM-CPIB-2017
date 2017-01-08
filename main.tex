@@ -9,7 +9,33 @@
 \usepackage{mathptmx}
 \newcounter{proto}
 
+% use 'rurl' to hide the 'http://' in text, but include it in the link
+\newcommand\rurl[1]{%
+	\href{http://#1}{\nolinkurl{#1}}%
+}
+
+% use 'button' to define a standard way to display clickable buttons 
+\newcommand\button[1]{%
+	\textbf{#1}
+}
+
+% use 'motif' to define a standard way to display motifs 
+\newcommand\motif[1]{%
+	\textsc{\lowercase{#1}}
+}
+
+% use 'uniprot' to define a standard way to display uniprot names
+\newcommand\uniprot[1]{%
+	\textsc{\lowercase{#1}}
+}
+
+% use 'fileformat' to define a standard way to display file formats 
+\newcommand\fileformat[1]{%
+	\textit{#1}
+}
+
 \begin{document}
+
 
 % Frontmatter 
 \input{frontmatter}
