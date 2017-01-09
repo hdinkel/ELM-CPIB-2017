@@ -137,19 +137,27 @@ interpret these data and avoid common pitfalls in SLiM discovery.
 \label{sec:explore_content}
 
 The core of the ELM database is a repository of manually annotated motifs and
-instances. As of December 2016, ELM contains over 260 motif classes categorized
-into 6 different types: DOC (docking), LIG (Ligand binding), DEG (degradation),
-CLV (cleavage), MOD (post translational modifications), and TRG
-(targeting/anchoring) motifs (Figure functional\_classification\_of\_SLiMs).
-These motifs are derived from various types of experiments reported in
-literature. Each manually annotated motif also has a set of bona fide instances
-(occurrences) of this motif. Currently, there are over 3000 annotated instances
-annotated from over 2500 publications. The motif classes and motif instances
-have been uploaded by a large group of annotators from around the globe. The
-complete catalogue of manually curated data can be searched, browsed and
-explored on the ELM website
+instances. As of December 2016, ELM contains over 260 motif classes and over
+3000 experimentally validated and manually curated instances.
+The motif classes and motif instances have been uploaded by a large group of
+annotators from around the globe. The complete catalogue of manually curated
+data can be searched, browsed and explored on the ELM website
 
-TODO MARC: explain: elms, annotations, classes, instances, regular expressions. And links to GO, methods PSI. we use DOC CYCLIN etc as example.
+Each motif class is a short genenerate sequence of amino acids with a given
+function. Since the sequences are genenerate, each motif class is represented
+using a ``regular expression'': a symbolic representation expressing a complex
+pattern of letters (or amino acids). For example, the regular expression
+``[FY].L.P'' is to be read as: The first amino acid is a phenylalaline (F) or a
+Tyrosine (Y) followed by any one amino acid (.), a Leucine (L), one more
+abritrary amino acid (.) and finally a Proline (P).
+
+Each motif class is annotated by an expert molecular biologist based on
+literature cited experiments.
+In all cases the annotator accompanies the motif definition with the list of
+instances, as well as links to external resources including Biological
+Pathways, Diseases, Gene Ontology and other Protein resources. In this protocol
+we explore the several datatypes stored in the database, as well as links to
+external resources.
 
 %
 % Subsection: Necessary Resources
