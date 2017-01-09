@@ -16,18 +16,18 @@
 
 % use 'button' to define a standard way to display clickable buttons 
 \newcommand\button[1]{%
-	\textbf{#1}
+	\textbf{#1}{}%
 }
 
 % use 'motif' to define a standard way to display motifs 
 \newcommand\motif[1]{%
-	\textsc{\lowercase{#1}}
+	\textsc{\lowercase{#1}}{}%
 }
 
 % use 'uniprot' to define a standard way to display uniprot names
 % TODO: HD/MG check if textsc/lowercase is the best way to represent this
 \newcommand\uniprot[1]{%
-	\textsc{\lowercase{#1}}
+	\textsc{\lowercase{#1}}{}%
 }
 
 % use 'fileformat' to define a standard way to display file formats 
@@ -168,7 +168,7 @@ external resources.
 %
 % Subsection: Database content overview 
 %
-\subsection{Database content overview}%
+\subsection*{Database content overview}%
 \label{subsec:explore_content_database}%
 
 
@@ -209,14 +209,16 @@ external resources.
 	This page displays the types and amounts of annotations contained in
 	the database and a few links to third-part databases.
 	Each line contains at least one link which will take you
-	to the corresponding contents page (for example, clicking on
-	\button{ELM instances} will take you to the page displaying all of the
-	annotated instances in the database).
+	to the corresponding contents page.
+% HD:I find the following sentence confusing, as the user doesn't know whether he should click on that 'instances' button or not... will be explained later anyways
+%	(for example, clicking on
+%	\button{ELM instances} will take you to the page displaying all of the
+%	annotated instances in the database).
 
 %
 % Subsection: Browsing motif classes and instances
 %
-\subsection{Browsing motif classes and annotated instances}
+\subsection*{Browsing motif classes and annotated instances}
 \label{subsec:explore_content_classes_and_instances}
 
 \begin{figure}[h!]
@@ -308,7 +310,7 @@ external resources.
 	identifier, the start and end positions of the instance, the specific
 	sequence matching the regular expression representing the motif and
 	the ``logic'' of the instance.
-	The ``\# Ev.'' indicates the number of experimental evidences
+	The ``\#~Ev.'' indicates the number of experimental evidences
 	associated with the annotation. ``Organism'' indicates in which  
 	species in which the protein is found. Lastly the ``Notes'' column
 	contains links to any ``interactions'' or ``switches'' present in the
@@ -339,9 +341,9 @@ external resources.
 \end{figure}
 
 \item Click on the sub-menu \button{ELM instances} in \button{ELM DB} to visit
-	the page where you can search and browse the instances annotated in ELM.
+	the page where you can search and browse the instances annotated in ELM
 	(Fig. \ref{fig:explore_content_instances}).
-	Note that only the first 100 instances matching the search criteria are shown.
+	Note that only the first hundred instances matching the search criteria are shown.
 	The search form can be used to filter results by a full text search, by
 	instance logic, or organisms.
 
@@ -1487,7 +1489,7 @@ classes}\label{downloading-all-elm-classes}
 \clearpage
 
 %%% Commentary 
-\section*{Guidelines for Understanding Results}\label{guidelines-for-understanding-results}
+\section{Guidelines for Understanding Results}\label{guidelines-for-understanding-results}
 
 \emph{instructions: A brief discussion of the theory and applications of
 your}
