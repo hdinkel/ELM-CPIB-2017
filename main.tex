@@ -25,6 +25,7 @@
 }
 
 % use 'uniprot' to define a standard way to display uniprot names
+% TODO: HD/MG check if textsc/lowercase is the best way to represent this
 \newcommand\uniprot[1]{%
 	\textsc{\lowercase{#1}}
 }
@@ -130,7 +131,7 @@ interpret these data and avoid common pitfalls in SLiM discovery.
 
 
 % Browsing and exploring content
-\section{(Basic): Explore the content of the ELM DB}%
+\section{Explore the content of the ELM DB}%
 \label{sec:explore_content}
 
 The core of the ELM database is a repository of manually annotated motifs and
@@ -159,8 +160,8 @@ external resources.
 %
 % Subsection: Necessary Resources
 %
-\subsection{Necessary Resources}
-\subsubsection{Software \& Hardware}
+\subsection*{Necessary Resources}
+\subsubsection*{Software \& Hardware}
 \input{resources_basic}
 
 
@@ -391,7 +392,7 @@ external resources.
 %
 % Subsection: Switches, pathways and other external resources. 
 %
-\subsection{Finding Switches and molecular interactions}
+\subsection*{Finding Switches and molecular interactions}
 \label{subsec:explore_content_external_resoureces}
 
 \begin{figure}[h!]
@@ -438,7 +439,7 @@ external resources.
 %
 % Subsection: Links to external resources
 %
-\subsection{Exploring Links External Protein Resources}
+\subsection*{Exploring Links External Protein Resources}
 \label{subsec:explore_content_links_to_external_resources}
 
 \begin{figure}[h!]
@@ -534,7 +535,7 @@ external resources.
 % Subsection: Exploreing KEGG pathways
 %
 
-\subsection{Visualizing KEGG pathways from ELM}
+\subsection*{Visualizing KEGG pathways from ELM}
 \label{subsec:explore_content_kegg}
 
 \begin{figure}[h!]
@@ -585,7 +586,7 @@ external resources.
 %
 % Subsection: Infections and Diseases
 %
-\subsection{Browsing Infections and Diseases}
+\subsection*{Browsing Infections and Diseases}
 \label{subsec:explore_content_infections_and_diseases}
 
 \begin{figure}[h!]
@@ -627,7 +628,7 @@ external resources.
 %
 % Subsection: Help page 
 %
-\subsection{Finding Help and Frequently Asked Questions}
+\subsection*{Finding Help and Frequently Asked Questions}
 \label{subsec:explore_content_help}
 
 \begin{figure}[h!]
@@ -662,13 +663,14 @@ protein and ELM class.
 %
 % Subsection: Necessary Resources
 %
-\subsection{Necessary Resources}
-\subsubsection{Software \& Hardware}
+\subsection*{Necessary Resources}
+\subsubsection*{Software \& Hardware}
+\input{resources_basic}
 
 %
 % Subsection: General search 
 %
-\subsection{Using the General Search}
+\subsection*{Using the General Search}
 \label{subsec:general_search_using}
 \input{resources_basic}
 
@@ -736,8 +738,10 @@ protein and ELM class.
 
 \end{enumerate}
 
+\clearpage
+
 %%% Predicting with P53
-\section{(Basic) Predicting ELMs in proteins}
+\section{Predicting ELMs in proteins}
 \label{sec:predicting_p53}
 
 One of the most useful (and used) features in ELM is the ability to
@@ -758,8 +762,8 @@ switches (switches.ELM).
 %
 % Subsection: Necessary Resources
 %
-\subsection{Necessary Resources}
-\subsubsection{Software \& Hardware}
+\subsection*{Necessary Resources}
+\subsubsection*{Software \& Hardware}
 \input{resources_basic}
 
 \begin{enumerate}
@@ -768,7 +772,7 @@ switches (switches.ELM).
 % Subsection:Predicting ELM insstances
 %
 
-\subsection{Predicting ELM instances: Input form}
+\subsection*{Predicting ELM instances: Input form}
 \label{subsec:predicting_p53_input}
 
 \begin{figure}[h!]
@@ -822,7 +826,7 @@ TODO: Repeat search using stringent filters (homo sapiens, nucleus,
 % Subsection: Understanding results: graphical summary
 %
 
-\subsection{Interpreting the prediction results: Graphical Summary}
+\subsection*{Interpreting the prediction results: Graphical Summary}
 \label{subsec:predicting_p53_graphical_summary}
 
 \item Click \button{submit} to start searching for motifs. You will be brought
@@ -1103,6 +1107,8 @@ TODO: EXPLAIN / SHOW ANNOTATED INSTANCES Marc: Use mouse over in this figure.
 	
 \end{enumerate}
 
+\clearpage
+
 %%% Predicting with CV_0974
 \section{(Alternate) Predicting ELMs in novel sequences}
 \label{sec:predicting_cv_0974}
@@ -1117,8 +1123,8 @@ This protein is predicted to be a tyrosine phosphates because it has a
 %
 % Subsection: Necessary Resources
 %
-\subsection{Necessary Resources}
-\subsubsection{Software \& Hardware}
+\subsection*{Necessary Resources}
+\subsubsection*{Software \& Hardware}
 \input{resources_basic}
 
 \begin{enumerate}
@@ -1126,7 +1132,7 @@ This protein is predicted to be a tyrosine phosphates because it has a
 %
 % Subsection: Submitting a query
 %
-\subsection{Submitting a query to ELM}
+\subsection*{Submitting a query to ELM}
 \label{subsec:predicting_cv_0974_submitting}
 
 \begin{figure}[h!]
@@ -1205,7 +1211,7 @@ TODO: CHECK CONSERVATION FILTER
 %
 % Subsection: Submitting a query
 %
-\subsection{Interpreting the prediction results: Additional Information}
+\subsection*{Interpreting the prediction results: Additional Information}
 \label{subsec:predicting_cv_0974_additional_information}
 
 TODO: DESCRIBE HOW TO INTERPRETE THE PREDICTIONS USING THIS BACTERIAL
@@ -1213,6 +1219,8 @@ EXAMPLE (OF WHICH NOT MUCH IS KNOWN). FOCUS ON HOW ONE SHOULD INTERPRETE
 THESE PREDICTIONS (LOOK AT DISORDER/GLOBULARITY, CONSERVATION)
 
 \end{enumerate}
+
+\clearpage
 
 %%% Predicting via REST API
 \section{(Alternate) Predicting ELMS in sequences using the API}
@@ -1241,8 +1249,8 @@ are using raw sequence. See below for details.
 %
 % Subsection: Necessary Resources
 %
-\subsection{Necessary Resources}
-\subsubsection{Software}
+\subsection*{Necessary Resources}
+\subsubsection*{Software}
 \input{resources_curl}
 
 
@@ -1251,7 +1259,7 @@ are using raw sequence. See below for details.
 %
 % Subsection: Submitting a query via the REST API
 %
-\subsection{Submitting a query to ELM via the REST API}
+\subsection*{Submitting a query to ELM via the REST API}
 \label{subsec:predicting_REST_submitting}
 
 \begin{figure}[h!]
@@ -1321,6 +1329,8 @@ TODO: Holger: what are the columns that are not described in the above section f
 
 \end{enumerate}
 
+\clearpage
+
 %%% Searching via REST API
 \section{(Alternate) Searching the ELM database using the REST API}
 \label{sec:search_REST}
@@ -1342,8 +1352,8 @@ downloaded both in using the browser as well as via the commandline.
 %
 % Subsection: Necessary Resources
 %
-\subsection{Necessary Resources}
-\subsubsection{Software}
+\subsection*{Necessary Resources}
+\subsubsection*{Software}
 \input{resources_curl}
 
 \begin{enumerate}
@@ -1351,7 +1361,7 @@ downloaded both in using the browser as well as via the commandline.
 %
 % Subsection: Necessary Resources
 %
-\subsection{Downloading all ELM
+\subsection*{Downloading all ELM
 classes}\label{downloading-all-elm-classes}
 
 \begin{figure}[h!]
@@ -1474,6 +1484,8 @@ classes}\label{downloading-all-elm-classes}
 	for each dataset.  
 
 \end{enumerate}
+
+\clearpage
 
 %%% Commentary 
 \section*{Guidelines for Unterstanding
