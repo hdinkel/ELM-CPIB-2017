@@ -341,7 +341,7 @@ external resources.
 	\label{fig:explore_content_instances}
 \end{figure}
 
-\item Click on the sub-menu \button{ELM instances} in \button{ELM DB} to visit
+\item Click on the sub-menu \button{ELM instances} under \button{ELM DB} to visit
 	the page where you can search and browse the instances annotated in ELM
 	(Fig. \ref{fig:explore_content_instances}).
 	Note that only the first hundred instances matching the search criteria are shown.
@@ -388,9 +388,8 @@ external resources.
 		\textit{in vitro}, \textit{in silico} or a combination of these.
 		The ``logic'' column indicates whether this experiment
 		``supports'' or ``contradicts'' this instance being functional.
-		Each method is also annotated with a ``reliability'', which can
-		be any of ``certain'', ``likely'', ``unlikely'' or
-		``unspecified''.}
+		Each method is also annotated with a ``reliability'' assessment, which can
+		be any of ``certain'', ``likely'', ``unlikely'' or ``unspecified''.}
 
 %
 % Subsection: Switches, pathways and other external resources. 
@@ -411,7 +410,7 @@ external resources.
 
 \item Repeat the previous search by clicking on the sub-menu \button{ELM instances}
 	under \button{ELM DB} and type ``p53\_human'' in the search box. This time,
-	find the ELM instance \motif{DOC\_WW\_Pin1\_4} motif with the
+	find the ELM instance of the motif \motif{DOC\_WW\_Pin1\_4} with the
 	start/end position ``30-35''. (You can sort the table by clicking on the
 	header lines: click on ``Start'' to sort by start position ). Click on the
 	start/end position or the subsequence which will take you to the details
@@ -429,15 +428,17 @@ external resources.
 	PF00397; found on position 7-37 in \uniprot{PIN1\_Human}. If available,
 	binding affinities are also shown here. Interaction data is made
 	available in \fileformat{MiTab} and \fileformat{XML} format
-	(cite{17925023}), and can be downloaded by clicking on the yellow
+	\citep{17925023}, and can be downloaded by clicking on the yellow
 	buttons in the right column.
 
 \item Scroll further down to the ``Switches'' section for a brief overview of
 	the switches details of this instance obtained form switches.ELM
-	cite{23550212} (Fig. \ref{fig:explore_content_doc_ww_instance}). This
-	particular instance is involved in the switch phosphorylating P53.
+	\citep{23550212} (Fig. \ref{fig:explore_content_doc_ww_instance}). This
+	particular instance is part of a phosphorylation-dependant molecular switch -- 
+	only if P53 is phosphorylated on residue Serine-33 can it bind to the protein 
+	``Peptidyl-prolyl cis-trans isomerase NIMA-interacting 1 (PIN1)``.
 	Clicking on the diagram will open an external link to the
-	switches.ELM website.
+	switches.ELM website where more detail can be found.
 
 %
 % Subsection: Links to external resources
@@ -455,10 +456,9 @@ external resources.
 	\label{fig:explore_content_methods}
 \end{figure}
 
-\item Click on the sub-menu \button{ELM methods} in \button{ELM DB} to see a
+\item Click on the sub-menu \button{ELM methods} under \button{ELM DB} to see a
 	list of all experimental methods which have been used to identify
-	motifs and instances
-	(Fig \ref{fig:explore_content_methods}).
+	motifs and instances (Fig \ref{fig:explore_content_methods}).
 	This table shows the internal method
 	identifier in the first column, a link to the corresponding entry in
 	the PSI-MI database \citep{17925023}, and the method name as annotated
@@ -474,16 +474,16 @@ external resources.
 	\centering
 	\includegraphics[width=\textwidth]{Figures/explore_content/pdbs.png} 
 	\caption{
-	The list of all known structures in PDB which are also in ELM.
+	The list of all known PDB structures for which annotated motif instances exist in the ELM database.
 	}
 	\label{fig:explore_content_pdbs}
 \end{figure}
 
-\item Click on the sub-menu \button{ELM PDB structures} in \button{ELM DB} to
+\item Click on the sub-menu \button{ELM PDB structures} under \button{ELM DB} to
 	see a list of all macromolecular structures in the ELM database
 	(Fig. \ref{fig:explore_content_pdbs}).
 	Structures annotated in ELM ideally (but not always) show
-	both interaction partners, motif and domain. This page also contains
+	both interaction partners (motif and domain). This page also contains
 	links to RCSB/PDB \citep{12037327}, the individual instance and the motif
 	class of that instance.
 
@@ -504,7 +504,7 @@ external resources.
 	to see a complete list of all the interaction domains in ELM
 	(Fig. \ref{fig:explore_content_interaction_domains}).
 	This table shows the ELM classes which have been annotated
-	with a corresponding interaction domain. This table shows the ELM
+	with a corresponding interaction domain divided by the ELM
 	class, a link to the Pfam \citep{26673716}, SMART \citep{25300481} or 
 	InterPro \citep{27899635} domain, as well as the name of the
 	interacting domain followed by a brief description.
@@ -523,7 +523,7 @@ external resources.
 	\label{fig:explore_content_switches}
 \end{figure}
 
-\item Click on the sub-menu \button{ELM switches} in \button{ELM DB} to see a complete
+\item Click on the sub-menu \button{ELM switches} under \button{ELM DB} to see a complete
 	list of all the switches in ELM
 	(Fig. \ref{fig:explore_content_switches}). This table shows
 	the motif class, contains a link to Uniprot, and the start and stop
@@ -550,11 +550,11 @@ external resources.
 	\label{fig:explore_content_pathways}
 \end{figure}
 
-\item Click on the sub-menu \button{ELM pathways} in \button{ELM DB} to see a list of all
+\item Click on the sub-menu \button{ELM pathways} under \button{ELM DB} to see a list of all
 	KEGG pathways contained in ELM
 	(Fig. \ref{fig:explore_content_pathways}).
-	Pathways are from the ``Kyoto Encyclopedia of Genes and Genomes'' (KEGG
-	\citep{26476454}) database mapped to ELM instances. 
+	Pathways are taken from and mapped onto the ``Kyoto Encyclopedia of Genes and Genomes'' (KEGG
+	\citep{26476454}). 
 	
 \begin{figure}[h!]
 	\centering
@@ -617,15 +617,18 @@ external resources.
 	\centering
 	\includegraphics[width=\textwidth]{Figures/explore_content/diseases.png}
 	\caption{
-	A list of all diseases in ELM.
+	A list of diseases which are mediated by short linear motifs. Disease description has been adapted from 
+	the ``Online Mendelian Inheritance in Man`` (OMIM) database \citep{17357067} and enriched with information about
+	the role of the motif.
 	}
 	\label{fig:explore_content_diseases}
 \end{figure}
 
 \item Click on the sub-menu \button{ELM diseases} under \button{ELM DB} to see
-	a list of all motif classes that have been annotated with a disease
+	a list of diseases which are mediated by short linear motifs accompanied by 
+	a short description of the disease as well as the role of the motif.
 	(Fig. \ref{fig:explore_content_diseases}). Disease information is taken
-	from the Online Mendelian Inheritance in Man (OMIM) database
+	from the ``Online Mendelian Inheritance in Man`` (OMIM) database
 	\citep{17357067}.
 
 %
@@ -638,9 +641,11 @@ external resources.
 	\centering
 	\includegraphics[width=\textwidth]{Figures/explore_content/help.png} 
 	\caption{
-		The ELM help and Questions \& Answers page.
+		The ELM help and Questions \& Answers page. 
+		Users are encouraged to contact via email if their questions 
+		regarding the ELM database could not be answered by this page.
 	}
-	\label{fig:explore_content_viruses}
+	\label{fig:explore_content_help}
 \end{figure}
 
 \item Click on the \button{Help} button on the right of the top navigation menu
@@ -657,11 +662,13 @@ external resources.
 \label{sec:general_search}
 
 A general search text box is available to query the entire collection of
-manually curated information in ELM DB. This search field can be found at the
-top of almost all pages on the ELM website (for example in Fig.
-\ref{fig:general_search_TP53_instances}). This search is a full-text
-search across multiple selected data sources in the database, including
-protein and ELM class. 
+manually curated information in ELM DB. This search field can be found in the header
+of the ELM database website (see for example Fig.
+\ref{fig:general_search_TP53_instances}). This search peforms a full-text
+query across multiple selected data sources in the ELM database, including
+ELM classes, instances, candidates, and switches. Using this general search is helpful in 
+getting information eg. about a particular protein and it's annotation status in the ELM database 
+(eg. full instance vs. candidate).
 
 %
 % Subsection: Necessary Resources
@@ -735,6 +742,7 @@ protein and ELM class.
 	(Fig. \ref{fig:general_search_TP53_instances})
 	in this case are different, returning 31 instances and 44
 	switches (instead of 14 and 11). The reason for this is that the
+% TODO: HD: maybe discuss this rather in the commentary section?
 	phrase ``P53'' also matches the Uniprot identifier of
 	\uniprot{CDH1\_YEAST} (P53197). This is important to keep in mind when
 	using the general search field.
