@@ -32,13 +32,13 @@
 
 % use 'fileformat' to define a standard way to display file formats 
 \newcommand\fileformat[1]{%
-	\textit{#1}
-}
+    \textit{#1}{}%
+}%
 
 % use 'code' to define a standard way to display inilne code
 \newcommand\code[1]{%
-	\texttt{#1}
-}
+    \texttt{#1}{}%
+}%
 
 \begin{document}
 
@@ -650,7 +650,7 @@ external resources.
 
 
 %%% General Search
-\section{(Alternate) General Search Box}
+\section{General Search Box}
 \label{sec:general_search}
 
 A general search text box is available to query the entire collection of
@@ -1110,7 +1110,7 @@ TODO: EXPLAIN / SHOW ANNOTATED INSTANCES Marc: Use mouse over in this figure.
 \clearpage
 
 %%% Predicting with CV_0974
-\section{(Alternate) Predicting ELMs in novel sequences}
+\section{Predicting ELMs in novel sequences}
 \label{sec:predicting_cv_0974}
 
 TODO: DESCRIBE MOST PROBABLE MOTIF INSTANCES (COMPARED TO FILTERED)
@@ -1223,7 +1223,7 @@ THESE PREDICTIONS (LOOK AT DISORDER/GLOBULARITY, CONSERVATION)
 \clearpage
 
 %%% Predicting via REST API
-\section{(Alternate) Predicting ELMS in sequences using the API}
+\section{Predicting ELMS in sequences using the API}
 \label{sec:predicting_REST}
 
 Querying ELM for motifs in a given sequence (as described in
@@ -1237,11 +1237,10 @@ provides an interface which you can use to submit your sequence in a
 programmatic way. Of course, this way, you won't receive the graphical
 output representation, but are limited to textual data representation.
 
-Currently, there exists a single URL (\code{http://elm.eu.org/start\_search/})
+Currently, there exists a single URL (\rurl{elm.eu.org/start\_search/})
 to accept such queries. You can choose to either submit a uniprot name
-or accession (eg. \code{http://elm.eu.org/start\_search/P53\_HUMAN.tsv}) or
-submit your raw sequence
-(e.g.\code{http://elm.eu.org/start\_search/MAPRGFSCLLLLTSEIDLPVKRRA'}.)
+or accession (eg. '\url{elm.eu.org/start\_search/P53\_HUMAN.tsv}') or
+submit your raw sequence (e.g. '\rurl{elm.eu.org/start\_search/MAPRGFSCLLLLTSEIDLPVKRRA}'.)
 If the URL ends in `.tsv' then the server assumes you
 are using a Uniprot id or accession; if it doesn't, then it assumes you
 are using raw sequence. See below for details.
@@ -1314,7 +1313,7 @@ TODO: Holger: what are the columns that are not described in the above section f
 \end{figure}
 
 \item Use \code{curl} to query ELM via protein sequence by using the URL
-	\code{http://elm.eu.org/start\_search/MAPRGFSCLLLLTSEIDLPVKRRA}
+	'\rurl{elm.eu.org/start\_search/MAPRGFSCLLLLTSEIDLPVKRRA}'
 	(Fig. \ref{fig:predicting_REST_query}).
 	In this case the query is an arbitrary short
 	peptide sequence, but this can (of course) contain any sequence you are
@@ -1332,7 +1331,7 @@ TODO: Holger: what are the columns that are not described in the above section f
 \clearpage
 
 %%% Searching via REST API
-\section{(Alternate) Searching the ELM database using the REST API}
+\section{Searching the ELM database using the REST API}
 \label{sec:search_REST}
 
 Many researchers are interested in large-scale analyses rather than
@@ -1378,7 +1377,7 @@ classes}\label{downloading-all-elm-classes}
 	\label{fig:search_REST_downloads}
 \end{figure}
 
-\item Direct your browser to the URL \rurl{elm.eu.org/downloads} or select
+\item Direct your browser to the URL '\rurl{elm.eu.org/downloads}' or select
 	`ELM Downloads' from the main menu
 	(Fig. \ref{fig:search_REST_downloads}).
 	This page contains links and descriptions on how to download ELM data
@@ -1393,11 +1392,11 @@ classes}\label{downloading-all-elm-classes}
 
 \item Click on the first orange `html' link in the table ``Classes'' to
 	navigate to the following URL:
-	\rurl{elm.eu.org/elms/elm\_index.html}. This page shows all of the
+	'\rurl{elm.eu.org/elms/elm\_index.html}'. This page shows all of the
 	annotated ELM classes in the database. This page is the same one as
 	shown in figure \ref{fig:explore_content_elms}.
 
-\item Navidate to the folling URL: \rurl{elm.eu.org/elms.html?q=CSK'}
+\item Navidate to the folling URL: '\rurl{elm.eu.org/elms.html?q=CSK}'
 	specifying \code{q=CSK} to limit the list of ELMs to those matching the
 	search query ``CSK''. This page is again similar to the one shown in
 	figure \ref{fig:explore_content_elms}, but with less classes.
@@ -1408,10 +1407,10 @@ classes}\label{downloading-all-elm-classes}
 		(Fig. \ref{fig:explore_content_elms}).}
 
 
-\item Open the following URL: \rurl{elm.eu.org/elms.tsv?q=CSK} to download a
+\item Open the following URL: '\rurl{elm.eu.org/elms.tsv?q=CSK}' to download a
 	list of classes that match the search query ``CSK'' (as in the previous
 	step) in the ``tab separated values'' format. By exchanging the
-	\fileformat{.html} part of the url with \fileformat{.tsv}', we ask the
+	'\fileformat{.html}' part of the url with '\fileformat{.tsv}', we ask the
 	webserver to give us the data in ``tab-separated values'' format.
 
 	\sdesc{ Depending on which browser you are using, the file may open
@@ -1462,10 +1461,7 @@ classes}\label{downloading-all-elm-classes}
 	(see \rurl{www.ensembl.org/info/website/upload/gff.html\#moreinfo}),
 	with the FASTA formatted sequence appended to the end of the output.  
 
-	\sdesc{ Many other file formats are available for downloading instances
-		annotations, including the \fileformat{fasta},
-		\fileformat{gff}, \fileformat{pir}, OR PSI-MI format (either
-		\fileformat{xml} or \fileformat{MiTab})}
+	\sdesc{Many other file formats are available for downloading instances annotations, including the \fileformat{FASTA}, \fileformat{GFF}, \fileformat{PIR}, OR \fileformat{PSI-MI} format (either \fileformat{xml} or \fileformat{MiTab})}
 
 
 \item To download a list of all instances matchin th search query ``CLV'' in
@@ -1474,11 +1470,11 @@ classes}\label{downloading-all-elm-classes}
 	\code{curl `http://elm.eu.org/instances.tsv?q=CLV\&taxon=aedes+aegypti'}.
 	In general any species name can be used, always replacing the ``space''
 	with a ``+''. This should return a single instance, the only one
-	matching CLV in \textit{A. aegypti}.
+	matching \motif{CLV} in \textit{A. aegypti}.
 
 \item More data (interactions, domains, methods, etc.) can be downloaded from
 	ELM in analogous fashion as shown in the preceeding steps. Take a look
-	at the ELM Downloads page (http://elm.eu.org/downloads, figure
+	at the ELM Downloads page (\rurl{elm.eu.org/downloads}, figure
 	\ref{fig:search_REST_downloads}) for an overview of which datasets can
 	be downloaded, and what the different possible filters and formats are
 	for each dataset.  
@@ -1535,7 +1531,7 @@ be targeted by specific enzymes for the addition or removal of a small chemical
 group (e.g. phosphorylation), a sugar molecule (e.g. glycosylation), a protein 
 (e.g. ubiquitylation), or another moiety (e.g. lipidation) (MOD type). Other PTM 
 SLiMs mediate proteolytic cleavage by acting as target site for proteolytic 
-enzymes (CLV type), or are recognised for structural modification by isomerases 
+enzymes (\motif{CLV} type), or are recognised for structural modification by isomerases 
 that catalyse cis-trans isomerisation of the peptide backbone (DOC type) 
 \cite{24926813, 24773235}.
 
