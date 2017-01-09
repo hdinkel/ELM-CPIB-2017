@@ -3,6 +3,8 @@ main.log
 main.out
 main.bbl
 main.blg
+main.fdb_latexmk
+main.fls
 instructions2authors/- CPBI-Protocol-Template.pdf
 instructions2authors/template/RB-CurrentProtocol_clean_orig.pdf
 instructions2authors/template/RB-CurrentProtocol_clean_orig.tex
@@ -16,3 +18,12 @@ merged/complete.md.bak
 merged/complete.pdf
 merged/complete.tex
 merged/complete.tex.bak
+OldMarkdown/commentary.tex
+OldMarkdown/explore_content.tex
+OldMarkdown/frontmatter.tex
+OldMarkdown/general_search.tex
+OldMarkdown/introducion.tex
+OldMarkdown/predicting_CV_0974.tex
+OldMarkdown/predicting_REST.tex
+OldMarkdown/predicting_p53.tex
+OldMarkdown/searching_REST.tex
