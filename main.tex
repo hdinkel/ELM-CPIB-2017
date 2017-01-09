@@ -43,7 +43,6 @@
 
 
 % Frontmatter 
-% \input{frontmatter}
 
 \thispagestyle{plain}
 \begin{center}
@@ -97,8 +96,7 @@ sequence.
 
 
 % Introdoction 
-% \input{introducion}
-\section*{Introduction}
+\section*{Introduction}%
 \label{sec:introduction}
 
 The activity and function of a protein is tightly regulated by its
@@ -132,8 +130,7 @@ interpret these data and avoid common pitfalls in SLiM discovery.
 
 
 % Browsing and exploring content
-% \input{explore_content}
-\section{(Basic): Explore the content of the ELM DB}
+\section{(Basic): Explore the content of the ELM DB}%
 \label{sec:explore_content}
 
 The core of the ELM database is a repository of manually annotated motifs and
@@ -170,19 +167,19 @@ external resources.
 %
 % Subsection: Database content overview 
 %
-\subsection{Database content overview}
-\label{subsec:explore_content_database}
+\subsection{Database content overview}%
+\label{subsec:explore_content_database}%
 
 
 % Counter for steps
-\begin{enumerate}
+\begin{enumerate}%
 
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=\textwidth]{Figures/explore_content/home.png} 
-	\caption{
-		The homepage of the ELM database (\rurl{elm.eu.org}).
-	}
+\begin{figure}[h!]%
+	\centering%
+	\includegraphics[width=\textwidth]{Figures/explore_content/home.png} %
+	\caption{%
+		The homepage of the ELM database (\rurl{elm.eu.org}).%
+	}%
 	\label{fig:explore_content_home}
 \end{figure}
 
@@ -652,7 +649,6 @@ external resources.
 
 
 %%% General Search
-% \input{general_search}
 \section{(Alternate) General Search Box}
 \label{sec:general_search}
 
@@ -668,7 +664,6 @@ protein and ELM class.
 %
 \subsection{Necessary Resources}
 \subsubsection{Software \& Hardware}
-%\input{resources_basic}
 
 %
 % Subsection: General search 
@@ -742,7 +737,6 @@ protein and ELM class.
 \end{enumerate}
 
 %%% Predicting with P53
-% \input{predicting_p53}
 \section{(Basic) Predicting ELMs in proteins}
 \label{sec:predicting_p53}
 
@@ -1110,7 +1104,6 @@ TODO: EXPLAIN / SHOW ANNOTATED INSTANCES Marc: Use mouse over in this figure.
 \end{enumerate}
 
 %%% Predicting with CV_0974
-% \input{predicting_CV_0974}
 \section{(Alternate) Predicting ELMs in novel sequences}
 \label{sec:predicting_cv_0974}
 
@@ -1221,7 +1214,6 @@ THESE PREDICTIONS (LOOK AT DISORDER/GLOBULARITY, CONSERVATION)
 \end{enumerate}
 
 %%% Predicting via REST API
-% \input{predicting_REST}
 \section{(Alternate) Predicting ELMS in sequences using the API}
 \label{sec:predicting_REST}
 
@@ -1329,7 +1321,6 @@ TODO: Holger: what are the columns that are not described in the above section f
 \end{enumerate}
 
 %%% Searching via REST API
-% \input{searching_REST}
 \section{(Alternate) Searching the ELM database using the REST API}
 \label{sec:search_REST}
 
