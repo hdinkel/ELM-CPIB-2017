@@ -1,3 +1,18 @@
 main.aux
 main.log
 main.out
+main.bbl
+main.blg
+instructions2authors/- CPBI-Protocol-Template.pdf
+instructions2authors/template/RB-CurrentProtocol_clean_orig.pdf
+instructions2authors/template/RB-CurrentProtocol_clean_orig.tex
+instructions2authors/template/RB-CurrentProtocol_content_orig.tex
+instructions2authors/template/fielding_REST.bib
+instructions2authors/template/refs.bib
+merged/RB-CurrentProtocol_clean.bbl
+merged/RB-CurrentProtocol_clean.blg
+merged/RB-CurrentProtocol_clean.pdf
+merged/complete.md.bak
+merged/complete.pdf
+merged/complete.tex
+merged/complete.tex.bak
