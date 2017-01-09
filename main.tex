@@ -16,28 +16,23 @@
 
 % use 'button' to define a standard way to display clickable buttons 
 \newcommand\button[1]{%
-	\textbf{#1}{}%
+	\textbf{#1}%
 }
 
 % use 'motif' to define a standard way to display motifs 
 \newcommand\motif[1]{%
-	\textsc{\lowercase{#1}}{}%
+    \textsc{\lowercase{#1}}%
 }
 
 % use 'uniprot' to define a standard way to display uniprot names
 % TODO: HD/MG check if textsc/lowercase is the best way to represent this
 \newcommand\uniprot[1]{%
-	\textsc{\lowercase{#1}}{}%
+	\textsc{\lowercase{#1}}%
 }
 
 % use 'fileformat' to define a standard way to display file formats 
 \newcommand\fileformat[1]{%
     \textit{#1}{}%
-}%
-
-% use 'code' to define a standard way to display inilne code
-\newcommand\code[1]{%
-    \texttt{#1}{}%
 }%
 
 \begin{document}
@@ -145,9 +140,9 @@ Each motif class is a short generate sequence of amino acids with a given
 function. Since the sequences are degenerate, each motif class is represented
 using a ``regular expression'': a symbolic representation expressing a complex
 pattern of letters (or amino acids). For example, the regular expression
-``\code{[FY].L.P}'' is to be read as: The first amino acid is a Phenylalaline (\code{F}) or a
-Tyrosine (\code{Y}) followed by any one amino acid (\code{.}), a Leucine (\code{L}), one more
-arbitrary amino acid (\code{.}) and finally a Proline (\code{P}).
+``\motif{[FY].L.P}'' is to be read as: The first amino acid is a Phenylalaline (\motif{F}) or a
+Tyrosine (\motif{Y}) followed by any one amino acid (\motif{.}), a Leucine (\motif{L}), one more
+arbitrary amino acid (\motif{.}) and finally a Proline (\motif{P}).
 
 Each motif class is annotated by an expert molecular biologist based on
 literature cited experiments.
@@ -1276,16 +1271,16 @@ are using raw sequence. See below for details.
 	\centering
 	\includegraphics[width=\textwidth]{Figures/predicting_REST/curl_P53.png}
 	\caption{
-	The commandline output when \code{curl} is used to
+	The commandline output when \cl{curl} is used to
 	download all motifs predicted in Human P53. Note that we used a more
-	advanced command that \code{curl} alone to make the columns align
+	advanced command that \cl{curl} alone to make the columns align
 	nicely (see text for an explanation).
 	}
 	\label{fig:predicting_REST_curl_p53}
 \end{figure}
 
 
-\item Use \code{curl} to query ELM for all motifs predicted to occur in Human
+\item Use \cl{curl} to query ELM for all motifs predicted to occur in Human
 	P53 by typing the following into a terminal: `curl
 	`http://elm.eu.org/start\_search/P53\_HUMAN.tsv'. Each row represents a
 	motif detection, and the first column ``elm\_identifier'' indicates
@@ -1302,10 +1297,10 @@ are using raw sequence. See below for details.
 	\sdesc{In figure \ref{fig:predicting_REST_curl_p53}
 		we use a slightly more
 		advanced command to get the output to look nice in the
-		terminal. We specified the \code{-s} option to silence all
-		\code{curl} output other than the downloaded file, and piped
+		terminal. We specified the \cl{-s} option to silence all
+		\cl{curl} output other than the downloaded file, and piped
 		the output directly to the
-		\code{column} command (this command exists on most Linux and
+		\cl{column} command (this command exists on most Linux and
 		OSX machines).}
 
 TODO: Holger: what are the columns that are not described in the above section for?
@@ -1316,14 +1311,14 @@ TODO: Holger: what are the columns that are not described in the above section f
 	\caption{
 	It is possible to send amino acid sequences to the ELM Prediction
 	pipeline. In this case we have used
-	the curl option \code{-o} to download directly to the file
-	\code{query.tsv}, and use a combination of the \code{head} and
-	\code{column} commands to display the first 10 rows to the terminal.
+	the curl option \cl{-o} to download directly to the file
+	\cl{query.tsv}, and use a combination of the \cl{head} and
+	\cl{column} commands to display the first 10 rows to the terminal.
 	}
 	\label{fig:predicting_REST_query}
 \end{figure}
 
-\item Use \code{curl} to query ELM via protein sequence by using the URL
+\item Use \cl{curl} to query ELM via protein sequence by using the URL
 	'\rurl{elm.eu.org/start\_search/MAPRGFSCLLLLTSEIDLPVKRRA}'
 	(Fig. \ref{fig:predicting_REST_query}).
 	In this case the query is an arbitrary short
@@ -1408,7 +1403,7 @@ classes}\label{downloading-all-elm-classes}
 	shown in figure \ref{fig:explore_content_elms}.
 
 \item Navigate to the following URL: '\rurl{elm.eu.org/elms.html?q=CSK}'
-	specifying \code{q=CSK} to limit the list of ELMs to those matching the
+	specifying \cl{q=CSK} to limit the list of ELMs to those matching the
 	search query ``CSK''. This page is again similar to the one shown in
 	figure \ref{fig:explore_content_elms}, but with less classes.
 
@@ -1436,7 +1431,7 @@ classes}\label{downloading-all-elm-classes}
 	\includegraphics[width=\textwidth]{Figures/search_REST/elm_curl_classes_CSK.png}
 	\caption{
 	A screenshot of a terminal window using
-	\code{curl} to download all ELM classes matching the term `CSK'.
+	\cl{curl} to download all ELM classes matching the term `CSK'.
 	}
 	\label{fig:search_REST_curl_csk}
 \end{figure}
@@ -1444,13 +1439,13 @@ classes}\label{downloading-all-elm-classes}
 \item Type the following command into a command line terminal to
 	download the same data from the previous step directly into the
 	terminal:
-	\code{curl 'http://elm.eu.org/elms/elms\_index.tsv?q=CSK'}.  The output
+	\cl{curl 'http://elm.eu.org/elms/elms\_index.tsv?q=CSK'}.  The output
 	should look similar to figure \ref{fig:search_REST_curl_csk}.
 	The column names are the same ones as shown in the
 	table in figure \ref{fig:explore_content_elms}.
 
-	\sdesc{ Use the curl option \code{-o} to save the results directly to
-		a file.  For example: \code{curl -o classes.tsv
+	\sdesc{ Use the curl option \cl{-o} to save the results directly to
+		a file.  For example: \cl{curl -o classes.tsv
 		'http://elm.eu.org/elms/elms\_index.tsv?q=CSK'} will save the
 		data to a file called \emph{classes.tsv}.}
 
@@ -1458,14 +1453,14 @@ classes}\label{downloading-all-elm-classes}
 	\centering
 	\includegraphics[width=\textwidth]{Figures/search_REST/elm_curl_instances_p53_human.png}
 	\caption{
-	Screenshot of a terminal window using \code{curl} to download all ELM
+	Screenshot of a terminal window using \cl{curl} to download all ELM
 	instances annotated for sequence p53\_human.
 	}
 	\label{fig:search_REST_curl_p53}
 \end{figure}
 
 \item To download a list of all motif instances detected in Human P53, type the
-	following command into a terminal: \code{curl
+	following command into a terminal: \cl{curl
 	'http://elm.eu.org/instances.gff?q=p53\_human'}. The output should look
 	similar to that shown in figure \ref{fig:predicting_REST_curl_p53}. The
 	output is in the ``General Feature Format''
@@ -1481,7 +1476,7 @@ classes}\label{downloading-all-elm-classes}
 \item To download a list of all instances matchin th search query ``CLV'' in
 	the yellow fever mosquito (\textit{Aedes aegypti}), enter the following
 	command into a terminal:
-	\code{curl `http://elm.eu.org/instances.tsv?q=CLV\&taxon=aedes+aegypti'}.
+	\cl{curl `http://elm.eu.org/instances.tsv?q=CLV\&taxon=aedes+aegypti'}.
 	In general any species name can be used, always replacing the ``space''
 	with a ``+''. This should return a single instance, the only one
 	matching \motif{CLV} in \textit{A. aegypti}.
