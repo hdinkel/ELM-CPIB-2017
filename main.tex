@@ -107,7 +107,7 @@ properties \cite{10550212}. One prominent type of binding module
 consists of short linear motifs (SLiMs) \cite{18508681}. These compact
 binding sites are generally located in intrinsically disordered regions
 (IDR) of the proteome and commonly bind to
-surfaceof a globular domain in a protein \cite{21909575}. SLiMs mediate
+surface of a globular domain in a protein \cite{21909575}. SLiMs mediate
 different types of interactions that regulate protein functionality, and hence
 are important regulators of the dynamic processes involved in cell
 signalling (\cite{22480932}) (\cite{24926813}). The number of
@@ -141,13 +141,13 @@ The motif classes and motif instances have been uploaded by a large group of
 annotators from around the globe. The complete catalogue of manually curated
 data can be searched, browsed and explored on the ELM website
 
-Each motif class is a short genenerate sequence of amino acids with a given
-function. Since the sequences are genenerate, each motif class is represented
+Each motif class is a short generate sequence of amino acids with a given
+function. Since the sequences are degenerate, each motif class is represented
 using a ``regular expression'': a symbolic representation expressing a complex
 pattern of letters (or amino acids). For example, the regular expression
-``[FY].L.P'' is to be read as: The first amino acid is a phenylalaline (F) or a
-Tyrosine (Y) followed by any one amino acid (.), a Leucine (L), one more
-abritrary amino acid (.) and finally a Proline (P).
+``\code{[FY].L.P}'' is to be read as: The first amino acid is a Phenylalaline (\code{F}) or a
+Tyrosine (\code{Y}) followed by any one amino acid (\code{.}), a Leucine (\code{L}), one more
+arbitrary amino acid (\code{.}) and finally a Proline (\code{P}).
 
 Each motif class is annotated by an expert molecular biologist based on
 literature cited experiments.
@@ -348,8 +348,8 @@ external resources.
 	\sdesc{This table can be filtered by motif class using the green toggle
 		filters on the left hand side. Lastly, the yellow buttons at
 		the top of the page can be used to download the instances in
-		the following formats: \fileformat{gff}, \fileformat{pir},
-		\fileformat{fasta} or \fileformat{tsv.}}
+		the following formats: \fileformat{GFF}, \fileformat{PIR},
+		\fileformat{FASTA} or \fileformat{TSV}.}
 
 \begin{figure}[h!]
 	\centering
@@ -382,7 +382,7 @@ external resources.
 
 	\sdesc{
 		The ``biosource'' indicates whether method is \textit{in vivo},
-		\textit{in vitro}, \textit{in sicilo} or a combination of these.
+		\textit{in vitro}, \textit{in silico} or a combination of these.
 		The ``logic'' column indicates whether this experiment
 		``supports'' or ``contradicts'' this instance being functional.
 		Each method is also annotated with a ``reliability'', which can
@@ -425,7 +425,7 @@ external resources.
 	interacts with \uniprot{PIN1\_Human} via the ``WW'' domain (Pfam identifier
 	PF00397; found on position 7-37 in \uniprot{PIN1\_Human}. If available,
 	binding affinities are also shown here. Interaction data is made
-	available in \fileformat{mitab} and \fileformat{xml} format
+	available in \fileformat{MiTab} and \fileformat{XML} format
 	(\cite{17925023}), and can be downloaded by clicking on the yellow
 	buttons in the right column.
 
@@ -464,7 +464,7 @@ external resources.
 	will list all instances annotated using that method.  
 
 	\sdesc{The filter bar on the top page can be used to filter the list of
-		methods. The \fileformat{tsv} link creates a downloadable file
+		methods. The \fileformat{TSV} link creates a downloadable file
 		in ``tab separated values'' format.}
 
 \begin{figure}[h!]
@@ -476,7 +476,7 @@ external resources.
 	\label{fig:explore_content_pdbs}
 \end{figure}
 
-\item Click on the sub-menu \button{ELM pdb structures} in \button{ELM DB} to
+\item Click on the sub-menu \button{ELM PDB structures} in \button{ELM DB} to
 	see a list of all macromolecular structures in the ELM database
 	(Fig. \ref{fig:explore_content_pdbs}).
 	Structures annotated in ELM ideally (but not always) show
@@ -485,7 +485,7 @@ external resources.
 	class of that instance.
 
 	\sdesc{The filter bar on the top page can be used to filter the list of
-		structures shown. The yellow \fileformat{tsv} link creates a
+		structures shown. The yellow \fileformat{TSV} link creates a
 		downloadable file in ``tab separated values'' format.}
 
 \begin{figure}[h!]
@@ -532,7 +532,7 @@ external resources.
 		the list of interactions shown.} 
 
 %
-% Subsection: Exploreing KEGG pathways
+% Subsection: Exploring KEGG pathways
 %
 
 \subsection*{Visualizing KEGG pathways from ELM}
@@ -606,8 +606,8 @@ external resources.
 
 	\sdesc{The green buttons on the left can be used to filter this table
 		by motif class. Click on the yellow links on the top right of
-		the page to download the (complete) table in \fileformat{gff},
-		\fileformat{pir}, \fileformat{fasta} or \fileformat{tsv}
+		the page to download the (complete) table in \fileformat{GFF},
+		\fileformat{PIR}, \fileformat{FASTA} or \fileformat{TSV}
 		format.}
 
 \begin{figure}[h!]
@@ -698,7 +698,7 @@ protein and ELM class.
 
 
 \item Use the general search field (on the top of the page) to do a general
-	seach for P53 using its Uniprot identifier by typing ``P04637'' in the
+	search for P53 using its Uniprot identifier by typing ``P04637'' in the
 	search field and hitting ``Enter''. This will search
 	across instances, motif classes and switches to find any matches to the
 	search query ``P04637''. 
@@ -746,7 +746,7 @@ protein and ELM class.
 
 One of the most useful (and used) features in ELM is the ability to
 detect motifs in proteins and sequences. Given a protein's amino acid
-sequence, the ``EML Predictions'' pipeline searches for occurrences of
+sequence, the ``ELM Predictions'' pipeline searches for occurrences of
 each motif class using regular expressions, applies a set of filters to
 remove false positives and creates a diagram to visualize resulting
 set of putative motifs.
@@ -769,7 +769,7 @@ switches (switches.ELM).
 \begin{enumerate}
 
 %
-% Subsection:Predicting ELM insstances
+% Subsection:Predicting ELM instances
 %
 
 \subsection*{Predicting ELM instances: Input form}
@@ -786,7 +786,7 @@ switches (switches.ELM).
 
 \item Open a browser, and navigate to the ELM homepage: http://elm.eu.org.
 	Enter the Uniprot ID \uniprot{P53\_HUMAN} in the search field labelled
-	``Enter a uniprot identifier or accession number''. The page should
+	``Enter a Uniprot identifier or accession number''. The page should
 	autocomplete/suggest the protein ``\uniprot{P53\_HUMAN} / P04637 (Homo
 	sapiens)'' (Fig. \ref{fig:predicting_p53_elm_search}).
 	Click on this entry to confirm that we want to search for
@@ -958,7 +958,7 @@ TODO: EXPLAIN / SHOW ANNOTATED INSTANCES Marc: Use mouse over in this figure.
 	in Fig. \ref{fig:predicting_p53_results_summary} to appear.
 	This motif resides inside of the P53 Pfam domain, and thus has been
 	subjected to ``structural filtering''. However, the secondary structure
-	prediction suggests this motif occurs within the looped regioun of this
+	prediction suggests this motif occurs within the looped region of this
 	domain, so may be accessible.
 
 	\sdesc{The information screen pop-up 
@@ -1011,8 +1011,8 @@ TODO: EXPLAIN / SHOW ANNOTATED INSTANCES Marc: Use mouse over in this figure.
 	The first two lines contain information on whether
 	and which filters were applied in step 1 of this protocol.
 	In this case 4 motifs (elms) representing 26 instances were filtered
-	out as they did not occur in \textit{Homo sapies}. An additional 5
-	motifs (representing 11 instances) were filtered out becuase they are
+	out as they did not occur in \textit{Homo sapiens}. An additional 5
+	motifs (representing 11 instances) were filtered out because they are
 	not annotated to the cell compartments automatically filled in on the
 	search page (Step 1).
 	The next three lines (``SMART'' \& ``Structural score'') show how many
@@ -1115,8 +1115,8 @@ TODO: EXPLAIN / SHOW ANNOTATED INSTANCES Marc: Use mouse over in this figure.
 
 TODO: DESCRIBE MOST PROBABLE MOTIF INSTANCES (COMPARED TO FILTERED)
 
-We will use protein \uniprot{CV\_0974} (uniprot ID: Q7NZE8) as an example, a
-``probable tyrosine phosphatase'' from \emph{Chromobacterium violaceum}.
+We will use protein \uniprot{CV\_0974} (Uniprot ID: Q7NZE8) as an example, a
+``probable tyrosine phosphatase'' from \textit{Chromobacterium violaceum}.
 This protein is predicted to be a tyrosine phosphates because it has a
 ``tyrosine phosphatase'' (PTPc) domain.
 
@@ -1141,7 +1141,7 @@ This protein is predicted to be a tyrosine phosphates because it has a
 	\caption{
 	\textbf{Figure BACT-BP-1:}
 	The input query page for finding motifs in ELM. The sequence
-	for \emph{C. vilaceum protein} CV\_0974 was used as an example for this
+	for \textit{C. vilaceum} protein CV\_0974 was used as an example for this
 	protocol.
 	}
 	\label{fig:predicting_cv_0974_search}
@@ -1150,10 +1150,10 @@ This protein is predicted to be a tyrosine phosphates because it has a
 \item Click on the ``ELM Predictions'' button in the menu to access the search
 	query page (Fig. \ref{fig:predicting_cv_0974_search}).
 	Here you can provide either a protein
-	accession (from uniprot) or an amino acid sequence (simply the
+	accession (from Uniprot) or an amino acid sequence (simply the
 	sequence, or a FASTA formatted entry) in which you want to detect
 	SLiMs.  Retrieve the FASTA formatted sequence from Uniprot
-	(http://www.uniprot.org/uniprot/Q7NZE8.fasta), and enter it into the
+	(\url{http://www.uniprot.org/uniprot/Q7NZE8.fasta}), and enter it into the
 	``sequence input text box''.
 
 TODO: MENTION NOT TO USE ``CHROMOBACTERIUM VIOLACEUM'' IN THE ORGANISM
@@ -1167,7 +1167,7 @@ BOX AND WHY
 	The graphical results summary of the ELM Prediction pipeline for
 	Probable Tyrosine phosphate (CV\_0974). Note that not all motif
 	detections are shown (the image is truncated at the bottom). The top
-	five rows show a handfull of structural features. The motif occurence
+	five rows show a handful of structural features. The motif occurrence
 	are shown as blue boxes, the intensity of which indicates the
 	conservation score. See steps XXX to YYY for more information.
 	}
@@ -1197,9 +1197,9 @@ BOX AND WHY
 	95\% likely to be disordered.  
 % (REF???)
 
-\item Place the cursor over the blue box for motif occurence
+\item Place the cursor over the blue box for motif occurrence
 	``DOC\_USP7\_MATH\_1'' at position 129-133. This motif is in a
-	disorered region, and has not been filtered out by the structural
+	disordered region, and has not been filtered out by the structural
 	filter. However, its conservation score is extremely low: 0.000,
 	indicating it is not conserved in homologous proteins. Place the cursor
 	over motif ``DOC\_MAPK\_DCC\_7'' at positions ``334-343''. Despite the
@@ -1231,14 +1231,14 @@ Querying ELM for motifs in a given sequence (as described in
 overview of putative and possibly
 annotated motifs in your query protein with a graphical representation
 using colors to highlight different regions of the protein sequence (eg.
-disordered vs.~globular). It is however difficult to analyse a large set
+disordered vs. globular). It is however difficult to analyse a large set
 of protein sequences in this manner. Therefore, the ELM server
 provides an interface which you can use to submit your sequence in a
 programmatic way. Of course, this way, you won't receive the graphical
 output representation, but are limited to textual data representation.
 
 Currently, there exists a single URL (\rurl{elm.eu.org/start\_search/})
-to accept such queries. You can choose to either submit a uniprot name
+to accept such queries. You can choose to either submit a Uniprot name
 or accession (eg. '\url{elm.eu.org/start\_search/P53\_HUMAN.tsv}') or
 submit your raw sequence (e.g. '\rurl{elm.eu.org/start\_search/MAPRGFSCLLLLTSEIDLPVKRRA}'.)
 If the URL ends in `.tsv' then the server assumes you
@@ -1282,9 +1282,9 @@ are using raw sequence. See below for details.
 	that first and last amino acid positions that matched form part of the
 	motif.  Column ``is annotated'' is True if this motif has been
 	annotated in the database as an (experimentally validated) motif
-	instance. The coulmn ``is phiblastmatch'' is True if ?????. The column
+	instance. The column ``is phiblastmatch'' is True if ?????. The column
 	``is filtered'' shows whether or not this motif was rejected by the
-	ELM Prediction structure filter. Coulumn ``phibast'' indicates whether
+	ELM Prediction structure filter. Column ``phibast'' indicates whether
 	?????.  The ``topodomfilter'' and ``taxonfilter'' shown whether ?????.
 	The last column ``structure'' ?????
 
@@ -1396,7 +1396,7 @@ classes}\label{downloading-all-elm-classes}
 	annotated ELM classes in the database. This page is the same one as
 	shown in figure \ref{fig:explore_content_elms}.
 
-\item Navidate to the folling URL: '\rurl{elm.eu.org/elms.html?q=CSK}'
+\item Navigate to the following URL: '\rurl{elm.eu.org/elms.html?q=CSK}'
 	specifying \code{q=CSK} to limit the list of ELMs to those matching the
 	search query ``CSK''. This page is again similar to the one shown in
 	figure \ref{fig:explore_content_elms}, but with less classes.
@@ -1410,7 +1410,7 @@ classes}\label{downloading-all-elm-classes}
 \item Open the following URL: '\rurl{elm.eu.org/elms.tsv?q=CSK}' to download a
 	list of classes that match the search query ``CSK'' (as in the previous
 	step) in the ``tab separated values'' format. By exchanging the
-	'\fileformat{.html}' part of the url with '\fileformat{.tsv}', we ask the
+	'\fileformat{.html}' part of the URL with '\fileformat{.tsv}', we ask the
 	webserver to give us the data in ``tab-separated values'' format.
 
 	\sdesc{ Depending on which browser you are using, the file may open
@@ -1430,7 +1430,7 @@ classes}\label{downloading-all-elm-classes}
 	\label{fig:search_REST_curl_csk}
 \end{figure}
 
-\item Type the follwing command into a command line terminal to
+\item Type the following command into a command line terminal to
 	download the same data from the previous step directly into the
 	terminal:
 	\code{curl 'http://elm.eu.org/elms/elms\_index.tsv?q=CSK'}.  The output
@@ -1454,18 +1454,21 @@ classes}\label{downloading-all-elm-classes}
 \end{figure}
 
 \item To download a list of all motif instances detected in Human P53, type the
-	followin command into a terminal: \code{curl
+	following command into a terminal: \code{curl
 	'http://elm.eu.org/instances.gff?q=p53\_human'}. The output should look
 	similar to that shown in figure \ref{fig:predicting_REST_curl_p53}. The
 	output is in the ``General Feature Format''
 	(see \rurl{www.ensembl.org/info/website/upload/gff.html\#moreinfo}),
 	with the FASTA formatted sequence appended to the end of the output.  
 
-	\sdesc{Many other file formats are available for downloading instances annotations, including the \fileformat{FASTA}, \fileformat{GFF}, \fileformat{PIR}, OR \fileformat{PSI-MI} format (either \fileformat{xml} or \fileformat{MiTab})}
+	\sdesc{Many other file formats are available for downloading instances
+	annotations, including the \fileformat{FASTA}, \fileformat{GFF},
+	\fileformat{PIR}, OR \fileformat{PSI-MI} format (either
+	\fileformat{XML} or \fileformat{MiTab})}
 
 
 \item To download a list of all instances matchin th search query ``CLV'' in
-	the yellow fever mosquito (\textit{Aedes agypti}), enter the following
+	the yellow fever mosquito (\textit{Aedes aegypti}), enter the following
 	command into a terminal:
 	\code{curl `http://elm.eu.org/instances.tsv?q=CLV\&taxon=aedes+aegypti'}.
 	In general any species name can be used, always replacing the ``space''
@@ -1484,8 +1487,7 @@ classes}\label{downloading-all-elm-classes}
 \clearpage
 
 %%% Commentary 
-\section*{Guidelines for Unterstanding
-Results}\label{guidelines-for-understanding-results}
+\section*{Guidelines for Understanding Results}\label{guidelines-for-understanding-results}
 
 \emph{instructions: A brief discussion of the theory and applications of
 your}
