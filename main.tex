@@ -170,6 +170,8 @@ external resources.
 % Counter for steps
 \begin{enumerate}%
 
+%TODO: Improve/expand all captions
+
 \begin{figure}[h!]%
 	\centering%
 	\includegraphics[width=\textwidth]{Figures/explore_content/home.png} %
@@ -397,7 +399,7 @@ external resources.
 	\includegraphics[width=\textwidth]{Figures/explore_content/doc_ww_pin_1_4_instance.png}
 	\caption{
 	The instance details page for the \motif{DOC\_WW\_Pin1\_4}
-	instance found in Human P53 (\uniprot{P53\_HUMAN}) with start/end position
+	instance found in human P53 (\uniprot{P53\_HUMAN}) with start/end position
 	``30-35''.
 	}
 	\label{fig:explore_content_doc_ww_instance}
@@ -699,7 +701,7 @@ getting information eg. about a particular protein and it's annotation status in
 	\includegraphics[width=\textwidth]{Figures/general_search/P04637_instances.png}
 	\caption{
 		The instances retrieved when performing a general search for
-		\uniprot{P53\_Human} using its Uniprot identifier ``P04637''.
+		\uniprot{P53\_HUMAN} using its Uniprot identifier ``P04637''.
 	}
 	\label{fig:general_search_P04637_instances}
 \end{figure}
@@ -709,7 +711,7 @@ getting information eg. about a particular protein and it's annotation status in
 	\includegraphics[width=\textwidth]{Figures/general_search/P04637_switches.png}
 	\caption{
 		The switches found when performing a general search for
-		\uniprot{P53\_Human} using its Uniprot identifier ``P04637'',
+		\uniprot{P53\_HUMAN} using its Uniprot identifier ``P04637'',
 	}
 	\label{fig:general_search_P04637_switches}
 \end{figure}
@@ -737,7 +739,7 @@ getting information eg. about a particular protein and it's annotation status in
 	\includegraphics[width=\textwidth]{Figures/general_search/TP53_instances.png}
 	\caption{
 		The results retrieved when performing a general search for
-		\uniprot{P53\_Human} using the query ``p53''.
+		\uniprot{P53\_HUMAN} using the query ``p53''.
 	}
 	\label{fig:general_search_TP53_instances}
 \end{figure}
@@ -814,7 +816,7 @@ switches (switches.ELM).
 	\sdesc{The autocompletion mechanism queries Uniprot for the given protein
 		identifier; if it succeeds, then additional information from
 		Uniprot will be used to pre-populate the input boxes. In this
-		example, \uniprot{P53\_HUMAN} is recognized as a Human protein,
+		example, \uniprot{P53\_HUMAN} is recognized as a human protein,
 		and so ``Homo sapiens'' is automatically filled in the
 		``Taxonomic Context'' field. Also, P53 has been annotated (by
 		Uniprot) to be localized to nucleus, cytosol, endoplasmic
@@ -1288,23 +1290,23 @@ classes}\label{downloading-all-elm-classes}
 \end{figure}
 
 \item Direct your browser to the URL '\rurl{elm.eu.org/downloads}' or select
-	`ELM Downloads' from the main menu
+    \button{ELM Downloads} from the main menu
 	(Fig. \ref{fig:search_REST_downloads}).
 	This page contains links and descriptions on how to download ELM data
 	in text format. The datasets are split into several smaller collections
 	(for example ``Classes'', ``Instances'', etc). Each table contains
-	links (in orange) to download the data in various formats.
+	links (in orange) to download the data in appropriate formats.
 
 	\sdesc{Each table also shows the `last modified date' indicating when
-		the data was last updated. This is useful if you want to know
+		the data was last updated. This information is useful if you want to know
 		when to update your local data with the most up to date ELM
-		data. }
+		data as it allows you to determine whether you need to update or not. }
 
-\item Click on the first orange `html' link in the table ``Classes'' to
+\item Click on the first orange \button{html} link in the table ``Classes'' to
 	navigate to the following URL:
 	'\rurl{elm.eu.org/elms/elm\_index.html}'. This page shows all of the
 	annotated ELM classes in the database. This page is the same one as
-	shown in figure \ref{fig:explore_content_elms}.
+	shown in figure \ref{fig:explore_content_elms}. 
 
 \item Navigate to the following URL: '\rurl{elm.eu.org/elms.html?q=CSK}'
 	specifying \cl{q=CSK} to limit the list of ELMs to those matching the
@@ -1313,15 +1315,18 @@ classes}\label{downloading-all-elm-classes}
 
 	\sdesc{ This search result is identical to the result you would obtain
 		by doing a ``manual'' search on the ELM Classes page
+		(eg. typing 'CSK' in the search box and clicking submit) as
 		described in step \ref{sec:predicting_p53_submit} of \ref{sec:explore_content}
 		(see fig. \ref{fig:explore_content_elms}).}
 
 
 \item Open the following URL: '\rurl{elm.eu.org/elms.tsv?q=CSK}' to download a
 	list of classes that match the search query ``CSK'' (as in the previous
-	step) in the ``tab separated values'' format. By exchanging the
-	'\fileformat{.html}' part of the URL with '\fileformat{.tsv}', we ask the
-	webserver to give us the data in ``tab-separated values'' format.
+	step) in the ``tab separated values'' format. Note that this time we
+	used the file extension '.tsv' instead of '.html' as before. By
+	exchanging the '\fileformat{.html}' part of the URL with
+	'\fileformat{.tsv}', we ask the webserver to give us the data in
+	``tab-separated values'' format.
 
 	\sdesc{ Depending on which browser you are using, the file may open
 		directly in your browser, or you may be prompted to download
@@ -1343,13 +1348,12 @@ classes}\label{downloading-all-elm-classes}
 \item Type the following command into a command line terminal to
 	download the same data from the previous step directly into the
 	terminal:
-	\cl{curl 'http://elm.eu.org/elms/elms\_index.tsv?q=CSK'}.  The output
+	\cl{curl 'http://elm.eu.org/elms/elms\_index.tsv?q=CSK'}. The output
 	should look similar to figure \ref{fig:search_REST_curl_csk}.
-	The column names are the same ones as shown in the
-	table in figure \ref{fig:explore_content_elms}.
+	The column names are the same as shown in figure \ref{fig:explore_content_elms}.
 
-	\sdesc{ Use the curl option \cl{-o} to save the results directly to
-		a file.  For example: \cl{curl -o classes.tsv
+	\sdesc{ Use the curl option ``\cl{-o}'' to save the results directly to
+		a file. For example: \cl{curl -o classes.tsv
 		'http://elm.eu.org/elms/elms\_index.tsv?q=CSK'} will save the
 		data to a file called \emph{classes.tsv}.}
 
@@ -1358,12 +1362,12 @@ classes}\label{downloading-all-elm-classes}
 	\includegraphics[width=\textwidth]{Figures/search_REST/elm_curl_instances_p53_human.png}
 	\caption{
 	Screenshot of a terminal window using \cl{curl} to download all ELM
-	instances annotated for sequence p53\_human.
+	instances annotated for sequence P53\_HUMAN.
 	}
 	\label{fig:search_REST_curl_p53}
 \end{figure}
 
-\item To download a list of all motif instances detected in Human P53, type the
+\item To download a list of all motif instances detected in the protein sequence of human P53, type the
 	following command into a terminal: \cl{curl
 	'http://elm.eu.org/instances.gff?q=p53\_human'}. The output should look
 	similar to that shown in figure \ref{fig:predicting_REST_curl_p53}. The
@@ -1372,24 +1376,26 @@ classes}\label{downloading-all-elm-classes}
 	with the FASTA formatted sequence appended to the end of the output.
 
 	\sdesc{Many other file formats are available for downloading instances
-	annotations, including the \fileformat{FASTA}, \fileformat{GFF},
-	\fileformat{PIR}, OR \fileformat{PSI-MI} format (either
-	\fileformat{XML} or \fileformat{MiTab})}
+	annotations; see the downloads page for available options including the 
+	\fileformat{FASTA}, \fileformat{GFF},
+	\fileformat{PIR}, or \fileformat{PSI-MI} format (either
+	\fileformat{XML} or \fileformat{MiTab}). 
+	}
 
 
-\item To download a list of all instances matchin th search query ``CLV'' in
-	the yellow fever mosquito (\textit{Aedes aegypti}), enter the following
+\item To download a list of all instances matching the search query ``CLV'' annotated for the taxon
+	``yellow fever mosquito (\textit{Aedes aegypti})'', enter the following
 	command into a terminal:
-	\cl{curl `http://elm.eu.org/instances.tsv?q=CLV\&taxon=aedes+aegypti'}.
-	In general any species name can be used, always replacing the ``space''
-	with a ``+''. This should return a single instance, the only one
+	\cl{curl `http://elm.eu.org/instances.tsv?q=CLV\&taxon=aedes+aegypti'}
+	(In general, any species name can be used, however remember to replace all ``spaces''
+	with ``+''). This should return a single instance, the only one
 	matching \motif{CLV} in \textit{A. aegypti}.
 
 \item More data (interactions, domains, methods, etc.) can be downloaded from
-	ELM in analogous fashion as shown in the preceeding steps. Take a look
+	ELM in analogous fashion as shown in the preceding steps. Take a look
 	at the ELM Downloads page (\rurl{elm.eu.org/downloads}, figure
 	\ref{fig:search_REST_downloads}) for an overview of which datasets can
-	be downloaded, and what the different possible filters and formats are
+	be downloaded, and what different filters and formats are available
 	for each dataset.
 
 \end{enumerate}
@@ -1424,8 +1430,10 @@ are using raw sequence. See below for details.
 %
 \subsection*{Necessary Resources}
 \subsubsection*{Software}
-\input{resources_curl}
-
+\input{resources_curl}%
+(Note that in some of the following screenshots, we append the following
+command to the commandline ``\cl{| column -t}'' to make the output more
+readable. All this does is to properly align all columns at tabstops.)
 
 \begin{enumerate}
 
@@ -1440,27 +1448,34 @@ are using raw sequence. See below for details.
 	\includegraphics[width=\textwidth]{Figures/predicting_REST/curl_P53.png}
 	\caption{
 	The commandline output when \cl{curl} is used to
-	download all motifs predicted in Human P53. Note that we used a more
-	advanced command that \cl{curl} alone to make the columns align
-	nicely (see text for an explanation).
-	}
+	download all motifs predicted in human P53.}
 	\label{fig:predicting_REST_curl_p53}
 \end{figure}
 
 
-\item Use \cl{curl} to query ELM for all motifs predicted to occur in Human
-	P53 by typing the following into a terminal: `curl
-	`http://elm.eu.org/start\_search/P53\_HUMAN.tsv'. Each row represents a
+\item Use \cl{curl} to query ELM for all motifs predicted to occur in human
+    P53 by typing the following into a terminal: `\cl{curl
+	`http://elm.eu.org/start\_search/P53\_HUMAN.tsv}'. 
+	See figure \ref{fig:predicting_REST_curl_p53} for example output.
+	Each resulting row represents a
 	motif detection, and the first column ``elm\_identifier'' indicates
-	which class was identified. The columns ``start'' and ``stop'' show
-	that first and last amino acid positions that matched form part of the
-	motif.  Column ``is annotated'' is True if this motif has been
-	annotated in the database as an (experimentally validated) motif
-	instance. The column ``is phiblastmatch'' is True if ?????. The column
-	``is filtered'' shows whether or not this motif was rejected by the
-	ELM Prediction structure filter. Column ``phibast'' indicates whether
-	?????.  The ``topodomfilter'' and ``taxonfilter'' shown whether ?????.
-	The last column ``structure'' ?????
+	which ELM class was identified, multiple matches to the same class are represented in multiple lines. 
+	The columns ``start'' and ``stop'' show
+	that first and last amino acid positions that matched the motif.
+	The column ``is annotated'' is True if this motif has been
+	annotated in the ELM database as an (experimentally validated) motif
+	instance. The column ``is phiblastmatch'' is True if a match was found 
+	by the ELM Instance mapper indicating that an experimentally validated 
+	instance in a homologous sequence was found.
+%TODO: check that this topic is explained in the commentary
+%TODO: link to the commentary
+	The column ``is filtered'' shows whether or not this motif was rejected by any
+	of the ELM prediction filters (structure, topodom, taxon), whereby
+	``topodomfilter'' uses information from Uniprot to determine the protein's ``topology''
+	with respect to trans-membrane domains or extracellular regions.
+	The columns ``taxonfilter'' and ``structure'' indicate that an instance 
+	has been filtered by the taxonomy or secondary structure filter, respectively.
+%TODO: link to taxonfilter in the commentary
 
 	\sdesc{In figure \ref{fig:predicting_REST_curl_p53}
 		we use a slightly more
@@ -1471,15 +1486,13 @@ are using raw sequence. See below for details.
 		\cl{column} command (this command exists on most Linux and
 		OSX machines).}
 
-TODO: Holger: what are the columns that are not described in the above section for?
-
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=\textwidth]{Figures/predicting_REST/predictions_query.png}
 	\caption{
 	It is possible to send amino acid sequences to the ELM Prediction
 	pipeline. In this case we have used
-	the curl option \cl{-o} to download directly to the file
+	the curl option ``\cl{-o}'' to download directly to the file
 	\cl{query.tsv}, and use a combination of the \cl{head} and
 	\cl{column} commands to display the first 10 rows to the terminal.
 	}
