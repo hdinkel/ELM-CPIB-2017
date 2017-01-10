@@ -127,30 +127,31 @@ interpret these data and avoid common pitfalls in SLiM discovery.
 
 % Browsing and exploring content
 \section{Explore the content of the ELM DB}%
-\label{sec:explore_content}
+\label{sec:explore_content}%
 
-The core of the ELM database is a repository of manually annotated motifs and
-instances. As of December 2016, ELM contains over 260 motif classes and over
-3000 experimentally validated and manually curated instances.
-The motif classes and motif instances have been uploaded by a large group of
-annotators from around the globe. The complete catalogue of manually curated
-data can be searched, browsed and explored on the ELM website
+The core of the ELM database is a repository of manually annotated motif classes
+and instances (as of December 2016, it contains over 260 classes and more than
+3000 experimentally validated and instances). The motif classes and motif
+instances have been manually curated from the scientific literature, carefully
+cross-checked and annotated by a large group of expert biologists from around the globe.
+The complete catalogue of manually curated data can be searched, browsed and
+explored for free on the ELM website.
 
-Each motif class is a short generate sequence of amino acids with a given
-function. Since the sequences are degenerate, each motif class is represented
-using a ``regular expression'': a symbolic representation expressing a complex
-pattern of letters (or amino acids). For example, the regular expression
-``\motif{[FY].L.P}'' is to be read as: The first amino acid is a Phenylalaline (\motif{F}) or a
-Tyrosine (\motif{Y}) followed by any one amino acid (\motif{.}), a Leucine (\motif{L}), one more
-arbitrary amino acid (\motif{.}) and finally a Proline (\motif{P}).
+Each motif class describes a short linear motif, a short sequence of amino acids
+with a dedicated function. Since the motifs are often degenerate, each motif
+class is represented using ``regular expressions'': a symbolic representation
+expressing a complex pattern of letters (or amino acids). For example, the
+regular expression ``\motif{[FY].L.P}'' is to be read as: The first amino acid
+is a Phenylalaline '\motif{F}' or a Tyrosine '\motif{Y}' followed by any one
+amino acid '\motif{.}', a Leucine '\motif{L}', one more arbitrary amino acid
+'\motif{.}' and finally a Proline '\motif{P}'.
 
-Each motif class is annotated by an expert molecular biologist based on
-literature cited experiments.
-In all cases the annotator accompanies the motif definition with the list of
-instances, as well as links to external resources including Biological
-Pathways, Diseases, Gene Ontology and other Protein resources. In this protocol
-we explore the several datatypes stored in the database, as well as links to
-external resources.
+In all cases the annotator condenses information from the primary and secondary
+literature into manageable abstracts, accompanies the motif definition with
+a list of experimental instances, as well as links to external resources including
+biological pathways, diseases, Gene Ontology and other protein resources. In
+this protocol we explore the several data-types stored in the database, as well
+as links to external resources.
 
 %
 % Subsection: Necessary Resources
