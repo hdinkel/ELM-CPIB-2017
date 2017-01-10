@@ -918,7 +918,8 @@ TODO: Repeat search using stringent filters (homo sapiens, nucleus,
 	and fifth rows
 	contain results from IUPred \citep{15955779}, another
 	predictor of disordered protein regions. Protein segments with
-	an IUPred score above 0.5 are considered to be disordered.
+	an IUPred score above 0.5 are considered to be disordered 
+	(see commentary section "Disorder Filter" at page \pageref{DisorderFilter}).
 
 	\sdesc{Motifs are typically only functional when found in intrinsically
 		disordered regions. Any motif occurrence detected by the ELM
@@ -926,7 +927,7 @@ TODO: Repeat search using stringent filters (homo sapiens, nucleus,
 		more likely to be functional.}
 
 \item The 5th row (Fig. \ref{fig:predicting_p53_results_summary}) contains
-	information on secondary structure. The secondary structure is
+	information on the protein's structure (see commentary section "Structure Filter" at page \pageref{StructureFilter}). The secondary structure is
 	predicted using a pipeline mapping motif occurrence onto high quality
 	reference domain structures \citep{19852836}. Check the graphical
 	representation, and if the output of the secondary structure filter and
@@ -1214,8 +1215,8 @@ BOX AND WHY
 	predicted by GlobPlot \citep{12824398}. The 4th \& 5th rows contain
 	results from IUPred \citep{15955779}, another unstructured region
 	prediction tool. Protein segments with an IUPred score above 0.5 are
-	95\% likely to be disordered.  
-% (REF???)
+	95\% likely to be disordered
+	(see Commentary section on ELM Filters at page \pageref{DisorderFilter}).
 
 \item Place the cursor over the blue box for motif occurrence
 	``DOC\_USP7\_MATH\_1'' at position 129-133. This motif is in a
@@ -1518,7 +1519,7 @@ readable. All this does is to properly align all columns at tabstops.)
 \clearpage
 
 %%% Commentary
-\section{Guidelines for Understanding Results}\label{guidelines-for-understanding-results}
+\section*{Guidelines for Understanding Results}\label{guidelines-for-understanding-results}
 
 \emph{instructions: A brief discussion of the theory and applications of
 your}
@@ -1625,8 +1626,31 @@ likely false positive hits, saving them valuable time and assets
 
 \subsubsection*{ELM Filters}
 
-\paragraph*{Structure Filter}\label{StructureFilter}
 \paragraph*{Disorder Filter}\label{DisorderFilter}
+
+ELM uses two different predictors of globularity/disorder: Firstly, GlobPlot
+developed by \cite{12824398}, uses amino acid propensities derived from a set of
+proteins to detect regions of globularity/disorder in any given protein
+sequence. Secondly, IUPred by \cite{15955779}, which, unlike GlobPlot, has not
+been trained on any dataset, but rather uses a position-specific scoring scheme
+assessing the tendency of any given amino acid to reside in either an ordered
+or disordered region. IUPred assigns a score between 0.0 to 1.0 to each amino
+acid of a protein sequence, whereby protein segments with an IUPred score above
+0.5 are considered to be disordered. ELM displays IUPred scores as a colored
+line on either green (disordered) or red (globular) background, see rows four
+and five of figure \ref{fig:predicting_p53_results_summary}.
+
+\paragraph*{Structure Filter}\label{StructureFilter}
+
+The ELM structural filter, developed by \cite{19852836}, assesses accessibility
+and secondary structural context derived from experimentally solved protein
+structures. It maps putatively functional motif occurrences onto a
+representative domain structure and scores these motifs for
+solvent-accessibility and secondary structure context. ELM displays this
+information as overlay boxes in the graphical output, whereby the user needs to
+hover over individual instance entries within structural context (see the
+\motif{CLV\_PCSK\_SKI1\_1} example in fig. \ref{fig:predicting_p53_results_summary}).
+
 \paragraph*{Conservation Filter}\label{ConservationFilter}
 \paragraph*{Instance Mapper}\label{InstanceMapper}
 
