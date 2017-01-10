@@ -7,6 +7,7 @@
 %%\usepackage{fontspec}
 %%\setmainfont{Times New Roman}
 \usepackage{mathptmx}
+\usepackage{nameref}
 \newcounter{proto}
 
 % use 'rurl' to hide the 'http://' in text, but include it in the link
@@ -90,7 +91,6 @@ sequence.
 \end{abstract}
 
 
-
 % Introdoction
 \section*{Introduction}%
 \label{sec:introduction}
@@ -123,7 +123,6 @@ The following protocols will guide users through the different ELM
 applications, explaining how to browse the curated data available in
 ELM, how to analyse a protein sequence for putative motifs, and how to
 interpret these data and avoid common pitfalls in SLiM discovery.
-
 
 % Browsing and exploring content
 \section{Explore the content of the ELM DB}%
@@ -833,12 +832,10 @@ switches (switches.ELM).
 	species name in the ``taxonomic context'' input field to get an
 	auto-completed list of species to select from. Additionally, a ``Motif
 	probability cutoff'' can be used to only retain ELM classes whose
-	pattern probability is below the given value. For the current protocol,
-	leave all of these at their default values: ``not specified'', ``100''
-	and no ``taxonomic context''
+	pattern probability is below the given value. 
 
 TODO: Repeat search using stringent filters (homo sapiens, nucleus,
-0.01) Do we want to do this? - Marc
+        0.01) Do we want to do this? - Marc (already done in part above)
 
 %
 % Subsection: Understanding results: graphical summary
