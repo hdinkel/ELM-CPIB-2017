@@ -545,7 +545,8 @@ external resources.
 	\centering
 	\includegraphics[width=\textwidth]{Figures/explore_content/pathways.png} 
 	\caption{
-	A list of all Pathways from KEGG with proteins in ELM.
+	    A list of organisms for which Pathways from KEGG have been mapped to protein sequences of instances in ELM. The number in brackets
+	    denote the number of different pathways per organism.
 	}
 	\label{fig:explore_content_pathways}
 \end{figure}
@@ -560,7 +561,9 @@ external resources.
 	\centering
 	\includegraphics[width=\textwidth]{Figures/explore_content/pathways_example.png} 
 	\caption{
-		A list of all KEGG pathways in \textit{Gallus gallus} involving proteins annotated in ELM.
+		A list of all KEGG pathways for the the taxon \textit{Gallus gallus} involving proteins annotated in ELM. Note that multiple
+		instances from a single sequence can be annotated for one pathway. The color scheme on the right is used for coloring instances
+		on the KEGG website (see figure \ref{fig:explore_content_pathways_kegg}).
 	}
 	\label{fig:explore_content_pathways_example}
 \end{figure}
@@ -575,7 +578,15 @@ external resources.
 	\centering
 	\includegraphics[width=\textwidth]{Figures/explore_content/pathways_kegg.png} 
 	\caption{
-	A list of all annotated pathways for taxon \textit{Gallus gallus}
+	A list of all annotated pathways for taxon \textit{Gallus gallus}. The coloring of genes/proteins is as follows: 
+light blue=\motif{CLV} (cleavage site),
+dark blue=\motif{DOC} (docking site),
+yellow=\motif{DEG} (degradation motif),
+green=\motif{LIG} (ligand binding motif),
+pink=\motif{MOD} (modification site),
+orange=\motif{TRG} (targeting motif),
+red=multiple classes per sequence.
+Light green boxes are colored by KEGG and represent the KEGG hyperlinks to GENES entries, indicating the presence of genes in the genome and also the completeness of the pathway.
 	}
 	\label{fig:explore_content_pathways_kegg}
 \end{figure}
@@ -709,21 +720,19 @@ getting information eg. about a particular protein and it's annotation status in
 
 \item Use the general search field (on the top of the page) to do a general
 	search for P53 using its Uniprot identifier by typing ``P04637'' in the
-	search field and hitting ``Enter''. This will search
-	across instances, motif classes and switches to find any matches to the
+	search field and hitting ``Enter''. This will perform a query
+	across multiple tables of the ELM database to find any matches to the
 	search query ``P04637''. 
-	The results are grouped into matching instances
+	In this case, the results are grouped into matching instances
 	(Fig. \ref{fig:general_search_P04637_instances})
 	candidate classes and switches
 	(Fig. \ref{fig:general_search_P04637_switches}).
-	As there are no classes with ``P04637'' in the name, no classes are
-	returned with this query.
+	As there are no classes with ``P04637'' in the name or description, no classes are
+	returned for this section of the query.
 
 	\sdesc{
-		The ``candidate classes'' are a separate part of ELM, where
-		users can propose novel classes to be annotated. Although these
-		are returned by the general search, we would advise users not
-		to use this data, as it is still pending curation.
+		The ``candidate classes'' are a collection of putative future ELM classes, which are not yet fully annotated, often submitted by
+		ELM users. Keep in mind that these are a first draft on ELM classes and are still pending curation.
 	}
 
 \begin{figure}[h!]
@@ -744,8 +753,8 @@ getting information eg. about a particular protein and it's annotation status in
 	switches (instead of 14 and 11). The reason for this is that the
 % TODO: HD: maybe discuss this rather in the commentary section?
 	phrase ``P53'' also matches the Uniprot identifier of
-	\uniprot{CDH1\_YEAST} (P53197). This is important to keep in mind when
-	using the general search field.
+	\uniprot{CDH1\_YEAST} (P53197). This is probably not what you had in mind when using this search term, so it is important to keep in mind
+	to check for such false positive search results when searching the database.
 
 \end{enumerate}
 
