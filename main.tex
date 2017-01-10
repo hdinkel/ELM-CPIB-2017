@@ -336,7 +336,7 @@ external resources.
 	\label{fig:explore_content_instances}
 \end{figure}
 
-\item Click on the sub-menu \button{ELM instances} under \button{ELM DB} to visit
+\item \label{sec:explore_content_instances} Click on the sub-menu \button{ELM instances} under \button{ELM DB} to visit
 	the page where you can search and browse the instances annotated in ELM
 	(Fig. \ref{fig:explore_content_instances}).
 	Note that only the first hundred instances matching the search criteria are shown.
@@ -611,7 +611,8 @@ Light green boxes are colored by KEGG and represent the KEGG hyperlinks to GENES
 \item Click on the sub-menu \button{ELM virus instances} under \button{ELM DB}
 	to see a list of all instances in ELM that have been annotated as being
 	abused by viruses (Fig. \ref{fig:explore_content_viruses}).
-	The columns are identical to those listed in Step 7 (Fig.  
+	(The columns are identical to those listed in step
+	\ref{sec:explore_content_instances}, see fig.
 	\ref{fig:explore_content_instances}).
 
 	\sdesc{The green buttons on the left can be used to filter this table
@@ -846,7 +847,7 @@ TODO: Repeat search using stringent filters (homo sapiens, nucleus,
 \subsection*{Interpreting the prediction results: Graphical Summary}
 \label{subsec:predicting_p53_graphical_summary}
 
-\item Click \button{submit} to start searching for motifs. You will be brought
+\item \label{sec:predicting_p53_submit} Click \button{submit} to start searching for motifs. You will be brought
 	to an intermediate page indicating that your results are being
 	processed, and should be redirected to the final results page
 	within a minute. You can bookmark this page: The results are stored for
@@ -879,7 +880,7 @@ TODO: Repeat search using stringent filters (homo sapiens, nucleus,
 	\label{fig:predicting_p53_results_summary}
 \end{figure}
 
-\item The first row contains phosphorylation sites as retrieved from
+\item \label{sec:predicting_p53_results_phosphorylation} The first row contains phosphorylation sites as retrieved from
 	phospho.ELM \citep{21062810}, and whether the phosphorylated amino
 	acid is a serine, threonine or tyrosine. Phospho.ELM is a database of
 	manually annotated phosphorylation sites obtained from scientific
@@ -968,7 +969,7 @@ TODO: EXPLAIN / SHOW ANNOTATED INSTANCES Marc: Use mouse over in this figure.
 		the motif's sequence is, and the more likely it is a functional
 		motif for this prediction.}
 
-\item Place the cursor over the blue \& gray rectangle for motif
+\item \label{fig:predicting_p53_results_structure_filter} Place the cursor over the blue \& gray rectangle for motif
 	\motif{CLV\_PCSK\_SKI1\_1} at position 120-124, a motif 
 	which was flagged as ``neutral'' by the ELM prediction pipeline.
 	This will trigger the information screen (with the pink header) shown
@@ -1185,7 +1186,8 @@ BOX AND WHY
 	detections are shown (the image is truncated at the bottom). The top
 	five rows show a handful of structural features. The motif occurrence
 	are shown as blue boxes, the intensity of which indicates the
-	conservation score. See steps XXX to YYY for more information.
+	conservation score. See steps \ref{sec:predicting_p53_results_phosphorylation} to \ref{fig:predicting_p53_results_structure_filter} of
+		\ref{sec:explore_content} for more information.
 	}
 	\label{fig:predicting_cv_0974_results_summary}
 \end{figure}
@@ -1419,8 +1421,8 @@ classes}\label{downloading-all-elm-classes}
 
 	\sdesc{ This search result is identical to the result you would obtain
 		by doing a ``manual'' search on the ELM Classes page
-		described in step 3 of \ref{sec:explore_content}
-		(Fig. \ref{fig:explore_content_elms}).}
+		described in step \ref{sec:predicting_p53_submit} of \ref{sec:explore_content}
+		(see fig. \ref{fig:explore_content_elms}).}
 
 
 \item Open the following URL: '\rurl{elm.eu.org/elms.tsv?q=CSK}' to download a
