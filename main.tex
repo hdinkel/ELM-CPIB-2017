@@ -586,7 +586,8 @@ green=\motif{LIG} (ligand binding motif),
 pink=\motif{MOD} (modification site),
 orange=\motif{TRG} (targeting motif),
 red=multiple classes per sequence.
-Light green boxes are colored by KEGG and represent the KEGG hyperlinks to GENES entries, indicating the presence of genes in the genome and also the completeness of the pathway.
+Light green boxes are colored by KEGG and represent the KEGG hyperlinks to GENES entries, indicating the presence of genes in the genome and also
+    the completeness of the pathway (see KEGG help \url{http://www.kegg.jp/kegg/document/help_pathway.html}.
 	}
 	\label{fig:explore_content_pathways_kegg}
 \end{figure}
@@ -799,23 +800,24 @@ switches (switches.ELM).
 	\centering
 	\includegraphics[width=\textwidth]{Figures/predicting_p53/elm_search.png} 
 	\caption{
-	The ELM input page for predicting motifs in a protein.
+	The ELM input page for predicting motifs in a protein. Here, all fields have been filled in; strictly only the protein ID field is
+	necessary to perform a search.
 	}
 	\label{fig:predicting_p53_elm_search}
 \end{figure}
 
-\item Open a browser, and navigate to the ELM homepage: http://elm.eu.org.
+\item Open a browser, and navigate to the ELM homepage: \url{http://elm.eu.org}.\label{sec:predicting_p53_elm_search}
 	Enter the Uniprot ID \uniprot{P53\_HUMAN} in the search field labelled
-	``Enter a Uniprot identifier or accession number''. The page should
-	autocomplete/suggest the protein ``\uniprot{P53\_HUMAN} / P04637 (Homo
-	sapiens)'' (Fig. \ref{fig:predicting_p53_elm_search}).
+	``Enter a Uniprot identifier or accession number''. While typing, the page should
+	autocomplete your input ``\uniprot{P53\_HUMAN} / P04637 (Homo
+	sapiens)'' and already pre-fill other fields of the input form (Fig. \ref{fig:predicting_p53_elm_search}).
 	Click on this entry to confirm that we want to search for
-	motifs in this protein. Click on \button{Submit} to submit the query to
+	motifs in this protein. Click on \button{Submit} to send the query to
 	the server.
 
-	\sdesc{The autocompletion mechanism queries Uniprot for protein
+	\sdesc{The autocompletion mechanism queries Uniprot for the given protein
 		identifier; if it succeeds, then additional information from
-		Uniprot will be used to pre-populate the filter boxes. In this
+		Uniprot will be used to pre-populate the input boxes. In this
 		example, \uniprot{P53\_HUMAN} is recognized as a Human protein,
 		and so ``Homo sapiens'' is automatically filled in the
 		``Taxonomic Context'' field. Also, P53 has been annotated (by
@@ -892,7 +894,7 @@ TODO: Repeat search using stringent filters (homo sapiens, nucleus,
 
 	\sdesc{Phosphorylation sites are only available when the search is
 		performed with a protein accession (eg. \emph{not} with a FASTA
-		sequence alone) in step 1 and there is relevant information
+		sequence alone) in step \ref{sec:predicting_p53_elm_search} and there is relevant information
 		annotated in the phospho.ELM database. Phosphorylation sites
 		are relevant to interpret ELM motif predictions when the
 		predicted motif requires to be phosphorylated (as in several
@@ -1029,12 +1031,12 @@ TODO: EXPLAIN / SHOW ANNOTATED INSTANCES Marc: Use mouse over in this figure.
 	(Fig.
 	\ref{fig:predicting_p53_elm_results_alignemnt_filtering_domains}).
 	The first two lines contain information on whether
-	and which filters were applied in step 1 of this protocol.
+	and which filters were applied in step \ref{sec:predicting_p53_elm_search} of this protocol.
 	In this case 4 motifs (elms) representing 26 instances were filtered
 	out as they did not occur in \textit{Homo sapiens}. An additional 5
 	motifs (representing 11 instances) were filtered out because they are
 	not annotated to the cell compartments automatically filled in on the
-	search page (Step 1).
+	search page (step \ref{sec:predicting_p53_elm_search}).
 	The next three lines (``SMART'' \& ``Structural score'') show how many
 	motifs and instances were not removed by the SMART and Secondary
 	structure filters. A total of 42 motifs (representing 106 instances)
@@ -1079,10 +1081,9 @@ TODO: EXPLAIN / SHOW ANNOTATED INSTANCES Marc: Use mouse over in this figure.
 	\centering
 	\includegraphics[width=\textwidth]{Figures/predicting_p53/elm_results_motifs.png}
 	\caption{
-	This table contains the list of motifs detected in the sequence (only
-	the top part of the table is shown). These are predictions in the sense
-	that the sequence in present, however its is known whether they are
-	\emph{bona-fide} motifs which are biologically functional.
+	This table contains the list of putative motifs detected in the query sequence (only
+	the top part of the table is shown). These are ``predictions`` in the sense
+	that each of these motifs could be found in the sequence after applying (structure/context) filtering, however no experimental evidence has been annotated (yet) to determine if they are biologically functional.
 	}
 	\label{fig:predicting_p53_elm_results_motifs}
 \end{figure}
@@ -1111,9 +1112,9 @@ TODO: EXPLAIN / SHOW ANNOTATED INSTANCES Marc: Use mouse over in this figure.
 \centering
 	\includegraphics[width=\textwidth]{Figures/predicting_p53/elm_results_motifs_filtered.png}
 	\caption{
-	This table contains the list of motifs detected in the sequence (only
+	This table contains the list of putative motifs detected in the query sequence (only
 	the top part of the table is shown) which were excluded by the
-	structural filter.
+	structural or context filter.
 	}
 	\label{fig:predicting_p53_elm_results_motifs_filtered}
 \end{figure}
