@@ -910,8 +910,7 @@ TODO: Repeat search using stringent filters (homo sapiens, nucleus,
 		and structured regions \citep{21909575}. Any motifs detected
 		by the ELM prediction pipeline inside of a smart domain are
 		less likely to be functional, and are shown as a gray box
-		background (see also the ``structural filter'' described in
-		\ref{StructureFilter}). }
+		background (see commentary section "Structure Filter" at page \pageref{StructureFilter}). }
 
 \item The third row shows globular and disordered regions in the
 	sequence as predicted by GlobPlot \citep{12824398}. The fourth
@@ -966,14 +965,14 @@ TODO: EXPLAIN / SHOW ANNOTATED INSTANCES Marc: Use mouse over in this figure.
 	of 0.910 is very high, indicating that this motif is highly conserved.
 
 	\sdesc{The confidence score is based on how conserved the sequence is
-		across a set of homologous proteins from other sequences. An
-		full description of the method can be found in \cite{18460207}.
-		The higher the conservation score (max. 1), the more conserved
+		across a set of homologous proteins from other sequences.
+		The higher the conservation score (max. 1.0), the more conserved
 		the motif's sequence is, and the more likely it is a functional
-		motif for this prediction.}
+		motif for this prediction
+		(see commentary section "Conservation Filter" at page \pageref{ConservationFilter}).}
 
 \item \label{fig:predicting_p53_results_structure_filter} Place the cursor over the blue \& gray rectangle for motif
-	\motif{CLV\_PCSK\_SKI1\_1} at position 120-124, a motif
+	\motif{CLV\_PCSK\_SKI1\_1} at position 120--124, a motif
 	which was flagged as ``neutral'' by the ELM prediction pipeline.
 	This will trigger the information screen (with the pink header) shown
 	in Fig. \ref{fig:predicting_p53_results_summary} to appear.
@@ -1642,16 +1641,43 @@ and five of figure \ref{fig:predicting_p53_results_summary}.
 
 \paragraph*{Structure Filter}\label{StructureFilter}
 
-The ELM structural filter, developed by \cite{19852836}, assesses accessibility
-and secondary structural context derived from experimentally solved protein
-structures. It maps putatively functional motif occurrences onto a
-representative domain structure and scores these motifs for
+The structural filter, especially developed for ELM by \cite{19852836},
+assesses accessibility and secondary structural context derived from
+experimentally solved protein structures. It maps putatively functional motif
+occurrences onto a representative domain structure and scores these motifs for
 solvent-accessibility and secondary structure context. ELM displays this
 information as overlay boxes in the graphical output, whereby the user needs to
 hover over individual instance entries within structural context (see the
-\motif{CLV\_PCSK\_SKI1\_1} example in fig. \ref{fig:predicting_p53_results_summary}).
+\motif{CLV\_PCSK\_SKI1\_1} example in fig.
+\ref{fig:predicting_p53_results_summary}).
 
 \paragraph*{Conservation Filter}\label{ConservationFilter}
+
+This filter method for scoring the conservation of linear motif instances was
+developed by \cite{18460207} and subsequently implemented into the ELM
+pipeline. It requires only primary sequence-derived information (e.g. a
+multiple alignment and the sequence tree) and implicitly takes into account the
+degenerate nature of short linear motif patterns. By auto-generating multiple
+sequence alignments from a non-redundant database, generating distance-trees
+and taking into account motif degeneracy, it assesses for each ELM motif class
+found in any given sequence its conservation. The conservation score ranges
+from 0.0 (the predicted instance is present only in the query sequence) to 1.0
+(full conservation of the motif regular expression in all the informative
+sequences).
+
+Since conserved motifs in structural regions are most likely conserved for
+structural integrity rather than motif function, one always has to assess the
+context when inspecting conservation score. Generally, best motif candidates
+are those with high conservation scores in regions of unstructured, unconserved
+regions.
+
+% When investigating conservation of short linear motifs, one has to bear in mind 
+% Further generalizing, taking into
+% account that the more likely it is a functional motif for this prediction.
+%
+% islands of conservation amidst a sea of unconserved disordered amino acid residues.
+
+
 \paragraph*{Instance Mapper}\label{InstanceMapper}
 
 \begin{figure}[h!]
