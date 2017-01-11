@@ -196,7 +196,7 @@ as links to external resources.
 	This page shows a brief explanation of the ELM resource, and a form to
 	search for SLiMs (which we cover in further detail in
 	\ref{sec:predicting_p53} and \ref{sec:predicting_cv_0974}).
-	The column to the right is the news column, and is continually
+	The column to the right is continually
 	updated with the latest news about changes and additions to the database.
 
 \begin{figure}[h!]
@@ -216,10 +216,15 @@ as links to external resources.
 	the database and a few links to third-part databases.
 	Each line contains at least one link that will take you
 	to the corresponding contents page.
+	For example: Clicking on \button{ELM classes} will take you to the
+	page showing all classes annotated in ELM.
+	We will be exploring these content overview pages in this protocol.
 % HD:I find the following sentence confusing, as the user doesn't know whether he should click on that 'instances' button or not... will be explained later anyways
 %	(for example, clicking on
 %	\button{ELM instances} will take you to the page displaying all of the
 %	annotated instances in the database).
+%
+% Marc: I completley agree. I added some things which I hope makes it clearer.
 
 %
 % Subsection: Browsing motif classes and instances
@@ -393,8 +398,8 @@ as links to external resources.
 	references in which the experiments were published.
 
 	\sdesc{
-		The ``biosource'' indicates whether method is \textit{in vivo},
-		\textit{in vitro}, \textit{in silico} or a combination of these.
+		The ``biosource'' indicates whether method is \emph{in vivo},
+		\emph{in vitro}, \emph{in silico} or a combination of these.
 		The ``logic'' column indicates whether this experiment
 		supports or contradicts this instance being functional.
 		Each method is also annotated with a reliability assessment, which can
@@ -543,7 +548,7 @@ as links to external resources.
 	the motif class, contains a link to UniProt, as well as the start and stop
 	positions of the motif mediating the switch. The last two columns show
 	links to the \rurl{switches.elm.eu.org} website, and a brief description
-	of the switch (taken from "switches.ELM", see \cite{23550212}).
+	of the switch (taken from the switches.ELM database, see \cite{23550212}).
 
 % duplicate information:
 %	\sdesc{The filter bar on the top page can be used to quickly filter
@@ -593,7 +598,7 @@ as links to external resources.
 	\centering
 	\includegraphics[width=\textwidth]{Figures/explore_content/pathways_kegg.png}
 	\caption{
-	A list of all annotated pathways for the taxon \textit{Gallus gallus}. The coloring of genes/proteins is as follows:
+	An overlay of ELM annotations of proteins in the Adherens junction pathway in \textit{Gallus gallus}. The coloring of genes/proteins is as follows:
 light blue=\motif{CLV} (cleavage site),
 dark blue=\motif{DOC} (docking site),
 yellow=\motif{DEG} (degradation motif),
@@ -691,7 +696,7 @@ Light green boxes are colored by KEGG and represent the KEGG hyperlinks to GENES
 \label{sec:general_search}
 
 A general search text box is available to query the entire collection of
-manually curated information in ELM DB. This search field can be found in the header
+manually curated information in the ELM database. This search field can be found in the header
 of the ELM database website (see for example Fig.
 \ref{fig:general_search_TP53_instances}). This search peforms a full-text
 query across multiple selected data sources in the ELM database, including
@@ -856,7 +861,11 @@ switches (switches.ELM).
 	species name in the ``Taxonomic Context'' input field to get an
 	auto-completed list of species to select from. Additionally, a ``Motif
 	probability cutoff'' can be used to only retain ELM classes whose
-	pattern probability is below the given value. 
+	pattern probability is below the given value.
+	These filters are implemented later in \ref{sec:predictions_cv_0974}).
+	For now, leave all all filters at the default values that were
+	auto-populated for p53. 
+
 
 %TODO: HD add probability filter to commentary
 
@@ -866,6 +875,10 @@ YES, we do. HD
 %	At the moment, step 1. & 2. are confusing as the second 'overwrites' the
 %	first. better to continue with 3 (as 2) and repeat 2 later with
 %	different settings
+%
+% Marc: Sorry, my mistake. I had intended to make this protocol use default
+% values, and Hugo's procol to use filters. I've adapted the existing text to
+% reflect this.
 
 %
 % Subsection: Understanding results: graphical summary
@@ -901,8 +914,9 @@ YES, we do. HD
 	\uniprot{P53\_HUMAN}. Note that not all motif detections are shown (the
 	image is truncated at the bottom). The top five rows show a set of
 	structural features. Annotated and predicted motifs are shown as
-	differently colored ovals/boxes. The info screens for two motifs are
-	shown: \motif{CLV\_C14\_Caspase3-7} and \motif{CLV\_PCSK\_SKI1\_1}.
+	differently colored ovals/boxes. The info screens for three motifs are
+	shown: \motif{CLV\_C14\_Caspase3-7}, \motif{DEG\_MDM2\_SWIG\_1} and
+	\motif{CLV_Separin_Metzoa}.
 	}
 	\label{fig:predicting_p53_results_summary}
 \end{figure}
@@ -978,8 +992,6 @@ YES, we do. HD
 		Therefore all of the motif occurrences will be shown in a
 		uniform shade of blue. }
 
-TODO: EXPLAIN / SHOW ANNOTATED INSTANCES Marc: Use mouse over in this figure.
-
 \item Place the cursor over the blue box for motif occurrence
 	\motif{CLV\_C14\_Caspase3-7} at the end of the sequence (
 	position 388--392). This will trigger the green and yellow
@@ -997,7 +1009,7 @@ TODO: EXPLAIN / SHOW ANNOTATED INSTANCES Marc: Use mouse over in this figure.
 		(see commentary section "Conservation Filter" at page \pageref{ConservationFilter}).}
 
 \item \label{sec:predicting_p53_results_structure_filter} Place the cursor over the blue \& gray rectangle for motif
-	\motif{CLV\_PCSK\_SKI1\_1} at position 120--124, a motif
+	\motif{CLV\_Separin_Metazo} at position 171--175, a motif
 	which was flagged as ``neutral'' by the ELM prediction pipeline.
 	This will trigger the information screen (with the pink header) shown
 	in Figure~\ref{fig:predicting_p53_results_summary} to appear.
@@ -1011,6 +1023,14 @@ TODO: EXPLAIN / SHOW ANNOTATED INSTANCES Marc: Use mouse over in this figure.
 	structure filter: The name of the domain, the \emph{accessibility
 	score} , \emph{secondary structure score}, \emph{combined total score},
 	and the associated \emph{total score P-value} \citep{19852836}.}
+
+\item Place the cursor over the red oval for \motif{DEG\_MDM2\_SWIG\_1} at
+	position 19--26. This motif is an annotated instances in the
+	ELM database, and is therefore a bona-fide experimentally validated
+	instance.
+
+%TODO: Marc: a little more description here?
+	
 
 \begin{figure}[h!]
 	\centering
@@ -1157,7 +1177,7 @@ TODO: EXPLAIN / SHOW ANNOTATED INSTANCES Marc: Use mouse over in this figure.
 \section{Detecting Short Linear Motifs in Unknown Protein Sequences}
 \label{sec:predicting_cv_0974}
 
-TODO: Marc: read this section to check for consistency, etc.
+TODO: read this section to check for consistency, etc.
 
 The ELM prediction pipeline is a very powerfull way to obtain a lot of
 information on which motifs are present, in which structural context they
@@ -1177,7 +1197,7 @@ Interestingly, the genes encoding this T3SS as well as other genes located in
 the same genomic location are very similar to the ones in \textit{Salmonella spp.}
 except for a couple of genes including the modular protein SptP
 [PMID:15100995]. SptP in \textit{Salmonella spp.} is a secreted protein tyrosine
-phosphatase (PMID:8866485) whose closest homolog in \textit{C. violaceum} is
+phosphatase \cite{8866485} whose closest homolog in \textit{C. violaceum} is
 the protein \uniprot{CV\_0974}. To further undestand the possible biological
 function of the protein \uniprot{CV\_0974} we will use it in the ELM server
 predict ELMs.
@@ -1217,17 +1237,30 @@ predict ELMs.
 	(\url{http://www.uniprot.org/uniprot/Q7NZE8.fasta}), and enter it into the
 	``sequence input text box''.
 
-\item Make sure that the ``Taxonomic Context'' is left empty: If any
-    species is used in this field the results will only include motifs which have an
-    instance in that species annotated in ELM. For example, if we were to
-    fill in ``C. violaceum'', only motifs known to occur in \textit{C.  violaceum}
-    would be searched for (which are zero).
+\item In the ``Taxonomic Context'' field, start typing the text ``Homo
+	sapiens''. As you type this field should auto-suggest species mathing
+	your text. Select ``Homo sapeciens'' to limit the search to motifs
+	which have been annotated in Human proteins.
 
+	\sdesc{
+		Certain human diseases occur when motifs are hijacked by
+		opportunisic pathogens (see Step 20 in
+		\ref{sec:explore_context} and figure
+		\ref{fig:explore_content_viruses}). By limiting the search to 
+		Human motifs, we will identify motifs which are known to exist
+		in Humans and thus may be the target of motif hijakcing.
+	}
+	
 \item \uniprot{CV\_0974} is likely to be an effector protein, simiarly to its
     homologue SptP. As SptP localizes to the cytosol, we can assume the same
     for \uniprot{CV\_0974}. Select ``cytosol'' in the ``Cell compartment''
     field.
 
+\item Lastly we will change the ``Motif probability cutoff value'' to a more
+	stringent threshold. Enter ``0.01'' for this value. This will exclude 
+	all motif with a probability score higher than ``0.01'', limiting the
+	results to motifs which are more likely not to represent random
+	sequences of amino acids.
 
 \subsection*{Interpreting the results}
 \label{subsec:predicting_cv_0974_submitting}
@@ -1280,7 +1313,7 @@ predict ELMs.
         sequence, and are gapped, thus it is not possible to calculate a
         conservation score.}
 
-    \item Click on the motif identifier \button{LIG\_CSK\_EPIYA\_1} in the
+\item Click on the motif identifier \button{LIG\_CSK\_EPIYA\_1} in the
         graphical summarty to be brought to the motif details page for this
         motif. In the ``Functional site description'' it is stated that 'The
         baterial proteins usually have repeats of EPIYA motifs.' The ELM
