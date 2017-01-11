@@ -369,7 +369,7 @@ as links to external resources.
 	\caption{
 	The instance details page for the \motif{DOC\_CYCLIN\_1} instance annotated
 	for protein \uniprot{P53\_HUMAN} with start/end position ``381--385''. This page
-	also contains links to many external databases including Uniprot
+	also contains links to many external databases including UniProt
 	\citep{25348405}, PDB \citep{12037327}, NCBI taxonomy and Pubmed
 	\citep{27899561}, and KEGG pathways \citep{26476454}, as well as the
 	PSI-MI controlled vocabulary \citep{17925023}.
@@ -383,7 +383,7 @@ as links to external resources.
 	details page of this
 	instance (Figure~\ref{fig:explore_content_doc_cyclin_instance}).
 	The top part of the page contains details about the instance
-	and the protein it was identified in, as well as a link to the Uniprot entry for
+	and the protein it was identified in, as well as a link to the UniProt entry for
 	the protein \citep{25348405}.
 
 \item Scroll down to the ``Instance Evidence'' header to view details on the
@@ -540,7 +540,7 @@ as links to external resources.
 \item Click on the sub-menu \button{ELM switches} under \button{ELM DB} to see a complete
 	list of all the molecular switches annotated in ELM
 	(Figure~\ref{fig:explore_content_switches}). This table shows
-	the motif class, contains a link to Uniprot, as well as the start and stop
+	the motif class, contains a link to UniProt, as well as the start and stop
 	positions of the motif mediating the switch. The last two columns show
 	links to the \rurl{switches.elm.eu.org} website, and a brief description
 	of the switch (taken from "switches.ELM", see \cite{23550212}).
@@ -720,7 +720,7 @@ getting information about a particular protein and its annotation status in the 
 	\includegraphics[width=\textwidth]{Figures/general_search/P04637_instances.png}
 	\caption{
 		The instances retrieved when performing a general search for
-		\uniprot{P53\_HUMAN} using its Uniprot identifier ``P04637''.
+		\uniprot{P53\_HUMAN} using its UniProt identifier ``P04637''.
 	}
 	\label{fig:general_search_P04637_instances}
 \end{figure}
@@ -730,14 +730,14 @@ getting information about a particular protein and its annotation status in the 
 	\includegraphics[width=\textwidth]{Figures/general_search/P04637_switches.png}
 	\caption{
 		The switches found when performing a general search for
-		\uniprot{P53\_HUMAN} using its Uniprot identifier ``P04637'',
+		\uniprot{P53\_HUMAN} using its UniProt identifier ``P04637'',
 	}
 	\label{fig:general_search_P04637_switches}
 \end{figure}
 
 
 \item Use the general search field (on the top of the page) to do a general
-	search for p53 using its Uniprot identifier by typing ``P04637'' in the
+	search for p53 using its UniProt identifier by typing ``P04637'' in the
 	search field and hitting ``Enter''. This will perform a query
 	across multiple tables of the ELM database to find any matches to the
 	search query ``P04637''.
@@ -765,14 +765,14 @@ getting information about a particular protein and its annotation status in the 
 \end{figure}
 
 \item Perform a search using the keyword ``p53'' in the general search field
-	instead of its Uniprot identifier ``P04637''.
+	instead of its UniProt identifier ``P04637''.
 	The set of results retrieved using this term as the search query
 	(Figure~\ref{fig:general_search_TP53_instances})
 	are different, returning 31 instances and 44
 	switches (instead of 14 and 11). The reason for this is that the
 % TODO: HD: maybe discuss this rather in the commentary section?
 % Marc: I'm OK with this here. This is very relevant to the 'general search' only - Marc
-	phrase ``p53'' also matches the Uniprot identifier of
+	phrase ``p53'' also matches the UniProt identifier of
 	\uniprot{CDH1\_YEAST} (P53197). This is probably not what you had in mind when using this search term, so it is important to keep in mind
 	to check for such false positive search results, when searching the database.
 
@@ -792,7 +792,7 @@ remove false positives and creates a diagram to visualize resulting
 set of putative motifs.
 
 In this protocol we will be viewing the manually annotated data of a
-typical protein, using p53 (Uniprot ID: \uniprot{P53\_HUMAN}/P04637) as an
+typical protein, using p53 (UniProt ID: \uniprot{P53\_HUMAN}/P04637) as an
 example. We will cover how to find the manually annotated motifs and instances,
 the references used to annotate each
 instance, the experimental protocols used, and additional information including
@@ -826,21 +826,21 @@ switches (switches.ELM).
 \end{figure}
 
 \item Open a browser, and navigate to the ELM homepage: \url{http://elm.eu.org}.\label{sec:predicting_p53_elm_search}
-	Enter the Uniprot ID \uniprot{P53\_HUMAN} in the search field labelled
-	``Enter a Uniprot identifier or accession number''. While typing, the page should
+	Enter the UniProt ID \uniprot{P53\_HUMAN} in the search field labelled
+	``Enter a UniProt identifier or accession number''. While typing, the page should
 	autocomplete your input ``\uniprot{P53\_HUMAN} / P04637 (\textit{Homo
 	sapiens})'' and already pre-fill other fields of the input form (Figure~\ref{fig:predicting_p53_elm_search}).
 	Click on this entry to confirm that you want to search for
 	motifs in this protein. Click on \button{Submit} to send the query to
 	the server.
 
-	\sdesc{The autocompletion mechanism queries Uniprot for the given protein
+	\sdesc{The autocompletion mechanism queries UniProt for the given protein
 		identifier; if it succeeds, then additional information from
-		Uniprot will be used to auto-populate the input boxes. In this
+		UniProt will be used to auto-populate the input boxes. In this
 		example, \uniprot{P53\_HUMAN} is recognized as a human protein,
 		and so ``Homo sapiens'' is automatically filled in the
 		``Taxonomic Context'' field. Also, p53 has been annotated (by
-		Uniprot) to be localized to nucleus, cytosol, endoplasmic
+		UniProt) to be localized to nucleus, cytosol, endoplasmic
 		reticulum and mitochondrion, so these are also automatically
 		applied as search criteria. The motif cutoff of ``100'' is a
 		sufficiently high (lenient) threshold to ensure no motif class
@@ -1211,9 +1211,9 @@ predict ELMs.
 \item Click on the ``ELM Predictions'' button in the menu to access the search
 	query page (Fig. \ref{fig:predicting_cv_0974_search}).
 	Here you can provide either a protein
-	accession (from Uniprot) or an amino acid sequence (simply the
+	accession (from UniProt) or an amino acid sequence (simply the
 	sequence, or a FASTA formatted entry) in which you want to detect
-	SLiMs.  Retrieve the FASTA formatted sequence from Uniprot
+	SLiMs.  Retrieve the FASTA formatted sequence from UniProt
 	(\url{http://www.uniprot.org/uniprot/Q7NZE8.fasta}), and enter it into the
 	``sequence input text box''.
 
@@ -1470,11 +1470,11 @@ programmatic way. Of course, this way, you won't receive the graphical
 output representation, but are limited to textual data representation.
 
 Currently, there exists a single URL (\rurl{elm.eu.org/start\_search/})
-to accept such queries. You can choose to either submit a Uniprot name
+to accept such queries. You can choose to either submit a UniProt name
 or accession (eg. '\url{elm.eu.org/start\_search/P53\_HUMAN.tsv}') or
 submit your raw sequence (e.g. '\rurl{elm.eu.org/start\_search/MAPRGFSCLLLLTSEIDLPVKRRA}'.)
 If the URL ends in `.tsv' then the server assumes you
-are using a Uniprot id or accession; if it doesn't, then it assumes you
+are using a UniProt id or accession; if it doesn't, then it assumes you
 are using raw sequence. See below for details.
 
 %
@@ -1522,7 +1522,7 @@ readable. All this does is to properly align all columns at tabstops.)
 	(see commentary section "Instance Mapper" at page \pageref{InstanceMapper}).
 	The column ``is\_filtered'' shows whether or not this motif was rejected by any
 	of the ELM prediction filters (structure, topodom, taxon), whereby
-	``topodomfilter'' uses information from Uniprot to determine the protein's ``topology''
+	``topodomfilter'' uses information from UniProt to determine the protein's ``topology''
 	with respect to trans-membrane domains or extracellular regions.
 	The columns ``taxonfilter'' and ``structure'' indicate that an instance
 	has been filtered by the taxonomy or secondary structure filter, respectively
