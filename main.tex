@@ -102,7 +102,7 @@ properties \citep{10550212}. One prominent type of binding module
 consists of short linear motifs (SLiMs) \citep{18508681}. These compact
 binding sites are generally located in intrinsically disordered regions
 (IDR) of the proteome and commonly bind to
-surface of a globular domain in a protein \citep{21909575}. SLiMs mediate
+surfaces of a globular domain of a protein \citep{21909575}. SLiMs mediate
 different types of interactions that regulate protein functionality, and hence
 are important regulators of the dynamic processes involved in cell
 signalling \citep{22480932} \citep{24926813}. The number of
@@ -113,12 +113,12 @@ Eukaryotic Linear Motif (ELM) resource contributes to this process by
 providing the necessary tools to researchers working on motifs. It
 consists of a database and a prediction tool. The database provides a
 categorised repository of experimentally validated linear motif classes
-and instances that were manually annotated form the literature. The ELM
+and instances that were manually annotated from the literature. The ELM
 prediction tool in turn relies on annotated data, both from the ELM
 database and other resources, to accurately analyse unknown sequences
 for candidate motifs and assist researchers in selecting the most
 plausible ones for experimental validation and discard likely false
-positive hits, saving them valuable time and assets \citep{22110040}.
+positive hits, saving them valuable time and resources \citep{22110040}.
 The following protocols will guide users through the different ELM
 applications, explaining how to browse the curated data available in
 ELM, how to analyse a protein sequence for putative motifs, and how to
@@ -129,6 +129,7 @@ interpret these data and avoid common pitfalls in SLiM discovery.
 \section{Exploring the Content of the ELM Database}%
 \label{sec:explore_content}%
 
+% TODO: this paragraph is technically not part of the protocol but rather introduction
 The core of the ELM database is a repository of manually annotated motif classes
 and instances (as of December 2016, it contains over 260 classes and more than
 3000 experimentally validated and instances). The motif classes and motif
@@ -137,6 +138,7 @@ cross-checked and annotated by a large group of expert biologists from around th
 The complete catalogue of manually curated data can be searched, browsed and
 explored for free on the ELM website.
 
+% TODO: this paragraph is technically not part of the protocol but rather introduction
 Each motif class describes a short linear motif, a short sequence of amino acids
 with a dedicated function. Since the motifs are often degenerate, each motif
 class is represented using ``regular expressions'': a symbolic representation
@@ -146,6 +148,7 @@ is a Phenylalaline '\motif{F}' or a Tyrosine '\motif{Y}' followed by any one
 amino acid '\motif{.}', a Leucine '\motif{L}', one more arbitrary amino acid
 '\motif{.}' and finally a Proline '\motif{P}'.
 
+% TODO: this paragraph is technically not part of the protocol but rather introduction
 In all cases the annotator condenses information from the primary and secondary
 literature into manageable abstracts, accompanies the motif definition with
 a list of experimental instances, as well as links to external resources including
@@ -195,8 +198,8 @@ as links to external resources.
 	\centering
 	\includegraphics[width=\textwidth]{Figures/explore_content/stats.png}
 	\caption{
-		The ELM database statistics overview page shows the most up to
-		date database statistics. As of January 2017 ELM has just over
+		The ELM database statistics overview page shows the most up-to-date
+		database statistics. As of January 2017, ELM has just over
 		3000 annotated instances in 262 different motif classes.
 	}
 	\label{fig:explore_content_stats}
@@ -206,7 +209,7 @@ as links to external resources.
 	the database statistics (Figure~\ref{fig:explore_content_stats}).
 	This page displays the types and amounts of annotations contained in
 	the database and a few links to third-part databases.
-	Each line contains at least one link which will take you
+	Each line contains at least one link that will take you
 	to the corresponding contents page.
 % HD:I find the following sentence confusing, as the user doesn't know whether he should click on that 'instances' button or not... will be explained later anyways
 %	(for example, clicking on
@@ -238,7 +241,7 @@ as links to external resources.
 	instances for an individual class, click on the number of instances.
 
 	\sdesc{Use the search bar at the top of the page to filter for certain
-		motif classes. For example, typing ``MAPK'' and hitting submit
+		motif classes. For example, typing ``MAPK'' and hitting \button{submit}
 		will perform a full-text search on all motif classes in the ELM
 		database containing the term ``MAPK''. The green buttons on the
 		left can also be used to filter this table. For example,
@@ -280,6 +283,7 @@ as links to external resources.
 		chance in a random sequence.}
 
 % TODO: Could explain more of the content, eg. Probability, interaction domain etc.
+% TODO: be more consistent in using bold, italics, inverted-commas - it should be clear what are clickable links
 \item Scroll further down the \motif{DOC\_CYCLIN\_1} page
 	(Figure~\ref{fig:explore_content_doc_cyclin}) to view
 	more details about the manually annotated data and instances in the
@@ -313,15 +317,15 @@ as links to external resources.
 	associated with the annotation. ``Organism'' indicates in which
 	species in which the protein is found. Lastly the ``Notes'' column
 	contains links to any ``interactions'' or ``switches'' present in the
-	database, as well as links to PDB if this structure exists in PDB.
+	database, as well as links to PDB, if the structure exists in PDB.
 
 	\sdesc{The instance ``logic'' is an annotation of whether this is a
 		\textit{bona-fide} instance, or whether it is a non-functional
 		instance. \textit{TP} (True positive) indicates the instance is
-		annotated with experimental evidence showing it is functional.
+		annotated with experimental evidence showing, that it is functional.
 		\textit{FP} (False Positive) instances have experimental
 		evidence suggesting function, but are believed to be
-		non-functional after careful examination by our annotators.
+		non-functional, after careful examination by our annotators.
 		\textit{TN} (True Negative) instances have been experimentally
 		determined to be non-functional, and \textit{U} (Unknown)
 		instances do not have enough evidence to determine whether it
@@ -344,8 +348,9 @@ as links to external resources.
 	(Figure~\ref{fig:explore_content_instances}).
 	Note that only the first hundred instances matching the search criteria are shown.
 	The search form can be used to filter results by a full text search, by
-	instance logic, or organisms.
+	instance logic, or by organism.
 
+% TODO: explain GFF, PIR, FASTA?
 	\sdesc{This table can be filtered by motif class using the green toggle
 		filters on the left hand side. Lastly, the yellow buttons at
 		the top of the page can be used to download the instances in
@@ -360,7 +365,7 @@ as links to external resources.
 	for protein \uniprot{P53\_HUMAN} with start/end position ``381--385''. This page
 	also contains links to many external databases including Uniprot
 	\citep{25348405}, PDB \citep{12037327}, NCBI taxonomy and Pubmed
-	\citep{27899561}, and KEGG Pathways \citep{26476454}, as well as the
+	\citep{27899561}, and KEGG pathways \citep{26476454}, as well as the
 	PSI-MI controlled vocabulary \citep{17925023}.
 	}
 	\label{fig:explore_content_doc_cyclin_instance}
@@ -378,16 +383,16 @@ as links to external resources.
 \item Scroll down to the ``Instance Evidence'' header to view details on the
 	experimental evidence used to annotate this instance. The each
 	experimental method is annotated using the Proteomics Standards
-	Initiative Method Identifier (PSI-MI) \citep{17925023} as well as the
+	Initiative Method Identifier (PSI-MI) \citep{17925023}, as well as the
 	references in which the experiments were published.
 
 	\sdesc{
 		The ``biosource'' indicates whether method is \textit{in vivo},
 		\textit{in vitro}, \textit{in silico} or a combination of these.
 		The ``logic'' column indicates whether this experiment
-		``supports'' or ``contradicts'' this instance being functional.
-		Each method is also annotated with a ``reliability'' assessment, which can
-		be any of ``certain'', ``likely'', ``unlikely'' or ``unspecified''.}
+		supports or contradicts this instance being functional.
+		Each method is also annotated with a reliability assessment, which can
+		be any of certain, likely, unlikely or unspecified.}
 
 %
 % Subsection: Switches, pathways and other external resources.
@@ -400,7 +405,7 @@ as links to external resources.
 	\includegraphics[width=\textwidth]{Figures/explore_content/doc_ww_pin_1_4_instance.png}
 	\caption{
 	The instance details page for the \motif{DOC\_WW\_Pin1\_4}
-	instance found in human P53 (\uniprot{P53\_HUMAN}) with start/end position
+	instance found in human p53 (\uniprot{P53\_HUMAN}) with start/end position
 	``30--35''.
 	}
 	\label{fig:explore_content_doc_ww_instance}
@@ -411,12 +416,12 @@ as links to external resources.
 	find the ELM instance of the motif \motif{DOC\_WW\_Pin1\_4} with the
 	start/end position ``30--35''. (You can sort the table by clicking on the
 	header lines: click on ``Start'' to sort by start position ). Click on the
-	start/end position or the sub-sequence which will take you to the details
+	start/end position or the sub-sequence that will take you to the details
 	page (Figure~\ref{fig:explore_content_doc_ww_instance}). This
-	page is similar to that described for the P53 instance \motif{DOC\_CYCLIN\_1}
+	page is similar to that described for the p53 instance \motif{DOC\_CYCLIN\_1}
 	(Figure~\ref{fig:explore_content_doc_cyclin_instance}).
-	Additionally, for this instance there is information available about
-	its interaction partner and a molecular switch which is mediated by
+	Additionally, for this instance, there is information available about
+	its interaction partner and a molecular switch, which is mediated by
 	this motif instance.
 
 \item Scroll down to the ``Interactions'' header to view information about this
@@ -433,7 +438,7 @@ as links to external resources.
 	the switches details of this instance obtained from "switches.ELM"
 	\citep{23550212} (Figure~\ref{fig:explore_content_doc_ww_instance}). This
 	particular instance is part of a phosphorylation-dependant molecular switch --
-	only if P53 is phosphorylated on residue Serine-33 can it bind to the protein
+	only if p53 is phosphorylated on residue Serine-33 can it bind to the protein
 	``Peptidyl-prolyl cis-trans isomerase NIMA-interacting 1 (PIN1)``.
 	Clicking on the diagram will open an external link to the
 	\rurl{switches.elm.eu.org} website where more detail can be found.
@@ -441,7 +446,7 @@ as links to external resources.
 %
 % Subsection: Links to external resources
 %
-\subsection*{Exploring Links External Protein Resources}
+\subsection*{Exploring Links to External Protein Resources}
 \label{subsec:explore_content_links_to_external_resources}
 
 \begin{figure}[h!]
@@ -455,13 +460,13 @@ as links to external resources.
 \end{figure}
 
 \item Click on the sub-menu \button{ELM methods} under \button{ELM DB} to see a
-	list of all experimental methods which have been used to identify
+	list of all experimental methods, which have been used to identify
 	motifs and instances (Figure~\ref{fig:explore_content_methods}).
 	This table shows the internal method
 	identifier in the first column, a link to the corresponding entry in
 	the PSI-MI database \citep{17925023}, and the method name as annotated
 	by the PSI-MI controlled vocabulary, as well as the type of experiment
-	(in vitro/in vivo). Clicking on the link in the ``instances'' column
+	(\textit{in vitro}/\textit{in vivo}). Clicking on the link in the ``instances'' column
 	will list all instances annotated using that method.
 
 	\sdesc{The filter bar on the top page can be used to filter the list of
@@ -485,9 +490,10 @@ as links to external resources.
 	links to RCSB/PDB \citep{12037327}, the individual instance and the motif
 	class of that instance.
 
-	\sdesc{The filter bar on the top page can be used to filter the list of
-		structures shown. The yellow \fileformat{TSV} link creates a
-		downloadable file in ``tab separated values'' format.}
+% duplicate information:
+%	\sdesc{The filter bar on the top page can be used to filter the list of
+%		structures shown. The yellow \fileformat{TSV} link creates a
+%		downloadable file in ``tab separated values'' format.}
 
 \begin{figure}[h!]
 	\centering
@@ -501,24 +507,25 @@ as links to external resources.
 \item Click on the sub-menu \button{ELM binding domains} under \button{ELM DB}
 	to see a complete list of all the interaction domains in ELM
 	(Figure~\ref{fig:explore_content_interaction_domains}).
-	This table shows the ELM classes which have been annotated
+	This table shows the ELM classes that have been annotated
 	with a corresponding interaction domain divided by the ELM
 	class, a link to the Pfam \citep{26673716}, SMART \citep{25300481} or
 	InterPro \citep{27899635} domain, as well as the name of the
 	interacting domain followed by a brief description.
 
-	\sdesc{The filter bar on the top page can be used to filter the list of
-		interactions shown. The \emph{tsv} link creates a downloadable
-		file in ``tab separated values'' format.}
+% duplicate information:
+%	\sdesc{The filter bar on the top page can be used to filter the list of
+%		interactions shown. The \emph{tsv} link creates a downloadable
+%		file in ``tab separated values'' format.}
 
 %
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=\textwidth]{Figures/explore_content/switches.png}
 	\caption{
-	    A list of all molecular switches annotated at the
-	    \rurl{switches.elm.eu.org} database which are are based on instances
-	    from ELM.
+	    A list of all molecular switches that are based on instances
+	    from ELM and which are annotated at the \rurl{switches.elm.eu.org}
+	    database.
 	}
 	\label{fig:explore_content_switches}
 \end{figure}
@@ -531,8 +538,9 @@ as links to external resources.
 	links to the \rurl{switches.elm.eu.org} website, and a brief description
 	of the switch (taken from "switches.ELM", see \cite{23550212}).
 
-	\sdesc{The filter bar on the top page can be used to quickly filter
-		the list of interactions shown.}
+% duplicate information:
+%	\sdesc{The filter bar on the top page can be used to quickly filter
+%		the list of interactions shown.}
 
 %
 % Subsection: Exploring KEGG pathways
@@ -545,8 +553,8 @@ as links to external resources.
 	\centering
 	\includegraphics[width=\textwidth]{Figures/explore_content/pathways.png}
 	\caption{
-	    A list of organisms for which Pathways from KEGG have been mapped to protein sequences of instances in ELM. The number in brackets
-	    denote the number of different pathways per organism.
+	    A list of organisms for which pathways from KEGG have been mapped to protein sequences of instances in ELM. The number in brackets
+	    denotes the number of different pathways per organism.
 	}
 	\label{fig:explore_content_pathways}
 \end{figure}
@@ -556,12 +564,12 @@ as links to external resources.
 	(Figure~\ref{fig:explore_content_pathways}).
 	Pathways are taken from and mapped onto the ``Kyoto Encyclopedia of Genes and Genomes'' (KEGG
 	\citep{26476454}).
-	
+
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=\textwidth]{Figures/explore_content/pathways_example.png}
 	\caption{
-		A list of all KEGG pathways for the the taxon \textit{Gallus gallus} involving proteins annotated in ELM. Note that multiple
+		A list of all KEGG pathways for the taxon \textit{Gallus gallus} involving proteins annotated in ELM. Note that multiple
 		instances from a single sequence can be annotated for one pathway. The color scheme on the right is used for coloring instances
 		on the KEGG website (see Figure~\ref{fig:explore_content_pathways_kegg}).
 	}
@@ -570,7 +578,7 @@ as links to external resources.
 
 \item On the ``ELM pathways'' page
 	(Figure~\ref{fig:explore_content_pathways_example})
-	click on the link \button{gallus gallus} to navigate to the page
+	click on the link \button{Gallus gallus} to navigate to the page
 	containing all pathways annotated for
 	chicken.
 
@@ -578,7 +586,7 @@ as links to external resources.
 	\centering
 	\includegraphics[width=\textwidth]{Figures/explore_content/pathways_kegg.png}
 	\caption{
-	A list of all annotated pathways for taxon \textit{Gallus gallus}. The coloring of genes/proteins is as follows:
+	A list of all annotated pathways for the taxon \textit{Gallus gallus}. The coloring of genes/proteins is as follows:
 light blue=\motif{CLV} (cleavage site),
 dark blue=\motif{DOC} (docking site),
 yellow=\motif{DEG} (degradation motif),
@@ -586,14 +594,15 @@ green=\motif{LIG} (ligand binding motif),
 pink=\motif{MOD} (modification site),
 orange=\motif{TRG} (targeting motif),
 red=multiple classes per sequence.
-Light green boxes are colored by KEGG and represent the KEGG hyperlinks to GENES entries, indicating the presence of genes in the genome and also
-    the completeness of the pathway (see KEGG help \url{http://www.kegg.jp/kegg/document/help_pathway.html}.
+Light green boxes are colored by KEGG and represent the KEGG hyperlinks to GENES entries
+    %, indicating the presence of genes in the genome and also the completeness of the pathway
+    (see KEGG help \url{http://www.kegg.jp/kegg/document/help_pathway.html}).
 	}
 	\label{fig:explore_content_pathways_kegg}
 \end{figure}
 
-\item One the page with chicken pathways
-	(Figure~\ref{fig:explore_content_pathways_example})
+\item On the page with pathways annotated for chicken
+	(Figure~\ref{fig:explore_content_pathways_example}),
 	click on \button{Adherens junction} to the KEGG entry for this pathway,
 	with each protein's color corresponding to ELM classes (see the color
 	legend right side of Figure~\ref{fig:explore_content_pathways_kegg}).
@@ -630,7 +639,7 @@ Light green boxes are colored by KEGG and represent the KEGG hyperlinks to GENES
 	\centering
 	\includegraphics[width=\textwidth]{Figures/explore_content/diseases.png}
 	\caption{
-	A list of diseases which are mediated by short linear motifs. Disease description has been adapted from
+	A list of diseases that are mediated by short linear motifs. Disease description has been adapted from
 	the ``Online Mendelian Inheritance in Man`` (OMIM) database \citep{17357067} and enriched with information about
 	the role of the motif.
 	}
@@ -654,9 +663,9 @@ Light green boxes are colored by KEGG and represent the KEGG hyperlinks to GENES
 	\centering
 	\includegraphics[width=\textwidth]{Figures/explore_content/help.png}
 	\caption{
-		The ELM help and Questions \& Answers page.
-		Users are encouraged to contact via email if their questions
-		regarding the ELM database could not be answered by this page.
+		The ELM ``Help'' and ``Questions \& Answers'' page.
+		Users are encouraged to contact the authors via email if their questions
+		regarding the ELM database can not be answered by this page.
 	}
 	\label{fig:explore_content_help}
 \end{figure}
@@ -680,7 +689,7 @@ of the ELM database website (see for example Fig.
 \ref{fig:general_search_TP53_instances}). This search peforms a full-text
 query across multiple selected data sources in the ELM database, including
 ELM classes, instances, candidates, and switches. Using this general search is helpful in
-getting information eg. about a particular protein and it's annotation status in the ELM database
+getting information about a particular protein and its annotation status in the ELM database
 (eg. full instance vs. candidate).
 
 %
@@ -721,7 +730,7 @@ getting information eg. about a particular protein and it's annotation status in
 
 
 \item Use the general search field (on the top of the page) to do a general
-	search for P53 using its Uniprot identifier by typing ``P04637'' in the
+	search for p53 using its Uniprot identifier by typing ``P04637'' in the
 	search field and hitting ``Enter''. This will perform a query
 	across multiple tables of the ELM database to find any matches to the
 	search query ``P04637''.
@@ -732,6 +741,7 @@ getting information eg. about a particular protein and it's annotation status in
 	As there are no classes with ``P04637'' in the name or description, no classes are
 	returned for this section of the query.
 
+% TODO: describe candidate classes (&instances) better
 	\sdesc{
 		The ``candidate classes'' are a collection of putative future ELM classes, which are not yet fully annotated, often submitted by
 		ELM users. Keep in mind that these are a first draft on ELM classes and are still pending curation.
@@ -749,14 +759,14 @@ getting information eg. about a particular protein and it's annotation status in
 
 \item Perform a search using the keyword ``p53'' in the general search field
 	instead of its Uniprot identifier ``P04637''.
-	The set of results retrieved using this term as search query
+	The set of results retrieved using this term as the search query
 	(Figure~\ref{fig:general_search_TP53_instances})
-	in this case are different, returning 31 instances and 44
+	are different, returning 31 instances and 44
 	switches (instead of 14 and 11). The reason for this is that the
 % TODO: HD: maybe discuss this rather in the commentary section?
-	phrase ``P53'' also matches the Uniprot identifier of
+	phrase ``p53'' also matches the Uniprot identifier of
 	\uniprot{CDH1\_YEAST} (P53197). This is probably not what you had in mind when using this search term, so it is important to keep in mind
-	to check for such false positive search results when searching the database.
+	to check for such false positive search results, when searching the database.
 
 \end{enumerate}
 
@@ -776,7 +786,7 @@ set of putative motifs.
 In this protocol we will be viewing the manually annotated data of a
 typical protein, using p53 (Uniprot ID: \uniprot{P53\_HUMAN}/P04637) as an
 example. We will cover how to find the manually annotated motifs and instances,
-and how to find the motif instances, the references used to annotate each
+the references used to annotate each
 instance, the experimental protocols used, and additional information including
 relationships to biological pathways (KEGG), diseases (OMIM) and molecular
 switches (switches.ELM).
@@ -810,40 +820,46 @@ switches (switches.ELM).
 \item Open a browser, and navigate to the ELM homepage: \url{http://elm.eu.org}.\label{sec:predicting_p53_elm_search}
 	Enter the Uniprot ID \uniprot{P53\_HUMAN} in the search field labelled
 	``Enter a Uniprot identifier or accession number''. While typing, the page should
-	autocomplete your input ``\uniprot{P53\_HUMAN} / P04637 (Homo
-	sapiens)'' and already pre-fill other fields of the input form (Figure~\ref{fig:predicting_p53_elm_search}).
-	Click on this entry to confirm that we want to search for
+	autocomplete your input ``\uniprot{P53\_HUMAN} / P04637 (\textit{Homo
+	sapiens})'' and already pre-fill other fields of the input form (Figure~\ref{fig:predicting_p53_elm_search}).
+	Click on this entry to confirm that you want to search for
 	motifs in this protein. Click on \button{Submit} to send the query to
 	the server.
 
 	\sdesc{The autocompletion mechanism queries Uniprot for the given protein
 		identifier; if it succeeds, then additional information from
-		Uniprot will be used to pre-populate the input boxes. In this
+		Uniprot will be used to auto-populate the input boxes. In this
 		example, \uniprot{P53\_HUMAN} is recognized as a human protein,
 		and so ``Homo sapiens'' is automatically filled in the
-		``Taxonomic Context'' field. Also, P53 has been annotated (by
+		``Taxonomic Context'' field. Also, p53 has been annotated (by
 		Uniprot) to be localized to nucleus, cytosol, endoplasmic
 		reticulum and mitochondrion, so these are also automatically
 		applied as search criteria. The motif cutoff of ``100'' is a
-		sufficiently high (lenient) threshold to allow all other
-		detected motifs to be shown.}
+		sufficiently high (lenient) threshold to ensure no motif class
+		is filtered out based on motif probability.}
 
-\item Select the search criteria (optional). It is possible to limit the
-	results by ``cell compartment'', ``taxonomic context'' or by changing
-	the ``motif probability cutoff''. To restrict the search to include
-	motifs that are active in certain cellular compartments, select one or
-	more from the list (use the ``control'' key to select more than one
-	option). It is also possible to select a ``taxonomic context'' to
+\item Select the search criteria (optional). 
+%	It is possible to limit the results by ``Cell compartment'', ``Taxonomic Context'' or by changing the ``Motif Probability Cutoff''.
+	To restrict the search to include
+	motifs that are active only in certain cellular compartments, select one or
+	more from the ``Cell compartment'' list (use the ``control'' key to select more than one
+	option). It is also possible to select a ``Taxonomic Context'' to
 	restrict the search to motifs from certain species. Start typing a
-	species name in the ``taxonomic context'' input field to get an
+	species name in the ``Taxonomic Context'' input field to get an
 	auto-completed list of species to select from. Additionally, a ``Motif
-	probability cutoff'' can be used to only retain ELM classes whose
+	Probability Cutoff'' can be used to only retain ELM classes whose
 	pattern probability is below the given value. For the current protocol,
 	leave all of these at their default values: ``not specified'', ``100''
-	and no ``taxonomic context''
+	and no ``Taxonomic Context''
 
-TODO: Repeat search using stringent filters (homo sapiens, nucleus,
-0.01) Do we want to do this? - Marc
+%TODO: HD add probability filter to commentary
+
+TODO: Repeat search using stringent filters (homo sapiens, nucleus, 0.01) Do we want to do this? - Marc
+
+YES, we do. HD
+%	At the moment, step 1. & 2. are confusing as the second 'overwrites' the
+%	first. better to continue with 3 (as 2) and repeat 2 later with
+%	different settings
 
 %
 % Subsection: Understanding results: graphical summary
@@ -866,7 +882,7 @@ TODO: Repeat search using stringent filters (homo sapiens, nucleus,
 		visualization should help you interpreting the results and to
 		assess whether or not a motif is present in a sequence, as well
 		as how likely it is to be functional based on its structural
-		context and evolutionary conservation. Motif instances which
+		context and evolutionary conservation. Motif instances that
 		are manually annotated in the database appear as red (TP) or
 		yellow (FP) ovals in the graphic. Blue/gray squares represent
 		predicted motif occurrences.}
@@ -934,7 +950,7 @@ TODO: Repeat search using stringent filters (homo sapiens, nucleus,
 	reference domain structures \citep{19852836}. Check the graphical
 	representation, and if the output of the secondary structure filter and
 	the disorder predictors agree with respect to which parts of the
-	sequence are considered structured and which disordered.
+	sequence are considered structured and which are disordered.
 
 \item The remainder of the figure (below ``secondary structure'' output)
 	displays predicted and annotated motif instances, overlayed with the
@@ -942,7 +958,7 @@ TODO: Repeat search using stringent filters (homo sapiens, nucleus,
 	blue square indicates a single motif occurrence, and intensity of the
 	color indicates the conservation of this sequence across a group of in
 	homologous proteins.
-	Boxes in gray are motif occurrences which have been filtered out by the
+	Boxes in gray are motif occurrences that have been filtered out by the
 	structure filter. Boxes that are blue \& gray are neutral (
 	residing in structural context, but the secondary structure detected a
 	loop region). If the sequence is already present in the ELM database,
@@ -979,7 +995,7 @@ TODO: EXPLAIN / SHOW ANNOTATED INSTANCES Marc: Use mouse over in this figure.
 	which was flagged as ``neutral'' by the ELM prediction pipeline.
 	This will trigger the information screen (with the pink header) shown
 	in Figure~\ref{fig:predicting_p53_results_summary} to appear.
-	This motif resides inside of the P53 Pfam domain, and thus has been
+	This motif resides inside of the p53 Pfam domain, and thus has been
 	subjected to ``structural filtering''. However, the secondary structure
 	prediction suggests this motif occurs within the looped region of this
 	domain, so may be accessible.
@@ -1053,7 +1069,7 @@ TODO: EXPLAIN / SHOW ANNOTATED INSTANCES Marc: Use mouse over in this figure.
 	\centering
 	\includegraphics[width=\textwidth]{Figures/predicting_p53/elm_results_known.png}
 	\caption{
-		The ELM prediction pipeline section displaying the P53 motifs
+		The ELM prediction pipeline section displaying the p53 motifs
 		that are ``known'', and have been annotated in the ELM
 		database.
 	}
@@ -1066,7 +1082,7 @@ TODO: EXPLAIN / SHOW ANNOTATED INSTANCES Marc: Use mouse over in this figure.
 	This section contains information on which domains were detected by the
 	SMART server, and their positions. Clicking on their names will bring
 	you to the entry for that domain on the SMART or Pfam homepage.
-	In this case the only domains detected is the ``P53'' Pfam domain.
+	In this case the only domains detected is the ``p53'' Pfam domain.
 
 \item On the results page, scroll down to the heading: ``The ELMs in the
 	following table are known instances annotated from the literature''
@@ -1126,7 +1142,6 @@ TODO: EXPLAIN / SHOW ANNOTATED INSTANCES Marc: Use mouse over in this figure.
 	(Figure~\ref{fig:predicting_p53_elm_results_motifs_filtered})
 	This table is similar to the one described above, but shows motif
 	matches which were rejected by the structural filter.
-	
 \end{enumerate}
 
 \clearpage
@@ -1317,7 +1332,7 @@ classes}\label{downloading-all-elm-classes}
 
 	\sdesc{ This search result is identical to the result you would obtain
 		by doing a ``manual'' search on the ELM Classes page
-		(eg. typing 'CSK' in the search box and clicking submit) as
+		(eg. typing 'CSK' in the search box and clicking \button{submit}) as
 		described in step \ref{sec:predicting_p53_submit} of \ref{sec:explore_content}
 		(see Figure~\ref{fig:explore_content_elms}).}
 
@@ -1369,7 +1384,7 @@ classes}\label{downloading-all-elm-classes}
 	\label{fig:search_REST_curl_p53}
 \end{figure}
 
-\item To download a list of all motif instances detected in the protein sequence of human P53, type the
+\item To download a list of all motif instances detected in the protein sequence of human p53, type the
 	following command into a terminal: \cl{curl
 	'http://elm.eu.org/instances.gff?q=p53\_human'}. The output should look
 	similar to that shown in Figure~\ref{fig:predicting_REST_curl_p53}. The
@@ -1450,13 +1465,13 @@ readable. All this does is to properly align all columns at tabstops.)
 	\includegraphics[width=\textwidth]{Figures/predicting_REST/curl_P53.png}
 	\caption{
 	The commandline output when \cl{curl} is used to
-	download all motifs predicted in human P53.}
+	download all motifs predicted in human p53.}
 	\label{fig:predicting_REST_curl_p53}
 \end{figure}
 
 
 \item Use \cl{curl} to query ELM for all motifs predicted to occur in human
-    P53 by typing the following into a terminal: `\cl{curl
+    p53 by typing the following into a terminal: `\cl{curl
 	`http://elm.eu.org/start\_search/P53\_HUMAN.tsv}'.
 	See Figure~\ref{fig:predicting_REST_curl_p53} for example output.
 	Each resulting row represents a
