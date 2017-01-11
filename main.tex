@@ -130,13 +130,12 @@ interpret these data and avoid common pitfalls in SLiM discovery.
 \label{sec:explore_content}%
 
 % TODO: this paragraph is technically not part of the protocol but rather introduction
-The core of the ELM database is a repository of manually annotated motif classes
-and instances (as of December 2016, it contains over 260 classes and more than
-3000 experimentally validated and instances). The motif classes and motif
-instances have been manually curated from the scientific literature, carefully
-cross-checked and annotated by a large group of expert biologists from around the globe.
-The complete catalogue of manually curated data can be searched, browsed and
-explored for free on the ELM website.
+The core of the ELM database is a repository of manually annotated motifs and
+instances. As of January 2017, ELM contains over 260 motif classes and over
+3000 experimentally validated and manually curated instances.
+The motif classes and motif instances have been uploaded by a large group of
+annotators from around the globe. The complete catalogue of manually curated
+data can be searched, browsed and explored on the ELM website.
 
 % TODO: this paragraph is technically not part of the protocol but rather introduction
 Each motif class describes a short linear motif, a short sequence of amino acids
@@ -286,9 +285,10 @@ as links to external resources.
 % TODO: be more consistent in using bold, italics, inverted-commas - it should be clear what are clickable links
 \item Scroll further down the \motif{DOC\_CYCLIN\_1} page
 	(Figure~\ref{fig:explore_content_doc_cyclin}) to view
-	more details about the manually annotated data and instances in the
-	database (Figure~\ref{fig:explore_content_doc_cyclin_1_abstract_instances})
-	The ``abstract'' contains a more detailed description of the motif
+	more details about this motif
+    (Figure~\ref{fig:explore_content_doc_cyclin_1_abstract_instances})
+    The ``abstract'' contains a description of the biological relevance of the
+    motif (for example its involvement in cellular processes and pathways).
 	annotation. Click on the \button{show} button next to the ``selected
 	references'' header for a list of publications relevant to this motif.
 	Click on \button{show} next to ``GO terms'' for a complete list of all
@@ -466,7 +466,8 @@ as links to external resources.
 	identifier in the first column, a link to the corresponding entry in
 	the PSI-MI database \citep{17925023}, and the method name as annotated
 	by the PSI-MI controlled vocabulary, as well as the type of experiment
-	(\textit{in vitro}/\textit{in vivo}). Clicking on the link in the ``instances'' column
+	(\textit{in vitro}, \textit{in vivo}, \textit{in silico}, or a combination of these).
+    Clicking on the link in the ``instances'' column
 	will list all instances annotated using that method.
 
 	\sdesc{The filter bar on the top page can be used to filter the list of
@@ -847,10 +848,8 @@ switches (switches.ELM).
 	restrict the search to motifs from certain species. Start typing a
 	species name in the ``Taxonomic Context'' input field to get an
 	auto-completed list of species to select from. Additionally, a ``Motif
-	Probability Cutoff'' can be used to only retain ELM classes whose
-	pattern probability is below the given value. For the current protocol,
-	leave all of these at their default values: ``not specified'', ``100''
-	and no ``Taxonomic Context''
+	probability cutoff'' can be used to only retain ELM classes whose
+	pattern probability is below the given value. 
 
 %TODO: HD add probability filter to commentary
 
@@ -1142,6 +1141,7 @@ TODO: EXPLAIN / SHOW ANNOTATED INSTANCES Marc: Use mouse over in this figure.
 	(Figure~\ref{fig:predicting_p53_elm_results_motifs_filtered})
 	This table is similar to the one described above, but shows motif
 	matches which were rejected by the structural filter.
+	
 \end{enumerate}
 
 \clearpage
@@ -1150,12 +1150,30 @@ TODO: EXPLAIN / SHOW ANNOTATED INSTANCES Marc: Use mouse over in this figure.
 \section{Detecting Short Linear Motifs in Unknown Protein Sequences}
 \label{sec:predicting_cv_0974}
 
-TODO: DESCRIBE MOST PROBABLE MOTIF INSTANCES (COMPARED TO FILTERED)
+TODO: Marc: read this section to check for consistency, etc.
 
-We will use protein \uniprot{CV\_0974} (Uniprot ID: Q7NZE8) as an example, a
-``probable tyrosine phosphatase'' from \textit{Chromobacterium violaceum}.
-This protein is predicted to be a tyrosine phosphates because it has a
-``tyrosine phosphatase'' (PTPc) domain.
+The ELM prediction pipeline is a very powerfull way to obtain a lot of
+information on which motifs are present, in which structural context they
+are. However, determining which motifs are actually true positive detections
+requires interpreting all of these results, as well incoorporating as much
+biological knowledge as possible. In this protocol we will be following a
+typical example of how one might use the ELM prediction pipeline to search for
+motifs in novel sequences.
+
+Some pathogens have evolved short linear motifs in effector proteins to modify
+the intracellular signalling of its host cell for its own convenience
+[PMID:25475989]. The Gram-negative bacteria \textit{Chromobacterium violaceum} is a
+human opportunistic pathogen whose mechanism of pathogenicity remain poorly
+understood. Its genome encodes a type three secretion system (T3SS) that is
+used by many pathogens to translocate bacterial proteins to the infected cells.
+Interestingly, the genes encoding this T3SS as well as other genes located in
+the same genomic location are very similar to the ones in \textit{Salmonella spp.}
+except for a couple of genes including the modular protein SptP
+[PMID:15100995]. SptP in \textit{Salmonella spp.} is a secreted protein tyrosine
+phosphatase (PMID:8866485) whose closest homolog in \textit{C. violaceum} is
+the protein \uniprot{CV\_0974}. To further undestand the possible biological
+function of the protein \uniprot{CV\_0974} we will use it in the ELM server
+predict ELMs.
 
 %
 % Subsection: Necessary Resources
@@ -1177,14 +1195,14 @@ This protein is predicted to be a tyrosine phosphates because it has a
 	\includegraphics[width=\textwidth]{Figures/predicting_cv_0974/elm_search.png}
 	\caption{
 	The input query page for finding motifs in ELM. The sequence
-	for \textit{C. vilaceum} protein CV\_0974 was used as an example for this
-	protocol.
+    for \textit{C. vilaceum} protein \uniprot{CV\_0974}, which is thought to be involved in its pathogenicity,
+    is used as an example for this protocol.
 	}
 	\label{fig:predicting_cv_0974_search}
 \end{figure}
 
 \item Click on the ``ELM Predictions'' button in the menu to access the search
-	query page (Figure~\ref{fig:predicting_cv_0974_search}).
+	query page (Fig. \ref{fig:predicting_cv_0974_search}).
 	Here you can provide either a protein
 	accession (from Uniprot) or an amino acid sequence (simply the
 	sequence, or a FASTA formatted entry) in which you want to detect
@@ -1192,8 +1210,20 @@ This protein is predicted to be a tyrosine phosphates because it has a
 	(\url{http://www.uniprot.org/uniprot/Q7NZE8.fasta}), and enter it into the
 	``sequence input text box''.
 
-TODO: MENTION NOT TO USE ``CHROMOBACTERIUM VIOLACEUM'' IN THE ORGANISM
-BOX AND WHY
+\item Make sure that the ``Taxonomic Context'' is left empty: If any
+    species is used in this field the results will only include motifs which have an
+    instance in that species annotated in ELM. For example, if we were to
+    fill in ``C. violaceum'', only motifs known to occur in \textit{C.  violaceum}
+    would be searched for (which are zero).
+
+\item \uniprot{CV\_0974} is likely to be an effector protein, simiarly to its
+    homologue SptP. As SptP localizes to the cytosol, we can assume the same
+    for \uniprot{CV\_0974}. Select ``cytosol'' in the ``Cell compartment''
+    field.
+
+
+\subsection*{Interpreting the results}
+\label{subsec:predicting_cv_0974_submitting}
 
 \begin{figure}[h!]
 	\centering
@@ -1204,63 +1234,61 @@ BOX AND WHY
 	detections are shown (the image is truncated at the bottom). The top
 	five rows show a handful of structural features. The motif occurrence
 	are shown as blue boxes, the intensity of which indicates the
-	conservation score. See steps \ref{sec:predicting_p53_results_phosphorylation}
-	to \ref{sec:predicting_p53_results_structure_filter} of
+	conservation score. See steps \ref{sec:predicting_p53_results_phosphorylation} to \ref{fig:predicting_p53_results_structure_filter} of
 		\ref{sec:explore_content} for more information.
 	}
 	\label{fig:predicting_cv_0974_results_summary}
 \end{figure}
 
-\item The Results are summarized in the first figure on the results page
-	(see Figure~\ref{fig:predicting_cv_0974_results_summary})
-	The Graphical summary shows all of the final and
-	intermediate results generated by the ELM Prediction pipeline, and can
-	be used infer whether or not a motif is present in a sequence, as well
-	as now likely it is to be functional based on its structural context
-	and evolutionary conservation.
-
-\item Check the first row to see whether there are for phosphorylation sites
-	acid is a serine, threonine or tyrosine. In this case, no
-	phosphorylation data could be found in the Phospho.ELM database
-	\citep{21062810}.
-
-\item Check the second row showing SMART and Pfam domains. Hover the mouse over
-	these domains to see their names and exact start and end positions.
-
-\item The third row shows globular and disordered regions in the sequence as
-	predicted by GlobPlot \citep{12824398}. The 4th \& 5th rows contain
-	results from IUPred \citep{15955779}, another unstructured region
-	prediction tool. Protein segments with an IUPred score above 0.5 are
-	95\% likely to be disordered
-	(see Commentary section "Disorder Filter" at page \pageref{DisorderFilter}).
-
-\item Place the cursor over the blue box for motif occurrence
-	``DOC\_USP7\_MATH\_1'' at position 129--133. This motif is in a
-	disordered region, and has not been filtered out by the structural
-	filter. However, its conservation score is extremely low: 0.000,
-	indicating it is not conserved in homologous proteins. Place the cursor
-	over motif ``DOC\_MAPK\_DCC\_7'' at positions ``334--343''. Despite the
-	high conservation score (1.000), this motif is inside the PTPc domain
-	(and a Globular regions), and therefore has been filtered out.
-
-TODO: CHECK CONSERVATION FILTER
-
 %
-% Subsection: Submitting a query
+% Subsection: Understanding results: graphical summary
 %
-\subsection*{Interpreting the prediction results: Additional Information}
-\label{subsec:predicting_cv_0974_additional_information}
 
-TODO: DESCRIBE HOW TO INTERPRETE THE PREDICTIONS USING THIS BACTERIAL
-EXAMPLE (OF WHICH NOT MUCH IS KNOWN). FOCUS ON HOW ONE SHOULD INTERPRETE
-THESE PREDICTIONS (LOOK AT DISORDER/GLOBULARITY, CONSERVATION)
+\subsection*{Interpreting the prediction results}
+\label{subsec:predicting_p53_graphical_summary}
+
+\item Hit \button{Submit} to send the query to the ELM prediction pipeline.
+    The Results are summarized in the first figure on the results page
+	(see Fig. \ref{fig:predicting_cv_0974_results_summary})
+    See steps 3 -- 11 of \ref{predicting_p53} for a description of the
+    graphical summary output.
+
+\item Find the entry for \motif{LIG\_CSK\_EPIYA\_1} in the graphical summary.
+    When this motif is tyrosine-phosphorylated it is recognized by C-terminal
+    kinase. Different effector proteins from human pathogens like
+    \textit{Bartonella henselae}, \textit{Helicobacter pylori} and
+    \textit{Haemophilus ducreyi} have been reported to use this motif to
+    interfere with the host signalling network to induce proliferation or to
+    avoid phagocytosis \citep{19380118, 12446738,24902122)}.  
+
+\item Check the structural context for both \motif{LIG\_CSK\_EPIYA\_1} motifs
+    predicted in \uniprot{CV\_0974}. Both of them fall ouside of the SMART
+    domain PTPC, and reside in a regioun with a protein disorder (IUPRED) score
+    abover 0.5. Both of these conditions are indicative that these motifs might
+    be True Positive predictions.
+
+    \sdesc{You may notice that there are no conservation scores for either of
+        these motifs. A closer examination of the alignments of homologous
+        proteins shows that none of the other proteins have this part of the
+        sequence, and are gapped, thus it is not possible to calculate a
+        conservation score.}
+
+    \item Click on the motif identifier \button{LIG\_CSK\_EPIYA\_1} in the
+        graphical summarty to be brought to the motif details page for this
+        motif. In the ``Functional site description'' it is stated that 'The
+        baterial proteins usually have repeats of EPIYA motifs.' The ELM
+        prediction results did indeed also detect two EPIYA motifs in a 20
+        amino acid range, lending further support to the likelyhood that there
+        are indeed two functional EPIYA motifs in \uniprot{CV\_0974}, which in
+        turn suggests that these motifs may be involved in \textit{C.
+        violaceum's} pathogenicity.
 
 \end{enumerate}
 
 \clearpage
 
 %%% Searching via REST API
-\section{(Alternate Protocol) Searching the ELM database using the REST API}
+\section{(Alternative Protocol) Searching the ELM database using the REST API}
 \label{sec:search_REST}
 
 Many researchers are interested in large-scale analyses rather than
@@ -1501,8 +1529,10 @@ readable. All this does is to properly align all columns at tabstops.)
 		terminal. We specified the \cl{-s} option to silence all
 		\cl{curl} output other than the downloaded file, and piped
 		the output directly to the
-		\cl{column} command (this command exists on most Linux and
+		\cl{column} command (this command exists on most Liux and
 		OSX machines).}
+
+
 
 \begin{figure}[h!]
 	\centering
