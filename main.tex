@@ -110,14 +110,14 @@ SLiM instances in the human proteome is currently suggested to be over
 one million \citep{25038412}. Identifying SLiMs and elucidating their
 functionality is an essential step in understanding cell regulation. The
 Eukaryotic Linear Motif (ELM) resource contributes to this process by
-providing the necessary tools to researchers working on motifs. It
+providing the necessary tools to researchers which  
 consists of a database and a prediction tool. The database provides a
 categorised repository of experimentally validated linear motif classes
-and instances that were manually annotated form the literature. The ELM
+and instances that were manually annotated from the literature. The ELM
 prediction tool in turn relies on annotated data, both from the ELM
 database and other resources, to accurately analyse unknown sequences
-for candidate motifs and assist researchers in selecting the most
-plausible ones for experimental validation and discard likely false
+for candidate motifs and which helps to discriminate between the most
+plausible ones for experimental validation and likely false
 positive hits, saving them valuable time and assets \citep{22110040}.
 The following protocols will guide users through the different ELM
 applications, explaining how to browse the curated data available in
@@ -129,11 +129,11 @@ interpret these data and avoid common pitfalls in SLiM discovery.
 \label{sec:explore_content}
 
 The core of the ELM database is a repository of manually annotated motifs and
-instances. As of December 2016, ELM contains over 260 motif classes and over
+instances. As of January 2017, ELM contains over 260 motif classes and over
 3000 experimentally validated and manually curated instances.
 The motif classes and motif instances have been uploaded by a large group of
 annotators from around the globe. The complete catalogue of manually curated
-data can be searched, browsed and explored on the ELM website
+data can be searched, browsed and explored on the ELM website.
 
 Each motif class is a short generate sequence of amino acids with a given
 function. Since the sequences are degenerate, each motif class is represented
@@ -184,7 +184,7 @@ external resources.
 	This page shows a brief explanation of the ELM resource, and a form to
 	search for SLiMs (which we cover in further detail in
 	\ref{sec:predicting_p53} and \ref{sec:predicting_cv_0974}).
-	The column to the right is the news column, and is continually
+	The column to the right is continually
 	updated with the latest news about changes and additions to the database.
 
 \begin{figure}[h!]
@@ -278,9 +278,10 @@ external resources.
 % TODO: Could explain more of the content, eg. Probability, interaction domain etc.
 \item Scroll further down the \motif{DOC\_CYCLIN\_1} page
 	(Fig. \ref{fig:explore_content_doc_cyclin}) to view
-	more details about the manually annotated data and instances in the
-	database (Fig. \ref{fig:explore_content_doc_cyclin_1_abstract_instances})
-	The ``abstract'' contains a more detailed description of the motif
+	more details about this motif
+    (Fig. \ref{fig:explore_content_doc_cyclin_1_abstract_instances})
+    The ``abstract'' contains a description of the biological relevance of the
+    motif (for example its involvement in cellular processes and pathways).
 	annotation. Click on the \button{show} button next to the ``selected
 	references'' header for a list of publications relevant to this motif.
 	Click on \button{show} next to ``GO terms'' for a complete list of all
@@ -457,7 +458,8 @@ external resources.
 	identifier in the first column, a link to the corresponding entry in
 	the PSI-MI database \citep{17925023}, and the method name as annotated
 	by the PSI-MI controlled vocabulary, as well as the type of experiment
-	(in vitro/in vivo). Clicking on the link in the ``instances'' column
+	(in vitro, in vivo, in silico, or a combination of these).
+    Clicking on the link in the ``instances'' column
 	will list all instances annotated using that method.
 
 	\sdesc{The filter bar on the top page can be used to filter the list of
@@ -761,7 +763,7 @@ getting information eg. about a particular protein and it's annotation status in
 \label{sec:predicting_p53}
 
 One of the most useful (and used) features in ELM is the ability to
-detect motifs in proteins and sequences. Given a protein's amino acid
+identify proteinal motifs in proteins and sequences. Given a protein's amino acid
 sequence, the ``ELM Predictions'' pipeline searches for occurrences of
 each motif class using regular expressions, applies a set of filters to
 remove false positives and creates a diagram to visualize resulting
