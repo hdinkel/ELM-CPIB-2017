@@ -1263,13 +1263,13 @@ sequence of \uniprot{CV\_0974/Q7NZE8}:
 	\label{fig:predicting_cv_0974_search}
 \end{figure}
 
-\item Click on the ``ELM Predictions'' button in the menu to access the search
+\item \label{subsec:predicting_cv_0974_search_fasta} Click on the ``ELM Predictions'' button in the menu to access the search
 	query page (Fig. \ref{fig:predicting_cv_0974_search}).
 	Here you should provide the amino acid sequence of \uniprot{CV\_0974}
 	from UniProt (\url{http://www.uniprot.org/uniprot/Q7NZE8.fasta}), and
 	enter it as FASTA format into the ``sequence input text box''.
 
-\item In the ``Taxonomic Context'' field, enter the text ``Homo
+\item \label{subsec:predicting_cv_0974_search_taxon} In the ``Taxonomic Context'' field, enter the text ``Homo
 	sapiens''. This will limit the search to motif classes
 	which have been annotated for human proteins.
 
@@ -1281,16 +1281,14 @@ sequence of \uniprot{CV\_0974/Q7NZE8}:
 	    in humans and thus may be the target of motif hijacking.
 	}
 
-\item The bacterial protein \uniprot{CV\_0974} is likely to be an effector protein, similarly to its
+\item \label{subsec:predicting_cv_0974_search_compartment} The bacterial protein \uniprot{CV\_0974} is likely to be an effector protein, similarly to its
     homologue SptP. As SptP localizes to the cytosol, and we assume the same
     for \uniprot{CV\_0974} so you should select ``cytosol'' in the ``Cell compartment''
     field.
 
-\item Lastly change the ``Motif probability cutoff value'' to a more
-	stringent threshold. Enter ``0.01'' for this value. This will exclude
-	all motif with a probability score higher than ``0.01'', limiting the
-	results to motifs which are more less likely to be found by random
-	chance (False Positives).
+\item \label{subsec:predicting_cv_0974_search_cutoff} For now, you should set
+    the ``Motif probability cutoff'' to the same value you used in
+	\ref{subsec:predicting_p53_input} and enter ``100'' into this box.
 
 \subsection*{Interpreting the results}
 \label{subsec:predicting_cv_0974_submitting}
@@ -1324,40 +1322,89 @@ sequence of \uniprot{CV\_0974/Q7NZE8}:
 \item Hit \button{Submit} to send the query to the ELM prediction pipeline.
     The results are summarized in the first figure on the results page
 	(see Fig. \ref{fig:predicting_cv_0974_results_summary})
-    See steps \ref{sec:predicting_p53_submit} -- \ref{sec:predicting_p53_results_structure_filter} 
+    See steps \ref{sec:predicting_p53_submit} -- \ref{sec:predicting_p53_results_structure_filter}
     of \ref{sec:predicting_p53} for a description of the
-    graphical summary output.
+    graphical summary output. In this case, there are a lot of putative motif
+    hits and it will be difficult to investigate all of these. So you should try
+    to limit your search to most promising candidates first, by trying to remove
+    false positive hits.
 
-\item Find the entry for \motif{LIG\_CSK\_EPIYA\_1} in the graphical summary.
-    When this motif is tyrosine-phosphorylated it is recognized by C-terminal
-    kinase. Different effector proteins from human pathogens like
-    \textit{Bartonella henselae}, \textit{Helicobacter pylori} and
-    \textit{Haemophilus ducreyi} have been reported to use this motif to
-    interfere with the host signalling network to induce proliferation or to
-    avoid phagocytosis \citep{19380118, 12446738, 24902122}.
+\item Go back to the ``ELM Predictions'' page (it's probably still open in
+    another browser tab) and enter the same values as used before in
+	steps~\ref{subsec:predicting_cv_0974_search_fasta}-\ref{subsec:predicting_cv_0974_search_cutoff}.
+	Now however, in order to remove false positive hits,
+    you should set the ``Motif probability cutoff value'' to a more
+	stringent threshold. Enter ``0.001'' for this value. This will exclude
+	all motif with a probability score higher than this, limiting the
+	results to motifs which are less likely to be found by random
+	chance (False Positives).
 
-\item Check the structural context for both \motif{LIG\_CSK\_EPIYA\_1} motifs
-    predicted in \uniprot{CV\_0974}. Both of them fall outside of the SMART
+% TODO: Marc: Please create and link new figure here, showing the result of the
+	% search (with cutoff of 0.001 there should be only 22 instances of 17 classes)
+\item Hit \button{Submit} to send the query to the ELM prediction pipeline.
+    The results are summarized in the first figure on the results page
+	(see Fig. \ref{fig:predicting_cv_0974_results_summary_limited}).
+    You notice the amount of motif classes detected has been
+    reduced drastically (from 54 to 11). % (instances from 156 to 22)
+
+\item By focussing on motif instances that reside in disordered context (in the
+    amino- or carboxy-terminus of this protein)
+    you have successfully limited the list of ELM motif classes down to 11.
+% \motif{DOC\_MAPK\_DCC\_7},
+% \motif{LIG\_Actin\_RPEL\_3},
+% \motif{LIG\_BIR\_III\_2},
+% \motif{LIG\_BIR\_II\_1},
+% \motif{LIG\_CSK\_EPIYA\_1},
+% \motif{LIG\_LIR\_LC3C\_4},
+% \motif{LIG\_SH2\_GRB2}, and
+% \motif{TRG\_AP2beta\_CARGO\_1}
+    %
+    (Now would be a good point in time to read up on the details of the
+    remaining motif classes to get a better idea, about which motifs might be
+    functional in your protein. Click on the motif identifiers on the left side
+    of the graphical summary to go to the details page for the motif classes).
+    For this protocol, however, just click on the motif identifier
+    \motif{LIG\_CSK\_EPIYA\_1} on the left side of the graphical summary to go
+    to the details page for this particular motif class.
+
+\item Find the entry for \motif{LIG\_CSK\_EPIYA\_1} in the graphical summary
+    and check the structural context for the two \motif{LIG\_CSK\_EPIYA\_1} motifs.
+    Both of them fall outside of the SMART
     domain PTPC, and reside in a region with a protein disorder (IUPred) score
-    above 0.5. Both of these conditions are indicative that these motifs might
-    be True Positive predictions.
-
-    \sdesc{You may notice that there are no conservation scores for either of
-        these motifs. A closer examination of the alignments of homologous
-        proteins shows that none of the other proteins have this part of the
-        sequence, and are gapped, thus it is not possible to calculate a
-        conservation score.}
-
-\item Click on the motif identifier \button{LIG\_CSK\_EPIYA\_1} on the left side of the
-        graphical summary to go to the details page for this
-        motif class. In the ``Functional site description'' it is stated that 'The
-        bacterial proteins usually have repeats of EPIYA motifs.' The ELM
+    higher than 0.5. 
+% TODO: Is conscore available for this protein?
+%    \sdesc{You may notice that there are no conservation scores for either of
+%        these motifs. A closer examination of the alignments of homologous
+%        proteins shows that none of the other proteins have this part of the
+%        sequence, and are gapped, thus it is not possible to calculate a
+%        conservation score.}
+%
+	In the ``Functional site description'' it is stated that 
+        'bacterial proteins usually have repeats of EPIYA motifs.' The ELM
         prediction results did indeed also detect two EPIYA motifs in a 20
         amino acid range, lending further support to the likelihood that there
         are indeed two functional EPIYA motifs in \uniprot{CV\_0974}, which in
         turn suggests that these motifs may be involved in \textit{C.
         violaceum's} pathogenicity.
 
+    \sdesc{When this motif is tyrosine-phosphorylated it is recognized by C-terminal
+    kinase. Different effector proteins from human pathogens like
+    \textit{Bartonella henselae}, \textit{Helicobacter pylori} and
+    \textit{Haemophilus ducreyi} have been reported to use this motif to
+    interfere with the host signalling network to induce proliferation or to
+    avoid phagocytosis \citep{19380118, 12446738, 24902122}.
+    }
+
+%\item Click on the motif identifier \button{LIG\_CSK\_EPIYA\_1} on the left side of the
+%        graphical summary to go to the details page for this
+%        motif class. In the ``Functional site description'' it is stated that 'The
+%        bacterial proteins usually have repeats of EPIYA motifs.' The ELM
+%        prediction results did indeed also detect two EPIYA motifs in a 20
+%        amino acid range, lending further support to the likelihood that there
+%        are indeed two functional EPIYA motifs in \uniprot{CV\_0974}, which in
+%        turn suggests that these motifs may be involved in \textit{C.
+%        violaceum's} pathogenicity.
+%
 \end{enumerate}
 
 \clearpage
