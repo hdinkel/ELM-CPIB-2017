@@ -885,7 +885,7 @@ YES, we do. HD
 %
 
 \subsection*{Interpreting the prediction results: Graphical Summary}
-\label{subsec:predicting_p53_graphical_summary}
+\label{sec:predicting_p53_graphical_summary}
 
 \item \label{sec:predicting_p53_submit} Click \button{submit} to start searching for motifs. You will be brought
 	to an intermediate page indicating that your results are being
@@ -916,7 +916,7 @@ YES, we do. HD
 	structural features. Annotated and predicted motifs are shown as
 	differently colored ovals/boxes. The info screens for three motifs are
 	shown: \motif{CLV\_C14\_Caspase3-7}, \motif{DEG\_MDM2\_SWIG\_1} and
-	\motif{CLV_Separin_Metzoa}.
+	\motif{CLV\_Separin\_Metazoa}.
 	}
 	\label{fig:predicting_p53_results_summary}
 \end{figure}
@@ -1009,7 +1009,7 @@ YES, we do. HD
 		(see commentary section "Conservation Filter" at page \pageref{ConservationFilter}).}
 
 \item \label{sec:predicting_p53_results_structure_filter} Place the cursor over the blue \& gray rectangle for motif
-	\motif{CLV\_Separin_Metazo} at position 171--175, a motif
+	\motif{CLV\_Separin\_Metazoa} at position 171--175, a motif
 	which was flagged as ``neutral'' by the ELM prediction pipeline.
 	This will trigger the information screen (with the pink header) shown
 	in Figure~\ref{fig:predicting_p53_results_summary} to appear.
@@ -1040,12 +1040,12 @@ YES, we do. HD
 	homologue alignments used to calculate the conservation score,
 	filtering results and globular domains.
 	}
-	\label{fig:predicting_p53_elm_results_alignemnt_filtering_domains}
+	\label{fig:predicting_p53_elm_results_alignment_filtering_domains}
 \end{figure}
 
-\item Scroll down to below the results graphic to find additional information
+\item \label{sec:predicting_p53_results_alignment} Scroll down to below the results graphic to find additional information
 	on the ELM prediction pipeline's results
-	(Figure~\ref{fig:predicting_p53_elm_results_alignemnt_filtering_domains}).
+	(Figure~\ref{fig:predicting_p53_elm_results_alignment_filtering_domains}).
 	The first
 	section contains links to download or view the multiple sequence
 	alignments of homologous proteins used to calculate the conservation
@@ -1072,7 +1072,7 @@ YES, we do. HD
 \item Scroll down to the section titled ``Filtering Summary'' to view some
 	statistics about how many motifs and instances were filtered out
 	(Fig.
-	\ref{fig:predicting_p53_elm_results_alignemnt_filtering_domains}).
+	\ref{fig:predicting_p53_elm_results_alignment_filtering_domains}).
 	The first two lines contain information on whether
 	and which filters were applied in step \ref{sec:predicting_p53_elm_search} of this protocol.
 	In this case 4 motifs representing 26 instances were filtered
@@ -1104,7 +1104,7 @@ YES, we do. HD
 
 \item Scroll down to the section with the header ``Globular domains/ TM domains
 	and signal peptide detected by the SMART server''
-	(Figure~\ref{fig:predicting_p53_elm_results_alignemnt_filtering_domains}).
+	(Figure~\ref{fig:predicting_p53_elm_results_alignment_filtering_domains}).
 	This section contains information on which domains were detected by the
 	SMART server, and their positions. Clicking on their names will bring
 	you to the entry for that domain on the SMART or Pfam homepage.
@@ -1274,8 +1274,11 @@ predict ELMs.
 	detections are shown (the image is truncated at the bottom). The top
 	five rows show a handful of structural features. The motif occurrence
 	are shown as blue boxes, the intensity of which indicates the
-	conservation score. See steps \ref{sec:predicting_p53_results_phosphorylation} to \ref{fig:predicting_p53_results_structure_filter} of
-		\ref{sec:explore_content} for more information.
+	conservation score. See steps
+	\ref{sec:predicting_p53_results_phosphorylation} to
+	\ref{sec:predicting_p53_results_structure_filter} of
+	\ref{sec:predicting_p53}
+	for more information.
 	}
 	\label{fig:predicting_cv_0974_results_summary}
 \end{figure}
@@ -1285,12 +1288,13 @@ predict ELMs.
 %
 
 \subsection*{Interpreting the prediction results}
-\label{subsec:predicting_p53_graphical_summary}
+\label{sec:predicting_cv_0974_graphical_summary}
 
 \item Hit \button{Submit} to send the query to the ELM prediction pipeline.
     The Results are summarized in the first figure on the results page
 	(see Fig. \ref{fig:predicting_cv_0974_results_summary})
-    See steps 3 -- 11 of \ref{predicting_p53} for a description of the
+    See steps \ref{sec:predicting_p53_submit} -- \ref{sec:predicting_p53_results_structure_filter} 
+    of \ref{sec:predicting_p53} for a description of the
     graphical summary output.
 
 \item Find the entry for \motif{LIG\_CSK\_EPIYA\_1} in the graphical summary.
@@ -1299,7 +1303,7 @@ predict ELMs.
     \textit{Bartonella henselae}, \textit{Helicobacter pylori} and
     \textit{Haemophilus ducreyi} have been reported to use this motif to
     interfere with the host signalling network to induce proliferation or to
-    avoid phagocytosis \citep{19380118, 12446738,24902122)}.  
+    avoid phagocytosis \citep{19380118, 12446738, 24902122}.
 
 \item Check the structural context for both \motif{LIG\_CSK\_EPIYA\_1} motifs
     predicted in \uniprot{CV\_0974}. Both of them fall ouside of the SMART
