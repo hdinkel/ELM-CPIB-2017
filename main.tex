@@ -989,7 +989,7 @@ YES, we do. HD
 	and fifth rows
 	contain results from IUPred \citep{15955779}, another
 	predictor of disordered protein regions. Protein segments with
-	an IUPred score above 0.5 are considered to be disordered 
+	an IUPred score above 0.5 are considered to be disordered
 	(see commentary section "Disorder Filter" at page \pageref{DisorderFilter}).
 
 	\sdesc{Motifs are typically only functional when found in intrinsically
@@ -1210,28 +1210,29 @@ YES, we do. HD
 
 % TODO: read this section to check for consistency, etc.
 
-The ELM prediction pipeline is a very powerful way to obtain a lot of
+The ELM motif detection pipeline is a very powerful way to obtain a lot of
 information on which motifs are present, in which structural context they
 are. However, determining which motifs are actually true positive detections
 requires interpreting all of these results, as well incorporating as much
 biological knowledge as possible. In this protocol we will be following a
-typical example of how one might use the ELM prediction pipeline to search for
+typical example of how one might use the ELM pipeline to search for
 motifs in novel sequences.
 
+% TODO: this might need to go into commentary section:
 Some pathogens have evolved short linear motifs in effector proteins to modify
-the intracellular signalling of its host cell for its own convenience
+the intracellular signalling of their host cell for their own convenience
 \citep{25475989}. The Gram-negative bacteria \textit{Chromobacterium violaceum} is a
-human opportunistic pathogen whose mechanism of pathogenicity remain poorly
+opportunistic pathogen of humans whose mechanism of pathogenicity remain poorly
 understood. Its genome encodes a type three secretion system (T3SS) that is
-used by many pathogens to translocate bacterial proteins to the infected cells.
+used by different pathogens to translocate bacterial proteins into the infected cells.
 Interestingly, the genes encoding this T3SS as well as other genes located in
 the same genomic location are very similar to the ones in \textit{Salmonella spp.}
 except for a couple of genes including the modular protein SptP
 \citep{15100995}. SptP in \textit{Salmonella spp.} is a secreted protein tyrosine
 phosphatase \citep{8866485} whose closest homolog in \textit{C. violaceum} is
 the protein \uniprot{CV\_0974}. To further understand the possible biological
-function of the protein \uniprot{CV\_0974} we will use it in the ELM server
-detect motif.
+function of the protein \uniprot{CV\_0974} we will use it as an example
+application of the ELM server motif detection pipeline.
 
 %
 % Subsection: Necessary Resources
@@ -1240,7 +1241,8 @@ detect motif.
 \subsubsection*{Software \& Hardware}
 \input{resources_basic}
 \subsubsection*{Files}
-You need to download the following FASTA file from UniProt:
+You need to download the following file from UniProt containing the FASTA
+sequence of \uniprot{CV\_0974/Q7NZE8}:
 \url{http://www.uniprot.org/uniprot/Q7NZE8.fasta}
 
 \begin{enumerate}
@@ -1256,44 +1258,39 @@ You need to download the following FASTA file from UniProt:
 	\includegraphics[width=\textwidth]{Figures/predicting_cv_0974/elm_search.png}
 	\caption{
 	The input query page for finding motifs in ELM. The sequence
-    for \textit{C. violaceum} protein \uniprot{CV\_0974}, which is thought to be involved in its pathogenicity,
-    is used as an example for this protocol.
+    for \textit{C. violaceum} protein \uniprot{CV\_0974} is used as an example for this protocol.
 	}
 	\label{fig:predicting_cv_0974_search}
 \end{figure}
 
 \item Click on the ``ELM Predictions'' button in the menu to access the search
 	query page (Fig. \ref{fig:predicting_cv_0974_search}).
-	Here you can provide either a protein
-	accession (from UniProt) or an amino acid sequence (simply the
-	sequence, or a FASTA formatted entry) in which you want to detect
-	SLiMs. Retrieve the FASTA formatted sequence from UniProt
-	(\url{http://www.uniprot.org/uniprot/Q7NZE8.fasta}), and enter it into the
-	``sequence input text box''.
+	Here you should provide the amino acid sequence of \uniprot{CV\_0974}
+	from UniProt (\url{http://www.uniprot.org/uniprot/Q7NZE8.fasta}), and
+	enter it as FASTA format into the ``sequence input text box''.
 
-\item In the ``Taxonomic Context'' field, start typing the text ``Homo
-	sapiens''. As you type this field should auto-suggest species matching
-	your text. Select ``Homo sapiens'' to limit the search to motifs
-	which have been annotated in Human proteins.
+\item In the ``Taxonomic Context'' field, enter the text ``Homo
+	sapiens''. This will limit the search to motif classes
+	which have been annotated for human proteins.
 
-	\sdesc{ Certain human diseases occur when motifs are hijacked by
-		opportunistic pathogens (see Step~\ref{sec:explore_content_viruses} in
-		\ref{sec:explore_content} and Figure~\ref{fig:explore_content_viruses}).
-		By limiting the search to
-		human motifs, we will identify motifs which are known to exist
-		in humans and thus may be the target of motif hijacking.
+    \sdesc{Certain human diseases occur when motifs are hijacked by
+	    opportunistic pathogens (see Step~\ref{sec:explore_content_viruses} in
+	    \ref{sec:explore_content} and Figure~\ref{fig:explore_content_viruses}).
+	    By limiting the search to
+	    human motifs, we will identify motifs which are known to exist
+	    in humans and thus may be the target of motif hijacking.
 	}
 
-\item \uniprot{CV\_0974} is likely to be an effector protein, similarly to its
-    homologue SptP. As SptP localizes to the cytosol, we can assume the same
-    for \uniprot{CV\_0974}. Select ``cytosol'' in the ``Cell compartment''
+\item The bacterial protein \uniprot{CV\_0974} is likely to be an effector protein, similarly to its
+    homologue SptP. As SptP localizes to the cytosol, and we assume the same
+    for \uniprot{CV\_0974} so you should select ``cytosol'' in the ``Cell compartment''
     field.
 
-\item Lastly we will change the ``Motif probability cutoff value'' to a more
+\item Lastly change the ``Motif probability cutoff value'' to a more
 	stringent threshold. Enter ``0.01'' for this value. This will exclude
 	all motif with a probability score higher than ``0.01'', limiting the
-	results to motifs which are more likely not to represent random
-	sequences of amino acids.
+	results to motifs which are more less likely to be found by random
+	chance (False Positives).
 
 \subsection*{Interpreting the results}
 \label{subsec:predicting_cv_0974_submitting}
@@ -1302,16 +1299,17 @@ You need to download the following FASTA file from UniProt:
 	\centering
 	\includegraphics[width=\textwidth]{Figures/predicting_cv_0974/elm_results_summary.png}
 	\caption{
-	The graphical results summary of the ELM Prediction pipeline for
-	Probable Tyrosine phosphate (\uniprot{CV\_0974}). Note that not all motif
-	detections are shown (the image is truncated at the bottom). The top
-	five rows show a handful of structural features. The motif occurrence
-	are shown as blue boxes, the intensity of which indicates the
-	conservation score. See steps
-	\ref{sec:predicting_p53_results_phosphorylation} to
-	\ref{sec:predicting_p53_results_structure_filter} of
-	\ref{sec:predicting_p53}
-	for more information.
+	The graphical results summary of the ELM prediction pipeline for the
+	protein ``Probable Tyrosine phosphate'' (\uniprot{CV\_0974}). Note that not all motif
+	detections are shown as the image is truncated at the bottom.
+% TODO: no conservation shown?!
+%	The top five rows show a handful of structural features. The motif occurrence
+%	are shown as blue boxes, the intensity of which indicates the
+%	conservation score. See steps
+%	\ref{sec:predicting_p53_results_phosphorylation} to
+%	\ref{sec:predicting_p53_results_structure_filter} of
+%	\ref{sec:predicting_p53}
+%	for more information.
 	}
 	\label{fig:predicting_cv_0974_results_summary}
 \end{figure}
@@ -1324,7 +1322,7 @@ You need to download the following FASTA file from UniProt:
 \label{sec:predicting_cv_0974_graphical_summary}
 
 \item Hit \button{Submit} to send the query to the ELM prediction pipeline.
-    The Results are summarized in the first figure on the results page
+    The results are summarized in the first figure on the results page
 	(see Fig. \ref{fig:predicting_cv_0974_results_summary})
     See steps \ref{sec:predicting_p53_submit} -- \ref{sec:predicting_p53_results_structure_filter} 
     of \ref{sec:predicting_p53} for a description of the
@@ -1350,9 +1348,9 @@ You need to download the following FASTA file from UniProt:
         sequence, and are gapped, thus it is not possible to calculate a
         conservation score.}
 
-\item Click on the motif identifier \button{LIG\_CSK\_EPIYA\_1} in the
-        graphical summary to be brought to the motif details page for this
-        motif. In the ``Functional site description'' it is stated that 'The
+\item Click on the motif identifier \button{LIG\_CSK\_EPIYA\_1} on the left side of the
+        graphical summary to go to the details page for this
+        motif class. In the ``Functional site description'' it is stated that 'The
         bacterial proteins usually have repeats of EPIYA motifs.' The ELM
         prediction results did indeed also detect two EPIYA motifs in a 20
         amino acid range, lending further support to the likelihood that there
@@ -1419,10 +1417,10 @@ classes}\label{downloading-all-elm-classes}
 	(for example ``Classes'', ``Instances'', etc). Each table contains
 	links (in orange) to download the data in appropriate formats.
 
-	\sdesc{Each table also shows the `last modified date' indicating when
-		the data was last updated. This information is useful if you want to know
-		when to update your local data with the most up to date ELM
-		data as it allows you to determine whether you need to update or not. }
+    \sdesc{Each table also shows the `last modified date' indicating when
+	    the data was last updated. This information is useful if you want to know
+	    when to update your local data with the most up to date ELM
+	    data as it allows you to determine whether you need to update or not. }
 
 \item Click on the first orange \button{html} link in the table ``Classes'' to
 	navigate to the following URL:
