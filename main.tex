@@ -668,12 +668,11 @@ Light green boxes are colored by KEGG and represent the KEGG hyperlinks to GENES
 	\label{fig:explore_content_viruses}
 \end{figure}
 
-\item Click on the sub-menu \button{ELM virus instances} under \button{ELM DB}
+\item \label{sec:explore_content_viruses} Click on the sub-menu \button{ELM virus instances} under \button{ELM DB}
 	to see a list of all instances in ELM that have been annotated as being
 	abused by viruses (Figure~\ref{fig:explore_content_viruses}).
-	(The columns are identical to those listed in step
-	\ref{sec:explore_content_instances}, see fig.
-	\ref{fig:explore_content_instances}).
+	(The columns are identical to those listed in
+	step~\ref{sec:explore_content_instances}, see Figure~\ref{fig:explore_content_instances}).
 
 	\sdesc{The green buttons on the left can be used to filter this table
 		by motif class. Click on the yellow links on the top right of
@@ -1064,7 +1063,6 @@ YES, we do. HD
 	instance.
 
 %TODO: Marc: a little more description here?
-	
 
 \begin{figure}[h!]
 	\centering
@@ -1202,7 +1200,6 @@ YES, we do. HD
 	(Figure~\ref{fig:predicting_p53_elm_results_motifs_filtered})
 	This table is similar to the one described above, but shows motif
 	matches which were rejected by the structural filter.
-	
 \end{enumerate}
 
 \clearpage
@@ -1211,30 +1208,30 @@ YES, we do. HD
 \section{Detecting Short Linear Motifs in Unknown Protein Sequences}
 \label{sec:predicting_cv_0974}
 
-TODO: read this section to check for consistency, etc.
+% TODO: read this section to check for consistency, etc.
 
-The ELM prediction pipeline is a very powerfull way to obtain a lot of
+The ELM prediction pipeline is a very powerful way to obtain a lot of
 information on which motifs are present, in which structural context they
 are. However, determining which motifs are actually true positive detections
-requires interpreting all of these results, as well incoorporating as much
+requires interpreting all of these results, as well incorporating as much
 biological knowledge as possible. In this protocol we will be following a
 typical example of how one might use the ELM prediction pipeline to search for
 motifs in novel sequences.
 
 Some pathogens have evolved short linear motifs in effector proteins to modify
 the intracellular signalling of its host cell for its own convenience
-[PMID:25475989]. The Gram-negative bacteria \textit{Chromobacterium violaceum} is a
+\citep{25475989}. The Gram-negative bacteria \textit{Chromobacterium violaceum} is a
 human opportunistic pathogen whose mechanism of pathogenicity remain poorly
 understood. Its genome encodes a type three secretion system (T3SS) that is
 used by many pathogens to translocate bacterial proteins to the infected cells.
 Interestingly, the genes encoding this T3SS as well as other genes located in
 the same genomic location are very similar to the ones in \textit{Salmonella spp.}
 except for a couple of genes including the modular protein SptP
-[PMID:15100995]. SptP in \textit{Salmonella spp.} is a secreted protein tyrosine
-phosphatase \cite{8866485} whose closest homolog in \textit{C. violaceum} is
-the protein \uniprot{CV\_0974}. To further undestand the possible biological
+\citep{15100995}. SptP in \textit{Salmonella spp.} is a secreted protein tyrosine
+phosphatase \citep{8866485} whose closest homolog in \textit{C. violaceum} is
+the protein \uniprot{CV\_0974}. To further understand the possible biological
 function of the protein \uniprot{CV\_0974} we will use it in the ELM server
-predict ELMs.
+detect motif.
 
 %
 % Subsection: Necessary Resources
@@ -1242,6 +1239,9 @@ predict ELMs.
 \subsection*{Necessary Resources}
 \subsubsection*{Software \& Hardware}
 \input{resources_basic}
+\subsubsection*{Files}
+You need to download the following FASTA file from UniProt:
+\url{http://www.uniprot.org/uniprot/Q7NZE8.fasta}
 
 \begin{enumerate}
 
@@ -1256,7 +1256,7 @@ predict ELMs.
 	\includegraphics[width=\textwidth]{Figures/predicting_cv_0974/elm_search.png}
 	\caption{
 	The input query page for finding motifs in ELM. The sequence
-    for \textit{C. vilaceum} protein \uniprot{CV\_0974}, which is thought to be involved in its pathogenicity,
+    for \textit{C. violaceum} protein \uniprot{CV\_0974}, which is thought to be involved in its pathogenicity,
     is used as an example for this protocol.
 	}
 	\label{fig:predicting_cv_0974_search}
@@ -1267,31 +1267,30 @@ predict ELMs.
 	Here you can provide either a protein
 	accession (from UniProt) or an amino acid sequence (simply the
 	sequence, or a FASTA formatted entry) in which you want to detect
-	SLiMs.  Retrieve the FASTA formatted sequence from UniProt
+	SLiMs. Retrieve the FASTA formatted sequence from UniProt
 	(\url{http://www.uniprot.org/uniprot/Q7NZE8.fasta}), and enter it into the
 	``sequence input text box''.
 
 \item In the ``Taxonomic Context'' field, start typing the text ``Homo
-	sapiens''. As you type this field should auto-suggest species mathing
-	your text. Select ``Homo sapeciens'' to limit the search to motifs
+	sapiens''. As you type this field should auto-suggest species matching
+	your text. Select ``Homo sapiens'' to limit the search to motifs
 	which have been annotated in Human proteins.
 
-	\sdesc{
-		Certain human diseases occur when motifs are hijacked by
-		opportunisic pathogens (see Step 20 in
-		\ref{sec:explore_context} and figure
-		\ref{fig:explore_content_viruses}). By limiting the search to 
-		Human motifs, we will identify motifs which are known to exist
-		in Humans and thus may be the target of motif hijakcing.
+	\sdesc{ Certain human diseases occur when motifs are hijacked by
+		opportunistic pathogens (see Step~\ref{sec:explore_content_viruses} in
+		\ref{sec:explore_content} and Figure~\ref{fig:explore_content_viruses}).
+		By limiting the search to
+		human motifs, we will identify motifs which are known to exist
+		in humans and thus may be the target of motif hijacking.
 	}
-	
-\item \uniprot{CV\_0974} is likely to be an effector protein, simiarly to its
+
+\item \uniprot{CV\_0974} is likely to be an effector protein, similarly to its
     homologue SptP. As SptP localizes to the cytosol, we can assume the same
     for \uniprot{CV\_0974}. Select ``cytosol'' in the ``Cell compartment''
     field.
 
 \item Lastly we will change the ``Motif probability cutoff value'' to a more
-	stringent threshold. Enter ``0.01'' for this value. This will exclude 
+	stringent threshold. Enter ``0.01'' for this value. This will exclude
 	all motif with a probability score higher than ``0.01'', limiting the
 	results to motifs which are more likely not to represent random
 	sequences of amino acids.
@@ -1304,7 +1303,7 @@ predict ELMs.
 	\includegraphics[width=\textwidth]{Figures/predicting_cv_0974/elm_results_summary.png}
 	\caption{
 	The graphical results summary of the ELM Prediction pipeline for
-	Probable Tyrosine phosphate (CV\_0974). Note that not all motif
+	Probable Tyrosine phosphate (\uniprot{CV\_0974}). Note that not all motif
 	detections are shown (the image is truncated at the bottom). The top
 	five rows show a handful of structural features. The motif occurrence
 	are shown as blue boxes, the intensity of which indicates the
@@ -1340,9 +1339,9 @@ predict ELMs.
     avoid phagocytosis \citep{19380118, 12446738, 24902122}.
 
 \item Check the structural context for both \motif{LIG\_CSK\_EPIYA\_1} motifs
-    predicted in \uniprot{CV\_0974}. Both of them fall ouside of the SMART
-    domain PTPC, and reside in a regioun with a protein disorder (IUPRED) score
-    abover 0.5. Both of these conditions are indicative that these motifs might
+    predicted in \uniprot{CV\_0974}. Both of them fall outside of the SMART
+    domain PTPC, and reside in a region with a protein disorder (IUPred) score
+    above 0.5. Both of these conditions are indicative that these motifs might
     be True Positive predictions.
 
     \sdesc{You may notice that there are no conservation scores for either of
@@ -1352,11 +1351,11 @@ predict ELMs.
         conservation score.}
 
 \item Click on the motif identifier \button{LIG\_CSK\_EPIYA\_1} in the
-        graphical summarty to be brought to the motif details page for this
+        graphical summary to be brought to the motif details page for this
         motif. In the ``Functional site description'' it is stated that 'The
-        baterial proteins usually have repeats of EPIYA motifs.' The ELM
+        bacterial proteins usually have repeats of EPIYA motifs.' The ELM
         prediction results did indeed also detect two EPIYA motifs in a 20
-        amino acid range, lending further support to the likelyhood that there
+        amino acid range, lending further support to the likelihood that there
         are indeed two functional EPIYA motifs in \uniprot{CV\_0974}, which in
         turn suggests that these motifs may be involved in \textit{C.
         violaceum's} pathogenicity.
