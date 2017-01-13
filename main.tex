@@ -1283,7 +1283,7 @@ sequence of \uniprot{CV\_0974/Q7NZE8}:
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=\textwidth]{Figures/predicting_cv_0974/elm_results_summary.png}
+	\includegraphics[width=\textwidth]{Figures/predicting_cv_0974/elm_results_summary_good.png}
 	\caption{
 	The graphical results summary of the ELM prediction pipeline for the
 	protein ``Probable Tyrosine phosphate'' (\uniprot{CV\_0974}). Note that not all motif
@@ -1357,7 +1357,7 @@ sequence of \uniprot{CV\_0974/Q7NZE8}:
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=\textwidth]{Figures/predicting_cv_0974/elm_results_summary_limited.png}
+	\includegraphics[width=\textwidth]{Figures/predicting_cv_0974/elm_results_summary_limited_good.png}
 	\caption{
 	The graphical results summary of the ELM prediction pipeline for (\uniprot{CV\_0974})
 	using a more stringent probability cutoff of 0.001. The number of
@@ -1382,20 +1382,19 @@ sequence of \uniprot{CV\_0974/Q7NZE8}:
 %    domain PTPC, and reside in a region with a protein disorder (IUPred) score
 %    higher than 0.5. 
 
-% TODO: Is conscore available for this protein?
-%    \sdesc{You may notice that there are no conservation scores for either of
-%        these motifs. A closer examination of the alignments of homologous
-%        proteins shows that none of the other proteins have this part of the
-%        sequence, and are gapped, thus it is not possible to calculate a
-%        conservation score.}
-%
     \sdesc{When this motif is tyrosine-phosphorylated it is recognized by C-terminal
     kinase. Different effector proteins from human pathogens like
     \textit{Bartonella henselae}, \textit{Helicobacter pylori} and
     \textit{Haemophilus ducreyi} have been reported to use this motif to
     interfere with the host signalling network to induce proliferation or to
     avoid phagocytosis \citep{19380118, 12446738, 24902122}.
+    Also, you may notice that there are no conservation scores for either of
+    these motifs. A closer examination of the alignments of homologous
+    proteins shows that none of the other proteins have this part of the
+    sequence, and are gapped, and it is not possible to calculate a
+    conservation score.
     }
+
 
 %\item Click on the motif identifier \button{LIG\_CSK\_EPIYA\_1} on the left side of the
 %        graphical summary to go to the details page for this
