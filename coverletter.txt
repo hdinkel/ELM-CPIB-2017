@@ -1,0 +1,47 @@
+Dear Sandra Orchard, 
+
+Thank you very much for encouraging us to submit an article on the Eukaryotic
+Linear Motifs resource (ELM) for publication in Current Protocols in
+Bioinformatics.
+
+We would like you to consider our article "Exploring Short Linear Motifs using
+the ELM Database and Tools" as a unit in CPIB.
+ELM is one of the major online resources dedicated to creating a comprehensive
+database of Short Linear Motifs.
+For more than 10 years expert curators have been annotating and uploading
+motifs and motif instances from experimental literature into ELM.
+Currently the database as over 3000 instances grouped into 262 motif classes,
+all expertly annotated and integrated with a host of other online resources.
+This database also serves as the basis of the ELM prediction pipeline;
+a tool which predicts motifs in novel sequences pipeline based on their peptide
+sequence, structural context and evolutionary conservation.
+
+
+We believe ELM to be an incredibly valuable knowledge resource for molecular
+and cell biologists, and we have written a small handful of protocols to cover
+both basic and advanced usage of the ELM resource and prediction pipeline.
+In this protocol we first explain how to explore and search the database
+content, and cover which other types of data and online resource are
+integrated into ELM.
+Next we give two examples on how to use the ELM prediction pipeline to identify
+motifs in sequences: First for p53, a well characterized and annotated protein;
+secondly for a novel bacterial protein as an example of how ELM can be used
+to select candidates for experimental followup. Lastly we also present two
+Alternative Protocols on how to access the ELM database via the programmatic API
+to search the database and run motif predictions.
+
+Current Procols in Bioinformatics is an excellent resource for
+experimentalists to learn how to use bioinformatics in their own research, and
+we hope that you find that this article contributes to this goal.
+
+We look forward to hearing from you,
+
+
+Yours sincerely,
+
+Holger
+
+
+
+
+
