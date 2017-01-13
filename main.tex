@@ -1307,39 +1307,39 @@ sequence of \uniprot{CV\_0974/Q7NZE8}:
 % Subsection: Understanding results: graphical summary
 %
 
-\subsection*{Interpreting the prediction results}
-\label{sec:predicting_cv_0974_graphical_summary}
-
 \item Hit \button{Submit} to send the query to the ELM prediction pipeline.
     The results are summarized in the first figure on the results page
 	(see Fig. \ref{fig:predicting_cv_0974_results_summary})
     See steps \ref{sec:predicting_p53_submit} -- \ref{sec:predicting_p53_results_structure_filter}
     of \ref{sec:predicting_p53} for a description of the
     graphical summary output. In this case, there are a lot of putative motif
-    hits and it will be difficult to investigate all of these. So you should try
+    hits and it will be difficult to investigate all of these. At this point, it is a good idea 
     to limit your search to most promising candidates first, by trying to remove
     false positive hits.
 
 \item Go back to the ``ELM Predictions'' page (it's probably still open in
     another browser tab) and enter the same values as used before in
 	steps~\ref{subsec:predicting_cv_0974_search_fasta}-\ref{subsec:predicting_cv_0974_search_cutoff}.
-	Now however, in order to remove false positive hits,
+	Now however, in order to reduce false positive hits,
     you should set the ``Motif probability cutoff value'' to a more
-	stringent threshold. Enter ``0.001'' for this value. This will exclude
-	all motif with a probability score higher than this, limiting the
+	stringent threshold: Enter ``0.001'' for this value. This will exclude
+	all motifs with a probability score higher than this, limiting the
 	results to motifs which are less likely to be found by random
-	chance (False Positives).
+	chance.
 
 % TODO: Marc: Please create and link new figure here, showing the result of the
 	% search (with cutoff of 0.001 there should be only 22 instances of 17 classes)
 \item Hit \button{Submit} to send the query to the ELM prediction pipeline.
     The results are summarized in the first figure on the results page
 	(see Fig. \ref{fig:predicting_cv_0974_results_summary_limited}).
-    You notice the amount of motif classes detected has been
-    reduced drastically (from 54 to 11). % (instances from 156 to 22)
+    The amount of motif classes detected has been
+    reduced from 54 to 17, and the number of instances from 
+    from 156 to 22. Of the remaining 17 motifs, 1 does not occur in
+    \textit{Homo sapiens}, 2 do not localize to the cytosol, and 3 are inside
+    of the PTPc domain (see the ``Filtering summary'' below the graphical
+    result summary).
 
-\item By focussing on motif instances that reside in disordered context (in the
-    amino- or carboxy-terminus of this protein)
+\item By focussing on motif instances with a high probability
     you have successfully limited the list of ELM motif classes down to 11.
 % \motif{DOC\_MAPK\_DCC\_7},
 % \motif{LIG\_Actin\_RPEL\_3},
@@ -1354,15 +1354,36 @@ sequence of \uniprot{CV\_0974/Q7NZE8}:
     remaining motif classes to get a better idea, about which motifs might be
     functional in your protein. Click on the motif identifiers on the left side
     of the graphical summary to go to the details page for the motif classes).
-    For this protocol, however, just click on the motif identifier
+    For this protocol, however, click on the motif identifier
     \motif{LIG\_CSK\_EPIYA\_1} on the left side of the graphical summary to go
-    to the details page for this particular motif class.
+    to the details page for this motif class.
 
-\item Find the entry for \motif{LIG\_CSK\_EPIYA\_1} in the graphical summary
-    and check the structural context for the two \motif{LIG\_CSK\_EPIYA\_1} motifs.
-    Both of them fall outside of the SMART
-    domain PTPC, and reside in a region with a protein disorder (IUPred) score
-    higher than 0.5. 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{Figures/predicting_cv_0974/elm_results_summary_limited.png}
+	\caption{
+	The graphical results summary of the ELM prediction pipeline for (\uniprot{CV\_0974})
+	using a more stringent probability cutoff of 0.001. The number of
+	motifs predicted is far less than when using the default threshold of
+	100 (Figure \ref{fig:predicting_cv_0974_results_summary_limited})
+	}
+	\label{fig:predicting_cv_0974_results_summary_limited}
+\end{figure}
+
+\item On the \motif{LIG\_CSK\_EPIYA\_1} details page the ``Functional site description'' states that 
+	'bacterial proteins usually have repeats of EPIYA motifs.' The ELM
+	prediction results did indeed also detect two EPIYA motifs in a 20
+	amino acid range (\ref{fig:predicting_cv_0974_results_summary_limited}),
+	lending further support to the likelihood that there
+	are indeed two functional EPIYA motifs in \uniprot{CV\_0974}, which in
+	turn suggests that these motifs may be involved in \textit{C.
+	violaceum's} pathogenicity.
+
+%\item Find the entry for \motif{LIG\_CSK\_EPIYA\_1} in the graphical summary
+%    and check the structural context for the two \motif{LIG\_CSK\_EPIYA\_1} motifs.
+%    Both of them fall outside of the SMART
+%    domain PTPC, and reside in a region with a protein disorder (IUPred) score
+%    higher than 0.5. 
 
 % TODO: Is conscore available for this protein?
 %    \sdesc{You may notice that there are no conservation scores for either of
@@ -1371,14 +1392,6 @@ sequence of \uniprot{CV\_0974/Q7NZE8}:
 %        sequence, and are gapped, thus it is not possible to calculate a
 %        conservation score.}
 %
-	In the ``Functional site description'' it is stated that 
-	'bacterial proteins usually have repeats of EPIYA motifs.' The ELM
-	prediction results did indeed also detect two EPIYA motifs in a 20
-	amino acid range, lending further support to the likelihood that there
-	are indeed two functional EPIYA motifs in \uniprot{CV\_0974}, which in
-	turn suggests that these motifs may be involved in \textit{C.
-	violaceum's} pathogenicity.
-
     \sdesc{When this motif is tyrosine-phosphorylated it is recognized by C-terminal
     kinase. Different effector proteins from human pathogens like
     \textit{Bartonella henselae}, \textit{Helicobacter pylori} and
