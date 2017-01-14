@@ -268,8 +268,8 @@ resources.
 	\includegraphics[width=\textwidth]{Figures/explore_content/elms.png}
 	\caption{
 		The list of all motif classes annotated in the ELM database. The search 
-		box on top allows entering a keywords for a full-text search of the 
-		motif classes, while selecting the green buttons on the right allows 
+		box on top allows entering keywords for a full-text search of the 
+		motif classes, while selecting the green buttons on the left allows 
 		filtering the list based on motif type. All data in the table can be 
 		exported in tsv format (top right).
 		\textbf{TODO} A better (bigger) caption would be nice.
@@ -337,7 +337,7 @@ resources.
 	(Figure~\ref{fig:explore_content_doc_cyclin_1_abstract_instances}).
     The ``abstract'' contains a description of the biological relevance of the
     motif (for example its involvement in cellular processes and pathways).
-	annotation. Click on the \button{show} button next to the ``selected
+    Click on the \button{show} button next to the ``selected
 	references'' header for a list of publications relevant to this motif.
 	Click on \button{show} next to ``GO terms'' for a complete list of all
 	Gene Ontology (GO) terms annotated for this motif.
@@ -389,7 +389,7 @@ resources.
 		The ``instances'' page is used to search for instances in
 		the ELM database. The search box on top allows entering a keywords for a 
 		full-text search of the motif instances, while selecting the green 
-		buttons on the right allows filtering based on motif type. In addition, 
+		buttons on the left allows filtering based on motif type. In addition, 
 		instances can be filtered by instance logic or organism. All data in the 
 		table can be exported in different formats (top right).
 		\textbf{TODO} Bigger caption for this figure.
@@ -641,7 +641,7 @@ resources.
 	\centering
 	\includegraphics[width=\textwidth]{Figures/explore_content/pathways_kegg.png}
 	\caption{
-	An overlay of ELM annotations of proteins in the Adherens junction pathway in \textit{Gallus gallus}. The coloring of genes/proteins is as follows:
+	An overlay of ELM annotations of proteins in the Adherens junction pathway in \textit{Gallus gallus}. The coloring of proteins is as follows:
 light blue=\motif{CLV} (cleavage site),
 dark blue=\motif{DOC} (docking site),
 yellow=\motif{DEG} (degradation motif),
@@ -1204,8 +1204,8 @@ the graphic. Blue/gray squares represent predicted motif occurrences.}
 
 \textbf{NOTE} This section is quite new. Extra feedback would be welcome :)
 
-The ELM motif detection pipeline provides a powerful tool to obtain a lot of 
-information about the putative motifs that are present and about their structural 
+The ELM motif detection pipeline provides a powerful tool to obtain 
+information about the putative motifs that are present in a protein sequence and about its structural 
 context. However, determining which motifs are actually true positive detections 
 requires interpreting all of these results, as well as incorporating as much 
 biological knowledge as possible. In this protocol we will be following a typical 
@@ -1221,7 +1221,7 @@ understood. Its genome encodes a type III secretion system (T3SS) that is used
 by different pathogens to translocate bacterial proteins into the infected cells. 
 Interestingly, the genes encoding this T3SS as well as other genes located in 
 the same genomic location are very similar to the ones in \textit{Salmonella spp.}, with 
-the exception of e few genes such as the modular protein SptP \citep{15100995}. 
+the exception of few genes such as the modular protein SptP \citep{15100995}. 
 SptP in \textit{Salmonella spp.} is a secreted protein tyrosine phosphatase 
 \citep{8866485} whose closest homolog in \textit{C. violaceum} is the protein 
 \uniprot{CV\_0974}. To better understand the possible biological function of the 
