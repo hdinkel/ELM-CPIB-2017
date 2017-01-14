@@ -30,7 +30,7 @@ to select candidates for experimental followup. Lastly we also present two
 Alternative Protocols on how to access the ELM database via the programmatic API
 to search the database and run motif predictions.
 
-Current Procols in Bioinformatics is an excellent resource for
+Current Protocols in Bioinformatics is an excellent resource for
 experimentalists to learn how to use bioinformatics in their own research, and
 we hope that you find that this article contributes to this goal.
 
@@ -40,8 +40,4 @@ We look forward to hearing from you,
 Yours sincerely,
 
 Holger
-
-
-
-
 
