@@ -80,17 +80,7 @@ curated SLiM instances from experimental literature, and a pipeline to detect
 SLiMs in protein sequences. ELM is a valuable resource to the scientific
 community studying protein function.
 
-% \emph{instructions: Provide a 120-word-maximum statement about the
-% significance of the protocols/topic described in your manuscript. This
-% should be understandable to undergraduate- educated scientists outside
-% their field of specialty. The goal is to explain the relevance of the
-% work in broad context to a broad readership. It will be used in
-% promotion of the article following publication.}
-
 \begin{abstract}%
-%
-% \emph{instructions: brief overview, no references, max 150 words}
-%
 
 The Eukaryotic Linear Motif (ELM) resource (\rurl{elm.eu.org}) is dedicated to
 the characterization and prediction of short linear motifs (SLiMs). SLiMs
@@ -110,7 +100,9 @@ to demonstrate how this knowledge can be used to improve your own research.
 
 
 
+%
 % Introduction
+%
 \section*{Introduction}%
 \label{sec:introduction}
 
@@ -144,7 +136,9 @@ ELM, how to analyse a protein sequence for putative motifs, and how to
 interpret these data and avoid common pitfalls in SLiM discovery.
 
 
+%
 % Browsing and exploring content
+%
 \section{Exploring the Content of the ELM Database}%
 \label{sec:explore_content}%
 
@@ -527,11 +521,6 @@ resources.
 	links to RCSB/PDB \citep{12037327}, the individual instance and the motif
 	class of that instance.
 
-% duplicate information:
-%	\sdesc{The filter bar on the top page can be used to filter the list of
-%		structures shown. The yellow \fileformat{TSV} link creates a
-%		downloadable file in ``tab separated values'' format.}
-
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=\textwidth]{Figures/explore_content/interactiondomains.png}
@@ -714,8 +703,9 @@ Light green boxes are colored by KEGG if a homolog of the protein is present in 
 	define motif classes.
 \end{enumerate}
 
-
-%%% General Search
+%
+% General Search
+%
 \section{Exploring the Content of the ELM Database Using the General Search}
 \label{sec:general_search}
 
@@ -807,7 +797,9 @@ ELM database (eg. full instance vs. candidate).
 
 %\clearpage
 
-%%% P53
+%
+% P53
+%
 \section{Detecting Short Linear Motifs in Protein Sequences}
 \label{sec:predicting_p53}
 
@@ -876,7 +868,6 @@ switches (switches.ELM).
 		is filtered out based on motif probability.}
 
 \item Select the search criteria (optional).
-%	It is possible to limit the results by ``Cell compartment'', ``Taxonomic Context'' or by changing the ``Motif Probability Cutoff''.
 	To restrict the search to include
 	motifs that are active only in certain cellular compartments, select one or
 	more from the ``Cell compartment'' list (use the ``control'' key to select more than one
@@ -1182,7 +1173,9 @@ the graphic. Blue/gray squares represent predicted motif occurrences.}
 
 %\clearpage
 
-%%% Predicting with CV_0974
+%
+% Detecting Short Linear Motifs in Novel Protein Sequences
+%
 \section{Detecting Short Linear Motifs in Novel Protein Sequences}
 \label{sec:predicting_cv_0974}
 
@@ -1316,15 +1309,6 @@ so you should select ``cytosol'' in the ``Cell compartment'' field.
 
 \item By focussing on motif instances with a high probability
     you have successfully limited the list of ELM motif classes down to 11.
-% \motif{DOC\_MAPK\_DCC\_7},
-% \motif{LIG\_Actin\_RPEL\_3},
-% \motif{LIG\_BIR\_III\_2},
-% \motif{LIG\_BIR\_II\_1},
-% \motif{LIG\_CSK\_EPIYA\_1},
-% \motif{LIG\_LIR\_LC3C\_4},
-% \motif{LIG\_SH2\_GRB2}, and
-% \motif{TRG\_AP2beta\_CARGO\_1}
-    %
     (Now would be a good point in time to read up on the details of the
     remaining motif classes to get a better idea, about which motifs might be
     functional in your protein. Click on the motif identifiers on the left side
@@ -1354,12 +1338,6 @@ so you should select ``cytosol'' in the ``Cell compartment'' field.
 	turn suggests that these motifs may be involved in \textit{C.
 	violaceum's} pathogenicity.
 
-%\item Find the entry for \motif{LIG\_CSK\_EPIYA\_1} in the graphical summary
-%    and check the structural context for the two \motif{LIG\_CSK\_EPIYA\_1} motifs.
-%    Both of them fall outside of the SMART
-%    domain PTPC, and reside in a region with a protein disorder (IUPred) score
-%    higher than 0.5.
-
     \sdesc{When this motif is tyrosine-phosphorylated it is recognized by C-terminal
     kinase. Different effector proteins from human pathogens like
     \textit{Bartonella henselae}, \textit{Helicobacter pylori} and
@@ -1372,18 +1350,6 @@ so you should select ``cytosol'' in the ``Cell compartment'' field.
     sequence, and are gapped, and it is not possible to calculate a
     conservation score.
     }
-
-
-%\item Click on the motif identifier \button{LIG\_CSK\_EPIYA\_1} on the left side of the
-%        graphical summary to go to the details page for this
-%        motif class. In the ``Functional site description'' it is stated that 'The
-%        bacterial proteins usually have repeats of EPIYA motifs.' The ELM
-%        prediction results did indeed also detect two EPIYA motifs in a 20
-%        amino acid range, lending further support to the likelihood that there
-%        are indeed two functional EPIYA motifs in \uniprot{CV\_0974}, which in
-%        turn suggests that these motifs may be involved in \textit{C.
-%        violaceum's} pathogenicity.
-%
 
 \item It is now up to the experimenter to decide whether to undertake
 	validation experiments that would confirm the \motif{LIG\_CSK\_EPIYA\_1}
@@ -1398,7 +1364,9 @@ so you should select ``cytosol'' in the ``Cell compartment'' field.
 
 %\clearpage
 
-%%% Searching via REST API
+%
+% Searching via REST API
+%
 \section{(Alternative Protocol) Searching the ELM database using the REST API}
 \label{sec:search_REST}
 
@@ -1558,7 +1526,9 @@ classes}\label{downloading-all-elm-classes}
 
 %\clearpage
 
-%%% Predicting via REST API
+%
+% Predicting via REST API
+%
 \section{(Alternate Protocol) Detecting Short Linear Motifs in Sequences using the REST API}
 \label{sec:predicting_REST}
 
@@ -1674,7 +1644,9 @@ readable. All this does is to properly align all columns at tabstops.)
 
 %\clearpage
 
-%%% Commentary
+%
+% Commentary
+%
 \section*{Guidelines for Understanding Results}
 \label{sec:guidelines-for-understanding-results}
 
@@ -1859,12 +1831,6 @@ are those with high conservation scores in regions of unstructured, unconserved
 regions.
 
 
-% When investigating conservation of short linear motifs, one has to bear in mind
-% Further generalizing, taking into
-% account that the more likely it is a functional motif for this prediction.
-%
-% islands of conservation amidst a sea of unconserved disordered amino acid residues.
-
 \paragraph*{Taxon Filter}\label{TaxonFilter}
 
 Each ELM class is annotated with one or more taxonomic ranges, for which
@@ -1888,7 +1854,6 @@ evidence exists) onto homologous sequences of unknown function.
 \centering
 \includegraphics[width=\textwidth]{Figures/Introduction/functional_classification_of_SLiMs.png}
 \caption{
-% TODO: text
 Classification of ELM motif classes.
 For each ELM class, the functional category to which it belongs is indicated by
 a three-letter prefix (such as ``MOD'' for ``MOD\_LATS\_1'').
@@ -1896,16 +1861,15 @@ Each ELM class is defined by a regular expression. Peptide sequences in
 proteins that match the regular expression of a specific ELM class and that
 were experimentally validated to be functional motifs are captured as ELM
 instances of that class.
-%Degrons are a specific subtype of enzyme-recruiting docking motifs (see text for a detailed description).
 Figure adapted from \cite{24773235}.
 }
 \label{fig:SLiMclasses}
 \end{figure}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% section Key References with Annotation
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Key References with Annotation
+%
 \section*{Key References with Annotation}
 \label{sec:key-references-with-annotation}
 
