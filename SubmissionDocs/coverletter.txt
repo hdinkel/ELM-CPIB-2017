@@ -30,7 +30,7 @@ to select candidates for experimental followup. Lastly we also present two
 Alternative Protocols on how to access the ELM database via the programmatic API
 to search the database and run motif predictions.
 
-Current Procols in Bioinformatics is an excellent resource for
+Current Protocols in Bioinformatics is an excellent resource for
 experimentalists to learn how to use bioinformatics in their own research, and
 we hope that you find that this article contributes to this goal.
 
@@ -42,6 +42,7 @@ Yours sincerely,
 Holger
 
 
+P.S. On a slightly more technical note: Thank you for letting us submit the manuscript in LaTeX. We were not completely sure how to best combine this with the online submission form, so we have uploaded some extra documents, should you need them.  "elm.pdf" is the complete manuscript (with figures included); "ELM-LaTeX-files.zip" is the entire collection of files needed to build the pdf using LaTeX; and lastly we've uploaded a copy of each figure in CMYK *.tiff (which unfortunately is not LaTeX compatible). If you prefer something different, don't hesitate to let us know.
 
 
 
