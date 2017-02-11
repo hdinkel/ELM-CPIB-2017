@@ -239,7 +239,7 @@ resources.
 	\caption{
 		The list of all motif classes annotated in the ELM database.
 		Clicking on the highlighted links brings you to the details page
-		for the individual ELM classes page.
+		for the individual ELM classes.
 		The search box on top allows entering keywords for a full-text search of the
 		motif classes, while selecting the green buttons on the left allows
 		filtering the list based on motif type. All data in the table can be
@@ -254,9 +254,10 @@ resources.
 	(Figure~\ref{fig:explore_content_elms}).
 	For each class, the following information is provided: ELM identifier,
 	short description, regular expression, number of instances annotated
-	for each class, and number of structures available. For details on each
-	class, click on the ELM identifier; to get a list of annotated
-	instances for an individual class, click on the number of instances.
+	for each class, and number of structures available in the Protein Data Bank 
+	(PDB). For details on each class, click on the ELM identifier; to get a list 
+	of annotated instances for an individual class, click on the number of 
+	instances.
 
 	\sdesc{Use the search bar at the top of the page to filter for certain
 		motif classes. For example, typing ``MAPK'' and hitting \button{submit}
@@ -272,7 +273,7 @@ resources.
 	\centering
 	\includegraphics[width=\textwidth]{Figures/explore_content/doc_cyclin_1_class.png}
 	\caption{
-	The motif details page for \motif{DOC\_CYCLIN\_1}. This page
+	The motif details page for the ELM class \motif{DOC\_CYCLIN\_1}. This page
 	contains all the manually annotated details for the
     \motif{DOC\_CYCLIN\_1} motif, as well as the biological background
     summarized from the scientific literature, including links to the primary
@@ -297,7 +298,7 @@ resources.
 	\sdesc{The probability score is the probability that the regular
 		expression represents a random selection of amino acids
 		(similar to an information content score). A lower score
-		indicates that the motif pattern is more difficult to find by
+		indicates that the motif pattern is less likely to be found by
 		chance in a random sequence.}
 
 \item Scroll further down the \motif{DOC\_CYCLIN\_1} page
@@ -307,7 +308,7 @@ resources.
     The ``abstract'' contains a description of the biological relevance of the
     motif (for example its involvement in cellular processes and pathways).
     Click on the \button{show} button next to the ``selected
-	references'' header for a list of publications relevant to this motif.
+	references'' header for a list of relevant publications.
 	Click on \button{show} next to ``GO terms'' for a complete list of all
 	Gene Ontology (GO) terms annotated for this motif.
 
@@ -324,23 +325,23 @@ resources.
 
 \item Scroll further down the \motif{DOC\_CYCLIN\_1} page to view
 	the ``Instances'' header
-	(Figure~\ref{fig:explore_content_doc_cyclin_1_abstract_instances})
+	(Figure~\ref{fig:explore_content_doc_cyclin_1_abstract_instances}).
 	This table contains the list of all annotated
 	instances for this motif in the database. This includes the protein
-	identifier, the start and end positions of the instance, the specific
+	identifier, the start and end positions of the ELM instance, the specific
 	sequence matching the regular expression representing the motif and
 	the ``logic'' of the instance.
 	The ``\#~Ev.'' indicates the number of experimental evidences
 	associated with the annotation. ``Organism'' indicates the
 	species in which the protein is found. Lastly the ``Notes'' column
 	contains links to any ``interactions'' or ``switches'' present in the
-	database, as well as links to PDB, if the structure exists in the PDB.
+	database, as well as links to PDB, if a relevant structure exists in PDB.
 	
 	\sdesc{The instance ``logic'' is an annotation of whether
 		-- at the time the entry was prepared -- this is a
 		\textit{bona-fide} instance, or whether it is a non-functional
 		instance. \textit{TP} (True Positive) indicates the instance is
-		annotated with experimental evidence that show it is functional.
+		annotated with experimental evidence that shows it is functional.
 		\textit{FP} (False Positive) instances have experimental
 		evidence suggesting function, but are believed to be
 		non-functional, after careful examination by our annotators.
@@ -394,8 +395,7 @@ resources.
 \item Type ``p53\_human'' in the search box to search for ELM instances in this
 	protein. Find the row for the ELM class \motif{DOC\_CYCLIN\_1} and click on
 	the instance sub-sequence (highlighted in red) to go to the instance
-	details page of this
-	instance (Figure~\ref{fig:explore_content_doc_cyclin_instance}).
+	details page (Figure~\ref{fig:explore_content_doc_cyclin_instance}).
 	The top part of the page contains details about the instance
 	and the protein it was identified in, as well as a link to the UniProt entry for
 	the protein \citep{25348405}.
@@ -428,7 +428,7 @@ resources.
 	found in human p53 (\uniprot{P53\_HUMAN}) with start/end position
 	``30--35''. For this instance, information is
 	also available about its interaction partner (\uniprot{PIN1\_HUMAN}) and a
-	phosphorylation-dependant molecular switch that is
+	phosphorylation-dependent molecular switch that is
 	mediated by this motif instance.
 	}
 	\label{fig:explore_content_doc_ww_instance}
@@ -441,17 +441,17 @@ resources.
 	header lines: click on ``Start'' to sort by start position). Click on the
 	start/end position or the sub-sequence that will take you to the details
 	page (Figure~\ref{fig:explore_content_doc_ww_instance}). This
-	page is similar to that described for the p53 instance \motif{DOC\_CYCLIN\_1}
-	(Figure~\ref{fig:explore_content_doc_cyclin_instance}).
+	page is similar to that described for the \motif{DOC\_CYCLIN\_1} instance 
+	in p53 (Figure~\ref{fig:explore_content_doc_cyclin_instance}).
 	Additionally, for this instance, there is information available about
-	its interaction partner and a molecular switch, which is mediated by
+	its interaction partner and a molecular switch that is mediated by
 	this motif instance.
 
 \item Scroll down to the ``Interactions'' header to view information about this
 	instance's interactions
 	(Figure~\ref{fig:explore_content_doc_ww_instance}). This instance
 	interacts with \uniprot{PIN1\_Human} via the ``WW'' domain (PFAM identifier
-	PF00397; found on position 7--37 in \uniprot{PIN1\_Human}. If available,
+	PF00397; found in position 7--37 in \uniprot{PIN1\_Human}). If available,
 	binding affinities are also shown here. Interaction data is made
 	available in \fileformat{MiTab} and \fileformat{XML} format
 	\citep{17925023}, and can be downloaded by clicking on the yellow
@@ -464,7 +464,7 @@ resources.
 	only if p53 is phosphorylated on residue serine-33 can it bind to the protein
 	``Peptidyl-prolyl cis-trans isomerase NIMA-interacting 1 (PIN1)``.
 	Clicking on the diagram will open an external link to the
-	\rurl{switches.elm.eu.org} website where more detail can be found.
+	\rurl{switches.elm.eu.org} website where more details can be found.
 
 %
 % Subsection: Links to external resources
@@ -490,7 +490,7 @@ resources.
 	motifs and instances (Figure~\ref{fig:explore_content_methods}).
 	This table shows the internal method
 	identifier in the first column, a link to the corresponding entry in
-	the PSI-MI database \citep{17925023}, and the method name as annotated
+	the PSI-MI ontology \citep{17925023}, and the method name as annotated
 	by the PSI-MI controlled vocabulary, as well as the type of experiment
 	(\textit{in vitro}, \textit{in vivo}, \textit{in silico}, or a combination of these).
     Clicking on the link in the ``instances'' column
@@ -504,9 +504,8 @@ resources.
 	\centering
 	\includegraphics[width=\textwidth]{Figures/explore_content/pdbs.png}
 	\caption{
-	The list of all known PDB structures for which annotated motif instances
-	exist in the ELM database. For each structure, a link to the protein
-	database RCSB \citep{12037327}
+	The list of PDB structures for which annotated motif instances
+	exist in the ELM database. For each structure, a link to PDB \citep{12037327}
 	is provided with a short description as well as the name of the
 	Identifier of the ELM instance / class.
 	}
@@ -538,19 +537,19 @@ resources.
 	(Figure~\ref{fig:explore_content_interaction_domains}).
 	This table shows the ELM classes that have been annotated
 	with a corresponding interaction domain divided by the ELM
-	class, a link to the PFAM \citep{26673716}, SMART \citep{25300481} or
-	InterPro \citep{27899635} domain, as well as the name of the
-	interacting domain followed by a brief description.
+	class, a link to the corresponding entry in the PFAM \citep{26673716}, 
+	SMART \citep{25300481} or InterPro \citep{27899635} resource, as well as the 
+	name of the interacting domain followed by a brief description.
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=\textwidth]{Figures/explore_content/switches.png}
 	\caption{
 	    A list of all molecular switches that are based on instances
-	    from ELM and which are annotated at the \rurl{switches.elm.eu.org}
+	    from ELM and that are annotated in the \rurl{switches.elm.eu.org}
 	    database. For each switch the ELM class, ELM instance ID,
-	    instance motif start position, Switch ID as well as a brief description of
-	    the molecular switching mechanism is provided.
+	    instance motif start position, Switch ID, as well as a brief description 
+	    of the molecular switching mechanism are provided.
 	}
 	\label{fig:explore_content_switches}
 \end{figure}
@@ -699,8 +698,8 @@ Light green boxes are colored by KEGG if a homolog of the protein is present in 
 	to visit the ELM Help page. This page has answers to the most
 	frequently asked questions, which you can see by clicking on a
 	particular question. For example: Click on ``Regular expressions'' for
-	a detailed description of the symbols used the regular expressions that
-	define motif classes.
+	a detailed description of the symbols used to build the regular expressions 
+	that define motif classes.
 \end{enumerate}
 
 %
@@ -804,7 +803,7 @@ ELM database (eg. full instance vs. candidate).
 \label{sec:predicting_p53}
 
 One of the most useful (and used) features in ELM is the ability to
-detect motifs in proteins and sequences. Given a protein's amino acid
+detect motifs in proteins and peptide sequences. Given a protein's amino acid
 sequence, the ``ELM Predictions'' pipeline searches for occurrences of
 each motif class using regular expressions, applies a set of filters to
 minimize false positives and creates a diagram to visualize the resulting
@@ -874,7 +873,7 @@ switches (switches.ELM).
 	option). It is also possible to select a ``Taxonomic Context'' to
 	restrict the search to motifs from certain species. Start typing a
 	species name in the ``Taxonomic Context'' input field to get an
-	auto-completed list of species to select from. Additionally, a ``Motif
+	autocompleted list of species to select from. Additionally, a ``Motif
 	probability cutoff'' can be used to only retain ELM classes whose
 	pattern probability is below the given value.
 	These filters are implemented later in \ref{sec:predicting_cv_0974}.
@@ -1021,8 +1020,8 @@ the graphic. Blue/gray squares represent predicted motif occurrences.}
 
 	\sdesc{The information screen pop-up
 	shows scores for all of the individual criteria used by the secondary
-	structure filter: The name of the domain, the accessibility
-	score, secondary structure score, a combined total score,
+	structure filter: the name of the domain, the accessibility
+	score, the secondary structure score, a combined total score,
 	and the associated total score P-value \citep{19852836}.}
 
 \item Place the cursor over the red oval for \motif{DEG\_MDM2\_SWIB\_1} at
@@ -1036,7 +1035,7 @@ the graphic. Blue/gray squares represent predicted motif occurrences.}
 	\caption{
 	This section of the results lists the user-provided search parameters
 	and summarizes the details of the filtering
-	results and provides a list of globular domains that have been detected in the query sequence.
+	results. It also provides a list of globular domains that have been detected in the query sequence.
 	}
 	\label{fig:predicting_p53_elm_results_alignment_filtering_domains}
 \end{figure}
@@ -1106,7 +1105,7 @@ the graphic. Blue/gray squares represent predicted motif occurrences.}
 	(Figure~\ref{fig:predicting_p53_elm_results_alignment_filtering_domains}).
 	This section contains information on which domains were detected by the
 	SMART server, and their positions. Clicking on their names will bring
-	you to the entry for that domain on the SMART or PFAM homepage.
+	you to the entry for that domain in SMART or PFAM.
 	In this case the only domain detected is the ``p53'' PFAM domain.
 
 \item On the results page, scroll down to the heading: ``The ELMs in the
@@ -1116,8 +1115,8 @@ the graphic. Blue/gray squares represent predicted motif occurrences.}
 	manually annotated in the ELM database. The columns show each motif
 	name, the sequence(s) that matched the motif as well as their starting
 	and ending positions and the logic of the annotation followed by a
-	short description of each motif, to which cell compartments its has
-	been associated, and finally the regular expression of the motif.
+	short description of each motif, to which cell compartments it has
+	been assigned, and finally the regular expression of the motif.
 
 \begin{figure}[h!]
 	\centering
@@ -1134,10 +1133,10 @@ the graphic. Blue/gray squares represent predicted motif occurrences.}
 
 \item Scroll further down to the section title ``Results of ELM motif search
 	after globular domain filtering, structural filtering and context
-	filtering'' to obtain an overview of all of the motifs and motif
-	instances detected
-	(\ref{fig:predicting_p53_elm_results_motifs})
-	Each of the rows is a ``predicted'' motif: A sequence matching a
+	filtering'' to obtain an overview of all the motifs and motif
+	instances that were detected
+	(\ref{fig:predicting_p53_elm_results_motifs}).
+	Each of row is a ``predicted'' motif: A sequence matching a
 	motif's regular expression has been detected that has also passed the
 	``structural filter''.
 	Each row displays the motif identified, the matching peptide
@@ -1166,7 +1165,7 @@ the graphic. Blue/gray squares represent predicted motif occurrences.}
 \item Scroll further down to the heading ``List of excluded ELMs falling inside
 	SMART/PFAM domains and/or scoring poorly with the structural filter (if
 	applicable).''
-	(Figure~\ref{fig:predicting_p53_elm_results_motifs_filtered})
+	(Figure~\ref{fig:predicting_p53_elm_results_motifs_filtered}).
 	This table is similar to the one described above, but shows motif
 	matches which were rejected by the structural filter.
 \end{enumerate}
@@ -1235,7 +1234,7 @@ sequence of \uniprot{CV\_0974/Q7NZE8}:
 	query page (Fig. \ref{fig:predicting_cv_0974_search}).
 	Here you should provide the amino acid sequence of \uniprot{CV\_0974}
 	from UniProt (\url{http://www.uniprot.org/uniprot/Q7NZE8.fasta}), and
-	enter it as FASTA format into the ``sequence input text box''.
+	enter it in FASTA format into the ``sequence input text box''.
 
 \item \label{subsec:predicting_cv_0974_search_taxon} In the ``Taxonomic Context'' field, enter the text ``Homo
 	sapiens''. This will limit the search to motif classes
@@ -1302,7 +1301,7 @@ so you should select ``cytosol'' in the ``Cell compartment'' field.
 	(see Fig. \ref{fig:predicting_cv_0974_results_summary_limited}).
     The amount of motif classes detected has been
     reduced from 54 to 17, and the number of instances from
-    from 156 to 22. Of the remaining 17 motifs, 1 does not occur in
+    156 to 22. Of the remaining 17 motifs, 1 does not occur in
     \textit{Homo sapiens}, 2 do not localize to the cytosol, and 3 are inside
     of the PTPc domain (see the ``Filtering summary'' below the graphical
     result summary).
@@ -1310,7 +1309,7 @@ so you should select ``cytosol'' in the ``Cell compartment'' field.
 \item By focussing on motif instances with a high probability
     you have successfully limited the list of ELM motif classes down to 11.
     (Now would be a good point in time to read up on the details of the
-    remaining motif classes to get a better idea, about which motifs might be
+    remaining motif classes to get a better idea about which motifs might be
     functional in your protein. Click on the motif identifiers on the left side
     of the graphical summary to go to the details page for the motif classes).
     For this protocol, however, click on the motif identifier
@@ -1357,8 +1356,8 @@ so you should select ``cytosol'' in the ``Cell compartment'' field.
 	predictions are never certain, and this is especially true for SLiM
 	prediction.  At this point it would be important to consult other
 	bioinformatics tools and to search literature published after the motif
-	was annotated.
-	(See the \ref{sec:guidelines-for-understanding-results})
+	was annotated
+	(See the \ref{sec:guidelines-for-understanding-results}).
 
 \end{enumerate}
 
@@ -1604,7 +1603,7 @@ readable. All this does is to properly align all columns at tabstops.)
 	%at page \pageref{TaxonFilter}
 	).
 
-	\sdesc{In FigureF\ref{fig:predicting_REST_curl_p53}
+	\sdesc{In Figure \ref{fig:predicting_REST_curl_p53}
 		we use a slightly more
 		advanced command to get the output to look nice in the
 		terminal. We specified the \cl{-s} option to silence all
@@ -1653,11 +1652,11 @@ readable. All this does is to properly align all columns at tabstops.)
 The annotations in the ELM database have all been created manually, and in most cases
 you can safely assume that the annotations present in the database are of
 high confidence.
-These annotators have a lot of experience in reading the scientific literature,
+The annotators have a lot of experience in reading the scientific literature,
 and know how to distinguish high confidence from suggestive experiments
 \cite{26581338}.
 However, bioinformatics databases are never perfect, and some annotations in
-ELM may be ~10 years old, so there could be updated literature.
+ELM may be about 10 years old, so there could be updated literature.
 You are also encouraged to dig deeper into each annotation.
 In all cases, each entry contains descriptions of the experiments performed and
 links to the original research.
@@ -1672,16 +1671,16 @@ on a heuristic which might make mistakes.
 In general the  prediction pipeline attempts to make as many predictions as
 possible, at the risk of making some False Positive predictions as well.
 
-In cases all of the intermediate results generated by the ELM prediction
+All intermediate results generated by the ELM prediction
 pipeline are made available to aid you in deciding which predictions are worth
 further investigation.
 Looking at the multiple sequence alignments used to generate the conservation
 score can (for example) help determine why a seemingly likely motif may have a
 (falsely) low confidence score.
 However, contrary you may have reason to believe that a predicted motif that was
-rejected by ELM's structure filter may actually exposed in a different
+rejected by ELM's structure filter may actually be exposed in a different
 structural conformation.
-We highly recommend you do not use ELM in isolation. Always make sure to check
+We highly recommend you not to use ELM in isolation. Always make sure to check
 the literature and to use other bioinformatics tools to check alignments, structures and conservation (See the \ref{sec:internet-resources-with-annotations} for a handful of suggestions)
 
 \section*{Commentary:}\label{commentary}
@@ -1695,7 +1694,7 @@ background information summarizes the different functionalities of SLiMs,
 describes the degenerate nature of motif sequences, and emphasizes the need for
 contextual data for confident SLiM prediction.
 
-\subsubsection*{ELM categorises SLiMs depending on their functionality}
+\subsubsection*{ELM categorizes SLiMs depending on their functionality}
 
 SLiMs mediate different types of interactions, and based on this functionality,
 the ELM classes annotated in the ELM database are grouped into six main ELM
@@ -1715,8 +1714,8 @@ be targeted by specific enzymes for the addition or removal of a small chemical
 group (e.g. phosphorylation), a sugar molecule (e.g. glycosylation), a protein
 (e.g. ubiquitylation), or another moiety (e.g. lipidation) (\motif{MOD} type). Other PTM
 SLiMs mediate proteolytic cleavage by acting as target site for proteolytic
-enzymes (\motif{CLV} type), or are recognised for structural modification by isomerases
-that catalyse cis-trans isomerisation of the peptide backbone (\motif{DOC} type), see
+enzymes (\motif{CLV} type), or are recognized for structural modification by isomerases
+that catalyze cis-trans isomerisation of the peptide backbone (\motif{DOC} type), see
 \cite{24926813} and \cite{24773235}.
 
 \subsubsection*{ELM regular expressions reflect the degenerate nature of SLiMs}
@@ -1730,7 +1729,7 @@ size or hydrophobicity) are allowed in these hotspot positions. In the motif
 positions that contribute little to the interaction, there are even less
 constraints, i.e. a broader range of amino acids is allowed in these positions
 \citep{21909575}. This sequence flexibility is captured in the regular
-expressions that are defined for each motif class. A first consequence of this
+expressions that are defined for each ELM class. A first consequence of this
 degeneracy is that SLiMs co-operatively engage in interactions of relatively low
 affinity. Hence these binding events are transient and reversible, and can be
 readily modulated, for instance by PTM. These characteristics make SLiM-based
@@ -1740,7 +1739,7 @@ or even a single point mutation to generate or disrupt a functional motif in a
 protein. The associated ability to evolve convergently might underlie the
 proliferation of SLiMs and the rewiring of interactomes \citep{26589632,
 22346764}. Conversely, several SLiM-associated diseases have been
-characterised to date, for instance Liddle syndrome \citep{15483078}.
+characterized to date, for instance Liddle syndrome \citep{15483078}.
 
 \subsubsection*{ELM integrates data to increase the confidence of SLiM prediction}
 
@@ -1759,7 +1758,7 @@ motifs that have a higher probability to be functional and help rule out those
 candidate motifs that are likely to be false positives. Taking into account
 additional information, besides a match to a sequence pattern defining a SLiM,
 can greatly narrow the selection of putative motifs for experimental validation.
-Additional data for in silico analysis include conservation of the motif
+Additional data for \textit{in silico} analysis include conservation of the motif
 sequence, the location of the motif within the protein's structure and its
 accessibility for its binding partner, validated interaction with the binding
 partner, and in-cell co-localisation with the binding partner. The availability
@@ -1826,8 +1825,8 @@ occurrences will be shown in a uniform shade of blue.
 
 Since conserved motifs in structural regions are most likely conserved for
 structural integrity rather than motif function, one always has to assess the
-context when inspecting conservation score. Generally, best motif candidates
-are those with high conservation scores in regions of unstructured, unconserved
+context when inspecting conservation score. Generally, the best motif candidates
+are those with high conservation scores in unstructured, unconserved
 regions.
 
 
