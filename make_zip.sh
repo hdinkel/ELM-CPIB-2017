@@ -44,6 +44,16 @@ if [ -d $ZIPFILE ] ; then
     rm -r $ZIPFILE
 fi
 
+echo "To build the final pdf:
+
+pdflatex main.tex
+bibtex main
+pdflatex main.tex
+pdflatex main.tex
+
+If you have any questions, please e-mail marc.gouw@embl.de
+" > $ZIPDIR/README.txt
+
 zip -rq $ZIPFILE $ZIPDIR
 
 if [[ $1 == '-nc' ]] ; then
