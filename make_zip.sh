@@ -1,11 +1,22 @@
 #!/bin/bash
 
+if [[ $1 == '-h' ]] ; then
+    echo "Usage 'make_zip.sh'"
+    echo "or: 'make_zip.sh -nc' (no clean) to keep temporary files)"
+    exit 1
+fi
+
 ZIPDIR='CompleteZip'
 ZIPFILE='ELM-CPIB.zip'
 
 if [ -d $ZIPDIR ] ; then
     echo "Deleting previous zip dir: $ZIPDIR"
     rm -r $ZIPDIR
+fi
+
+if [ -d $ZIPFILE ] ; then
+    echo "Deleting previous zip file: $ZIPFILE"
+    rm -r $ZIPFILE
 fi
 
 echo "Creating Zip dir: $ZIPDIR"
@@ -35,9 +46,14 @@ fi
 
 zip -rq $ZIPFILE $ZIPDIR
 
+if [[ $1 == '-nc' ]] ; then
+    echo 'Keeping temporary folder $ZIPDIR'
+else
+    echo 'Cleaning temporary folder'
+    rm -r $ZIPDIR
+fi
+
 echo "Created zip file: $ZIPFILE"
 echo "Please copy it somewhere else, and make sure it still works!"
-
-
 
 
